@@ -1,0 +1,38 @@
+{
+  "name": "angular-embed-codepen",
+  "version": "1.1.1",
+  "authors": [
+    {
+      "name": "Jurgen Van de Moere",
+      "email": "jurgen.van.de.moere@gmail.com"
+    }
+  ],
+  "main": [
+    "dist/embed-codepen.js"
+  ],
+  "ignore": [
+    "src",
+    "test",
+    "gulpfile.js",
+    "karma-dist-concatenated.conf.js",
+    "karma-dist-minified.conf.js",
+    "**/.*"
+  ],
+  "dependencies": {
+    "angular": "~1.2.21"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.2.21",
+    "angular-scenario": "~1.2.21"
+  },
+  "homepage": "https://github.com/jvandemo/angular-embed-codepen",
+  "_release": "1.1.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.1.1",
+    "commit": "4578047ba9f5ab57094f74dbe9b8b23555a91fde"
+  },
+  "_source": "https://github.com/jvandemo/angular-embed-codepen.git",
+  "_target": "~1.1.1",
+  "_originalSource": "angular-embed-codepen"
+}

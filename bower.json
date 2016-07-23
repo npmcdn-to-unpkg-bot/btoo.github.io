@@ -1,0 +1,24 @@
+{
+  "name": "btoo.github.io",
+  "description": "Brian's Portfolio",
+  "main": "index.js",
+  "authors": [
+    "Brian Tu"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/btoo/btoo.github.io",
+  "dependencies": {
+    "angular": ">=1.3.15",
+    "jquery": "~2.1.3",
+    "trianglify": "~0.2.0",
+    "mdi": "~1.0.8-beta",
+    "moment": "~2.9.0",
+    "angular-google-maps": "~2.0.19",
+    "fontawesome": "~4.3.0",
+    "materialize": "~0.96.1",
+    "angular-sanitize": "~1.3.15",
+    "angular-embed-codepen": "~1.1.1",
+    "angular-animate": "~1.3.15",
+    "angulartics": "~0.17.2"
+  }
+}
