@@ -21,7 +21,7 @@ gulp.task('deploy', function() {
 gulp.task('serve', ['sass', 'fonts', 'bower', 'html', 'javascript', 'resources'], function() {
 
     browserSync({
-        server: "./app"
+        server: "./portfolio"
     });
 
     gulp.watch("bower_components/**/*.*", ['bower']);
@@ -44,7 +44,7 @@ gulp.task('sass', function() {
         .pipe(autoprefixer({
             browsers: ['> 1%']
         }))
-        .pipe(gulp.dest("./app/css/"))
+        .pipe(gulp.dest("./portfolio/css/"))
         .pipe(reload({
             stream: true
         }));
@@ -52,7 +52,7 @@ gulp.task('sass', function() {
 
 gulp.task('fonts', function() {
     return gulp.src(["src/scss/**/*.ttf", 'src/scss/**/*.woff', 'src/scss/**/*.woff2'])
-        .pipe(gulp.dest("./app/"))
+        .pipe(gulp.dest("./portfolio/"))
         .pipe(reload({
             stream: true
         }));
@@ -64,7 +64,7 @@ gulp.task('html', function() {
         .pipe(minifyHTML({
             conditionals: true
         }))
-        .pipe(gulp.dest("./app/"))
+        .pipe(gulp.dest("./portfolio/"))
         .pipe(reload({
             stream: true
         }));
@@ -76,7 +76,7 @@ gulp.task('javascript', function() {
         .pipe(plumber())
         .pipe(babel())
         .pipe(uglify())
-        .pipe(gulp.dest('./app/'))
+        .pipe(gulp.dest('./portfolio/'))
         .pipe(reload({
             stream: true
         }));
@@ -84,7 +84,7 @@ gulp.task('javascript', function() {
 
 gulp.task('resources', function() {
     return gulp.src("src/res/**/*.*")
-        .pipe(gulp.dest('./app/res'))
+        .pipe(gulp.dest('./portfolio/res'))
         .pipe(reload({
             stream: true
         }));
@@ -92,7 +92,7 @@ gulp.task('resources', function() {
 
 gulp.task('bower', function() {
     return bower('bower_components')
-        .pipe(gulp.dest('app/lib/'));
+        .pipe(gulp.dest('portfolio/lib/'));
 });
 
 gulp.task('default', ['serve']);
