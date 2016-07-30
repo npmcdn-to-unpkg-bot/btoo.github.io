@@ -1,0 +1,38 @@
+@import 'bubble-gradient';
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	font-smooth: always;
+}
+
+
+.darkcolor, .lightcolor, .ultralightcolor, .ultradarkcolor, .headercolor {
+	transition: color 1s ease;
+}
+
+.bgcolor, .darkbgcolor, .ultradarkbgcolor, .bgcolor-transparent, .darkbgcolor-transparent, .ultradarkbgcolor-transparent {
+	transition: background-color 1s ease;
+}
+
+.hoverdarker {
+	transition: background-color 0.3s ease;
+}
+
+.scrollfade {
+	transition: all 0.4s ease;
+	&.hidden {
+		opacity: 0;
+		transform: translateY(15px) scale(0.9, 0.9);
+	}
+}
+
+// .background {
+// 	transition: 1s ease all;
+// 	z-index: 0;
+// 	position: fixed;
+// 	height: 100%;
+// 	width: 100%;
+// }

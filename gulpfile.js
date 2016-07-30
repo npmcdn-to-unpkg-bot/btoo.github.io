@@ -25,7 +25,7 @@ gulp.task('serve', ['sass', 'fonts', 'bower', 'html', 'javascript', 'resources']
     });
 
     gulp.watch("bower_components/**/*.*", ['bower']);
-    gulp.watch("src/scss/**/*.scss", ['sass']);
+    gulp.watch("src/sass/**/*.scss", ['sass']);
     gulp.watch("src/**/*.html", ['html']);
     gulp.watch("src/js/**/*.js", ['javascript']);
     gulp.watch("src/res/**/*.*", ['resources']);
@@ -35,7 +35,7 @@ gulp.task('build', ['sass', 'fonts', 'bower', 'html', 'javascript', 'resources']
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
-    return gulp.src(["src/scss/style.scss", "src/scss/materialize/materialize.scss"])
+    return gulp.src(["src/sass/style.scss", "src/sass/materialize/materialize.scss"])
         .pipe(plumber())
         .pipe(sass())
         .pipe(minifyCSS({
@@ -51,7 +51,7 @@ gulp.task('sass', function() {
 });
 
 gulp.task('fonts', function() {
-    return gulp.src(["src/scss/**/*.ttf", 'src/scss/**/*.woff', 'src/scss/**/*.woff2'])
+    return gulp.src(["src/sass/**/*.ttf", 'src/scss/**/*.woff', 'src/scss/**/*.woff2'])
         .pipe(gulp.dest("./portfolio/"))
         .pipe(reload({
             stream: true
@@ -71,7 +71,7 @@ gulp.task('html', function() {
 });
 
 gulp.task('javascript', function() {
-    return gulp.src(["src/js/core.js", "src/js/services/*.js", "src/js/**/*.js"])
+    return gulp.src(["src/js/portfolio.module.js", "src/js/services/*.js", "src/js/**/*.js"])
         .pipe(concat('all.min.js'))
         .pipe(plumber())
         .pipe(babel())

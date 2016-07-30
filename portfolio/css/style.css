@@ -1,0 +1,8 @@
+[bubble-gradient]{-webkit-transition:1s ease all;transition:1s ease all;z-index:0;position:relative;height:100vh;width:100%}
+[bubble-gradient] canvas{border:3px solid #CCC}
+body{-webkit-font-smoothing:antialiased;-moz-font-smoothing:antialiased;font-smoothing:antialiased;text-rendering:optimizeLegibility;font-smooth:always}
+.darkcolor,.headercolor,.lightcolor,.ultradarkcolor,.ultralightcolor{-webkit-transition:color 1s ease;transition:color 1s ease}
+.bgcolor,.bgcolor-transparent,.darkbgcolor,.darkbgcolor-transparent,.ultradarkbgcolor,.ultradarkbgcolor-transparent{-webkit-transition:background-color 1s ease;transition:background-color 1s ease}
+.hoverdarker{-webkit-transition:background-color .3s ease;transition:background-color .3s ease}
+.scrollfade{-webkit-transition:all .4s ease;transition:all .4s ease}
+.scrollfade.hidden{opacity:0;-webkit-transform:translateY(15px) scale(.9,.9);transform:translateY(15px) scale(.9,.9)}
