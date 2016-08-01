@@ -8,7 +8,8 @@ portfolio.directive("animejsBanner", [ '$window',/*"ColorService",*/
 			templateUrl: 'js/directives/animejs-banner/animejs-banner.html',
 			link: function(scope, element, attr, ctrl) {
 
-				var loadingScreen = new Promise((resolve, reject) => {
+				var loadingSquares = element[0].querySelector('#loading-squares');
+				var loadScreen = new Promise((resolve, reject) => {
 					anime({
 						targets: '#Bsvg path',
 						strokeDashoffset: {
@@ -42,9 +43,14 @@ portfolio.directive("animejsBanner", [ '$window',/*"ColorService",*/
 						easing: 'easeOutExpo',
 						loop: false,
 						direction: 'alternate',
+						update: (animation) => {
+							//start animating squares once B is loaded
+							if(animation.reversed==true /*&& animation.progress>75*/)
+								resolve(); 
+						},
 						complete: () => {
 							console.log('finished loadingscreen');
-							resolve();
+							// resolve();
 						}
 					});
 				});
@@ -86,7 +92,7 @@ portfolio.directive("animejsBanner", [ '$window',/*"ColorService",*/
 					resolve();
 				});
 
-				var finishedLoading = [loadingScreen,createSquares];
+				var finishedLoading = [loadScreen,createSquares];
 
 				Promise.all(finishedLoading).then(()=>{ //animate squares loading screen and squares are created
 					console.log('finished building loading everything, so now animate');
@@ -107,6 +113,7 @@ portfolio.directive("animejsBanner", [ '$window',/*"ColorService",*/
 						loop: false,
 						complete: () => {
 							squares.className += 'bg-dark';
+							loadingSquares.innerHTML = ''; //clear the squares so they dont take up memory
 							squares.innerHTML = ''; //clear the squares so they dont take up memory
 						},
 						direction: 'normal',
