@@ -1,13 +1,15 @@
-[animejs-banner] #loading-squares div,[animejs-banner] #loading-squares svg,[animejs-banner] #squares div{margin:auto;position:absolute;top:0;left:0;bottom:0;right:0}
+#landing-card,[animejs-banner] #loading-squares div,[animejs-banner] #loading-squares svg,[animejs-banner] #squares div{margin:auto;position:absolute;top:0;left:0;bottom:0;right:0}
 .bg-dark{background-color:#18212D}
 [bubble-gradient]{-webkit-transition:1s ease all;transition:1s ease all;z-index:0;position:relative;height:100vh;width:100%}
 [bubble-gradient] canvas{border:3px solid #CCC}
+#landing-card{z-index:1;background-color:#fff;line-height:20em;height:20em;max-width:90vw;width:42em;text-align:center}
 [animejs-banner].background{height:100vh;width:100%;overflow:hidden}
 [animejs-banner] section{width:100%;height:100%}
 [animejs-banner] #loading-squares,[animejs-banner] #squares article{position:absolute}
 [animejs-banner] #squares{position:relative;display:none}
 [animejs-banner] #squares div{border-radius:50%}
 body{-webkit-font-smoothing:antialiased;-moz-font-smoothing:antialiased;font-smoothing:antialiased;text-rendering:optimizeLegibility;font-smooth:always}
+.hide-overflow{overflow:hidden}
 .darkcolor,.headercolor,.lightcolor,.ultradarkcolor,.ultralightcolor{-webkit-transition:color 1s ease;transition:color 1s ease}
 .bgcolor,.bgcolor-transparent,.darkbgcolor,.darkbgcolor-transparent,.ultradarkbgcolor,.ultradarkbgcolor-transparent{-webkit-transition:background-color 1s ease;transition:background-color 1s ease}
 .hoverdarker{-webkit-transition:background-color .3s ease;transition:background-color .3s ease}

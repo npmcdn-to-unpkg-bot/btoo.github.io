@@ -1,0 +1,11 @@
+#landing-card {
+	z-index: 1;
+	background-color: white;
+	@include center();
+
+	line-height: 20em;
+    height: 20em;
+    max-width: 90vw;
+    width: 42em;
+    text-align: center;
+}
