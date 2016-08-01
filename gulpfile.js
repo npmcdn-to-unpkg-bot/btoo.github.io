@@ -28,7 +28,7 @@ gulp.task('serve', ['sass', 'fonts', 'bower', 'html', 'javascript', 'resources']
     gulp.watch("src/sass/**/*.scss", ['sass']);
     gulp.watch("src/**/*.html", ['html']);
     gulp.watch("src/js/**/*.js", ['javascript']);
-    gulp.watch("src/res/**/*.*", ['resources']);
+    gulp.watch("src/resources/**/*.*", ['resources']);
 });
 
 gulp.task('build', ['sass', 'fonts', 'bower', 'html', 'javascript', 'resources'], function() {});
@@ -83,8 +83,8 @@ gulp.task('javascript', function() {
 });
 
 gulp.task('resources', function() {
-    return gulp.src("src/res/**/*.*")
-        .pipe(gulp.dest('./portfolio/res'))
+    return gulp.src("src/resources/**/*.*")
+        .pipe(gulp.dest('./portfolio/resources'))
         .pipe(reload({
             stream: true
         }));
