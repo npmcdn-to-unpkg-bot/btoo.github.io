@@ -1,100 +1,101 @@
-portfolio.directive('animejsBanner', [ /*"ColorService",*/
-	function( /*,ColorService*/ ) {
+portfolio.directive('animejsBanner', [ '$q', 'landingService', /*"ColorService",*/
+	function( $q, landingService /*,ColorService*/ ) {
 		return {
 			restrict: 'AE',
 			templateUrl: 'js/directives/animejs-banner/animejs-banner.html',
 			link: function(scope, element, attr, ctrl) {
 
+				/**
+				 * animate the B
+				 */
 				var loadingSquares = element[0].querySelector('#loading-squares');
-				var loadScreen = new Promise((resolve, reject) => {
-					anime({
-						targets: '#Bsvg path',
-						strokeDashoffset: {
-							easing: 'easeInOutExpo',
-							duration: 500,
-							value: function(el) {
-								var pathLength = el.getTotalLength();
-								el.setAttribute('stroke-dasharray', pathLength);
-								return [-pathLength, 0];
-							}
+				anime({
+					targets: '#Bsvg path',
+					strokeDashoffset: {
+						easing: 'easeInOutExpo',
+						duration: 500,
+						value: function(el) {
+							var pathLength = el.getTotalLength();
+							el.setAttribute('stroke-dasharray', pathLength);
+							return [-pathLength, 0];
+						}
+					},
+					stroke: {
+						value: function(el, i) {
+							return 'rgb('+(i*2)+','+(i*8)+','+(i*12)+')';
 						},
-						stroke: {
-							value: function(el, i) {
-								return 'rgb('+(i*2)+','+(i*8)+','+(i*12)+')';
-							},
-							easing: 'linear',
-							duration: 222,
-						},
-						strokeWidth: {
-							value: 8,
-							easing: 'linear',
-							delay: function(el, i) {
-								return 600 + (i * 8);
-							},
-							duration: 222,
-						},
+						easing: 'linear',
+						duration: 222,
+					},
+					strokeWidth: {
+						value: 8,
+						easing: 'linear',
 						delay: function(el, i) {
-							return i * 30;
+							return 600 + (i * 8);
 						},
-						duration: 1200,
-						easing: 'easeOutExpo',
-						loop: false,
-						direction: 'alternate',
-						begin: () => {
-							console.log('beginning');
-							console.log(document.getElementsByTagName('body')[0]);
-							document.getElementsByTagName('body')[0].addClass('hide-overflow');
-						},
-						update: (animation) => {
-							//start animating squares once B is loaded
-							if(animation.reversed==true /*&& animation.progress>75*/)
-								resolve(); 
-						},
-						complete: () => {
-							console.log('finished loadingscreen');
-							loadingSquares.innerHTML = ''; //clear up memory
-						}
-					});
+						duration: 222,
+					},
+					delay: function(el, i) {
+						return i * 30;
+					},
+					duration: 1200,
+					easing: 'easeOutExpo',
+					loop: false,
+					direction: 'alternate',
+					update: (animation) => {
+						//start animating squares once B is loaded
+						if(animation.reversed==true)
+							landingService.animatedB.resolve();
+					},
+					complete: () => {
+						// console.log('finished loadingscreen');
+					}
 				});
 
+				/**
+				 * create the elements for the squares
+				 */
 				var squares = element[0].querySelector('#squares');
+				var x, y, xmax, ymin, xincrement, yincrement;
+				x = y = xmax = ymin = 0;
+				var size = Math.min(Math.ceil(element.height()/3.8), 122);
+				xincrement = yincrement = size; //width and height of each square
+				do {
+					squares.innerHTML +=	`
+												<article style="width:`+xincrement+`px;height:`+yincrement+`px;top:`+y+`px;right:`+x+`px">
+													<div></div>
+												</article>
+											`;
 
-				var createSquares = new Promise((resolve, reject) => {
-					var x, y, xmax, ymin, xincrement, yincrement;
-					x = y = xmax = ymin = 0;
-					var size = Math.min(Math.ceil(element.height()/3.8), 122);
-					xincrement = yincrement = size; //width and height of each square
-
-					do {
-						squares.innerHTML +=	`
-													<article style="width:`+xincrement+`px;height:`+yincrement+`px;top:`+y+`px;right:`+x+`px">
-														<div></div>
-													</article>
-												`;
-
-						if (x < xincrement || y > element.height()-yincrement) {
-							if (xmax < element.width()) {
-								xmax += xincrement;
-							} else {
-								ymin += yincrement;
-							}
-							y = ymin;
-							x = xmax;
+					if (x < xincrement || y > element.height()-yincrement) {
+						if (xmax < element.width()) {
+							xmax += xincrement;
 						} else {
-							x -= xincrement;
-							y += yincrement;
+							ymin += yincrement;
 						}
+						y = ymin;
+						x = xmax;
+					} else {
+						x -= xincrement;
+						y += yincrement;
+					}
 
-					} while (x < element.width() || y < element.height())
-					$('#squares').css('display','block');
-					console.log('finished building squares');
-					resolve();
-				});
+				} while (x < element.width() || y < element.height())
+				$('#squares').css('display','block');
+				// console.log('finished building squares');
+				landingService.createdSquares.resolve();
 
-				var finishedLoading = [loadScreen,createSquares];
-
-				Promise.all(finishedLoading).then(()=>{ //animate squares loading screen and squares are created
-					console.log('finished building loading everything, so now animate');
+				/**
+				 * animate the sqaures once the previous tasks are done
+				 */
+				// var finishedLoading = [
+				// 	// pAnimateB,
+				// 	// pCreateSquares
+				// 	landingService.animateB.promise,
+				// 	landingService.createSquares.promise
+				// ];
+				// $q.all(finishedLoading).then(()=>{ //animate squares loading screen and squares are created
+				landingService.canAnimateSquares.then(()=>{ //animate squares loading screen and squares are created
 					anime({
 						targets: '#squares div',
 						rotate: {
@@ -109,11 +110,6 @@ portfolio.directive('animejsBanner', [ /*"ColorService",*/
 							easing: 'easeInOutExpo'
 						},
 						loop: false,
-						complete: () => {
-							$('body').removeClass('hide-overflow');
-							squares.className += 'bg-dark';
-							squares.innerHTML = '';
-						},
 						direction: 'normal',
 						borderRadius: {
 							value: 0,
@@ -125,6 +121,11 @@ portfolio.directive('animejsBanner', [ /*"ColorService",*/
 							var duration = 888; //duration of squares animation
 							return index * (duration / total);
 						},
+						complete: () => {
+							// $('body').removeClass('hide-overflow');
+							squares.className += 'bg-dark';
+							landingService.animatedSquares.resolve();
+						}
 					});
 				});
 
