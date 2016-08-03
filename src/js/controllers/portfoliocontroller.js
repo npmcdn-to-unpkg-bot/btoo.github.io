@@ -23,6 +23,7 @@ portfolio.controller("PortfolioController", ["$scope", /*"uiGmapGoogleMapApi", "
 		}
 
 		this.initialScroll = function() {
+			$scope.scrollable = 'scrollable';
 			var top = 0;
 			if ($('#intro').offset().top - 120 + $('#intro')[0].offsetHeight - $(window).height() > $('#intro').offset().top) {
 				top = $('#intro').offset().top - 120;
@@ -35,6 +36,9 @@ portfolio.controller("PortfolioController", ["$scope", /*"uiGmapGoogleMapApi", "
 			}, 800);
 		}
 
+
+		$scope.showLandingContent = false;
+		$scope.scrollable = 'unscrollable';
 
 	}
 ]);

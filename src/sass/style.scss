@@ -1,7 +1,7 @@
 @import 'mixins';
 @import 'variables';
 @import 'bubble-gradient';
-@import 'landing-card';
+@import 'landing-content';
 @import 'animejs-banner';
 
 body {
@@ -12,9 +12,9 @@ body {
 	font-smooth: always;
 }
 
-.hide-overflow {
-	overflow: hidden;
-}
+// .hide-overflow {
+// 	overflow: hidden;
+// }
 
 .darkcolor, .lightcolor, .ultralightcolor, .ultradarkcolor, .headercolor {
 	transition: color 1s ease;

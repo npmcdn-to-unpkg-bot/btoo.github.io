@@ -34,9 +34,9 @@
     </script>
 </head>
 
-<body class="hide-overflow" ng-controller="PortfolioController as portfolio">
+<body ng-controller="PortfolioController as portfolio" ng-class="[scrollable]">
 	
-	<landing-card></landing-card>
+	<landing-content ng-show="showLandingContent"></landing-content>
 	<div class="header">
 		<!-- <div bubble-gradient class="background"></div> -->
 		<div animejs-banner class="background"></div>
@@ -61,7 +61,7 @@
 					<i class="logo lightcolor ultradarkbgcolor fa fa-github-alt"></i>
 				</a>
 			</div>
-			<div class="profileimg-container">
+			<div class="initialScrollBtn">
 				<img ng-repeat="i in main.ivesimages" class="profileimg u-photo" ng-src="{{i}}" ng-class="{'shown': main.currentIves === $index}"></img>
 				<i ng-click="portfolio.initialScroll()" class="darkcolor fa fa-chevron-down"></i>
 			</div>

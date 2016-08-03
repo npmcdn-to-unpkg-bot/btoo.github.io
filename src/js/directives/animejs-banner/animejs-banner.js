@@ -107,10 +107,13 @@ portfolio.directive('animejsBanner', [ '$q', 'landingService', /*"ColorService",
 							var duration = 888; //duration of squares animation
 							return index * (duration / total);
 						},
+						update: (animation) => {
+							if(animation.progress > 75)
+								landingService.animatedSquares();
+						},
 						complete: () => {
-							// $('body').removeClass('hide-overflow');
 							squares.className += 'bg-dark';
-							landingService.animatedSquares();
+							element.find('article').hide();
 						}
 					});
 				});
