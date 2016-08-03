@@ -4,11 +4,11 @@ portfolio.directive('landingCard', ['landingService',/*'ColorService', */
 			restrict: 'AE',
 			templateUrl: 'js/directives/landing-card/landing-card.html',
 			link: (scope, element, attr, ctrl) => {
-				// console.log(scope);
 
 				// finished animating squares, so animate landing card
-				landingService.animatedSquares.promise.then(()=>{
-					console.log('finished animating squares');
+				landingService.canAnimateCard().then(()=>{
+					console.log('finished animating squares, so now animate the card');
+					
 				});
 
 

@@ -5,9 +5,7 @@ portfolio.directive('animejsBanner', [ '$q', 'landingService', /*"ColorService",
 			templateUrl: 'js/directives/animejs-banner/animejs-banner.html',
 			link: function(scope, element, attr, ctrl) {
 
-				/**
-				 * animate the B
-				 */
+				// animate the B
 				var loadingSquares = element[0].querySelector('#loading-squares');
 				anime({
 					targets: '#Bsvg path',
@@ -45,16 +43,14 @@ portfolio.directive('animejsBanner', [ '$q', 'landingService', /*"ColorService",
 					update: (animation) => {
 						//start animating squares once B is loaded
 						if(animation.reversed==true)
-							landingService.animatedB.resolve();
+							landingService.animatedB();
 					},
 					complete: () => {
 						// console.log('finished loadingscreen');
 					}
 				});
 
-				/**
-				 * create the elements for the squares
-				 */
+				// create the elements for the squares
 				var squares = element[0].querySelector('#squares');
 				var x, y, xmax, ymin, xincrement, yincrement;
 				x = y = xmax = ymin = 0;
@@ -79,23 +75,13 @@ portfolio.directive('animejsBanner', [ '$q', 'landingService', /*"ColorService",
 						x -= xincrement;
 						y += yincrement;
 					}
-
 				} while (x < element.width() || y < element.height())
 				$('#squares').css('display','block');
 				// console.log('finished building squares');
-				landingService.createdSquares.resolve();
+				landingService.createdSquares();
 
-				/**
-				 * animate the sqaures once the previous tasks are done
-				 */
-				// var finishedLoading = [
-				// 	// pAnimateB,
-				// 	// pCreateSquares
-				// 	landingService.animateB.promise,
-				// 	landingService.createSquares.promise
-				// ];
-				// $q.all(finishedLoading).then(()=>{ //animate squares loading screen and squares are created
-				landingService.canAnimateSquares.then(()=>{ //animate squares loading screen and squares are created
+				// B is animated AND squares are created
+				landingService.canAnimateSquares().then(()=>{
 					anime({
 						targets: '#squares div',
 						rotate: {
@@ -124,7 +110,7 @@ portfolio.directive('animejsBanner', [ '$q', 'landingService', /*"ColorService",
 						complete: () => {
 							// $('body').removeClass('hide-overflow');
 							squares.className += 'bg-dark';
-							landingService.animatedSquares.resolve();
+							landingService.animatedSquares();
 						}
 					});
 				});
