@@ -81,9 +81,12 @@
 
 
 
-		<section id="hammer-section">
-			<div swipable-card class="swipable">
-				dis be a crazy div
+		<section id="hammer-section" hm-dir="hm-dir">
+			<div hm-panmove="onHammer" class="swipable bg-dark">
+				dis be a draggable div
+			</div>
+			<div hm-panmove="onHammer" class="swipable bg-dark">
+				dis be a another draggable div
 			</div>
 		</section>
 		
@@ -113,8 +116,9 @@
 	<script src="lib/moment/min/moment.min.js"></script>
 	<!-- AnimeJS for banner -->
 	<script src="lib/animejs/anime.js"></script>
-	<!-- HammerJS for swipable cards -->
+	<!-- HammerJS and AngularHammer for swipable cards -->
 	<script src="lib/hammerjs/hammer.js"></script>
+	<script src="lib/AngularHammer/angular.hammer.min.js"></script>
 	<!-- Google Maps -->
 	<script src='lib/lodash/dist/lodash.min.js'></script>
 	<script src='lib/angular-google-maps/dist/angular-google-maps.min.js'></script>

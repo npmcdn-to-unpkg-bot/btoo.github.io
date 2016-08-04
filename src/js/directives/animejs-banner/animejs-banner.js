@@ -3,6 +3,7 @@ portfolio.directive('animejsBanner', [ '$q', 'landingService', /*"ColorService",
 		return {
 			restrict: 'AE',
 			templateUrl: 'js/directives/animejs-banner/animejs-banner.html',
+			controller: 'PortfolioController',
 			link: function(scope, element, attr, ctrl) {
 
 				// animate the B

@@ -1,1 +1,1 @@
-var portfolio = angular.module('portfolio', ['ngAnimate', 'ngSanitize' /*'ngAnimate', 'uiGmapgoogle-maps', 'ngSanitize', 'embedCodepen'*/]);
+var portfolio = angular.module('portfolio', ['ngAnimate','ngSanitize','hmTouchEvents' /*'ngAnimate', 'uiGmapgoogle-maps', 'ngSanitize', 'embedCodepen'*/]);
