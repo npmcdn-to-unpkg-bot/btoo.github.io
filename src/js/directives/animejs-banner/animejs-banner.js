@@ -101,6 +101,7 @@ portfolio.directive('animejsBanner', [ '$q', 'landingService', /*"ColorService",
 							value: 0,
 							duration: 1222,
 							easing: 'easeInOutCirc'
+							// easing: 'linear'
 						},
 						backgroundColor: '#18212D',
 						delay: (el, index, total) => {

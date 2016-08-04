@@ -1,7 +1,8 @@
+#hammer-section,#landing-card{text-align:center}
 .bg-dark{background-color:#18212D}
 [bubble-gradient]{-webkit-transition:1s ease all;transition:1s ease all;z-index:0;position:relative;height:100vh;width:100%}
 [bubble-gradient] canvas{border:3px solid #CCC}
-#landing-card{z-index:1;background-color:#fff;margin:auto;position:absolute;top:0;left:0;bottom:0;right:0;line-height:20em;height:20em;max-width:90vw;width:42em;text-align:center}
+#landing-card{z-index:1;background-color:#fff;margin:auto;position:absolute;top:0;left:0;bottom:0;right:0;line-height:20em;height:20em;max-width:90vw;width:42em}
 .initialScrollBtn{position:fixed;color:#fff;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);bottom:20px}
 [animejs-banner] #loading-squares div,[animejs-banner] #loading-squares svg,[animejs-banner] #squares div{margin:auto;position:absolute;top:0;left:0;bottom:0;right:0}
 .unscrollable{overflow:hidden}
@@ -17,3 +18,4 @@ body{-webkit-font-smoothing:antialiased;-moz-font-smoothing:antialiased;font-smo
 .hoverdarker{-webkit-transition:background-color .3s ease;transition:background-color .3s ease}
 .scrollfade{-webkit-transition:all .4s ease;transition:all .4s ease}
 .scrollfade.hidden{opacity:0;-webkit-transform:translateY(15px) scale(.9,.9);transform:translateY(15px) scale(.9,.9)}
+#hammer-section .swipable{display:inline-block}
