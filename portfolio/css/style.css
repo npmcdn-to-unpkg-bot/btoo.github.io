@@ -17,5 +17,5 @@ body{-webkit-font-smoothing:antialiased;-moz-font-smoothing:antialiased;font-smo
 .hoverdarker{-webkit-transition:background-color .3s ease;transition:background-color .3s ease}
 .scrollfade{-webkit-transition:all .4s ease;transition:all .4s ease}
 .scrollfade.hidden{opacity:0;-webkit-transform:translateY(15px) scale(.9,.9);transform:translateY(15px) scale(.9,.9)}
-#hammer-section{height:100vh}
-#hammer-section .swipable{display:inline-block;color:#fff;position:relative}
+#hammer-section{position:relative;height:100vh}
+#hammer-section .swipable{display:inline-block;color:#fff;position:relative;top:80px;left:80px}

@@ -47,12 +47,15 @@ body {
 
 #hammer-section {
 	// text-align: center;
-
+	position: relative;
 	height: 100vh;
 	.swipable {
 		// margin: 10px; 
 		display: inline-block;
 		color: white;
 		position: relative;
+		top: 80px;
+		left: 80px;
+		// padding: 88px;
 	}
 }
