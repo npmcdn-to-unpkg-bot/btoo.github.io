@@ -3,6 +3,7 @@
 @import 'bubble-gradient';
 @import 'landing-content';
 @import 'animejs-banner';
+@import 'cards';
 
 body {
 	-webkit-font-smoothing: antialiased;
@@ -33,29 +34,5 @@ body {
 	&.hidden {
 		opacity: 0;
 		transform: translateY(15px) scale(0.9, 0.9);
-	}
-}
-
-// .background {
-// 	transition: 1s ease all;
-// 	z-index: 0;
-// 	position: fixed;
-// 	height: 100%;
-// 	width: 100%;
-// }
-
-
-#hammer-section {
-	// text-align: center;
-	position: relative;
-	height: 100vh;
-	.swipable {
-		// margin: 10px; 
-		display: inline-block;
-		color: white;
-		position: relative;
-		top: 80px;
-		left: 80px;
-		// padding: 88px;
 	}
 }

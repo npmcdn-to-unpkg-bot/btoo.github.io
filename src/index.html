@@ -80,14 +80,17 @@
 
 
 
-
-		<section id="hammer-section" hm-dir="hm-dir">
-			<div style="top:80px;left:80px" hm-panmove="onHammer" hm-panend="endHammer" class="swipable bg-dark">
-				dis be a draggable div
-			</div>
-			<!-- <div hm-panmove="onHammer" class="swipable bg-dark">
-				dis be a another draggable div
-			</div> -->
+		<section id="cards">
+			<article project="spark" class="card-section" hm-dir="hm-dir">
+				<div style="top:50%;left:50%" hm-panmove="spark.onPan" hm-panend="spark.endPan" hm-swiperight="spark.swipeRight" class="card bg-dark" ng-class="spark.dragging ? 'dragging' : ''">
+					spark description
+				</div>
+			</article>
+			<article project="neroli" class="card-section" hm-dir="hm-dir">
+				<div style="top:50%;left:50%" hm-panmove="neroli.onPan" hm-panend="neroli.endPan" hm-swiperight="neroli.swipeRight" class="card bg-dark" ng-class="neroli.dragging ? 'dragging' : ''">
+					neroli description
+				</div>
+			</article>
 		</section>
 		
 	</div>

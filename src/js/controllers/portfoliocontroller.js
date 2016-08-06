@@ -38,7 +38,9 @@ portfolio.controller("PortfolioController", ["$scope", /*"uiGmapGoogleMapApi", "
 
 
 		$scope.showLandingContent = false;
-		$scope.scrollable = 'unscrollable';
+		// $scope.scrollable = 'unscrollable';
+		$scope.scrollable = 'auto';
+
 
 	}
 ]);
