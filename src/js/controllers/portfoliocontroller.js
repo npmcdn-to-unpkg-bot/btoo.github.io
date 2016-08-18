@@ -1,5 +1,17 @@
-portfolio.controller("PortfolioController", ["$scope", /*"uiGmapGoogleMapApi", "ColorService", 'ScrollService',*/
-	function($scope/*, uiGmapGoogleMapApi, ColorService, ScrollService*/) {
+portfolio.controller("PortfolioController", ["$scope", '$http', 'projectsService',  /*"uiGmapGoogleMapApi", "ColorService", 'ScrollService',*/
+	function($scope, $http, projectsService/*, uiGmapGoogleMapApi, ColorService, ScrollService*/) {
+
+		$scope.projects = {};
+		// ProjectsService.loadProjectsInto($scope.projects);
+		$http.get('resources/json/projects.json')
+			.then(response => {
+				// console.log(response.data);
+				$scope.projects = response.data;
+				// console.log($scope);
+				projectsService.loadedProjects();
+			});
+
+
 		var birthdate = moment("1993-08-24 00:00").startOf('minute');
 		this.ageyears = moment().diff(birthdate, 'years');
         this.agemonths = moment().subtract(this.ageyears, 'years').diff(birthdate, 'months');

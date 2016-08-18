@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="portfolio">
+<html lang="en">
 
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Brian Tu</title>
-	<!-- Materialize -->
-	<link href="css/materialize.css" rel="stylesheet">
 	<link href="lib/fontawesome/css/font-awesome.min.css" rel="stylesheet"></link>
+	<link rel="stylesheet" href="lib/mobile-angular-ui/dist/css/mobile-angular-ui-hover.min.css" />
+	<link rel="stylesheet" href="lib/mobile-angular-ui/dist/css/mobile-angular-ui-base.min.css" />
+	<link rel="stylesheet" href="lib/mobile-angular-ui/dist/css/mobile-angular-ui-desktop.min.css" />
 	<link href='css/style.css' rel="stylesheet"></link>
+
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -34,9 +36,11 @@
     </script>
 </head>
 
-<body ng-controller="PortfolioController as portfolio" ng-class="[scrollable]">
-	
-	<landing-content ng-show="showLandingContent"></landing-content>
+<body ng-app="portfolio" ng-controller="PortfolioController as portfolio" ng-class="[scrollable]">
+
+	<landing-content ng-show="showLandingContent">
+		
+	</landing-content>
 	<div class="header">
 		<!-- <div bubble-gradient class="background"></div> -->
 		<div animejs-banner class="background"></div>
@@ -80,27 +84,23 @@
 
 
 
-		<section id="cards">
-			<article project="spark" class="card-section" hm-dir="hm-dir">
-				<div style="top:50%;left:50%" hm-panmove="spark.onPan" hm-panend="spark.endPan" hm-swiperight="spark.swipeRight" class="card bg-dark" ng-class="spark.dragging ? 'dragging' : ''">
-					spark description
+		
+		<div ui-content-for="title">
+			<span>Carousel with $drag</span>
+		</div>
+		<div class="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item" style='background-image: url(/lib/mobile-angular-ui/demo/img/1.jpg);'>
 				</div>
-			</article>
-			<article project="neroli" class="card-section" hm-dir="hm-dir">
-				<div style="top:50%;left:50%" hm-panmove="neroli.onPan" hm-panend="neroli.endPan" hm-swiperight="neroli.swipeRight" class="card bg-dark" ng-class="neroli.dragging ? 'dragging' : ''">
-					neroli description
+				<div class="carousel-item" style='background-image: url(/lib/mobile-angular-ui/demo/img/2.jpg);'>
 				</div>
-			</article>
-		</section>
+				<div class="carousel-item" style='background-image: url(/lib/mobile-angular-ui/demo/img/3.jpg);'>
+				</div>
+			</div>
+		</div>
+
 		
 	</div>
-
-
-	
-
-
-
-
 
 
 
@@ -119,12 +119,9 @@
 	<script src="lib/moment/min/moment.min.js"></script>
 	<!-- AnimeJS for banner -->
 	<script src="lib/animejs/anime.js"></script>
-	<!-- HammerJS and AngularHammer for swipable cards -->
-	<script src="lib/hammerjs/hammer.js"></script>
-	<script src="lib/AngularHammer/angular.hammer.min.js"></script>
-	<!-- Google Maps -->
-	<script src='lib/lodash/dist/lodash.min.js'></script>
-	<script src='lib/angular-google-maps/dist/angular-google-maps.min.js'></script>
+	<!-- Mobile Angular UI for swipable cards -->
+	<script src="lib/mobile-angular-ui/dist/js/mobile-angular-ui.js"></script>
+	<script src="lib/mobile-angular-ui/dist/js/mobile-angular-ui.gestures.js"></script>
 	<!-- Sanitizer -->
 	<script src="lib/angular-sanitize/angular-sanitize.min.js"></script>
 	<!-- Own scripts -->
