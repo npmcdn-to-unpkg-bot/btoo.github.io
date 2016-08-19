@@ -1,5 +1,7 @@
-portfolio.controller("PortfolioController", ["$scope", '$http', 'projectsService',  /*"uiGmapGoogleMapApi", "ColorService", 'ScrollService',*/
-	function($scope, $http, projectsService/*, uiGmapGoogleMapApi, ColorService, ScrollService*/) {
+portfolio.controller("PortfolioController", ["$scope", '$http', '$window', 'projectsService',  /*"uiGmapGoogleMapApi", "ColorService", 'ScrollService',*/
+	function($scope, $http, $window, projectsService/*, uiGmapGoogleMapApi, ColorService, ScrollService*/) {
+		var self = this;
+
 
 		$scope.projects = {};
 		// ProjectsService.loadProjectsInto($scope.projects);
@@ -53,8 +55,27 @@ portfolio.controller("PortfolioController", ["$scope", '$http', 'projectsService
 		$scope.scrollable = 'scrollable';
 		this.scrollableToggle = (state) => {
 			$scope.scrollable = state ? 'scrollable' : 'unscrollable';
-			console.log($scope.scrollable);
+			// console.log($scope.scrollable);
 		}
+
+
+
+		angular.element($window).bind( //when user reaches bottom of page
+			"scroll",
+	 		function() {
+				var windowHeight = "innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight;
+				var body = document.body, html = document.documentElement;
+				var docHeight = Math.max(body.scrollHeight,
+						body.offsetHeight, html.clientHeight,
+						html.scrollHeight, html.offsetHeight);
+				var windowBottom = windowHeight + window.pageYOffset;
+				if (windowBottom >= docHeight) {
+					// alert('bottom reached');
+					// console.log('bottom reached');
+					self.scrollableToggle(false);
+				}
+			}
+		);
 
 
 	}
