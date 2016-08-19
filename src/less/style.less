@@ -12,12 +12,20 @@ body {
 	font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
 	font-smooth: always;
-	overflow: auto;
+	// overflow: auto;
 	overflow-x: hidden;
+	margin: 0;
 }
 .row {
 	margin-left: 0;
 	margin-right: 0;
+}
+
+.scrollable {
+	overflow: auto !important;
+}
+.unscrollable {
+	overflow: hidden !important;
 }
 
 // .hide-overflow {

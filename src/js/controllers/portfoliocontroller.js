@@ -50,8 +50,11 @@ portfolio.controller("PortfolioController", ["$scope", '$http', 'projectsService
 
 
 		$scope.showLandingContent = false;
-		// $scope.scrollable = 'unscrollable';
-		$scope.scrollable = 'auto';
+		$scope.scrollable = 'scrollable';
+		this.scrollableToggle = (state) => {
+			$scope.scrollable = state ? 'scrollable' : 'unscrollable';
+			console.log($scope.scrollable);
+		}
 
 
 	}

@@ -2,10 +2,12 @@ portfolio.directive('carouselItem', ['$drag', 'carouselService',
 	function($drag, carouselService) {
 		return {
 			restrict: 'C',
-			scope: {},
 			transclude: true,
 			template: '<div class="item"><div ng-transclude></div></div>',
-			link: function(scope, elem, attrs) {
+			controller: 'PortfolioController',
+			// require: '^PortfolioController',
+			link: function(scope, elem, attrs, PortfolioController) {
+				// console.log(scope);
 				var id = carouselService.addItem();
 				var zIndex = function() {
 					var res = 0;
@@ -36,6 +38,9 @@ portfolio.directive('carouselItem', ['$drag', 'carouselService',
 						t.rotateZ = angle + (Math.round(t0.rotateZ));
 						return t;
 					},
+					start: (drag, event) => {
+						PortfolioController.scrollableToggle(false);
+					},
 					move: function(drag) {
 						if (Math.abs(drag.distanceX) >= drag.rect.width / 4) {
 							elem.addClass('dismiss');
@@ -47,6 +52,7 @@ portfolio.directive('carouselItem', ['$drag', 'carouselService',
 						elem.removeClass('dismiss');
 					},
 					end: function(drag) {
+						PortfolioController.scrollableToggle(true);
 						elem.removeClass('dismiss');
 						if (Math.abs(drag.distanceX) >= drag.rect.width / 4) {
 							scope.$apply(function() {

@@ -1,5 +1,4 @@
 .carousel,.carousel-inner{overflow:visible}
-.carousel{height:100vh}
 #lightbulb{display:block;font-size:100px;text-align:center}
 h1{margin:10px 0;padding:0}
 .chat-user-avatar{background:#31708f;font-size:40px;padding:5px 10px}
@@ -13,10 +12,10 @@ h1{margin:10px 0;padding:0}
 .carousel-item{-moz-transition:-moz-transform .5s;-moz-transition:opacity .3s;-moz-user-select:none;-ms-user-select:none;-webkit-transition:-webkit-transform .5s;-webkit-transition:opacity .3s;-webkit-user-select:none;background:#f4f4f4;box-shadow:0 0 3px rgba(0,0,0,.5);color:#444;display:block;height:100%;left:0;position:absolute;top:0;-webkit-transition:opacity .3s;transition:opacity .3s;-webkit-transition:-webkit-transform .5s;transition:transform .5s;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:100%}
 .dismiss,[drag-to-dismiss]{-webkit-transition:opacity .3s,-webkit-transform .3s}
 .carousel-inner{position:relative}
+#cards,.notices-container,body{overflow-x:hidden}
 #landing-card,.carousel>.item,.center{position:absolute;left:0;top:0}
 .carousel>.item{background-size:cover;display:block;height:100%;width:100%}
 [drag-to-dismiss]{-moz-user-select:none;-ms-user-select:none;-webkit-user-drag:none;-webkit-user-select:none;-webkit-transform:translate(0,0);transform:translate(0,0);-webkit-transition:opacity .3s,-webkit-transform .3s;transition:opacity .3s,transform .3s;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
-.notices-container{overflow-x:hidden}
 .dismiss{opacity:.5;-webkit-transition:opacity .3s,-webkit-transform .3s;transition:opacity .3s,transform .3s}
 .dismitted{-webkit-transition:opacity .3s,-webkit-transform .3s;opacity:0;-webkit-transition:opacity .3s,-webkit-transform .3s;transition:opacity .3s,transform .3s}
 pre{text-align:left!important}
@@ -26,24 +25,26 @@ input.scrollable-header{border-bottom:3px solid #31708f}
 .bg-dark{background-color:#18212D}
 [bubble-gradient]{-webkit-transition:1s ease all;transition:1s ease all;z-index:0;position:relative;height:100vh;width:100%}
 [bubble-gradient] canvas{border:3px solid #CCC}
-#landing-card{z-index:1;background-color:#fff;margin:auto;bottom:0;right:0;line-height:20em;height:20em;max-width:90vw;width:42em;text-align:center}
+#landing-card{z-index:1;background-color:#fff;margin:auto;bottom:0;right:0;line-height:20em;height:20em;max-height:90vh;max-width:90vw;width:42em;text-align:center}
 .initialScrollBtn{position:fixed;color:#fff;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);bottom:20px}
-.unscrollable{overflow:hidden}
-.scrollable{overflow:auto}
 [animejs-banner].background{height:100vh;width:100%;overflow:hidden}
 [animejs-banner] section{width:100%;height:100%}
 [animejs-banner] #loading-squares,[animejs-banner] #squares article{position:absolute}
 [animejs-banner] #loading-squares div,[animejs-banner] #loading-squares svg{margin:auto;position:absolute;top:0;left:0;bottom:0;right:0}
 [animejs-banner] #squares{position:relative;display:none}
 [animejs-banner] #squares div{border-radius:50%;margin:auto;position:absolute;top:0;left:0;bottom:0;right:0}
-#cards{height:100vh;overflow-x:hidden}
+#cards{height:100vh}
 .card-section{position:absolute;height:100vh;background-color:#d3d3d3;width:100%}
 .card-section .card{display:inline-block;color:#fff;position:relative;z-index:2;padding:88px;height:auto;width:88%;max-width:500px}
-.drag-area,.viewport{height:100vh;width:100%}
 .card-section .card.dragging{-webkit-transform:translate(0,0);transform:translate(0,0)}
 .card-section .card .card-content{position:relative;z-index:1}
-body{-webkit-font-smoothing:antialiased;-moz-font-smoothing:antialiased;font-smoothing:antialiased;text-rendering:optimizeLegibility;font-smooth:always;overflow:auto;overflow-x:hidden}
+.carousel{height:calc(100vh - 40px)}
+.carousel-inner{height:100%}
+.drag-area,.viewport{height:100vh;width:100%}
+body{-webkit-font-smoothing:antialiased;-moz-font-smoothing:antialiased;font-smoothing:antialiased;text-rendering:optimizeLegibility;font-smooth:always;margin:0}
 .row{margin-left:0;margin-right:0}
+.scrollable{overflow:auto!important}
+.unscrollable{overflow:hidden!important}
 .darkcolor,.headercolor,.lightcolor,.ultradarkcolor,.ultralightcolor{-webkit-transition:color 1s ease;transition:color 1s ease}
 .bgcolor,.bgcolor-transparent,.darkbgcolor,.darkbgcolor-transparent,.ultradarkbgcolor,.ultradarkbgcolor-transparent{-webkit-transition:background-color 1s ease;transition:background-color 1s ease}
 .hoverdarker{-webkit-transition:background-color .3s ease;transition:background-color .3s ease}
