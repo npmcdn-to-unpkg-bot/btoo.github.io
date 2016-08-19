@@ -36,9 +36,10 @@ input.scrollable-header{border-bottom:3px solid #31708f}
 #cards{height:100vh}
 .card-section{position:absolute;height:100vh;background-color:#d3d3d3;width:100%}
 .card-section .card{display:inline-block;color:#fff;position:relative;z-index:2;padding:88px;height:auto;width:88%;max-width:500px}
+#intro,.circles.h-card{display:none}
 .card-section .card.dragging{-webkit-transform:translate(0,0);transform:translate(0,0)}
 .card-section .card .card-content{position:relative;z-index:1}
-.carousel{height:calc(100vh - 40px)}
+.carousel{height:calc(100vh - 40px);width:calc(100% - 40px)}
 .carousel-inner{height:100%}
 .drag-area,.viewport{height:100vh;width:100%}
 body{-webkit-font-smoothing:antialiased;-moz-font-smoothing:antialiased;font-smoothing:antialiased;text-rendering:optimizeLegibility;font-smooth:always;margin:0}
@@ -52,3 +53,10 @@ body{-webkit-font-smoothing:antialiased;-moz-font-smoothing:antialiased;font-smo
 .scrollfade.hidden{opacity:0;-webkit-transform:translateY(15px) scale(.9,.9);transform:translateY(15px) scale(.9,.9)}
 .drag-area{border:1px solid #444;position:relative}
 .drag-me{-webkit-transition:-webkit-transform .5s;background-color:#d9edf7;border-radius:200px;border:1px solid #31708f;box-shadow:1px 1px 1px #ccc;color:#31708f;font-size:30px;height:100px;left:50%;line-height:95px;margin:-50px auto auto -50px;position:absolute;text-align:center;text-shadow:1px 1px #fff;top:50%;-webkit-transition:-webkit-transform .5s;transition:transform .5s;width:100px}
+.header,.second{background:#fff}
+.main{position:fixed;top:0;left:0;width:100%}
+.header,landing-content{position:absolute;width:100%;height:100vh}
+.decoy{width:100%;height:100vh}
+.header{z-index:20}
+landing-content{z-index:30}
+.second{width:100%;height:100vh;position:relative;z-index:10}

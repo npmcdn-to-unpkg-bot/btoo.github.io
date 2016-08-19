@@ -39,9 +39,11 @@ portfolio.directive('carouselItem', ['$drag', 'carouselService',
 						return t;
 					},
 					start: (drag, event) => {
+						event.stopPropagation();
 						PortfolioController.scrollableToggle(false);
 					},
-					move: function(drag) {
+					move: function(drag, event) {
+						event.stopPropagation();
 						if (Math.abs(drag.distanceX) >= drag.rect.width / 4) {
 							elem.addClass('dismiss');
 						} else {

@@ -72,7 +72,7 @@ portfolio.controller("PortfolioController", ["$scope", '$http', '$window', 'proj
 				if (windowBottom >= docHeight) {
 					// alert('bottom reached');
 					// console.log('bottom reached');
-					self.scrollableToggle(false);
+					// self.scrollableToggle(false);
 				}
 			}
 		);
