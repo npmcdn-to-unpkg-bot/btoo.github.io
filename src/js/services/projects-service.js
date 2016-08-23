@@ -10,6 +10,7 @@ portfolio.factory('projectsService', ['$q', '$http',
 		var cardCount = 0;
 		var activeCard = null;
 
+
 		return {
 			'loadedProjects': () => {
 				loadedProjects.resolve();
@@ -20,16 +21,16 @@ portfolio.factory('projectsService', ['$q', '$http',
 
 			cardCount: () => { return cardCount; },
 			activeCard: () => { return activeCard; },
-			addCard: function() {
+			addCard: () => {
 				var newId = cardCount++;
 				activeCard = cardCount === 1 ? newId : activeCard;
 				return newId;
 			},
-			next: function() {
+			next: () => {
 				activeCard = activeCard || 0;
 				activeCard = activeCard === cardCount - 1 ? 0 : activeCard + 1;
 			},
-			prev: function() {
+			prev: () => {
 				activeCard = activeCard || 0;
 				activeCard = activeCard === 0 ? cardCount - 1 : activeCard - 1;
 			}

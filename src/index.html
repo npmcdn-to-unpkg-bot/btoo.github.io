@@ -101,21 +101,13 @@
 		<!-- <div ui-content-for="title">
 			<span>Carousel with $drag</span>
 		</div> -->
-		<!-- <section id="project-cards"> -->
-			<div class="cards">
-				<div class="cards-inner">
-					<div class="card" ng-repeat="project in projects" style="background-image: url({{project.front.image}});"">
-						
-					</div>
-					<!-- <div class="card" style='background-image: url(resources/img/spark-logo.png);'>
-					</div>
-					<div class="card" style='background-image: url(resources/img/spark-logo.png);'>
-					</div>
-					<div class="card" style='background-image: url(resources/img/spark-logo.png);'>
-					</div> -->
+		<div class="cards">
+			<div class="cards-inner">
+				<div ng-repeat="project in projects" class="card" id="{{project.shortcode}}" style="background-image: url({{project.front.image}});"">
+					{{project.name}}
 				</div>
 			</div>
-		<!-- </section> -->
+		</div>
 
 		
 	</div>

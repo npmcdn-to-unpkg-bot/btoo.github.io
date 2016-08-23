@@ -16,7 +16,6 @@ portfolio.controller('PortfolioController', [
 			.then(response => {
 				// console.log(response.data);
 				$scope.projects = response.data;
-				console.log($scope.projects);
 				projectsService.loadedProjects();
 			});
 
