@@ -1,5 +1,12 @@
-portfolio.controller("PortfolioController", ["$scope", '$http', '$window', 'projectsService',  /*"uiGmapGoogleMapApi", "ColorService", 'ScrollService',*/
-	function($scope, $http, $window, projectsService/*, uiGmapGoogleMapApi, ColorService, ScrollService*/) {
+portfolio.controller('PortfolioController', [
+	'$scope',
+	'$http',
+	'$window',
+	'projectsService',
+	'$location',
+	'$anchorScroll',
+	'$document', /*"uiGmapGoogleMapApi", "ColorService", 'ScrollService',*/
+	function($scope, $http, $window, projectsService, $location, $anchorScroll, $document /*, uiGmapGoogleMapApi, ColorService, ScrollService*/) {
 		var self = this;
 
 
@@ -9,7 +16,7 @@ portfolio.controller("PortfolioController", ["$scope", '$http', '$window', 'proj
 			.then(response => {
 				// console.log(response.data);
 				$scope.projects = response.data;
-				// console.log($scope);
+				console.log($scope.projects);
 				projectsService.loadedProjects();
 			});
 
@@ -37,6 +44,7 @@ portfolio.controller("PortfolioController", ["$scope", '$http', '$window', 'proj
 		}
 
 		this.initialScroll = function() {
+			console.log('scrolling');
 			$scope.scrollable = 'scrollable';
 			var top = 0;
 			if ($('#intro').offset().top - 120 + $('#intro')[0].offsetHeight - $(window).height() > $('#intro').offset().top) {
@@ -48,6 +56,12 @@ portfolio.controller("PortfolioController", ["$scope", '$http', '$window', 'proj
 			$("html, body").stop().animate({
 				scrollTop: top
 			}, 800);
+		}
+
+		$scope.goToSecond = () => {
+			// $location.hash('second');
+			// $anchorScroll();
+			$document.scrollToElementAnimated(angular.element(document.getElementById('second')));
 		}
 
 
@@ -71,11 +85,15 @@ portfolio.controller("PortfolioController", ["$scope", '$http', '$window', 'proj
 				var windowBottom = windowHeight + window.pageYOffset;
 				if (windowBottom >= docHeight) {
 					// alert('bottom reached');
-					// console.log('bottom reached');
+					console.log('bottom reached');
 					// self.scrollableToggle(false);
 				}
 			}
 		);
+
+
+
+
 
 
 	}

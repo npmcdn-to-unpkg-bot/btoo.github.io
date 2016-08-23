@@ -1,10 +1,10 @@
-@import "demo.less";
+@import 'projects-cards';
 @import 'mixins';
 @import 'variables';
 @import 'bubble-gradient';
 @import 'landing-content';
 @import 'animejs-banner';
-@import 'cards';
+
 
 body {
 	-webkit-font-smoothing: antialiased;
@@ -136,4 +136,15 @@ landing-content {
 	position: relative;
 	z-index: 10;
 	background: white;
+}
+
+#initial-scroll {
+	display: block;
+	text-align: center;
+	margin-top: 95vh;
+
+	.fa-chevron-down {
+		color: white;
+		cursor: pointer;
+	}
 }

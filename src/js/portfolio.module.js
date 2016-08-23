@@ -4,5 +4,11 @@ var portfolio = angular.module('portfolio', [
 	'mobile-angular-ui',
 	'mobile-angular-ui.gestures.drag',
 	'ngAnimate',
-	'ngSanitize'
-]);
+	'ngSanitize',
+	'duScroll'
+])
+	// these values are configuration settings for angular-scroll
+	// .value('duScrollEasing', x => {
+	// 	return 1-x;
+	// })
+	.value('duScrollOffset', 88);

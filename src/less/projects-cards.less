@@ -1,4 +1,4 @@
-.carousel {
+.cards {
 	height: 100vh;
 }
 
@@ -67,7 +67,7 @@ h1 {
 	top: 50%;
 	width: @width0;
 }
-.carousel-item {
+.card {
 	-khtml-user-select: none;
 	-moz-transition: -moz-transform 500ms;
 	-moz-transition: opacity 0.3s;
@@ -93,15 +93,15 @@ h1 {
 	user-select: none;
 	width: @width0;
 }
-.carousel {
+.cards {
 	overflow: visible;
 	padding: 20px;
 }
-.carousel-inner {
+.cards-inner {
 	overflow: visible;
 	position: relative;
 }
-.carousel>.item {
+.cards > .card {
 	background-size: cover;
 	display: block;
 	height: @height0;
@@ -152,3 +152,54 @@ input.scrollable-header {
 	height: @height0;
 	width: @width0;
 }
+
+// #cards {
+// 	height: 100vh;
+// 	overflow-x: hidden;
+// }
+
+// .card-section {
+// 	// text-align: center;
+// 	position: absolute;
+// 	height: 100vh;
+// 	background-color: lightgray;
+// 	width: 100%;
+// 	.card {
+// 		// margin: 10px; 
+// 		display: inline-block;
+// 		color: white;
+// 		position: relative;
+// 		z-index: 2;
+// 		padding: 88px;
+// 		height: auto;
+// 		width: 88%;
+// 		max-width: 500px;
+// 		// max-height: 300px;
+
+// 		// -ms-transform: translate(-50%,-50%); /* IE 9 */
+// 		// -webkit-transform: translate(-50%,-50%); /* Safari */
+// 		// transform: translate(-50%,-50%);
+
+// 		&.dragging {
+// 			-ms-transform: translate(0%,0%); /* IE 9 */
+// 			-webkit-transform: translate(0%,0%); /* Safari */
+// 			transform: translate(0%,0%);
+// 		}
+
+
+
+// 		.card-content {
+// 			position: relative;
+// 			z-index: 1;
+// 		}
+// 	}
+// }
+
+.cards {
+	height: calc(~"100vh - 40px");
+	width: calc(~"100% - 40px");
+}
+.cards-inner {
+	height: 100%;
+}
+

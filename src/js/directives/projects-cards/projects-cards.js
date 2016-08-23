@@ -1,28 +1,28 @@
-portfolio.directive('carouselItem', ['$drag', 'carouselService',
-	function($drag, carouselService) {
+portfolio.directive('card', ['$drag', 'projectsService',
+	function($drag, projectsService) {
 		return {
 			restrict: 'C',
 			transclude: true,
-			template: '<div class="item"><div ng-transclude></div></div>',
+			template: '<div class="project"><div ng-transclude></div></div>',
 			controller: 'PortfolioController',
 			// require: '^PortfolioController',
 			link: function(scope, elem, attrs, PortfolioController) {
 				// console.log(scope);
-				var id = carouselService.addItem();
+				var id = projectsService.addCard();
 				var zIndex = function() {
 					var res = 0;
-					if (id === carouselService.activeItem()) {
+					if (id === projectsService.activeCard()) {
 						res = 2000;
-					} else if (carouselService.activeItem < id) {
-						res = 2000 - (id - carouselService.activeItem());
+					} else if (projectsService.activeCard < id) {
+						res = 2000 - (id - projectsService.activeCard());
 					} else {
-						res = 2000 - (carouselService.itemCount() - 1 - carouselService.activeItem() + id);
+						res = 2000 - (projectsService.cardCount() - 1 - projectsService.activeCard() + id);
 					}
 					return res;
 				};
 
 				scope.$watch(function() {
-					return carouselService.activeItem();
+					return projectsService.activeCard();
 				}, function() {
 					elem[0].style.zIndex = zIndex();
 				});
@@ -58,7 +58,7 @@ portfolio.directive('carouselItem', ['$drag', 'carouselService',
 						elem.removeClass('dismiss');
 						if (Math.abs(drag.distanceX) >= drag.rect.width / 4) {
 							scope.$apply(function() {
-								carouselService.next();
+								projectsService.next();
 							});
 						}
 						drag.reset();

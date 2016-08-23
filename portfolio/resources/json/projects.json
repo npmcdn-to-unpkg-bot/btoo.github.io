@@ -30,7 +30,7 @@
 	}, {
 		"name": "Neroli",
 		"front": {
-			"image": "resources/img/spark-logo.png",
+			"image": "resources/img/Neroli_BottomLogo.png",
 			"backgroundimage": true,
 			"title": "This"
 		},
@@ -52,7 +52,7 @@
 		"tasks": "Frontend",
 		"link": {
 			"title": "Source",
-			"url": "http://www.sparkcollaboration.com/"
+			"url": "http://www.neroliapp.com/"
 		},
 		"color": "rgb(65, 170, 92)"
 	}

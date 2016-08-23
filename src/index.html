@@ -67,7 +67,7 @@
 			</div>
 			<div class="initialScrollBtn">
 				<img ng-repeat="i in main.ivesimages" class="profileimg u-photo" ng-src="{{i}}" ng-class="{'shown': main.currentIves === $index}"></img>
-				<i ng-click="portfolio.initialScroll()" class="darkcolor fa fa-chevron-down"></i>
+				<!-- <i ng-click="portfolio.initialScroll()" class="darkcolor fa fa-chevron-down"></i> -->
 			</div>
 		</div>
 	</div>
@@ -76,14 +76,14 @@
 		
 	</section>
 
-	<div class="second">
+	<div id="second" class="second">
 		second body
 	</div>
 
 
-	<section class="decoy">
+	<!-- <section class="decoy">
 		
-	</section>
+	</section> -->
 
 	<div class="main">
 		<div id="intro" class="row firstrow contentrow bgcolor-transparent">
@@ -102,14 +102,17 @@
 			<span>Carousel with $drag</span>
 		</div> -->
 		<!-- <section id="project-cards"> -->
-			<div class="carousel">
-				<div class="carousel-inner">
-					<div class="carousel-item" style='background-image: url(resources/img/spark-logo.png);'>
+			<div class="cards">
+				<div class="cards-inner">
+					<div class="card" ng-repeat="project in projects" style="background-image: url({{project.front.image}});"">
+						
 					</div>
-					<div class="carousel-item" style='background-image: url(resources/img/spark-logo.png);'>
+					<!-- <div class="card" style='background-image: url(resources/img/spark-logo.png);'>
 					</div>
-					<div class="carousel-item" style='background-image: url(resources/img/spark-logo.png);'>
+					<div class="card" style='background-image: url(resources/img/spark-logo.png);'>
 					</div>
+					<div class="card" style='background-image: url(resources/img/spark-logo.png);'>
+					</div> -->
 				</div>
 			</div>
 		<!-- </section> -->
@@ -132,11 +135,13 @@
 	<!-- jQuery (necessary for Materializes JavaScript plugins) -->
 	<script src="lib/jquery/dist/jquery.min.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="lib/materialize/dist/js/materialize.min.js"></script>
+	<!-- <script src="lib/materialize/dist/js/materialize.min.js"></script> -->
 	<!-- Angular for frontend modularity -->
 	<script src="lib/angular/angular.min.js"></script>
 	<!-- Angular animate for animations -->
 	<script src="lib/angular-animate/angular-animate.min.js"></script>
+	<!-- Angular-Scroll for smooth scrolling -->
+	<script src="lib/angular-scroll/angular-scroll.min.js"></script>
 	<!-- Moment.JS -->
 	<script src="lib/moment/min/moment.min.js"></script>
 	<!-- AnimeJS for banner -->
