@@ -53,6 +53,8 @@ portfolio.directive('card', [
 					},
 					move: (drag, event) => {
 						event.stopPropagation();
+						console.log(drag);
+						elem[0].style.opacity = 1 - (Math.abs(drag.distanceX) / drag.rect.width);
 						if (Math.abs(drag.distanceX) >= drag.rect.width / 4) {
 							elem.addClass('dismiss');
 						} else {
@@ -63,6 +65,7 @@ portfolio.directive('card', [
 						elem.removeClass('dismiss');
 					},
 					end: drag => {
+						elem[0].style.opacity = 1;
 						PortfolioController.scrollableToggle(true);
 						elem.removeClass('dismiss');
 						if (Math.abs(drag.distanceX) >= drag.rect.width/4) {
