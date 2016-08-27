@@ -1,24 +1,16 @@
-portfolio.factory('projectsService', ['$q', '$http',
-	function($q, $http){
-		
-		var loadedProjects = $q.defer();
-		// loadedProjects.promise.then(() => {
-			
-		// });
+portfolio.factory('projectsService', ['$q', '$http', '$rootScope',
+	function($q, $http, $rootScope){
 
+		// using rootScope and doing $http over here because doesnt work in controller
+		$http.get('resources/json/projects.json')
+			.then(response => {
+				$rootScope.projects = response.data;
+			});
 
 		var cardCount = 0;
 		var activeCard = null;
 
-
 		return {
-			'loadedProjects': () => {
-				loadedProjects.resolve();
-			},
-			'canAddMethods': () => {
-				return loadedProjects.promise;
-			},
-
 			cardCount: () => { return cardCount; },
 			activeCard: () => { return activeCard; },
 			addCard: () => {

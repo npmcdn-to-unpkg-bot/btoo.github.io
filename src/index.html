@@ -41,6 +41,7 @@
 	<landing-content ng-show="showLandingContent">
 		
 	</landing-content>
+
 	<div class="header">
 		<!-- <div bubble-gradient class="background"></div> -->
 		<div animejs-banner class="background"></div>
@@ -95,17 +96,12 @@
 			</span>
 		</div>
 
-
-
-		
-		<!-- <div ui-content-for="title">
-			<span>Carousel with $drag</span>
-		</div> -->
 		<div class="cards">
 			<div class="cards-inner">
-				<div ng-repeat="project in projects" class="card" id="{{project.shortcode}}" style="background-image: url({{project.front.image}});"">
+				<div ng-repeat="project in projects" class="card" id="{{project.shortcode}}" style="background-image: url({{project.front.image}});">
 					{{project.name}}
 				</div>
+
 			</div>
 		</div>
 

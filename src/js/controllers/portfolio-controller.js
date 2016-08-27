@@ -6,19 +6,9 @@ portfolio.controller('PortfolioController', [
 	'$location',
 	'$anchorScroll',
 	'$document', /*"uiGmapGoogleMapApi", "ColorService", 'ScrollService',*/
-	function($scope, $http, $window, projectsService, $location, $anchorScroll, $document /*, uiGmapGoogleMapApi, ColorService, ScrollService*/) {
+	'$rootScope',
+	function($scope, $http, $window, projectsService, $location, $anchorScroll, $document, $rootScope /*, uiGmapGoogleMapApi, ColorService, ScrollService*/) {
 		var self = this;
-
-
-		$scope.projects = {};
-		// ProjectsService.loadProjectsInto($scope.projects);
-		$http.get('resources/json/projects.json')
-			.then(response => {
-				// console.log(response.data);
-				$scope.projects = response.data;
-				projectsService.loadedProjects();
-			});
-
 
 		var birthdate = moment("1993-08-24 00:00").startOf('minute');
 		this.ageyears = moment().diff(birthdate, 'years');
@@ -27,35 +17,6 @@ portfolio.controller('PortfolioController', [
         setInterval(() => $scope.$apply(() =>
             this.ageseconds++ //make me older by a second every second
         ), 1000);
-
-		function landingScroll(){
-			var windowTopHTML = $("html").scrollTop();
-			var windowTopBody = $("body").scrollTop();
-			var windowTop = Math.max(windowTopHTML, windowTopBody);
-			if (windowTop > 50) {
-				$('.landing-background').removeClass('navbar');
-				$('landing-card').addClass('navbar');
-			}
-			else {
-				$('.landing-background').addClass('navbar');
-				$('landing-card').removeClass('navbar');
-			}
-		}
-
-		this.initialScroll = function() {
-			console.log('scrolling');
-			$scope.scrollable = 'scrollable';
-			var top = 0;
-			if ($('#intro').offset().top - 120 + $('#intro')[0].offsetHeight - $(window).height() > $('#intro').offset().top) {
-				top = $('#intro').offset().top - 120;
-			}
-			else {
-				top = $('#intro').offset().top + $('#intro')[0].offsetHeight - $(window).height();
-			}
-			$("html, body").stop().animate({
-				scrollTop: top
-			}, 800);
-		}
 
 		$scope.goToSecond = () => {
 			// $location.hash('second');
@@ -66,11 +27,9 @@ portfolio.controller('PortfolioController', [
 
 		$scope.showLandingContent = false;
 		$scope.scrollable = 'scrollable';
-		this.scrollableToggle = (state) => {
+		this.scrollableToggle = state => {
 			$scope.scrollable = state ? 'scrollable' : 'unscrollable';
-			// console.log($scope.scrollable);
 		}
-
 
 
 		angular.element($window).bind( //when user reaches bottom of page
@@ -83,16 +42,10 @@ portfolio.controller('PortfolioController', [
 						html.scrollHeight, html.offsetHeight);
 				var windowBottom = windowHeight + window.pageYOffset;
 				if (windowBottom >= docHeight) {
-					// alert('bottom reached');
 					console.log('bottom reached');
-					// self.scrollableToggle(false);
 				}
 			}
 		);
-
-
-
-
 
 
 	}
