@@ -1,6 +1,6 @@
 .cards,.cards-inner{overflow:visible}
 #initial-scroll,#landing-card,#lightbulb,.app-content-loading,.drag-me,.feature-icon{text-align:center}
-.cards .card{cursor:pointer}
+.cards .card{height:95%;top:0;margin:auto;cursor:pointer}
 .cards .card .project,.cards .card [ng-transclude]{height:100%}
 .cards .card .card-inner{width:100%;height:100%;margin:auto;display:block;position:absolute;bottom:0;top:0;left:0;right:0}
 .cards .card .card-inner article{width:100%;height:100%;position:relative;-webkit-perspective:800px;perspective:800px}

@@ -43,6 +43,12 @@ portfolio.controller('PortfolioController', [
 				var windowBottom = windowHeight + window.pageYOffset;
 				if (windowBottom >= docHeight) {
 					console.log('bottom reached');
+					// var cards = document.querySelectorAll('.card');
+					// console.log(cards);
+
+					
+
+
 				}
 			}
 		);

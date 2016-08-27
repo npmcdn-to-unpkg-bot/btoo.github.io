@@ -9,25 +9,30 @@ portfolio.directive('card', [
 			template: '<div class="project"><div ng-transclude></div></div>',
 			controller: 'PortfolioController',
 			// require: '^PortfolioController',
-			link: function(scope, elem, attrs, PortfolioController) {
+			link: (scope, elem, attrs, PortfolioController) => {
 
-				var id = projectsService.addCard();
-				var zIndex = function() {
-					var res = 0;
-					if (id === projectsService.activeCard()) {
-						res = 2000;
-					} else if (projectsService.activeCard() < id) {
-						res = 2000 - (id - projectsService.activeCard());
-					} else {
-						res = 2000 - (projectsService.cardCount() - 1 - projectsService.activeCard() + id);
-					}
-					return res;
-				};
+				var id, index, zIndex, zIndexDelta;
+				id = index = projectsService.addCard();
+				zIndexDelta = 0;
+				zIndex = elem[0].style.zIndex;
 
 				scope.$watch(() => {
 					return projectsService.activeCard();
 				}, () => {
-					elem[0].style.zIndex = zIndex();
+					//update zindex
+					zIndexDelta = 0;
+					if (id === projectsService.activeCard())
+						zIndexDelta = 0;
+					else if (projectsService.activeCard() < id)
+						zIndexDelta = id - projectsService.activeCard();
+					else
+						zIndexDelta = projectsService.cardCount() - 1 - projectsService.activeCard() + id;
+					elem[0].style.zIndex = 2000 - zIndexDelta;
+
+					//update position from top
+					if(index<0) index = projectsService.cardCount() - 1;
+					index--
+					elem[0].style.top = (projectsService.cardSpreadInterval() * (index+1)) + 'px';
 				});
 
 				$drag.bind(elem, {
@@ -77,7 +82,6 @@ portfolio.directive('card', [
 					}
 				});
 
-				
 
 			}
 		};
