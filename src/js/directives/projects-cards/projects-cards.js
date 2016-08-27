@@ -1,7 +1,8 @@
 portfolio.directive('card', [
 	'$drag',
+	'$touch',
 	'projectsService',
-	($drag, projectsService) => {
+	($drag, $touch, projectsService) => {
 		return {
 			restrict: 'C',
 			transclude: true,
@@ -58,7 +59,7 @@ portfolio.directive('card', [
 					end: drag => {
 						PortfolioController.scrollableToggle(true);
 						elem.removeClass('dismiss');
-						if (Math.abs(drag.distanceX) >= drag.rect.width / 4) {
+						if (Math.abs(drag.distanceX) >= drag.rect.width/4) {
 							scope.$apply(function() {
 								projectsService.next();
 							});
@@ -67,10 +68,19 @@ portfolio.directive('card', [
 					}
 				});
 
-					
+				$touch.bind(elem, {
+					end: (touchInfo, event) => {
+						if (Math.abs(touchInfo.total) < elem[0].clientWidth/8) {
+							var flipCard = elem[0].querySelector('.flip-card');
+							flipCard.classList.toggle('flipped');
+						}
+					}
+				});
+
 				
 
 			}
 		};
 	}
 ]);
+

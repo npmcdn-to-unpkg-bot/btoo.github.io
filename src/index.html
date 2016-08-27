@@ -97,10 +97,27 @@
 		</div>
 
 		<div class="cards">
-			<div class="cards-inner">
-				<div ng-repeat="project in projects" class="card" id="{{project.shortcode}}" style="background-image: url({{project.front.image}});">
-					{{project.name}}
+			<div class="cards-inner flip">
+				<!-- <div ng-repeat="project in projects" class="card" id="{{project.shortcode}}" style="background-image: url({{project.front.image}});"> -->
+				<div ng-repeat="project in projects" class="card" id="{{project.shortcode}}">
+
+					<div class="card-inner">
+						<article>
+							<div class="flip-card">
+								<figure class="front">
+									<img src="{{project.front.image}}">
+								</figure>
+								<figure class="back">
+									back
+								</figure>
+							</div>	
+						</article>
+						
+						
+					</div>
+
 				</div>
+
 
 			</div>
 		</div>

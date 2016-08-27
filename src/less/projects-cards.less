@@ -1,6 +1,127 @@
 .cards {
 	height: 100vh;
+
+	.card {
+		cursor: pointer;
+		.project, [ng-transclude] {
+			height: 100%;
+		}
+
+		// img,
+		.card-inner {
+			width: 100%;
+			height: 100%;
+			// max-width: 80vw;
+			// max-height: 50vh;
+			margin: auto;
+			display: block;
+			position: absolute;
+			bottom: 0; top: 0; left: 0; right: 0;
+
+
+			article {
+				width: 100%;
+				height: 100%;
+				position: relative;
+				perspective: 800px;
+				.flip-card {
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					transform-style: preserve-3d;
+					transition: transform 1s;
+					box-shadow: 0px 0px 3px rgba(0,0,0,0.5);
+					background: #f4f4f4;
+					figure {
+						margin: 0;
+						display: block;
+						position: absolute;
+						width: 100%;
+						height: 100%;
+						backface-visibility: hidden;
+					}
+					.front {
+						// background: red;
+					}
+					.back {
+						background: #f4f4f4;
+						transform: rotateY( 180deg);
+					}
+					&.flipped {
+						transform: rotateY( 180deg );
+						// background: white;
+						// .front {
+						// 	display: none;
+						// }
+					}
+				}
+				img {
+					max-width: 90%;
+					margin: auto;
+					display: block;
+					position: absolute;
+					bottom: 0; top: 0; left: 0; right: 0;
+				}
+			}
+
+		}
+
+
+
+		// //flip
+		// .flip-card {
+		// 	position: relative;
+		// 	float: left;
+		// 	// padding-bottom: 25%;
+		// 	width: 100%;
+		// 	text-align: center;
+		// }
+
+		// .card__front,
+		// .card__back {
+		// 	position: absolute;
+		// 	top: 0;
+		// 	left: 0;
+		// 	width: 100%;
+		// 	height: 100%;
+		// }
+
+		// .card__front,
+		// .card__back {
+		// 	-webkit-backface-visibility: hidden;
+		// 	backface-visibility: hidden;
+		// 	-webkit-transition: -webkit-transform 0.3s;
+		// 	transition: transform 0.3s;
+		// }
+
+		// .card__front {
+		// 	background-color: #ff5078;
+		// }
+
+		// .card__back {
+		// 	background-color: #1e1e1e;
+		// 	-webkit-transform: rotateY(-180deg);
+		// 	transform: rotateY(-180deg);
+		// }
+		// .card.effect__click.flipped .card__front {
+		// 	-webkit-transform: rotateY(-180deg);
+		// 	transform: rotateY(-180deg);
+		// }
+
+		// .card.effect__click.flipped .card__back {
+		// 	-webkit-transform: rotateY(0);
+		// 	transform: rotateY(0);
+		// }
+
+
+
+
+
+
+
+	}
 }
+
 
 // Color variables (appears count calculates by raw css)
 @color0: #cccccc; // Appears 2 times
@@ -78,8 +199,9 @@ h1 {
 	-webkit-transition: opacity 0.3s;
 	-webkit-user-select: none;
 	background-size: cover;
-	background: #f4f4f4;
-	box-shadow: 0px 0px 3px rgba(0,0,0,0.5);
+	background: transparent;
+	// background: #f4f4f4;
+	// box-shadow: 0px 0px 3px rgba(0,0,0,0.5);
 	color: #444444;
 	display: block;
 	display: block;

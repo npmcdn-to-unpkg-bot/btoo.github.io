@@ -1,5 +1,14 @@
 .cards,.cards-inner{overflow:visible}
 #initial-scroll,#landing-card,#lightbulb,.app-content-loading,.drag-me,.feature-icon{text-align:center}
+.cards .card{cursor:pointer}
+.cards .card .project,.cards .card [ng-transclude]{height:100%}
+.cards .card .card-inner{width:100%;height:100%;margin:auto;display:block;position:absolute;bottom:0;top:0;left:0;right:0}
+.cards .card .card-inner article{width:100%;height:100%;position:relative;-webkit-perspective:800px;perspective:800px}
+.cards .card .card-inner article .flip-card{width:100%;height:100%;position:absolute;-webkit-transform-style:preserve-3d;transform-style:preserve-3d;-webkit-transition:-webkit-transform 1s;transition:transform 1s;box-shadow:0 0 3px rgba(0,0,0,.5);background:#f4f4f4}
+.cards .card .card-inner article .flip-card figure{margin:0;display:block;position:absolute;width:100%;height:100%;-webkit-backface-visibility:hidden;backface-visibility:hidden}
+.cards .card .card-inner article .flip-card .back{background:#f4f4f4;-webkit-transform:rotateY(180deg);transform:rotateY(180deg)}
+.cards .card .card-inner article .flip-card.flipped{-webkit-transform:rotateY(180deg);transform:rotateY(180deg)}
+.cards .card .card-inner article img{max-width:90%;margin:auto;display:block;position:absolute;bottom:0;top:0;left:0;right:0}
 #lightbulb{display:block;font-size:100px}
 h1{margin:10px 0;padding:0}
 .chat-user-avatar{background:#31708f;font-size:40px;padding:5px 10px}
@@ -12,7 +21,7 @@ h1{margin:10px 0;padding:0}
 .loading-spinner{font-size:50px;left:50%;margin-left:-25px;margin-top:-25px;position:absolute;top:50%}
 .carousel-example-content{font-size:50px;line-height:50px;margin-top:-50px;position:absolute;text-align:center;top:50%;width:100%}
 #landing-card,.center{margin:auto;bottom:0;right:0}
-.card{-moz-transition:-moz-transform .5s;-moz-transition:opacity .3s;-moz-user-select:none;-ms-user-select:none;-webkit-transition:-webkit-transform .5s;-webkit-transition:opacity .3s;-webkit-user-select:none;background:#f4f4f4;box-shadow:0 0 3px rgba(0,0,0,.5);color:#444;display:block;left:0;position:absolute;top:0;-webkit-transition:opacity .3s;transition:opacity .3s;-webkit-transition:-webkit-transform .5s;transition:transform .5s;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+.card{-moz-transition:-moz-transform .5s;-moz-transition:opacity .3s;-moz-user-select:none;-ms-user-select:none;-webkit-transition:-webkit-transform .5s;-webkit-transition:opacity .3s;-webkit-user-select:none;background:0 0;color:#444;display:block;left:0;position:absolute;top:0;-webkit-transition:opacity .3s;transition:opacity .3s;-webkit-transition:-webkit-transform .5s;transition:transform .5s;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
 .dismiss,[drag-to-dismiss]{-webkit-transition:opacity .3s,-webkit-transform .3s}
 .cards-inner{position:relative}
 .notices-container,body{overflow-x:hidden}

@@ -3,6 +3,7 @@ var portfolio = angular.module('portfolio', [
 	'ngSanitize',
 	'mobile-angular-ui',
 	'mobile-angular-ui.gestures.drag',
+	'mobile-angular-ui.gestures.touch',
 	'ngAnimate',
 	'ngSanitize',
 	'duScroll'
