@@ -29,9 +29,10 @@ portfolio.directive('card', [
 						zIndexDelta = projectsService.cardCount() - 1 - projectsService.activeCard() + id;
 					elem[0].style.zIndex = 2000 - zIndexDelta;
 
-					//update position from top
+					//update width and position from top 
 					if(index<0) index = projectsService.cardCount() - 1;
 					index--
+					elem[0].style.width = (100 - (index+1)) + '%';
 					elem[0].style.top = (projectsService.cardSpreadInterval() * (index+1)) + 'px';
 				});
 

@@ -42,7 +42,11 @@ portfolio.factory('projectsService', ['$q', '$http', '$rootScope',
 			cardSpreadInterval: () => { //cards take up 95% height, so space is 5%
 				var cardSpreadInterval = (document.querySelector('.cards-inner').clientHeight * .05) / (cardCount-1);
 				if(cardCount > 0) return cardSpreadInterval;
-			}
+			}/*,
+			cardShrinkInterval: () => { //how much narrower a card gets the deeper in the stack it is
+				var cardShrinkInterval = (document.querySelector('.cards-inner').clientWidth * .5) / (cardCount-1);
+				if(cardCount > 0) return cardShrinkInterval;
+			}*/
 		};
 
 	}
