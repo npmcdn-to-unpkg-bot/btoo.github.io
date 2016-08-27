@@ -53,7 +53,6 @@ portfolio.directive('card', [
 					},
 					move: (drag, event) => {
 						event.stopPropagation();
-						console.log(drag);
 						elem[0].style.opacity = 1 - (Math.abs(drag.distanceX) / drag.rect.width);
 						if (Math.abs(drag.distanceX) >= drag.rect.width / 4) {
 							elem.addClass('dismiss');
@@ -91,4 +90,6 @@ portfolio.directive('card', [
 		};
 	}
 ]);
+
+
 

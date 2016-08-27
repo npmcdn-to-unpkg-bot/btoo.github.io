@@ -1,13 +1,9 @@
 [
 	{
-		"shortcode": "spark",
+		"id": "spark",
 		"name": "Spark Collaboration",
-		"front": {
-			"image": "resources/img/spark-logo.png",
-			"backgroundimage": true,
-			"title": "This"
-		},
-		"shortdescription": "My portfolio website, you're browsing it now!",
+		"image": "resources/img/spark-logo.png",
+		"shortdescription": "Spark Collaboration is a social networking platform that seeks to create connections where they normally wouldn't occur.",
 		"description": "My portfolio website is designed to highlight important information so potential employers can have a quick glance before reading further. It features a dynamic color palette and some small features like this portfolio.",
 		"features": [
 			"Dynamic Color Palette",
@@ -18,7 +14,8 @@
 			"Yii",
 			"HTML5",
 			"Sass",
-			"Javascript"
+			"Javascript",
+			"MySQL"
 		],
 		"progress": "Almost finished",
 		"calendar": "April 2015",
@@ -29,13 +26,9 @@
 		},
 		"color": "rgb(65, 170, 92)"
 	}, {
-		"shortcode": "neroli",
+		"id": "neroli",
 		"name": "Neroli",
-		"front": {
-			"image": "resources/img/Neroli_BottomLogo.png",
-			"backgroundimage": true,
-			"title": "This"
-		},
+		"image": "resources/img/Neroli_BottomLogo.png",
 		"shortdescription": "My portfolio website, you're browsing it now!",
 		"description": "My portfolio website is designed to highlight important information so potential employers can have a quick glance before reading further. It features a dynamic color palette and some small features like this portfolio.",
 		"features": [
@@ -43,11 +36,10 @@
 			"Small design features"
 		],
 		"tools": [
-			"D3",
-			"Yii",
-			"HTML5",
-			"Sass",
-			"Javascript"
+			"Angular",
+			"ngRoute",
+			"MongoDB",
+			"Sass"
 		],
 		"progress": "Almost finished",
 		"calendar": "April 2015",
@@ -58,25 +50,19 @@
 		},
 		"color": "rgb(65, 170, 92)"
 	}, {
-		"shortcode": "primal",
+		"id": "primal",
 		"name": "Primal Blueprint",
-		"front": {
-			"image": "resources/img/PrimalBlueprint_Logo_250px_wide_1_1.png",
-			"backgroundimage": true,
-			"title": "This"
-		},
+		"image": "resources/img/PrimalBlueprint_Logo_250px_wide_1_1.png",
 		"shortdescription": "My portfolio website, you're browsing it now!",
-		"description": "My portfolio website is designed to highlight important information so potential employers can have a quick glance before reading further. It features a dynamic color palette and some small features like this portfolio.",
+		"description": "..and my personal favorite, avacado mayonnaise: BUY SOME NOW",
 		"features": [
 			"Dynamic Color Palette",
 			"Small design features"
 		],
 		"tools": [
-			"D3",
-			"Yii",
-			"HTML5",
-			"Sass",
-			"Javascript"
+			"Magento",
+			"PHP",
+			"MySQL"
 		],
 		"progress": "Almost finished",
 		"calendar": "April 2015",
@@ -87,13 +73,9 @@
 		},
 		"color": "rgb(65, 170, 92)"
 	}, {
-		"shortcode": "vocatio",
+		"id": "vocatio",
 		"name": "Vocatio",
-		"front": {
-			"image": "resources/img/VocatioLogoDarkLowRes.png",
-			"backgroundimage": true,
-			"title": "This"
-		},
+		"image": "resources/img/VocatioLogoDarkLowRes.png",
 		"shortdescription": "My portfolio website, you're browsing it now!",
 		"description": "My portfolio website is designed to highlight important information so potential employers can have a quick glance before reading further. It features a dynamic color palette and some small features like this portfolio.",
 		"features": [
@@ -101,11 +83,9 @@
 			"Small design features"
 		],
 		"tools": [
-			"D3",
-			"Yii",
-			"HTML5",
-			"Sass",
-			"Javascript"
+			"BuddyPress",
+			"Javascript",
+			"MySQL"
 		],
 		"progress": "Almost finished",
 		"calendar": "April 2015",

@@ -36,14 +36,68 @@
     </script>
 </head>
 
-<body ng-app="portfolio" ng-controller="PortfolioController as portfolio" ng-class="scrollable">
+<body ng-app="portfolio" ng-class="scrollable" ng-controller="3DBoxController as box">
 
+	<section style="position:absolute; z-index:10;">
+		<button ng-click="box.showSide('front')">show front</button>
+		<button ng-click="box.showSide('right')">show right</button>
+		<button ng-click="box.showSide('back')">show back</button>
+		<button ng-click="box.showSide('left')">show left</button>
+	</section>
+	
+	<section id="box-container" ng-controller="PortfolioController as portfolio">
+		<div id="box" class=" panels-backface-invisible" ng-class="box.side">
+			<figure class="front">
+				<div animejs-banner class="background" style="position:absolute">
+					
+				</div>
+				<div landing-content ng-show="showLandingContent">
+		
+				</div>
+			</figure>
+			<figure class="right">2</figure>
+			<figure class="back">
+				<div class="cards">
+					<div class="cards-inner flip">
+						<div ng-repeat="project in projects" class="card" id="{{project.id}}">
+							<div class="card-inner">
+
+								<article>
+									<div class="flip-card">
+										<figure class="front">
+											<img src="{{project.image}}">
+										</figure>
+										<figure class="back">
+											<p>
+												<strong>
+													{{project.shortdescription}}
+												</strong>
+											</p>
+										</figure>
+									</div>	
+								</article>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</figure>
+			<figure class="left">4</figure>
+			<!-- <figure class="top">5</figure> -->
+			<!-- <figure class="bottom">6</figure> -->
+		</div>
+	</section>
+
+
+
+
+
+	<!--
 	<landing-content ng-show="showLandingContent">
 		
 	</landing-content>
 
 	<div class="header">
-		<!-- <div bubble-gradient class="background"></div> -->
 		<div animejs-banner class="background"></div>
 		<div class="circles h-card">
 			<div class="logocircle darkbgcolor">
@@ -68,7 +122,6 @@
 			</div>
 			<div class="initialScrollBtn">
 				<img ng-repeat="i in main.ivesimages" class="profileimg u-photo" ng-src="{{i}}" ng-class="{'shown': main.currentIves === $index}"></img>
-				<!-- <i ng-click="portfolio.initialScroll()" class="darkcolor fa fa-chevron-down"></i> -->
 			</div>
 		</div>
 	</div>
@@ -78,47 +131,86 @@
 	</section>
 
 	<div id="second" class="second">
-		second body
+		<h1>
+			Brian's portfolio
+		</h1>
+		<span class="flow-text">
+			My name is <strong>Brian Tu</strong>. I'm <strong>{{portfolio.ageyears}} years, {{portfolio.agemonths}} months and {{portfolio.ageseconds}} seconds</strong> old and live in <strong>Holmdel, New Jersey</strong>. I'm an <strong>ambitious developer</strong>, passionate about new technology and its capabilities. I am inspired by fast-growing companies and hope to become the lead of one in the future.
+		</span>
+
+		<section id="options">
+			<p id="show-buttons">
+				<button class="show-front">Show 1</button>
+				<button class="show-back">Show 2</button>
+				<button class="show-right">Show 3</button>
+				<button class="show-left">Show 4</button>
+				<button class="show-top">Show 5</button>
+				<button class="show-bottom">Show 6</button>
+			</p>
+			<p>
+				<button id="toggle-backface-visibility">Toggle Backface Visibility</button>
+			</p>
+		</section>
+
+		<script type="text/javascript">
+			var init = function() {
+				var box = document.querySelector('.cube-container').children[0],
+					showPanelButtons = document.querySelectorAll('#show-buttons button'),
+					panelClassName = 'show-front',
+
+					onButtonClick = function(event) {
+						// box.removeClassName(panelClassName);
+
+						var re = new RegExp("/\b"+panelClassName+"\b/")
+						console.log(box,re);
+						box.className = box.className.replace(re,'');
+						panelClassName = event.target.className;
+						// box.addClassName(panelClassName);
+					};
+
+				for (var i = 0, len = showPanelButtons.length; i < len; i++) {
+					showPanelButtons[i].addEventListener('click', onButtonClick, false);
+				}
+
+				document.getElementById('toggle-backface-visibility').addEventListener('click', function() {
+					box.toggleClassName('panels-backface-invisible');
+				}, false);
+
+			};
+
+			window.addEventListener('DOMContentLoaded', init, false);
+		</script>
+
 	</div>
 
 
-	<!-- <section class="decoy">
-		
-	</section> -->
-
 	<div class="main">
 		<div id="intro" class="row firstrow contentrow bgcolor-transparent">
-			<h1>
-				Brian's portfolio
-			</h1>
-			<span class="flow-text">
-				My name is <strong>Brian Tu</strong>. I'm <strong>{{portfolio.ageyears}} years, {{portfolio.agemonths}} months and {{portfolio.ageseconds}} seconds</strong> old and live in <strong>Holmdel, New Jersey</strong>. I'm an <strong>ambitious developer</strong>, passionate about new technology and its capabilities. I am inspired by fast-growing companies and hope to become the lead of one in the future.
-			</span>
+			
 		</div>
 
 		<div class="cards">
 			<div class="cards-inner flip">
-				<!-- <div ng-repeat="project in projects" class="card" id="{{project.shortcode}}" style="background-image: url({{project.front.image}});"> -->
-				<div ng-repeat="project in projects" class="card" id="{{project.shortcode}}">
-
+				<div ng-repeat="project in projects" class="card" id="{{project.id}}">
 					<div class="card-inner">
+
 						<article>
 							<div class="flip-card">
 								<figure class="front">
-									<img src="{{project.front.image}}">
+									<img src="{{project.image}}">
 								</figure>
 								<figure class="back">
-									back
+									<p>
+										<strong>
+											{{project.shortdescription}}
+										</strong>
+									</p>
 								</figure>
 							</div>	
 						</article>
-						
-						
+
 					</div>
-
 				</div>
-
-
 			</div>
 		</div>
 
@@ -128,11 +220,10 @@
 
 
 
-	<section class="decoy">
+	<section class="decoy ng-class:enableCards">
 		
 	</section>
-
-
+	-->
 
 
 

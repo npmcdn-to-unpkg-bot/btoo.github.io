@@ -1,11 +1,19 @@
-portfolio.factory('projectsService', ['$q', '$http', '$rootScope',
-	function($q, $http, $rootScope){
+portfolio.factory('projectsService', [
+	'$q',
+	'$http',
+	'$rootScope',
+	'landingService',
+	function($q, $http, $rootScope, landingService){
 
-		// using rootScope and doing $http over here because doesnt work in controller
-		$http.get('resources/json/projects.json')
-			.then(response => {
-				$rootScope.projects = response.data;
-			});
+		landingService.canAnimateCard().then(() => {
+			// using rootScope and doing $http over here because doesnt work in controller
+			$http.get('resources/json/projects.json')
+				.then(response => {
+					$rootScope.projects = response.data;
+				});
+			}
+		);
+		
 
 		var cardCount = 0;
 		var activeCard = null;

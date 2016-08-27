@@ -10,6 +10,9 @@ portfolio.controller('PortfolioController', [
 	function($scope, $http, $window, projectsService, $location, $anchorScroll, $document, $rootScope /*, uiGmapGoogleMapApi, ColorService, ScrollService*/) {
 		var self = this;
 
+		// $scope.side = 'show-front';
+
+
 		var birthdate = moment("1993-08-24 00:00").startOf('minute');
 		this.ageyears = moment().diff(birthdate, 'years');
         this.agemonths = moment().subtract(this.ageyears, 'years').diff(birthdate, 'months');
@@ -32,6 +35,7 @@ portfolio.controller('PortfolioController', [
 		}
 
 
+		$scope.enableCards = 'cardsDisabled';
 		angular.element($window).bind( //when user reaches bottom of page
 			"scroll",
 	 		function() {
@@ -43,12 +47,7 @@ portfolio.controller('PortfolioController', [
 				var windowBottom = windowHeight + window.pageYOffset;
 				if (windowBottom >= docHeight) {
 					console.log('bottom reached');
-					// var cards = document.querySelectorAll('.card');
-					// console.log(cards);
-
-					
-
-
+					$scope.enableCards = 'cardsEnabled';
 				}
 			}
 		);

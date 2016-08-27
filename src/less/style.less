@@ -1,12 +1,25 @@
+@font-face {
+	font-family: Ubuntu;
+	src: url(font/ubuntu/Ubuntu-R.ttf);
+}
+@font-face {
+	font-family: Ubuntu;
+	src: url(font/ubuntu/Ubuntu-B.ttf);
+	font-weight: bold;
+}
+
+
 @import 'projects-cards';
 @import 'mixins';
 @import 'variables';
 @import 'bubble-gradient';
 @import 'landing-content';
 @import 'animejs-banner';
+@import 'cube';
 
 
 body {
+	font-family: Ubuntu;
 	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
 	font-smoothing: antialiased;
@@ -54,49 +67,6 @@ body {
 
 
 
-
-// Color variables (appears count calculates by raw css)
-@color0: #31708f; // Appears 2 times
-
-// Width variables (appears count calculates by raw css)
-@width1: 100%; // Appears 2 times
-
-// Height variables (appears count calculates by raw css)
-@height1: 100vh; // Appears 2 times
-
-.viewport {
-	height: @height1;
-	// padding: 40px;
-	width: @width1;
-}
-.drag-area {
-	border: 1px solid #444444;
-	height: @height1;
-	position: relative;
-	width: @width1;
-}
-.drag-me {
-	-moz-transition: -moz-transform 500ms;
-	-ms-transition: -ms-transform 500ms;
-	-webkit-transition: -webkit-transform 500ms;
-	background-color: #d9edf7;
-	border-radius: 200px;
-	border: 1px solid @color0;
-	box-shadow: 1px 1px 1px #cccccc;
-	color: @color0;
-	font-size: 30px;
-	height: 100px;
-	left: 50%;
-	line-height: 95px;
-	margin: -50px auto auto -50px;
-	position: absolute;
-	text-align: center;
-	text-shadow: 1px 1px #ffffff;
-	top: 50%;
-	transition: transform 500ms;
-	width: 100px;
-}
-
 .main {
 	position: fixed;
 	top: 0%;
@@ -109,6 +79,7 @@ body {
 .decoy {
 	width: 100%;
 	height: 100vh;
+	position: relative;
 }
 .decoy:first-of-type {
 
