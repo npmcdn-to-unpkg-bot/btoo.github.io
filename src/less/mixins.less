@@ -3,3 +3,48 @@
 	position: absolute;
 	top: 0; left: 0; bottom: 0; right: 0;
 }
+
+.transition(@transition) {
+	-webkit-transition: @transition;
+	-moz-transition: @transition;
+	-o-transition: @transition;
+	transition: @transition;
+}
+
+.transition-delay(@delay){
+	-webkit-transition-delay: @delay;
+	transition-delay: @delay;
+}
+
+.transition-timing(@timing){
+	-webkit-transition-timing-function: @timing;
+	-moz-transition-timing-function: @timing;
+	-o-transition-timing-function: @timing;
+	transition-timing-function: @timing;
+}
+
+.rotate(@deg){
+	-webkit-transform: rotate(@deg);
+	-moz-transform: rotate(@deg);
+	-o-transform: rotate(@deg);
+	transform: rotate(@deg);
+}
+
+@keyframes appear {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes disappear {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+

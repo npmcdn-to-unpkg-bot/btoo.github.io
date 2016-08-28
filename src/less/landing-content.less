@@ -1,22 +1,37 @@
+
+
+[landing-content] {
+	.transition(all linear 2s);
+	&[ng-hide] {
+		animation: 1s disappear;
+	}
+	&[ng-show] {
+		animation: 1s appear;
+	}
+}
+
 #landing-card {
 	z-index: 1;
-	background-color: white;
+	// background-color: white;
+	background-color: transparent;
 	.center();
-
 	line-height: 20em;
-    height: 20em;
-    max-height: 90vh;
-    max-width: 90vw;
-    width: 42em;
-    text-align: center;
+	height: 20em;
+	max-height: 90vh;
+	max-width: 90vw;
+	width: 42em;
+	text-align: center;
+	h1 {
+		color: #f4f4f4;
+	}
 }
 
 .initialScrollBtn {
-    position: fixed;
-    color: white;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 20px;
+	position: fixed;
+	color: white;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 20px;
 }
 
 .unscrollable {

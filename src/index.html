@@ -36,21 +36,24 @@
     </script>
 </head>
 
-<body ng-app="portfolio" ng-class="scrollable" ng-controller="3DBoxController as box">
+<body ng-app="portfolio" ng-class="scrollable" ng-controller="PortfolioController as portfolio">
 
-	<section style="position:absolute; z-index:10;">
-		<button ng-click="box.showSide('front')">show front</button>
-		<button ng-click="box.showSide('right')">show right</button>
-		<button ng-click="box.showSide('back')">show back</button>
-		<button ng-click="box.showSide('left')">show left</button>
-	</section>
 	
-	<section id="box-container" ng-controller="PortfolioController as portfolio">
-		<div id="box" class=" panels-backface-invisible" ng-class="box.side">
+	
+	<section id="box-container" ng-controller="3DBoxController as box">
+		<div style="position:absolute; z-index:10;">
+			<button ng-click="box.showSide('front')">show front</button>
+			<button ng-click="box.showSide('right')">show right</button>
+			<button ng-click="box.showSide('back')">show back</button>
+			<button ng-click="box.showSide('left')">show left</button>
+		</div>
+
+		<div id="box" class="{{box.side}}" ng-class="{removeBorders:showLandingContent}">
 			<figure class="front">
-				<div animejs-banner class="background" style="position:absolute">
+				<div animejs-banner class="background" style="position:fixed">
 					
 				</div>
+				{{showLandingContent}}
 				<div landing-content ng-show="showLandingContent">
 		
 				</div>
@@ -64,10 +67,10 @@
 
 								<article>
 									<div class="flip-card">
-										<figure class="front">
+										<figure class="card-front">
 											<img src="{{project.image}}">
 										</figure>
-										<figure class="back">
+										<figure class="card-back">
 											<p>
 												<strong>
 													{{project.shortdescription}}
@@ -88,6 +91,54 @@
 		</div>
 	</section>
 
+	<section id="action-menu">
+
+		<div id="gooey">
+			<nav class="menu">
+				<input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
+				<label class="menu-open-button" for="menu-open">
+					<span class="hamburger hamburger-1"></span>
+					<span class="hamburger hamburger-2"></span>
+					<span class="hamburger hamburger-3"></span>
+				</label>
+				<a href="#" class="menu-item"> <i class="fa fa-bar-chart"></i> </a>
+				<a href="#" class="menu-item"> <i class="fa fa-plus"></i> </a>
+				<a href="#" class="menu-item"> <i class="fa fa-heart"></i> </a>
+				<a href="#" class="menu-item"> <i class="fa fa-envelope"></i> </a>
+				<a href="#" class="menu-item"> <i class="fa fa-cog"></i> </a>
+			</nav>
+
+			<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+				<defs>
+					<filter id="shadowed-goo">
+						<feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+						<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+						<feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+						<feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+						<feOffset in="shadow" dx="1" dy="1" result="shadow" />
+						<feBlend in2="shadow" in="goo" result="goo" />
+						<feBlend in2="goo" in="SourceGraphic" result="mix" />
+					</filter>
+					<filter id="goo">
+						<feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+						<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+						<feBlend in2="goo" in="SourceGraphic" result="mix" />
+					</filter>
+				</defs>
+			</svg>
+		</div>
+
+
+
+		<figure id="action-button-container">
+			<div action-button id="action-button">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</figure>
+	</section>
 
 
 
@@ -152,34 +203,6 @@
 			</p>
 		</section>
 
-		<script type="text/javascript">
-			var init = function() {
-				var box = document.querySelector('.cube-container').children[0],
-					showPanelButtons = document.querySelectorAll('#show-buttons button'),
-					panelClassName = 'show-front',
-
-					onButtonClick = function(event) {
-						// box.removeClassName(panelClassName);
-
-						var re = new RegExp("/\b"+panelClassName+"\b/")
-						console.log(box,re);
-						box.className = box.className.replace(re,'');
-						panelClassName = event.target.className;
-						// box.addClassName(panelClassName);
-					};
-
-				for (var i = 0, len = showPanelButtons.length; i < len; i++) {
-					showPanelButtons[i].addEventListener('click', onButtonClick, false);
-				}
-
-				document.getElementById('toggle-backface-visibility').addEventListener('click', function() {
-					box.toggleClassName('panels-backface-invisible');
-				}, false);
-
-			};
-
-			window.addEventListener('DOMContentLoaded', init, false);
-		</script>
 
 	</div>
 
@@ -196,10 +219,10 @@
 
 						<article>
 							<div class="flip-card">
-								<figure class="front">
+								<figure class="card-front">
 									<img src="{{project.image}}">
 								</figure>
-								<figure class="back">
+								<figure class="card-back">
 									<p>
 										<strong>
 											{{project.shortdescription}}

@@ -2,12 +2,14 @@ portfolio.controller('PortfolioController', [
 	'$scope',
 	'$http',
 	'$window',
+	'$timeout',
 	'projectsService',
+	'landingService',
 	'$location',
 	'$anchorScroll',
 	'$document', /*"uiGmapGoogleMapApi", "ColorService", 'ScrollService',*/
 	'$rootScope',
-	function($scope, $http, $window, projectsService, $location, $anchorScroll, $document, $rootScope /*, uiGmapGoogleMapApi, ColorService, ScrollService*/) {
+	function($scope, $http, $window, $timeout, projectsService, landingService, $location, $anchorScroll, $document, $rootScope /*, uiGmapGoogleMapApi, ColorService, ScrollService*/) {
 		var self = this;
 
 		// $scope.side = 'show-front';
@@ -32,6 +34,11 @@ portfolio.controller('PortfolioController', [
 		$scope.scrollable = 'scrollable';
 		this.scrollableToggle = state => {
 			$scope.scrollable = state ? 'scrollable' : 'unscrollable';
+		}
+
+
+		
+		this.showLandingContent = () => {
 		}
 
 

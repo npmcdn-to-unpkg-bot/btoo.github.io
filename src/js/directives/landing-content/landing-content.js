@@ -1,5 +1,7 @@
-portfolio.directive('landingContent', ['landingService',/*'ColorService', */
-	function(landingService/*ColorService*/){
+portfolio.directive('landingContent', [
+	'$timeout',
+	'landingService',/*'ColorService', */
+	function($timeout, landingService/*ColorService*/){
 		return {
 			restrict: 'AE',
 			templateUrl: 'js/directives/landing-content/landing-content.html',
@@ -10,7 +12,12 @@ portfolio.directive('landingContent', ['landingService',/*'ColorService', */
 				landingService.canAnimateCard().then(()=>{
 					console.log('finished animating squares, so now animate the card');
 
-					scope.showLandingContent = true;
+					$timeout(() => {
+						scope.showLandingContent = true;
+						angular.element(document.getElementById('action-button')).toggleClass('show-action-button');
+					});
+
+
 					
 				});
 

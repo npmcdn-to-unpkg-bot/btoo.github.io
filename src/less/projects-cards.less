@@ -31,6 +31,8 @@
 		transition: opacity 0.3s, transform 500ms, top .2s linear, width .2s linear;
 		user-select: none;
 
+		
+
 		cursor: pointer;
 		.project, [ng-transclude] {
 			height: 100%;
@@ -71,9 +73,9 @@
 						height: 100%;
 						backface-visibility: hidden;
 					}
-					.front {
+					.card-front {
 					}
-					.back {
+					.card-back {
 						background: #f4f4f4;
 						transform: rotateY( 180deg);
 					}
@@ -90,6 +92,14 @@
 				}
 			}
 
+
+			// &:nth-of-type(odd) .flip-card {
+			// 	background-color: #18212D;
+			// }
+			// &:nth-of-type(even) .flip-card {
+			// 	background: #f4f4f4;
+			// }
+
 		}
 
 	}
@@ -100,3 +110,4 @@
 .decoy.cardsEnabled {
 	z-index: -1;
 }
+

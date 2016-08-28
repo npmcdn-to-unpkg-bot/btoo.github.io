@@ -19,18 +19,6 @@ portfolio.factory('projectsService', [
 		var activeCard = null;
 
 
-		// var cards = document.querySelectorAll('.card'),
-		// 	cardsInner = document.querySelector('.cards-inner'),
-		// 	cardSpreadSpace = .12 * cardsInner.clientHeight, //cards take up 88% height, so space is 12%
-		// 	numberCards = scope.$index + 1,
-		// 	cardSpreadInterval = cardSpreadSpace / (numberCards - 1);
-		
-		// for (var i=0; i<numberCards; i++) {
-		// 	cards[i].style.top = (i * cardSpreadInterval) + 'px';
-		// 	console.log();
-		// }
-		// console.log();
-
 		return {
 			cardCount: () => { return cardCount; },
 			activeCard: () => { return activeCard; },
@@ -50,11 +38,8 @@ portfolio.factory('projectsService', [
 			cardSpreadInterval: () => { //cards take up 95% height, so space is 5%
 				var cardSpreadInterval = (document.querySelector('.cards-inner').clientHeight * .05) / (cardCount-1);
 				if(cardCount > 0) return cardSpreadInterval;
-			}/*,
-			cardShrinkInterval: () => { //how much narrower a card gets the deeper in the stack it is
-				var cardShrinkInterval = (document.querySelector('.cards-inner').clientWidth * .5) / (cardCount-1);
-				if(cardCount > 0) return cardShrinkInterval;
-			}*/
+			}
+			
 		};
 
 	}

@@ -36,8 +36,8 @@ portfolio.controller('3DBoxController', [
 			}
 			var side = document.querySelector('#box .'+sides[i]);
 			side.style.transform = 'rotateY('+rotateY+') translateZ('+translateZ+')';
-			side.style.width = (vw -4)+'px';
-			side.style.height = (vh -4)+'px';
+			side.style.width = (vw )+'px';
+			side.style.height = (vh )+'px';
 		}
 		
 
