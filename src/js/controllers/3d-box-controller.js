@@ -1,8 +1,8 @@
 portfolio.controller('3DBoxController', [
-	function() {
+	'$scope',
+	'landingService',
+	function($scope, landingService) {
 		var vm = this;
-
-		// vm.side = 'show-front';
 
 		var vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 		var vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
@@ -39,6 +39,8 @@ portfolio.controller('3DBoxController', [
 			side.style.width = (vw )+'px';
 			side.style.height = (vh )+'px';
 		}
+		console.log('finished rendering box');
+		landingService.renderedBox();
 		
 
 		

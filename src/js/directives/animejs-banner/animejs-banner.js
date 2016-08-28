@@ -8,47 +8,50 @@ portfolio.directive('animejsBanner', [ '$q', 'landingService', /*"ColorService",
 
 				// animate the B
 				var loadingSquares = element[0].querySelector('#loading-squares');
-				anime({
-					targets: '#Bsvg path',
-					strokeDashoffset: {
-						easing: 'easeInOutExpo',
-						duration: 500,
-						value: function(el) {
-							var pathLength = el.getTotalLength();
-							el.setAttribute('stroke-dasharray', pathLength);
-							return [-pathLength, 0];
-						}
-					},
-					stroke: {
-						value: function(el, i) {
-							return 'rgb('+(i*2)+','+(i*8)+','+(i*12)+')';
+				landingService.canShowBox().then(() => {
+					document.getElementById('box-container').className += 'show-box';
+					anime({
+						targets: '#Bsvg path',
+						strokeDashoffset: {
+							easing: 'easeInOutExpo',
+							duration: 500,
+							value: function(el) {
+								var pathLength = el.getTotalLength();
+								el.setAttribute('stroke-dasharray', pathLength);
+								return [-pathLength, 0];
+							}
 						},
-						easing: 'linear',
-						duration: 222,
-					},
-					strokeWidth: {
-						value: 8,
-						easing: 'linear',
+						stroke: {
+							value: function(el, i) {
+								return 'rgb('+(i*2)+','+(i*8)+','+(i*12)+')';
+							},
+							easing: 'linear',
+							duration: 222,
+						},
+						strokeWidth: {
+							value: 8,
+							easing: 'linear',
+							delay: function(el, i) {
+								return 600 + (i * 8);
+							},
+							duration: 222,
+						},
 						delay: function(el, i) {
-							return 600 + (i * 8);
+							return i * 30;
 						},
-						duration: 222,
-					},
-					delay: function(el, i) {
-						return i * 30;
-					},
-					duration: 1200,
-					easing: 'easeOutExpo',
-					loop: false,
-					direction: 'alternate',
-					update: (animation) => {
-						//start animating squares once B is loaded
-						if(animation.reversed==true)
-							landingService.animatedB();
-					},
-					complete: () => {
-						// console.log('finished loadingscreen');
-					}
+						duration: 1200,
+						easing: 'easeOutExpo',
+						loop: false,
+						direction: 'alternate',
+						update: (animation) => {
+							//start animating squares once B is loaded
+							if(animation.reversed==true)
+								landingService.animatedB();
+						},
+						complete: () => {
+							// console.log('finished loadingscreen');
+						}
+					});
 				});
 
 				// create the elements for the squares

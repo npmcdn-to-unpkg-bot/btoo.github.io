@@ -1,5 +1,8 @@
 portfolio.factory('landingService', ['$q', function($q){
 	
+	// rendered the box
+	var renderedBox = $q.defer();
+
 	// animated the B
 	var animatedB = $q.defer();
 	// animatedB.promise.then(console.log('resolved animatedB'));
@@ -30,6 +33,12 @@ portfolio.factory('landingService', ['$q', function($q){
 
 
 	return {
+		'renderedBox': () => {
+			return renderedBox.resolve();
+		},
+		'canShowBox': () => {
+			return renderedBox.promise;
+		},
 		'animatedB': () => {
 			return animatedB.resolve();
 		},

@@ -12,7 +12,7 @@ portfolio.controller('PortfolioController', [
 	function($scope, $http, $window, $timeout, projectsService, landingService, $location, $anchorScroll, $document, $rootScope /*, uiGmapGoogleMapApi, ColorService, ScrollService*/) {
 		var self = this;
 
-		// $scope.side = 'show-front';
+		$scope.showBox = false; //wait for 
 
 
 		var birthdate = moment("1993-08-24 00:00").startOf('minute');

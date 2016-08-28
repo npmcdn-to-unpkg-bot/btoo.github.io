@@ -43,11 +43,12 @@ to{opacity:0}
 [animejs-banner] #loading-squares div,[animejs-banner] #loading-squares svg{margin:auto;position:absolute;top:0;left:0;bottom:0;right:0}
 [animejs-banner] #squares{position:relative;display:none}
 [animejs-banner] #squares div{border-radius:50%;margin:auto;position:absolute;top:0;left:0;bottom:0;right:0}
-#box-container{position:relative;-webkit-perspective:1000px;perspective:1000px}
+#box-container{position:relative;-webkit-perspective:1000px;perspective:1000px;visibility:hidden}
 #box,#box>figure{position:absolute}
 #box{-webkit-transform-style:preserve-3d;transform-style:preserve-3d;-webkit-transition:-webkit-transform 1s;transition:transform 1s}
 #box>figure{margin:0;display:block;border:2px solid #000}
 #box.removeBorders>figure{border-style:none}
+.show-box{visibility:visible!important}
 #action-menu{position:fixed;bottom:0;right:0}
 #action-button{position:relative;-webkit-transform:rotate(0);transform:rotate(0);-webkit-transition:all .5s ease-in-out,opacity 1s linear;transition:all .5s ease-in-out,opacity 1s linear;cursor:pointer}
 #action-button:not(.show-action-button){opacity:0;right:-100%}
