@@ -42,13 +42,12 @@
 
 </head>
 
-<body ng-class="scrollable" ng-controller="3DBoxController as box">
+<body ng-class="scrollable" ng-controller="BoxController as box">
 
-	
-	
 	<section id="box-container" ng-class="{'open-menu-blur':actionMenuOpened, 'show-box':showBox}">
-		<div id="box" class="{{box.side}}" ng-class="{removeBorders:showLandingContent}">
-			<figure class="front">
+		<!-- <div id="box" class="{{box.side}}" ng-class="{removeBorders:showLandingContent}"> -->
+		<div id="box" class="{{box.side}}">
+			<figure class="front" ng-class="{'shown':shown==='front'}">
 				<div animejs-banner class="background" style="position:fixed">
 					
 				</div>
@@ -56,8 +55,8 @@
 		
 				</div>
 			</figure>
-			<figure class="right">2</figure>
-			<figure class="back">
+			<figure class="right" ng-class="{'shown':shown==='right'}">2</figure>
+			<figure class="back" ng-class="{'shown':shown==='back'}">
 				<div class="cards">
 					<div class="cards-inner flip">
 						<div ng-repeat="project in projects" class="card" id="{{project.id}}">
@@ -83,7 +82,7 @@
 					</div>
 				</div>
 			</figure>
-			<figure class="left">4</figure>
+			<figure class="left" ng-class="{'shown':shown==='left'}">4</figure>
 			<!-- <figure class="top">5</figure> -->
 			<!-- <figure class="bottom">6</figure> -->
 		</div>

@@ -4,6 +4,7 @@ portfolio.directive('animejsBanner', [ '$q', 'landingService', /*"ColorService",
 			restrict: 'AE',
 			templateUrl: 'js/directives/animejs-banner/animejs-banner.html',
 			controller: 'PortfolioController',
+			transclude: true,
 			link: function(scope, element, attr, ctrl) {
 
 				// animate the B
@@ -44,9 +45,10 @@ portfolio.directive('animejsBanner', [ '$q', 'landingService', /*"ColorService",
 						loop: false,
 						direction: 'alternate',
 						update: (animation) => {
-							//start animating squares once B is loaded
-							if(animation.reversed==true)
-								landingService.animatedB();
+							// // start animating squares once B is loaded
+							// if(animation.reversed==true)
+							// 	landingService.animatedB();
+							landingService.animatedB();
 						},
 						complete: () => {
 							// console.log('finished loadingscreen');
@@ -54,73 +56,74 @@ portfolio.directive('animejsBanner', [ '$q', 'landingService', /*"ColorService",
 					});
 				});
 
-				// create the elements for the squares
-				var squares = element[0].querySelector('#squares');
-				var x, y, xmax, ymin, xincrement, yincrement;
-				x = y = xmax = ymin = 0;
-				var size = Math.min(Math.ceil(element.height()/3.8), 122);
-				xincrement = yincrement = size; //width and height of each square
-				do {
-					squares.innerHTML +=	`
-												<article style="width:`+xincrement+`px;height:`+yincrement+`px;top:`+y+`px;right:`+x+`px">
-													<div></div>
-												</article>
-											`;
+				// // create the elements for the squares
+				// var squares = element[0].querySelector('#squares');
+				// var x, y, xmax, ymin, xincrement, yincrement;
+				// x = y = xmax = ymin = 0;
+				// var size = Math.min(Math.ceil(element.height()/3.8), 122);
+				// xincrement = yincrement = size; //width and height of each square
+				// do {
+				// 	squares.innerHTML +=	`
+				// 								<article style="width:`+xincrement+`px;height:`+yincrement+`px;top:`+y+`px;right:`+x+`px">
+				// 									<div></div>
+				// 								</article>
+				// 							`;
 
-					if (x < xincrement || y > element.height()-yincrement) {
-						if (xmax < element.width()) {
-							xmax += xincrement;
-						} else {
-							ymin += yincrement;
-						}
-						y = ymin;
-						x = xmax;
-					} else {
-						x -= xincrement;
-						y += yincrement;
-					}
-				} while (x < element.width() || y < element.height())
-				$('#squares').css('display','block');
-				// console.log('finished building squares');
-				landingService.createdSquares();
+				// 	if (x < xincrement || y > element.height()-yincrement) {
+				// 		if (xmax < element.width()) {
+				// 			xmax += xincrement;
+				// 		} else {
+				// 			ymin += yincrement;
+				// 		}
+				// 		y = ymin;
+				// 		x = xmax;
+				// 	} else {
+				// 		x -= xincrement;
+				// 		y += yincrement;
+				// 	}
+				// } while (x < element.width() || y < element.height())
+				// document.getElementById('squares').style.display = block;
+				// landingService.createdSquares();
 
-				// B is animated AND squares are created
-				landingService.canAnimateSquares().then(()=>{
-					anime({
-						targets: '#squares div',
-						rotate: {
-							value: 180,
-							duration: 888,
-							easing: 'linear'
-						},
-						scale: {
-							value: [0, 1],
-							// delay: 150,
-							duration: 888,
-							easing: 'easeInOutExpo'
-						},
-						loop: false,
-						direction: 'normal',
-						borderRadius: {
-							value: 0,
-							duration: 1222,
-							easing: 'linear'
-						},
-						backgroundColor: '#18212D',
-						delay: (el, index, total) => {
-							var duration = 888; //duration of squares animation
-							return index * (duration / total);
-						},
-						update: (animation) => {
-							if(animation.progress > 75)
-								landingService.animatedSquares();
-						},
-						complete: () => {
-							squares.className += 'bg-dark';
-							element.find('article').hide();
-						}
-					});
-				});
+				// // B is animated AND squares are created
+				// landingService.canAnimateSquares().then(() => {
+				// 	anime({
+				// 		targets: '#squares div',
+				// 		rotate: {
+				// 			value: 180,
+				// 			duration: 888,
+				// 			easing: 'linear'
+				// 		},
+				// 		scale: {
+				// 			value: [0, 1],
+				// 			// delay: 150,
+				// 			duration: 888,
+				// 			easing: 'easeInOutExpo'
+				// 		},
+				// 		loop: false,
+				// 		direction: 'normal',
+				// 		borderRadius: {
+				// 			value: 0,
+				// 			duration: 1222,
+				// 			easing: 'linear'
+				// 		},
+				// 		backgroundColor: '#18212D',
+				// 		delay: (el, index, total) => {
+				// 			var duration = 888; //duration of squares animation
+				// 			return index * (duration / total);
+				// 		},
+				// 		update: (animation) => {
+				// 			if(animation.progress > 75)
+				// 				landingService.animatedSquares();
+				// 		},
+				// 		complete: () => {
+				// 			squares.className += 'bg-dark';
+				// 			element.find('article').hide();
+				// 		}
+				// 	});
+				// });
+
+
 
 			}
 		};

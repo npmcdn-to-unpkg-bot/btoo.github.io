@@ -20,22 +20,11 @@
 		margin: 0;
 		display: block;
 		position: absolute;
-		border: 2px solid black;
-		// background: @bg-dark;
-		// padding: 15px;
-		// z-index: 1;
-		// &:after {
-		// 	background: @bg-light;
-		// 	background-color: grey;
-		// 	content: '';
-		// 	display: block;
-		// 	position: absolute;
-		// 	top: 15px;
-		// 	left: 15px;
-		// 	right: 15px;
-		// 	bottom: 15px;
-		// 	z-index: -1;
-		// }
+		border: 2px solid @mid-blue;
+		&.shown {
+			top: -2px;
+			left: -2px;
+		}
 	}
 
 	&.removeBorders > figure {

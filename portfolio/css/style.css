@@ -35,9 +35,9 @@ to{opacity:0}
 [landing-content][ng-hide]{-webkit-animation:1s disappear;animation:1s disappear}
 [landing-content][ng-show]{-webkit-animation:1s appear;animation:1s appear}
 [landing-content] strong{color:#3cf0ff}
-#landing-card{z-index:1;background-color:transparent;margin:auto;position:absolute;top:0;left:0;bottom:0;right:0;height:20em;max-height:90vh;max-width:90vw;width:42em;text-align:center}
+#landing-card{z-index:1;background-color:transparent;margin:auto;position:absolute;top:0;left:0;bottom:0;right:0;height:28em;max-height:90vh;max-width:90vw;width:42em;text-align:center}
 #landing-card h1{color:#f4f4f4}
-#landing-card p{text-align:left;padding:0 15px;line-height:1.2}
+#landing-card p{text-align:left;padding:0 15px;line-height:1.2;display:none}
 .initialScrollBtn{position:fixed;color:#fff;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);bottom:20px}
 [animejs-banner].background{height:100vh;width:100%;overflow:hidden}
 #box,[animejs-banner] section{width:100%;height:100%}
@@ -45,10 +45,13 @@ to{opacity:0}
 [animejs-banner] #loading-squares div,[animejs-banner] #loading-squares svg{margin:auto;position:absolute;top:0;left:0;bottom:0;right:0}
 [animejs-banner] #squares{position:relative;display:none}
 [animejs-banner] #squares div{border-radius:50%;margin:auto;position:absolute;top:0;left:0;bottom:0;right:0}
+#animejs-explosion{display:block;width:100vw;height:100vh;cursor:pointer}
+[animejs-explosion]{position:fixed}
 #box-container{position:relative;-webkit-perspective:1000px;perspective:1000px;visibility:hidden}
 #box,#box>figure{position:absolute}
 #box{-webkit-transform-style:preserve-3d;transform-style:preserve-3d;-webkit-transition:-webkit-transform 1s;transition:transform 1s}
-#box>figure{margin:0;display:block;border:2px solid #000}
+#box>figure{margin:0;display:block;border:2px solid #1e78b4}
+#box>figure.shown{top:-2px;left:-2px}
 #box.removeBorders>figure{border-style:none}
 .show-box{visibility:visible!important}
 #action-menu{position:fixed;bottom:0;right:0}

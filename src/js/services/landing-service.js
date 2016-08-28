@@ -19,18 +19,8 @@ portfolio.factory('landingService', ['$q', function($q){
 	// animated squares
 	var animatedSquares = $q.defer();
 
-	// animated the card
-	// this.animatedCard = $q.defer();
-	// this.animatedCard.promise
-
-
-
-
-
-
-	// var qlandingAnimated = $q.defer();
-	// var plandingAnimated = qlandingAnimated.promise;
-
+	// animated explosion
+	var animatedExplosion = $q.defer();
 
 	return {
 		'renderedBox': () => {
@@ -42,17 +32,24 @@ portfolio.factory('landingService', ['$q', function($q){
 		'animatedB': () => {
 			return animatedB.resolve();
 		},
-		'createdSquares': () => {
-			return createdSquares.resolve();
+		// 'createdSquares': () => {
+		// 	return createdSquares.resolve();
+		// },
+		// 'canAnimateSquares': () => {
+		// 	return $q.all(requiredForAnimatingSquares);
+		// },
+		// 'animatedSquares': () => {
+		// 	return animatedSquares.resolve();
+		// },
+		'canAnimateExplosion': () => {
+			return animatedB.promise;
 		},
-		'canAnimateSquares': () => {
-			return $q.all(requiredForAnimatingSquares);
-		},
-		'animatedSquares': () => {
-			return animatedSquares.resolve();
+		'animatedExplosion': () => {
+			return animatedExplosion.resolve();
 		},
 		'canAnimateCard': () => {
-			return animatedSquares.promise;
+			// return animatedSquares.promise;
+			return animatedExplosion.promise;
 		}
 	};
 
