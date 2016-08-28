@@ -62,7 +62,7 @@ to{opacity:0}
 #action-button-container .menu-open:checked+.menu-open-button .hamburger-1{-webkit-transform:translate3d(0,0,0) rotate(45deg);transform:translate3d(0,0,0) rotate(45deg)}
 #action-button-container .menu-open:checked+.menu-open-button .hamburger-2{-webkit-transform:translate3d(0,0,0) scale(.1,1);transform:translate3d(0,0,0) scale(.1,1)}
 #action-button-container .menu-open:checked+.menu-open-button .hamburger-3{-webkit-transform:translate3d(0,0,0) rotate(-45deg);transform:translate3d(0,0,0) rotate(-45deg)}
-#action-button-container .menu{-webkit-filter:url(../resources/svg/shadowed-goo.svg#shadowed-goo);filter:url(../resources/svg/shadowed-goo.svg#shadowed-goo);position:absolute;left:50%;width:8888px;height:8888px;box-sizing:border-box;font-size:20px;text-align:left}
+#action-button-container .menu{-webkit-filter:url(resources/svg/shadowed-goo.svg#shadowed-goo);filter:url(resources/svg/shadowed-goo.svg#shadowed-goo);position:absolute;left:50%;width:8888px;height:8888px;box-sizing:border-box;font-size:20px;text-align:left}
 #action-button-container .menu-item:hover{background:#fff;color:#ff4081}
 #action-button-container .menu-item:nth-child(3){-webkit-transition-duration:70ms;transition-duration:70ms}
 #action-button-container .menu-item:nth-child(4){-webkit-transition-duration:130ms;transition-duration:130ms}
