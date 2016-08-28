@@ -10,10 +10,6 @@ portfolio.controller('PortfolioController', [
 	'$document', /*"uiGmapGoogleMapApi", "ColorService", 'ScrollService',*/
 	'$rootScope',
 	function($scope, $http, $window, $timeout, projectsService, landingService, $location, $anchorScroll, $document, $rootScope /*, uiGmapGoogleMapApi, ColorService, ScrollService*/) {
-		var self = this;
-
-		$scope.showBox = false; //wait for 
-
 
 		var birthdate = moment("1993-08-24 00:00").startOf('minute');
 		this.ageyears = moment().diff(birthdate, 'years');
@@ -23,11 +19,6 @@ portfolio.controller('PortfolioController', [
             this.ageseconds++ //make me older by a second every second
         ), 1000);
 
-		$scope.goToSecond = () => {
-			// $location.hash('second');
-			// $anchorScroll();
-			$document.scrollToElementAnimated(angular.element(document.getElementById('second')));
-		}
 
 
 		$scope.showLandingContent = false;

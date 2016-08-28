@@ -1,0 +1,34 @@
+{
+  "name": "awesome-button",
+  "description": "Cool option to quickly add share buttons (or any kind of buttons) to your projects",
+  "homepage": "http://caferati.me/labs/awesome-button",
+  "authors": [
+    "rcaferati (https://github.com/rcaferati/)"
+  ],
+  "license": "MIT",
+  "main": "awesome-button.html",
+  "keywords": [
+    "web-components",
+    "awesome-button",
+    "share button",
+    "button",
+    "share"
+  ],
+  "ignore": [
+    "**/.*",
+    "bower_components"
+  ],
+  "dependencies": {
+    "webcomponentsjs": "^0.7.0"
+  },
+  "_release": "50a03f9ed5",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "50a03f9ed5f0ff61301e5b3599e472566cd6cd37"
+  },
+  "_source": "https://github.com/rcaferati/awesome-button.git",
+  "_target": "*",
+  "_originalSource": "awesome-button",
+  "_direct": true
+}

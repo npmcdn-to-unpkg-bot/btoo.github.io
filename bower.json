@@ -17,7 +17,8 @@
     "angular-embed-codepen": "~1.1.1",
     "angular-animate": "~1.5.8",
     "angulartics": "~0.17.2",
-    "mobile-angular-ui": "^1.2.1"
+    "mobile-angular-ui": "^1.2.1",
+    "awesome-button": "*"
   },
   "resolutions": {
     "angular-animate": "^1.5.8"

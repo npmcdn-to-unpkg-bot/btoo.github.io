@@ -1,12 +1,14 @@
-
-
 [landing-content] {
 	.transition(all linear 2s);
+	color: @bg-light;
 	&[ng-hide] {
 		animation: 1s disappear;
 	}
 	&[ng-show] {
 		animation: 1s appear;
+	}
+	strong {
+		color: @light-blue;
 	}
 }
 
@@ -15,14 +17,19 @@
 	// background-color: white;
 	background-color: transparent;
 	.center();
-	line-height: 20em;
+	// line-height: 20em;
 	height: 20em;
 	max-height: 90vh;
 	max-width: 90vw;
 	width: 42em;
 	text-align: center;
 	h1 {
-		color: #f4f4f4;
+		color: @bg-light;
+	}
+	p {
+		text-align: left;
+		padding: 0px 15px;
+		line-height: 1.2;
 	}
 }
 

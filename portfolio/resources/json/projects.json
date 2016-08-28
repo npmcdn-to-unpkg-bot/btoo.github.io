@@ -59,9 +59,7 @@
 			"Small design features"
 		],
 		"tools": [
-			"Angular",
-			"ngRoute",
-			"MongoDB",
+			"MEAN-Stack",
 			"Sass"
 		],
 		"progress": "Almost finished",

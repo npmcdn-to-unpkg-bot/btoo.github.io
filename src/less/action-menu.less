@@ -31,24 +31,32 @@
 		filter: url("resources/svg/shadowed-goo.svg#shadowed-goo");
 	}
 
+	@menuButtonSize: 69px;
 	.menu-item,
 	.menu-open-button {
-		background: #ff4081;
+		background: @mid-blue;
 		border-radius: 100%;
-		width: 80px;
-		height: 80px;
-		// margin-left: -40px;
+		width: @menuButtonSize;
+		height: @menuButtonSize;
+		line-height: @menuButtonSize;
+		color: @light-blue;
 		position: absolute;
-		// top: 20px;
-		color: white;
 		text-align: center;
-		line-height: 80px;
-		-webkit-transform: translate3d(0, 0, 0);
-		transform: translate3d(0, 0, 0);
-		-webkit-transition: -webkit-transform ease-out 200ms;
-		transition: -webkit-transform ease-out 200ms;
-		transition: transform ease-out 200ms;
+		.transform(translate3d(0, 0, 0));
 		transition: transform ease-out 200ms, -webkit-transform ease-out 200ms;
+
+		&:hover {
+			// way too laggy
+			// width: @menuButtonSize * 1.2;
+			// height: @menuButtonSize * 1.2;
+			// line-height: @menuButtonSize * 1.2;
+			
+			// background: @dark-blue;
+			color: @dark-blue;
+		}
+	}
+	.menu-open-button:hover {
+		.transform(scale(1.2, 1.2) translate3d(0, 0, 0));
 	}
 
 	.menu-open {
@@ -58,33 +66,22 @@
 	.hamburger {
 		width: 25px;
 		height: 3px;
-		background: white;
+		background: @light-blue;
+		border-radius: 8px;
 		display: block;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		margin-left: -12.5px;
-		margin-top: -1.5px;
-		-webkit-transition: -webkit-transform 200ms;
-		transition: -webkit-transform 200ms;
-		transition: transform 200ms;
+		.center();
 		transition: transform 200ms, -webkit-transform 200ms;
 	}
 
-	.hamburger-1 {
-		-webkit-transform: translate3d(0, -8px, 0);
-		transform: translate3d(0, -8px, 0);
-	}
+	.hamburgers(@hamburger) when (@hamburger > 0) {
+		.hamburgers((@hamburger - 1));
 
-	.hamburger-2 {
-		-webkit-transform: translate3d(0, 0, 0);
-		transform: translate3d(0, 0, 0);
-	}
+		.hamburger-@{hamburger} {
+			.transform(translate3d(0, -8px + (8 * (@hamburger - 1)), 0));
+		}
 
-	.hamburger-3 {
-		-webkit-transform: translate3d(0, 8px, 0);
-		transform: translate3d(0, 8px, 0);
 	}
+	.hamburgers(3);
 
 	.menu-open:checked + .menu-open-button .hamburger-1 {
 		-webkit-transform: translate3d(0, 0, 0) rotate(45deg);
@@ -103,10 +100,6 @@
 
 	.menu {
 		position: absolute;
-		left: 50%;
-		// margin-left: -190px;
-		// padding-top: 20px;
-		// padding-left: 190px;
 		width: 8888px;
 		height: 8888px;
 		box-sizing: border-box;
@@ -114,18 +107,6 @@
 		text-align: left;
 	}
 
-	.menu-item:hover {
-		background: white;
-		color: #ff4081;
-	}
-
-	.menuItemTransition(@micounter) when (@micounter > 2) { //starts at 3 because first menu item is third child
-		.menuItemTransition((@micounter - 1)); // next iteration
-		.menu-item:nth-child(@{micounter}) {
-			.transition-duration(70ms + ((@micounter - 3) * 60)); // minus three ebcause starts at 3
-		}
-	}
-	.menuItemTransition(6);
 
 	.menu-open-button {
 		z-index: 2;
@@ -133,10 +114,6 @@
 		.transition-duration(400ms);
 		.transform( scale(1.1, 1.1) translate3d(0, 0, 0));
 		cursor: pointer;
-	}
-
-	.menu-open-button:hover {
-		.transform(scale(1.2, 1.2) translate3d(0, 0, 0));
 	}
 
 	.menu-open:checked + .menu-open-button {
@@ -151,14 +128,21 @@
 
 
 	@radius: 169px;
+	@menuItemCount: 5;
+	@angle: (90deg / (@menuItemCount - 1)); // increase in angle for each menu item
 	.openMenuItemsTransform(@counter) when (@counter > 2) { //starts at 3 because first menu item is third child
 		.openMenuItemsTransform((@counter - 1)); // next iteration
+
+		.menu-item:nth-child(@{counter}) {
+			.transition-duration(70ms + ((@counter - 3) * 60)); // minus three ebcause starts at 3
+		}
+
 		.menu-open:checked ~ .menu-item:nth-child(@{counter}) {
 			.transition-duration(160ms + ((@counter - 3) * 80)); // minus three ebcause starts at 3
-			.transform(translate3d(-(abs(cos((@counter - 3) * 22.5) * @radius)), -(abs(sin((@counter - 3) * 22.5) * @radius)), 0)); //SOHCAHTOA
+			.transform(translate3d(-(abs(cos((@counter - 3) * @angle) * @radius)), -(abs(sin((@counter - 3) * @angle) * @radius)), 0)); //SOHCAHTOA
 		}
 	}
-	.openMenuItemsTransform(6);
+	.openMenuItemsTransform(@menuItemCount + 2);
 
 
 	@media only screen and (min-width : 768px) {
@@ -189,5 +173,5 @@
 	.transition(all .5s);
 }
 :not(.open-menu-blur) {
-	-webkit-transition : -webkit-filter .6s ease-in
+	-webkit-transition : -webkit-filter .3s linear
 }
