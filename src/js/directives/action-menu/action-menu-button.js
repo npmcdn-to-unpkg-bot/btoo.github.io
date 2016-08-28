@@ -1,4 +1,4 @@
-portfolio.directive('actionButton',
+portfolio.directive('actionMenuButton',
 	() => {
 		return {
 			link: (scope, element, attrs) => {

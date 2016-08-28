@@ -1,5 +1,6 @@
 @font-face{font-family:Ubuntu;src:url(font/ubuntu/Ubuntu-R.ttf)}
 @font-face{font-family:Ubuntu;src:url(font/ubuntu/Ubuntu-B.ttf);font-weight:700}
+@font-face{font-family:Ubuntu;src:url(font/ubuntu/Ubuntu-C.ttf);font-stretch:condensed}
 .cards{height:calc(100vh - 40px);width:calc(100% - 40px);overflow:hidden;padding:20px}
 .cards .cards-inner{height:100%;overflow:visible;position:relative}
 .cards .card,.cards .card .card-inner{margin:auto;position:absolute;display:block;left:0;right:0}
@@ -50,7 +51,7 @@ to{opacity:0}
 #action-menu{position:fixed;bottom:0;right:0}
 #action-button{position:relative;-webkit-transform:rotate(0);transform:rotate(0);-webkit-transition:all .5s ease-in-out,opacity 1s linear;transition:all .5s ease-in-out,opacity 1s linear;cursor:pointer}
 #action-button:not(.show-action-button){opacity:0;right:-100%}
-#action-button.show-action-button{-webkit-transition-delay:2s;transition-delay:2s;-webkit-transition-timing-function:cubic-bezier(.25,.46,.45,.94);transition-timing-function:cubic-bezier(.25,.46,.45,.94);opacity:1;right:0}
+#action-button.show-action-button{-webkit-transition-delay:2s;transition-delay:2s;-webkit-transition-timing-function:cubic-bezier(.25,.46,.45,.94);transition-timing-function:cubic-bezier(.25,.46,.45,.94);opacity:1;right:-10px}
 #action-button-container{position:relative;top:-18vh;left:-32vw}
 #action-button-container .menu-item,#action-button-container .menu-open-button{background:#ff4081;border-radius:100%;width:80px;height:80px;position:absolute;color:#fff;text-align:center;line-height:80px;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);-webkit-transition:-webkit-transform ease-out .2s;transition:-webkit-transform ease-out .2s;transition:transform ease-out .2s;-webkit-transition:-webkit-transform ease-out .2s,-webkit-transform ease-out .2s;transition:transform ease-out .2s,-webkit-transform ease-out .2s}
 #action-button-container .menu-open{display:none}
@@ -68,7 +69,6 @@ to{opacity:0}
 #action-button-container .menu-item:nth-child(4){-webkit-transition-duration:130ms;transition-duration:130ms}
 #action-button-container .menu-item:nth-child(5){-webkit-transition-duration:190ms;transition-duration:190ms}
 #action-button-container .menu-item:nth-child(6){-webkit-transition-duration:250ms;transition-duration:250ms}
-#action-button-container .menu-item:nth-child(7){-webkit-transition-duration:310ms;transition-duration:310ms}
 #action-button-container .menu-open-button{z-index:2;-webkit-transition-timing-function:cubic-bezier(.175,.885,.32,1.275);transition-timing-function:cubic-bezier(.175,.885,.32,1.275);-webkit-transition-duration:.4s;transition-duration:.4s;-webkit-transform:scale(1.1,1.1) translate3d(0,0,0);transform:scale(1.1,1.1) translate3d(0,0,0);cursor:pointer}
 #action-button-container .menu-open-button:hover{-webkit-transform:scale(1.2,1.2) translate3d(0,0,0);transform:scale(1.2,1.2) translate3d(0,0,0)}
 #action-button-container .menu-open:checked+.menu-open-button{-webkit-transition-timing-function:linear;transition-timing-function:linear;-webkit-transition-duration:.2s;transition-duration:.2s;-webkit-transform:scale(.8,.8) translate3d(0,0,0);transform:scale(.8,.8) translate3d(0,0,0)}
@@ -85,6 +85,8 @@ to{opacity:0}
 }
 @media only screen and (min-width:2560px){#action-button-container #action-button.show-action-button{right:-569px}
 }
+.open-menu-blur{-webkit-filter:blur(8px) brightness(88%) opacity(88%);filter:blur(8px) brightness(88%) opacity(88%);-webkit-transition:all .5s;transition:all .5s}
+:not(.open-menu-blur){-webkit-transition:-webkit-filter .6s ease-in}
 body{font-family:Ubuntu;-webkit-font-smoothing:antialiased;-moz-font-smoothing:antialiased;font-smoothing:antialiased;text-rendering:optimizeLegibility;font-smooth:always;overflow-x:hidden;margin:0}
 .row{margin-left:0;margin-right:0}
 .scrollable{overflow:auto!important}

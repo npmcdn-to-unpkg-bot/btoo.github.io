@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="portfolio" ng-controller="PortfolioController as portfolio">
 
 <head>
 	<meta charset="utf-8">
@@ -36,24 +36,17 @@
     </script>
 </head>
 
-<body ng-app="portfolio" ng-class="scrollable" ng-controller="PortfolioController as portfolio">
+<body ng-class="scrollable" ng-controller="3DBoxController as box">
 
 	
 	
-	<section id="box-container" ng-controller="3DBoxController as box">
-		<div style="position:absolute; z-index:10;">
-			<button ng-click="box.showSide('front')">show front</button>
-			<button ng-click="box.showSide('right')">show right</button>
-			<button ng-click="box.showSide('back')">show back</button>
-			<button ng-click="box.showSide('left')">show left</button>
-		</div>
+	<section id="box-container" ng-class="{'open-menu-blur':actionMenuOpened}">
 
 		<div id="box" class="{{box.side}}" ng-class="{removeBorders:showLandingContent}">
 			<figure class="front">
 				<div animejs-banner class="background" style="position:fixed">
 					
 				</div>
-				{{showLandingContent}}
 				<div landing-content ng-show="showLandingContent">
 		
 				</div>
@@ -94,18 +87,18 @@
 	<section id="action-menu">
 
 		<div id="action-button-container">
-			<div action-button id="action-button">
+			<div action-menu-button id="action-button">
 				<nav class="menu">
-					<input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
+					<input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" ng-model="actionMenuOpened" />
 					<label class="menu-open-button" for="menu-open">
 						<span class="hamburger hamburger-1"></span>
 						<span class="hamburger hamburger-2"></span>
 						<span class="hamburger hamburger-3"></span>
 					</label>
-					<a href="#" class="menu-item"> <i class="fa fa-bar-chart"></i> </a>
-					<a href="#" class="menu-item"> <i class="fa fa-plus"></i> </a>
-					<a href="#" class="menu-item"> <i class="fa fa-heart"></i> </a>
-					<a href="#" class="menu-item"> <i class="fa fa-cog"></i> </a>
+					<a href="#" action-menu-item-button ng-click="box.showSide('front')" class="menu-item"> <i class="fa fa-bar-chart"></i></a>
+					<a href="#" action-menu-item-button ng-click="box.showSide('right')" class="menu-item"> <i class="fa fa-plus"></i></a>
+					<a href="#" action-menu-item-button ng-click="box.showSide('back')" class="menu-item"> <i class="fa fa-heart"></i></a>
+					<a href="#" action-menu-item-button ng-click="box.showSide('left')" class="menu-item"> <i class="fa fa-cog"></i></a>
 				</nav>
 			</div>
 			

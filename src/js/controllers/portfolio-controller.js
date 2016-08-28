@@ -37,9 +37,7 @@ portfolio.controller('PortfolioController', [
 		}
 
 
-		
-		this.showLandingContent = () => {
-		}
+		$scope.actionMenuOpened = false;
 
 
 		$scope.enableCards = 'cardsDisabled';
