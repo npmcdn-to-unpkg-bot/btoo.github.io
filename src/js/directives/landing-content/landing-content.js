@@ -49,19 +49,16 @@ portfolio.directive('landingContent', [
 									delay: 88,
 									translateY: {
 										value: ['8rem', '0rem'],
-										duration: 2222,
-										direction: 'normal',
-										easing: 'easeOutElastic'
+										duration: 88,
+										direction: 'normal'
 									},
 									scale: {
 										value: [0, 1],
-										duration: 88,
-										easing: 'linear'
+										duration: 88
 									},
 									opacity: {
 										value: [0, 1],
-										duration: 888,
-										easing: 'linear'
+										duration: 888
 									}
 								});
 							}

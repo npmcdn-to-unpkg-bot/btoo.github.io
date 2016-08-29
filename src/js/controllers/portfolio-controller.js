@@ -22,7 +22,7 @@ portfolio.controller('PortfolioController', [
 
 
 		$scope.showLandingContent = false;
-		$scope.scrollable = 'scrollable';
+		$scope.scrollable = 'unscrollable';
 		this.scrollableToggle = state => {
 			$scope.scrollable = state ? 'scrollable' : 'unscrollable';
 		}

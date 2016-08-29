@@ -94,7 +94,7 @@ to{opacity:0}
 }
 @media only screen and (min-width:2560px){#action-button-container #action-button.show-action-button{right:-569px}
 }
-.open-menu-blur{-webkit-filter:blur(8px) brightness(88%) opacity(88%);filter:blur(8px) brightness(88%) opacity(88%);-webkit-transition:all .5s;transition:all .5s}
+.open-menu-blur{-webkit-filter:blur(8px) brightness(28%) opacity(88%);filter:blur(8px) brightness(28%) opacity(88%);-webkit-transition:all .5s;transition:all .5s}
 :not(.open-menu-blur){-webkit-transition:-webkit-filter .3s linear}
 body{font-family:Ubuntu;-webkit-font-smoothing:antialiased;-moz-font-smoothing:antialiased;font-smoothing:antialiased;text-rendering:optimizeLegibility;font-smooth:always;overflow-x:hidden;margin:0}
 .row{margin-left:0;margin-right:0}
