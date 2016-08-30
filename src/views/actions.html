@@ -1,0 +1,23 @@
+<div id="action-button-container">
+	<div action-menu-button id="action-button">
+		<nav class="menu">
+			<input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" ng-model="actionMenuOpened" />
+			<label class="menu-open-button" for="menu-open">
+				<span class="hamburger hamburger-1"></span>
+				<span class="hamburger hamburger-2"></span>
+				<span class="hamburger hamburger-3"></span>
+			</label>
+			<a href="#" action-menu-item-button ng-click="box.showSide('front')" class="menu-item"><i class="fa fa-user" aria-hidden="true"></i></a>
+			<a href="#" action-menu-item-button ng-click="box.showSide('right')" class="menu-item"><i class="fa fa-plus"></i></a>
+			<a href="#" action-menu-item-button ng-click="box.showSide('back')" class="menu-item"><i class="fa fa-heart"></i></a>
+			<a href="#" action-menu-item-button ng-click="box.showSide('left')" class="menu-item"><i class="fa fa-cog"></i></a>
+			<a href="#" action-menu-item-button class="menu-item">
+				<i class="fa fa-cog">
+				<!-- <awesome-button type="facebook" sharer>Share it!</awesome-button>
+				<awesome-button type="twitter" sharer>Share it!</awesome-button>
+				<awesome-button type="plus" sharer>Share it!</awesome-button>
+				<awesome-button type="linkedin" sharer>Share it!</awesome-button> -->
+			</a>
+		</nav>
+	</div>
+</div>

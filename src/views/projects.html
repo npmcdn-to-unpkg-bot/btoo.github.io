@@ -1,0 +1,24 @@
+<div class="cards">
+	<div class="cards-inner flip">
+		<div ng-repeat="project in projects" class="card" id="{{project.id}}">
+			<div class="card-inner">
+
+				<article>
+					<div class="flip-card">
+						<figure class="card-front">
+							<img src="{{project.image}}">
+						</figure>
+						<figure class="card-back">
+							<p>
+								<strong>
+									{{project.shortdescription}}
+								</strong>
+							</p>
+						</figure>
+					</div>	
+				</article>
+
+			</div>
+		</div>
+	</div>
+</div>

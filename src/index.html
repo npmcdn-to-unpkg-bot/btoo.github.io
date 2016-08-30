@@ -39,7 +39,6 @@
 		ga('create', 'UA-81226838-1', 'auto');
 		ga('send', 'pageview');
 	</script>
-
 </head>
 
 <body ng-class="scrollable" ng-controller="BoxController as box">
@@ -48,201 +47,32 @@
 		<!-- <div id="box" class="{{box.side}}" ng-class="{removeBorders:showLandingContent}"> -->
 		<div id="box" class="{{box.side}}">
 			<figure class="front" ng-class="{'shown':shown==='front'}">
-				<div animejs-banner class="background" style="position:fixed">
-					
-				</div>
-				<div landing-content ng-show="showLandingContent">
-		
-				</div>
+				<ng-include	src="'views/about.html'"></ng-include>
 			</figure>
-			<figure class="right" ng-class="{'shown':shown==='right'}">2</figure>
+			<figure class="right" ng-class="{'shown':shown==='right'}">
+				<ng-include	src="'views/profile.html'"></ng-include>
+			</figure>
 			<figure class="back" ng-class="{'shown':shown==='back'}">
-				<div class="cards">
-					<div class="cards-inner flip">
-						<div ng-repeat="project in projects" class="card" id="{{project.id}}">
-							<div class="card-inner">
-
-								<article>
-									<div class="flip-card">
-										<figure class="card-front">
-											<img src="{{project.image}}">
-										</figure>
-										<figure class="card-back">
-											<p>
-												<strong>
-													{{project.shortdescription}}
-												</strong>
-											</p>
-										</figure>
-									</div>	
-								</article>
-
-							</div>
-						</div>
-					</div>
-				</div>
+				<ng-include	src="'views/projects.html'"></ng-include>
 			</figure>
-			<figure class="left" ng-class="{'shown':shown==='left'}">4</figure>
+			<figure class="left" ng-class="{'shown':shown==='left'}">
+				<ng-include	src="'views/contact.html'"></ng-include>
+			</figure>
 			<!-- <figure class="top">5</figure> -->
 			<!-- <figure class="bottom">6</figure> -->
 		</div>
 	</section>
 
+	<section id="box-controls">
+		<ng-include	src="'views/controls.html'"></ng-include>
+	</section>
+
 	<section id="action-menu">
-
-		<div id="action-button-container">
-			<div action-menu-button id="action-button">
-				<nav class="menu">
-					<input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" ng-model="actionMenuOpened" />
-					<label class="menu-open-button" for="menu-open">
-						<span class="hamburger hamburger-1"></span>
-						<span class="hamburger hamburger-2"></span>
-						<span class="hamburger hamburger-3"></span>
-					</label>
-					<a href="#" action-menu-item-button ng-click="box.showSide('front')" class="menu-item"><i class="fa fa-user" aria-hidden="true"></i></a>
-					<a href="#" action-menu-item-button ng-click="box.showSide('right')" class="menu-item"><i class="fa fa-plus"></i></a>
-					<a href="#" action-menu-item-button ng-click="box.showSide('back')" class="menu-item"><i class="fa fa-heart"></i></a>
-					<a href="#" action-menu-item-button ng-click="box.showSide('left')" class="menu-item"><i class="fa fa-cog"></i></a>
-					<a href="#" action-menu-item-button class="menu-item">
-						<i class="fa fa-cog">
-						<!-- <awesome-button type="facebook" sharer>Share it!</awesome-button>
-						<awesome-button type="twitter" sharer>Share it!</awesome-button>
-						<awesome-button type="plus" sharer>Share it!</awesome-button>
-						<awesome-button type="linkedin" sharer>Share it!</awesome-button> -->
-					</a>
-				</nav>
-			</div>
-			
-
-		</div>
-
-
-
-		<!-- <figure id="action-button-container">
-			<div action-button id="action-button">
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
-		</figure> -->
+		<ng-include	src="'views/actions.html'"></ng-include>
 	</section>
 
 
 
-
-	<!--
-	<landing-content ng-show="showLandingContent">
-		
-	</landing-content>
-
-	<div class="header">
-		<div animejs-banner class="background"></div>
-		<div class="circles h-card">
-			<div class="logocircle darkbgcolor">
-				<a href="https://www.linkedin.com/in/brianjtu" rel="me" target="_blank">
-					<i class="logo lightcolor ultradarkbgcolor fa fa-linkedin"></i>
-				</a>
-			</div>
-			<div class="logocircle darkbgcolor">
-				<a href="http://stackoverflow.com/users/3942699/feihcsim" rel="me" target="_blank">
-					<i class="logo lightcolor ultradarkbgcolor fa fa-stack-overflow"></i>
-				</a>
-			</div>
-			<div class="logocircle darkbgcolor">
-				<a href="https://soundcloud.com/betwo" rel="me" target="_blank">
-					<i class="logo lightcolor ultradarkbgcolor fa fa-soundcloud"></i>
-				</a>
-			</div>
-			<div class="logocircle darkbgcolor">
-				<a href="https://github.com/btoo" rel="me" target="_blank">
-					<i class="logo lightcolor ultradarkbgcolor fa fa-github-alt"></i>
-				</a>
-			</div>
-			<div class="initialScrollBtn">
-				<img ng-repeat="i in main.ivesimages" class="profileimg u-photo" ng-src="{{i}}" ng-class="{'shown': main.currentIves === $index}"></img>
-			</div>
-		</div>
-	</div>
-
-	<section class="decoy">
-		
-	</section>
-
-	<div id="second" class="second">
-		<h1>
-			Brian's portfolio
-		</h1>
-		<span class="flow-text">
-			My name is <strong>Brian Tu</strong>. I'm <strong>{{portfolio.ageyears}} years, {{portfolio.agemonths}} months and {{portfolio.ageseconds}} seconds</strong> old and live in <strong>Holmdel, New Jersey</strong>. I'm an <strong>ambitious developer</strong>, passionate about new technology and its capabilities. I am inspired by fast-growing companies and hope to become the lead of one in the future.
-		</span>
-
-		<section id="options">
-			<p id="show-buttons">
-				<button class="show-front">Show 1</button>
-				<button class="show-back">Show 2</button>
-				<button class="show-right">Show 3</button>
-				<button class="show-left">Show 4</button>
-				<button class="show-top">Show 5</button>
-				<button class="show-bottom">Show 6</button>
-			</p>
-			<p>
-				<button id="toggle-backface-visibility">Toggle Backface Visibility</button>
-			</p>
-		</section>
-
-
-	</div>
-
-
-	<div class="main">
-		<div id="intro" class="row firstrow contentrow bgcolor-transparent">
-			
-		</div>
-
-		<div class="cards">
-			<div class="cards-inner flip">
-				<div ng-repeat="project in projects" class="card" id="{{project.id}}">
-					<div class="card-inner">
-
-						<article>
-							<div class="flip-card">
-								<figure class="card-front">
-									<img src="{{project.image}}">
-								</figure>
-								<figure class="card-back">
-									<p>
-										<strong>
-											{{project.shortdescription}}
-										</strong>
-									</p>
-								</figure>
-							</div>	
-						</article>
-
-					</div>
-				</div>
-			</div>
-		</div>
-
-		
-	</div>
-
-
-
-
-	<section class="decoy ng-class:enableCards">
-		
-	</section>
-	-->
-
-
-
-
-	<!-- jQuery (necessary for Materializes JavaScript plugins) -->
-	<!-- <script src="lib/jquery/dist/jquery.min.js"></script> -->
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<!-- <script src="lib/materialize/dist/js/materialize.min.js"></script> -->
 	<!-- Angular for frontend modularity -->
 	<script src="lib/angular/angular.min.js"></script>
 	<!-- Angular animate for animations -->

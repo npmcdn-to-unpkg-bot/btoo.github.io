@@ -29,6 +29,7 @@ portfolio.controller('PortfolioController', [
 
 
 		$scope.actionMenuOpened = false;
+		
 
 
 		$scope.enableCards = 'cardsDisabled';

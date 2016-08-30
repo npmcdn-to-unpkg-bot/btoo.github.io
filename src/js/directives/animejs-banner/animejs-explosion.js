@@ -219,7 +219,7 @@ portfolio.directive('animejsExplosion', [
 						}
 					
 
-					}, 2000); //timeout
+					}, 0); //timeout
 
 				});
 

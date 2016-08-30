@@ -5,6 +5,7 @@
 	// width: @block-width;
 	// height: @block-height;
 	position: relative;
+	// left: -2px;
 	perspective: 1000px;
 	visibility: hidden;
 }
@@ -20,7 +21,7 @@
 		margin: 0;
 		display: block;
 		position: absolute;
-		border: 2px solid @mid-blue;
+		border: 2px solid @dark-blue;
 		&.shown {
 			top: -2px;
 			left: -2px;
@@ -34,4 +35,8 @@
 
 .show-box {
 	visibility: visible !important;
+}
+
+html {
+	border: 2px solid @dark-blue;
 }

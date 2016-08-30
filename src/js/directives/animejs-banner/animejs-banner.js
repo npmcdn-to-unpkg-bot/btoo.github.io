@@ -14,9 +14,12 @@ portfolio.directive('animejsBanner', [ '$q', 'landingService', /*"ColorService",
 					anime({
 						targets: '#Bsvg path',
 						strokeDashoffset: {
-							easing: 'easeInOutExpo',
+							easing: 'easeInExpo',
 							duration: 500,
-							value: function(el) {
+							// duration: (el, i) => {
+							// 	return 88 + (i * 22);
+							// },
+							value: (el) => {
 								var pathLength = el.getTotalLength();
 								el.setAttribute('stroke-dasharray', pathLength);
 								return [-pathLength, 0];
@@ -32,12 +35,18 @@ portfolio.directive('animejsBanner', [ '$q', 'landingService', /*"ColorService",
 						strokeWidth: {
 							value: 8,
 							easing: 'linear',
-							delay: function(el, i) {
-								return 600 + (i * 8);
+							delay: (el, i) => {
+								return 222 + (i * 22);
 							},
 							duration: 222,
 						},
-						delay: function(el, i) {
+						opacity: {
+							value: [0,1],
+							duration: 250,
+							delay: 250,
+							easing: 'linear'
+						},
+						delay: (el, i) => {
 							return i * 30;
 						},
 						duration: 1200,
@@ -48,10 +57,11 @@ portfolio.directive('animejsBanner', [ '$q', 'landingService', /*"ColorService",
 							// // start animating squares once B is loaded
 							// if(animation.reversed==true)
 							// 	landingService.animatedB();
-							landingService.animatedB();
+							// landingService.animatedB();
 						},
 						complete: () => {
 							// console.log('finished loadingscreen');
+							landingService.animatedB();
 						}
 					});
 				});

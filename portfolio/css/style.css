@@ -50,14 +50,15 @@ to{opacity:0}
 #box-container{position:relative;-webkit-perspective:1000px;perspective:1000px;visibility:hidden}
 #box,#box>figure{position:absolute}
 #box{-webkit-transform-style:preserve-3d;transform-style:preserve-3d;-webkit-transition:-webkit-transform 1s;transition:transform 1s}
-#box>figure{margin:0;display:block;border:2px solid #1e78b4}
+#box>figure{margin:0;display:block;border:2px solid #0c3048}
 #box>figure.shown{top:-2px;left:-2px}
 #box.removeBorders>figure{border-style:none}
 .show-box{visibility:visible!important}
+html{border:2px solid #0c3048}
 #action-menu{position:fixed;bottom:0;right:0}
 #action-button{position:relative;-webkit-transform:rotate(0);transform:rotate(0);-webkit-transition:all .5s ease-in-out,opacity 1s linear;transition:all .5s ease-in-out,opacity 1s linear;cursor:pointer}
 #action-button:not(.show-action-button){opacity:0;right:-100%}
-#action-button.show-action-button{-webkit-transition-delay:2s;transition-delay:2s;-webkit-transition-timing-function:cubic-bezier(.25,.46,.45,.94);transition-timing-function:cubic-bezier(.25,.46,.45,.94);opacity:1;right:-10px}
+#action-button.show-action-button{-webkit-transition-delay:5s;transition-delay:5s;-webkit-transition-timing-function:cubic-bezier(.25,.46,.45,.94);transition-timing-function:cubic-bezier(.25,.46,.45,.94);opacity:1;right:-10px}
 #action-button-container{position:relative;top:-18vh;left:-32vw}
 #action-button-container .menu-item,#action-button-container .menu-open-button{background:#1e78b4;border-radius:100%;width:69px;height:69px;line-height:69px;color:#3cf0ff;position:absolute;text-align:center;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);-webkit-transition:-webkit-transform ease-out .2s,-webkit-transform ease-out .2s;transition:transform ease-out .2s,-webkit-transform ease-out .2s}
 #action-button-container .menu-item:hover,#action-button-container .menu-open-button:hover{color:#0c3048}
