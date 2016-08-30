@@ -22,9 +22,7 @@ portfolio.controller('BoxController', [
 		var box = document.getElementById('box');
 		box.style.transform = 'translateZ(-'+translateZ+') rotateY(0deg)';
 
-		var sides = [
-			'front','right','back','left'
-		];
+		var sides = ['front','right','back','left'];
 		this.sides = sides;
 
 		for (var i = sides.length - 1; i >= 0; i--) {
@@ -57,13 +55,13 @@ portfolio.controller('BoxController', [
 			var leftControl = document.querySelector('#side-controls a:first-child');
 			var rightControl = document.querySelector('#side-controls a:last-child');
 
-			leftControl.style.display = 'block';
-			rightControl.style.display = 'block';
+			leftControl.style.opacity = '1';
+			rightControl.style.opacity = '1';
 
 			var rotateY;
 			switch(side){
 				case 'front':
-					leftControl.style.display = 'none';
+					leftControl.style.opacity = 0;
 					rotateY = '0deg'
 					break;
 				case 'right':
@@ -73,7 +71,7 @@ portfolio.controller('BoxController', [
 					rotateY = '-180deg'
 					break;
 				case 'left':
-					rightControl.style.display = 'none';
+					rightControl.style.opacity = 0;
 					rotateY = '-270deg'
 					break;
 			}

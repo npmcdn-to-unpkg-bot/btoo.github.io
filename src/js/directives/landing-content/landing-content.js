@@ -13,7 +13,8 @@ portfolio.directive('landingContent', [
 
 				// finished animating squares, so animate landing card
 				landingService.canAnimateCard().then(() => {
-					// console.log('finished animating squares, so now animate the card');
+					greeting.style.display = 'block';
+
 					$timeout(() => {
 						scope.showLandingContent = true;
 						angular.element(document.getElementById('action-button')).toggleClass('show-action-button');
@@ -50,12 +51,20 @@ portfolio.directive('landingContent', [
 									opacity: {
 										value: [0, 1],
 										duration: 888
+									},
+									complete: () => {
+										landingService.animatedCard();
 									}
 								});
 							}
 						}
 					});
 
+					landingService.canAnimateControls().then(() => {
+						$timeout(() => {
+							document.getElementById('side-controls').style.opacity = 1;
+						}, 888);
+					});
 
 
 					

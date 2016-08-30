@@ -50,9 +50,8 @@ to{opacity:0}
 #animejs-explosion{display:block;width:100vw;height:100vh;cursor:pointer}
 [animejs-explosion]{position:fixed}
 #box-container{position:relative;-webkit-perspective:1000px;perspective:1000px;visibility:hidden}
-#box,#box>figure{position:absolute}
-#box{-webkit-transform-style:preserve-3d;transform-style:preserve-3d;-webkit-transition:-webkit-transform 1s;transition:transform 1s}
-#box>figure{margin:0;display:block;border:2px solid #18212D}
+#box{position:absolute;-webkit-transform-style:preserve-3d;transform-style:preserve-3d;-webkit-transition:-webkit-transform 1s;transition:transform 1s}
+#box>figure{margin:0;display:block;position:absolute;border:2px solid #18212D}
 #box>figure.shown{top:-2px;left:-2px}
 #box.removeBorders>figure{border-style:none}
 .show-box{visibility:visible!important}
@@ -97,7 +96,7 @@ html{border:2px solid #18212D}
 }
 @media only screen and (min-width:2560px){#action-button-container #action-button.show-action-button{right:-569px}
 }
-#side-controls{position:fixed;top:50vh;width:calc(100% - 6px - 7vw);padding:0 3.5vw}
+#side-controls{position:fixed;top:50vh;width:calc(100% - 6px - 7vw);padding:0 3.5vw;-webkit-transition:all .4s;transition:all .4s}
 #side-controls a{-webkit-transition:all .4s;transition:all .4s;opacity:.42}
 #side-controls a i{font-size:2em;color:#1e78b4;cursor:pointer}
 #side-controls a:hover{-webkit-transform:scale(1.2,1.2) translate3d(0,0,0);transform:scale(1.2,1.2) translate3d(0,0,0);opacity:1}

@@ -22,6 +22,9 @@ portfolio.factory('landingService', ['$q', function($q){
 	// animated explosion
 	var animatedExplosion = $q.defer();
 
+	// animated landing card
+	var animatedCard = $q.defer();
+
 	return {
 		'renderedBox': () => {
 			return renderedBox.resolve();
@@ -50,6 +53,12 @@ portfolio.factory('landingService', ['$q', function($q){
 		'canAnimateCard': () => {
 			// return animatedSquares.promise;
 			return animatedExplosion.promise;
+		},
+		'animatedCard': () => {
+			return animatedCard.resolve();
+		},
+		'canAnimateControls': () => {
+			return animatedCard.promise;
 		}
 	};
 

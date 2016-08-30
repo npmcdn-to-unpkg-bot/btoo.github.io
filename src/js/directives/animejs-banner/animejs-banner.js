@@ -1,5 +1,5 @@
-portfolio.directive('animejsBanner', [ '$q', 'landingService', /*"ColorService",*/
-	function( $q, landingService /*,ColorService*/ ) {
+portfolio.directive('animejsBanner', [ '$q', 'landingService',
+	function( $q, landingService ) {
 		return {
 			restrict: 'AE',
 			templateUrl: 'js/directives/animejs-banner/animejs-banner.html',
