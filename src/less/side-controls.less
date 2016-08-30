@@ -1,0 +1,33 @@
+#side-controls {
+	position: fixed;
+	top: 50vh;
+	width: calc(~"100% - 6px - 7vw");
+	padding: 0px 3.5vw;
+
+	a {
+		.transition(all .4s);
+		// .transition-duration(.4s);
+		opacity: .42;
+
+		i {
+			font-size: 2em;
+			color: @mid-blue;
+			cursor: pointer;
+		}
+		
+		&:hover {
+			.transform(~"scale(1.2,1.2) translate3d(0,0,0)");
+			opacity: 1; //use mobile angular ui touch event instead
+		}
+
+		&:first-child {
+			float: left;
+		}
+		&:last-child {
+			float: right;
+		}
+	}
+
+
+
+}

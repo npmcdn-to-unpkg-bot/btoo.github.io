@@ -5,6 +5,11 @@ portfolio.controller('BoxController', [
 		var vm = this;
 		$scope.shown = 'front';
 
+		landingService.canAnimateCard().then(()=>{
+			document.querySelector('.front.shown').classList += ' bg-dark';
+		});
+
+
 
 		var vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0) - 4;
 		var vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0) - 4;
@@ -20,6 +25,8 @@ portfolio.controller('BoxController', [
 		var sides = [
 			'front','right','back','left'
 		];
+		this.sides = sides;
+
 		for (var i = sides.length - 1; i >= 0; i--) {
 			var rotateY;
 			switch(sides[i]){
@@ -46,9 +53,17 @@ portfolio.controller('BoxController', [
 
 		
 		vm.showSide = side => {
+
+			var leftControl = document.querySelector('#side-controls a:first-child');
+			var rightControl = document.querySelector('#side-controls a:last-child');
+
+			leftControl.style.display = 'block';
+			rightControl.style.display = 'block';
+
 			var rotateY;
 			switch(side){
 				case 'front':
+					leftControl.style.display = 'none';
 					rotateY = '0deg'
 					break;
 				case 'right':
@@ -58,6 +73,7 @@ portfolio.controller('BoxController', [
 					rotateY = '-180deg'
 					break;
 				case 'left':
+					rightControl.style.display = 'none';
 					rotateY = '-270deg'
 					break;
 			}

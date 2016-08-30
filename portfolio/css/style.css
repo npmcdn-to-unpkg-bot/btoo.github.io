@@ -37,7 +37,9 @@ to{opacity:0}
 [landing-content] strong{color:#3cf0ff}
 #landing-card{z-index:1;background-color:transparent;margin:auto;position:absolute;top:0;left:0;bottom:0;right:0;height:28em;max-height:90vh;max-width:90vw;width:42em;text-align:center}
 #landing-card h1{color:#f4f4f4}
-#landing-card p{text-align:left;padding:0 15px;line-height:1.2;display:none}
+#landing-card p{text-align:center;padding:0 10vw;display:none;line-height:1.8}
+@media (max-width:375px){#landing-card p{line-height:1.2}
+}
 .initialScrollBtn{position:fixed;color:#fff;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);bottom:20px}
 [animejs-banner].background{height:100vh;width:100%;overflow:hidden}
 #box,[animejs-banner] section{width:100%;height:100%}
@@ -50,11 +52,11 @@ to{opacity:0}
 #box-container{position:relative;-webkit-perspective:1000px;perspective:1000px;visibility:hidden}
 #box,#box>figure{position:absolute}
 #box{-webkit-transform-style:preserve-3d;transform-style:preserve-3d;-webkit-transition:-webkit-transform 1s;transition:transform 1s}
-#box>figure{margin:0;display:block;border:2px solid #0c3048}
+#box>figure{margin:0;display:block;border:2px solid #18212D}
 #box>figure.shown{top:-2px;left:-2px}
 #box.removeBorders>figure{border-style:none}
 .show-box{visibility:visible!important}
-html{border:2px solid #0c3048}
+html{border:2px solid #18212D}
 #action-menu{position:fixed;bottom:0;right:0}
 #action-button{position:relative;-webkit-transform:rotate(0);transform:rotate(0);-webkit-transition:all .5s ease-in-out,opacity 1s linear;transition:all .5s ease-in-out,opacity 1s linear;cursor:pointer}
 #action-button:not(.show-action-button){opacity:0;right:-100%}
@@ -95,8 +97,12 @@ html{border:2px solid #0c3048}
 }
 @media only screen and (min-width:2560px){#action-button-container #action-button.show-action-button{right:-569px}
 }
-.open-menu-blur{-webkit-filter:blur(8px) brightness(28%) opacity(88%);filter:blur(8px) brightness(28%) opacity(88%);-webkit-transition:all .5s;transition:all .5s}
-:not(.open-menu-blur){-webkit-transition:-webkit-filter .3s linear}
+#side-controls{position:fixed;top:50vh;width:calc(100% - 6px - 7vw);padding:0 3.5vw}
+#side-controls a{-webkit-transition:all .4s;transition:all .4s;opacity:.42}
+#side-controls a i{font-size:2em;color:#1e78b4;cursor:pointer}
+#side-controls a:hover{-webkit-transform:scale(1.2,1.2) translate3d(0,0,0);transform:scale(1.2,1.2) translate3d(0,0,0);opacity:1}
+#side-controls a:first-child{float:left}
+#side-controls a:last-child{float:right}
 body{font-family:Ubuntu;-webkit-font-smoothing:antialiased;-moz-font-smoothing:antialiased;font-smoothing:antialiased;text-rendering:optimizeLegibility;font-smooth:always;overflow-x:hidden;margin:0}
 .row{margin-left:0;margin-right:0}
 .scrollable{overflow:auto!important}
@@ -114,3 +120,4 @@ landing-content{z-index:30}
 .second{width:100%;height:100vh;position:relative;z-index:10}
 #initial-scroll{display:block;text-align:center;margin-top:95vh}
 #initial-scroll .fa-chevron-down{color:#fff;cursor:pointer}
+.hidden{display:none}

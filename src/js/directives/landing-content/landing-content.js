@@ -12,7 +12,7 @@ portfolio.directive('landingContent', [
 				var intro = element[0].querySelector('p');
 
 				// finished animating squares, so animate landing card
-				landingService.canAnimateCard().then(()=>{
+				landingService.canAnimateCard().then(() => {
 					// console.log('finished animating squares, so now animate the card');
 					$timeout(() => {
 						scope.showLandingContent = true;
@@ -35,11 +35,11 @@ portfolio.directive('landingContent', [
 							direction: 'normal',
 							delay: 2000
 						},
-						opacity: {
-							value: [0, 1],
-							duration: 888,
-							easing: 'linear'
-						},
+						// opacity: {
+						// 	value: [0, 1],
+						// 	duration: 888,
+						// 	easing: 'linear'
+						// },
 						update: animation => { // animate intro paragraph
 							if(greetingAnimationHalwayFinished==false && animation.progress>50){
 								greetingAnimationHalwayFinished = true;

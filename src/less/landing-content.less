@@ -27,10 +27,14 @@
 		color: @bg-light;
 	}
 	p {
-		text-align: left;
-		padding: 0px 15px;
-		line-height: 1.2;
+		text-align: center;
+		padding: 0px 10vw;
 		display: none;
+		line-height: 1.8;
+
+		@media (max-width: 375px) {
+			line-height: 1.2;
+		}
 	}
 }
 
