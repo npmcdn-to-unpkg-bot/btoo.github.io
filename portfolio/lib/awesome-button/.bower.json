@@ -29,5 +29,6 @@
   },
   "_source": "https://github.com/rcaferati/awesome-button.git",
   "_target": "*",
-  "_originalSource": "awesome-button"
+  "_originalSource": "awesome-button",
+  "_direct": true
 }

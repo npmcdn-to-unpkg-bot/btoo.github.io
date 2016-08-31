@@ -30,5 +30,6 @@
   },
   "_source": "https://github.com/oblador/angular-scroll.git",
   "_target": "^1.0.0",
-  "_originalSource": "angular-scroll"
+  "_originalSource": "angular-scroll",
+  "_direct": true
 }

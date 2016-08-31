@@ -31,7 +31,7 @@ to{opacity:0}
 .bg-light{background-color:#f4f4f4}
 [bubble-gradient]{-webkit-transition:1s ease all;transition:1s ease all;z-index:0;position:relative;height:100vh;width:100%}
 [bubble-gradient] canvas{border:3px solid #CCC}
-[landing-content]{-webkit-transition:all linear 2s;transition:all linear 2s;color:#f4f4f4}
+[landing-content]{font-family:Ubuntu!important;-webkit-transition:all linear 2s;transition:all linear 2s;color:#f4f4f4}
 [landing-content][ng-hide]{-webkit-animation:1s disappear;animation:1s disappear}
 [landing-content][ng-show]{-webkit-animation:1s appear;animation:1s appear}
 [landing-content] strong{color:#3cf0ff}
