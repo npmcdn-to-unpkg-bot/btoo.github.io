@@ -20,11 +20,14 @@ portfolio.controller('PortfolioController', [
 
 
 
+		// @TODO: get scope to update OR figure out why apply/watch is getting called twice in a row
+		// @TODO: at least refactor this code into a service
 		this.closeActionMenu = () => {
-			console.log('closing');
 			$scope.actionMenuOpened = false;
 			document.querySelector('#action-button input').checked = false;
 			document.getElementById('box-container').classList.remove('open-menu-blur');
+			document.querySelector('#side-controls a:first-child').style.left = 0;
+			document.querySelector('#side-controls a:last-child').style.right = 0;
 		}
 
 
