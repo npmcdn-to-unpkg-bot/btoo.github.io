@@ -180,9 +180,22 @@
 
 // why tf did this stop working
 .open-menu-blur {
+	.filter(blur(8px));
 	// .filter(~"blur(8px) brightness(28%) opacity(88%)");
 	// .transition(all .5s);
 }
+#box-container {
+	.transition(all 1s);
+}
 :not(.open-menu-blur) {
 	// -webkit-transition : -webkit-filter .3s linear
+}
+
+
+@media only screen and (max-width: 768px) and (max-height: 425px) {
+	#action-button-container {
+	    position: relative;
+	    top: -20vh;
+	    left: -25vw;
+	}
 }

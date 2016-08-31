@@ -9,8 +9,6 @@ portfolio.controller('BoxController', [
 			document.querySelector('.front.shown').classList += ' bg-dark';
 		});
 
-
-
 		var vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0) - 4;
 		var vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0) - 4;
 

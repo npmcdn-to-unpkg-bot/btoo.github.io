@@ -43,7 +43,7 @@
 
 <body ng-class="scrollable" ng-controller="BoxController as box">
 
-	<section id="box-container" ng-class="{'open-menu-blur':actionMenuOpened, 'show-box':showBox}">
+	<section id="box-container" ng-class="{'open-menu-blur':actionMenuOpened, 'show-box':showBox}" ng-click="portfolio.closeActionMenu()">
 		<!-- <div id="box" class="{{box.side}}" ng-class="{removeBorders:showLandingContent}"> -->
 		<div id="box" class="{{box.side}}">
 			<figure class="front" ng-class="{'shown':shown==='front'}">

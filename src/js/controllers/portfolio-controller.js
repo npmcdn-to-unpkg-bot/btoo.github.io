@@ -20,6 +20,13 @@ portfolio.controller('PortfolioController', [
 
 
 
+		this.closeActionMenu = () => {
+			console.log('closing');
+			$scope.actionMenuOpened = false;
+			document.querySelector('#action-button input').checked = false;
+			document.getElementById('box-container').classList.remove('open-menu-blur');
+		}
+
 
 		$scope.actionMenuOpened = false;
 		
