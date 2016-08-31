@@ -14,11 +14,21 @@
 		right: -100%;
 	}
 	&.show-action-button {
-		.transition-delay(5s);
+		.transition-delay(4.2s);
 		.transition-timing(cubic-bezier(0.250, 0.460, 0.450, 0.940));
 		opacity: 1;
 		right: -10px;
 	}
+
+	nav {
+		opacity: .69;
+		.transition(.5s);
+		&.opened,
+		&:hover {
+			opacity: 1;
+		}
+	}
+
 }
 #action-button-container {
 	position: relative;

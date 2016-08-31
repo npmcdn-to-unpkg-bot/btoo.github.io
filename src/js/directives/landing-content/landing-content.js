@@ -25,7 +25,7 @@ portfolio.directive('landingContent', [
 						targets: greeting,
 						delay: 222,
 						translateY: {
-							value: ['3em', '0em'],
+							value: ['4.2em', '0em'],
 							duration: 1888,
 							direction: 'normal',
 							delay: 2000
@@ -63,6 +63,8 @@ portfolio.directive('landingContent', [
 					landingService.canAnimateControls().then(() => {
 						$timeout(() => {
 							document.getElementById('side-controls').style.opacity = 1;
+							document.querySelector('#side-controls a:last-child').style.transform = "scale(1)";
+							document.querySelector('#side-controls a:last-child').style.animation = "pulse .8s infinite alternate";
 						}, 888);
 					});
 

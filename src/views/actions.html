@@ -2,7 +2,7 @@
 	<div action-menu-button id="action-button">
 		<nav class="menu">
 			<input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" ng-model="actionMenuOpened" />
-			<label class="menu-open-button" for="menu-open">
+			<label class="menu-open-button" for="menu-open" onclick="document.querySelector('#action-button nav.menu').classList.toggle('opened')">
 				<span class="hamburger hamburger-1"></span>
 				<span class="hamburger hamburger-2"></span>
 				<span class="hamburger hamburger-3"></span>

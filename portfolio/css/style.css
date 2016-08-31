@@ -1,6 +1,6 @@
-@font-face{font-family:Ubuntu;src:url(font/ubuntu/Ubuntu-R.ttf)}
-@font-face{font-family:Ubuntu;src:url(font/ubuntu/Ubuntu-B.ttf);font-weight:700}
-@font-face{font-family:Ubuntu;src:url(font/ubuntu/Ubuntu-C.ttf);font-stretch:condensed}
+@font-face{font-family:Ubuntu;src:url(../font/ubuntu/Ubuntu-R.ttf)}
+@font-face{font-family:Ubuntu;src:url(../font/ubuntu/Ubuntu-B.ttf);font-weight:700}
+@font-face{font-family:Ubuntu;src:url(../font/ubuntu/Ubuntu-C.ttf);font-stretch:condensed}
 .cards{height:calc(100vh - 40px);width:calc(100% - 40px);overflow:hidden;padding:20px}
 .cards .cards-inner{height:100%;overflow:visible;position:relative}
 .cards .card,.cards .card .card-inner{margin:auto;position:absolute;display:block;left:0;right:0}
@@ -41,6 +41,8 @@ to{opacity:0}
 @media (max-width:375px){#landing-card p{line-height:1.2}
 }
 .initialScrollBtn{position:fixed;color:#fff;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);bottom:20px}
+@media screen and (min-width:1024px){#landing-card p{padding:0 5px}
+}
 [animejs-banner].background{height:100vh;width:100%;overflow:hidden}
 #box,[animejs-banner] section{width:100%;height:100%}
 [animejs-banner] #loading-squares,[animejs-banner] #squares article{position:absolute}
@@ -52,14 +54,15 @@ to{opacity:0}
 #box-container{position:relative;-webkit-perspective:1000px;perspective:1000px;visibility:hidden}
 #box{position:absolute;-webkit-transform-style:preserve-3d;transform-style:preserve-3d;-webkit-transition:-webkit-transform 1s;transition:transform 1s}
 #box>figure{margin:0;display:block;position:absolute;border:2px solid #18212D}
-#box>figure.shown{top:-2px;left:-2px}
 #box.removeBorders>figure{border-style:none}
 .show-box{visibility:visible!important}
 html{border:2px solid #18212D}
 #action-menu{position:fixed;bottom:0;right:0}
 #action-button{position:relative;-webkit-transform:rotate(0);transform:rotate(0);-webkit-transition:all .5s ease-in-out,opacity 1s linear;transition:all .5s ease-in-out,opacity 1s linear;cursor:pointer}
 #action-button:not(.show-action-button){opacity:0;right:-100%}
-#action-button.show-action-button{-webkit-transition-delay:5s;transition-delay:5s;-webkit-transition-timing-function:cubic-bezier(.25,.46,.45,.94);transition-timing-function:cubic-bezier(.25,.46,.45,.94);opacity:1;right:-10px}
+#action-button.show-action-button{-webkit-transition-delay:4.2s;transition-delay:4.2s;-webkit-transition-timing-function:cubic-bezier(.25,.46,.45,.94);transition-timing-function:cubic-bezier(.25,.46,.45,.94);opacity:1;right:-10px}
+#action-button nav{opacity:.69;-webkit-transition:.5s;transition:.5s}
+#action-button nav.opened,#action-button nav:hover{opacity:1}
 #action-button-container{position:relative;top:-18vh;left:-32vw}
 #action-button-container .menu-item,#action-button-container .menu-open-button{background:#1e78b4;border-radius:100%;width:69px;height:69px;line-height:69px;color:#3cf0ff;position:absolute;text-align:center;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);-webkit-transition:-webkit-transform ease-out .2s,-webkit-transform ease-out .2s;transition:transform ease-out .2s,-webkit-transform ease-out .2s}
 #action-button-container .menu-item:hover,#action-button-container .menu-open-button:hover{color:#0c3048}
@@ -75,6 +78,7 @@ html{border:2px solid #18212D}
 #action-button-container .menu-open:checked+.menu-open-button .hamburger-2{-webkit-transform:translate3d(0,0,0) scale(.1,1);transform:translate3d(0,0,0) scale(.1,1)}
 #action-button-container .menu-open:checked+.menu-open-button .hamburger-3{-webkit-transform:translate3d(0,0,0) rotate(-45deg);transform:translate3d(0,0,0) rotate(-45deg)}
 #action-button-container .menu{-webkit-filter:url(resources/svg/shadowed-goo.svg#shadowed-goo);filter:url(resources/svg/shadowed-goo.svg#shadowed-goo);position:absolute;width:8888px;height:8888px;box-sizing:border-box;font-size:20px;text-align:left}
+#side-controls,.main{position:fixed;width:100%}
 #action-button-container .menu-open-button{z-index:2;-webkit-transition-timing-function:cubic-bezier(.175,.885,.32,1.275);transition-timing-function:cubic-bezier(.175,.885,.32,1.275);-webkit-transition-duration:.4s;transition-duration:.4s;-webkit-transform:scale(1.1,1.1) translate3d(0,0,0);transform:scale(1.1,1.1) translate3d(0,0,0);cursor:pointer}
 #action-button-container .menu-open:checked+.menu-open-button{-webkit-transition-timing-function:linear;transition-timing-function:linear;-webkit-transition-duration:.2s;transition-duration:.2s;-webkit-transform:scale(.8,.8) translate3d(0,0,0);transform:scale(.8,.8) translate3d(0,0,0)}
 #action-button-container .menu-open:checked~.menu-item{-webkit-transition-timing-function:cubic-bezier(.935,0,.34,1.33);transition-timing-function:cubic-bezier(.935,0,.34,1.33)}
@@ -96,12 +100,18 @@ html{border:2px solid #18212D}
 }
 @media only screen and (min-width:2560px){#action-button-container #action-button.show-action-button{right:-569px}
 }
-#side-controls{position:fixed;top:50vh;width:calc(100% - 6px - 7vw);padding:0 3.5vw;-webkit-transition:all .4s;transition:all .4s}
+#side-controls{top:50vh;padding:0 3.5vw;-webkit-transition:all .4s;transition:all .4s}
 #side-controls a{-webkit-transition:all .4s;transition:all .4s;opacity:.42}
 #side-controls a i{font-size:2em;color:#1e78b4;cursor:pointer}
 #side-controls a:hover{-webkit-transform:scale(1.2,1.2) translate3d(0,0,0);transform:scale(1.2,1.2) translate3d(0,0,0);opacity:1}
 #side-controls a:first-child{float:left}
 #side-controls a:last-child{float:right}
+@-webkit-keyframes pulse{0%{-webkit-transform:scale(1);transform:scale(1);color:#1e78b4;opacity:.42}
+100%{-webkit-transform:scale(2);transform:scale(2);color:#3cf0ff;opacity:1}
+}
+@keyframes pulse{0%{-webkit-transform:scale(1);transform:scale(1);color:#1e78b4;opacity:.42}
+100%{-webkit-transform:scale(2);transform:scale(2);color:#3cf0ff;opacity:1}
+}
 body{font-family:Ubuntu;-webkit-font-smoothing:antialiased;-moz-font-smoothing:antialiased;font-smoothing:antialiased;text-rendering:optimizeLegibility;font-smooth:always;overflow-x:hidden;margin:0}
 .row{margin-left:0;margin-right:0}
 .scrollable{overflow:auto!important}
@@ -111,7 +121,7 @@ body{font-family:Ubuntu;-webkit-font-smoothing:antialiased;-moz-font-smoothing:a
 .hoverdarker{-webkit-transition:background-color .3s ease;transition:background-color .3s ease}
 .scrollfade{-webkit-transition:all .4s ease;transition:all .4s ease}
 .scrollfade.hidden{opacity:0;-webkit-transform:translateY(15px) scale(.9,.9);transform:translateY(15px) scale(.9,.9)}
-.main{position:fixed;top:0;left:0;width:100%}
+.main{top:0;left:0}
 .decoy{width:100%;height:100vh;position:relative}
 .header,landing-content{position:absolute;width:100%;height:100vh}
 .header{z-index:20}

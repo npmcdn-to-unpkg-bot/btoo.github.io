@@ -51,6 +51,7 @@ portfolio.controller('BoxController', [
 
 		
 		vm.showSide = side => {
+			document.querySelector('#side-controls a:last-child').style.animationName = 'none';
 
 			var leftControl = document.querySelector('#side-controls a:first-child');
 			var rightControl = document.querySelector('#side-controls a:last-child');
