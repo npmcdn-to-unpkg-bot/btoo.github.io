@@ -1,0 +1,20 @@
+<div id="skillz-order">
+	<a ng-click="skillzOrderProperty='skill'" href="#">order by skill name</a>
+	<a ng-click="skillzOrderProperty='experience'" href="#">order by experience</a>
+	<a ng-click="skillzOrderProperty='skill'" href="#">order by project count</a>
+</div>
+<div id="skillz-filter-categories">
+	<a ng-repeat="dummySkillCategory in dummySkillzCategoriesList" ng-click="toggleCategoryFilter(dummySkillzCategoriesList[$index])" ng-class="{'skillz-category-on':skillzFilterCategories.indexOf(dummySkillzCategoriesList[$index]) > -1}" href="#">
+		{{dummySkillCategory}}
+	</a>
+
+</div>
+<div id="skillz-filter-experience">
+</div>
+
+
+<ul id="skillz-list">
+	<li class="skill" ng-repeat="skill in skillz | orderBy: skillzOrderProperty | byCategories: skillzFilterCategories | byExperience: skillzFilterExperienceMin:skillzFilterExperienceMax">
+		{{skill.skill}} {{skill.experience}}years {{skill.projects.length}}
+	</li>
+</ul>

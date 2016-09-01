@@ -2,6 +2,10 @@ portfolio.directive('landingContent', [
 	'$timeout',
 	'landingService',
 	function($timeout, landingService){
+		
+		// REMOVE THIS - only for dev
+		landingService.animatedCard();
+		
 		return {
 			restrict: 'AE',
 			templateUrl: 'js/directives/landing-content/landing-content.html',
@@ -60,6 +64,8 @@ portfolio.directive('landingContent', [
 						}
 					});
 
+
+					// @TODO: put  in own directive
 					landingService.canAnimateControls().then(() => {
 						$timeout(() => {
 							document.getElementById('side-controls').style.opacity = 1;

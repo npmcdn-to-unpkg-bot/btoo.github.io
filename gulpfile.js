@@ -76,11 +76,17 @@ gulp.task('html', function() {
 });
 
 gulp.task('javascript', function() {
-	return gulp.src(["src/js/portfolio.module.js", "src/js/services/*.js", /*"src/js/controllers/*.js",*/ "src/js/**/*.js"])
+	return gulp.src([
+			"src/js/portfolio.module.js",
+			"src/js/services/*.js",
+			/*"src/js/controllers/*.js",*/
+			"src/js/**/!(portfolio.bootstrap)*.js",
+			'src/**/portfolio.bootstrap.js'
+		])
 		.pipe(concat('all.min.js'))
 		.pipe(plumber())
 		.pipe(babel())
-		// .pipe(uglify())
+		.pipe(uglify())
 		.pipe(gulp.dest('./portfolio/'))
 		.pipe(reload({
 			stream: true

@@ -1,0 +1,120 @@
+[
+	{
+		"skill": "JavaScript",
+		"experience": "3",
+		"categories": [
+			"frontend",
+			"backend"
+		],
+		"projects": [
+			"spark",
+			"neroli"
+		]
+	}, {
+		"skill": "PHP",
+		"experience": "2",
+		"categories": [
+			"backend"
+		],
+		"projects": [
+			"spark",
+			"neroli"
+		]
+	}, {
+		"skill": "MySQL",
+		"experience": "3",
+		"categories": [
+			"database"
+		],
+		"projects": [
+			"spark",
+			"vocatio"
+		]
+	}, {
+		"skill": "Python",
+		"experience": "1",
+		"categories": [
+			"backend"
+		],
+		"projects": [
+			"fruity",
+			"quantopian"
+		]
+	}, {
+		"skill": "AWS",
+		"experience": "1",
+		"categories": [
+			"cloud administration"
+		],
+		"projects": [
+			"spark",
+			"neroli"
+		]
+	}, {
+		"skill": "CSS",
+		"experience": "3",
+		"categories": [
+			"frontend"
+		],
+		"projects": [
+			"spark",
+			"neroli",
+			"vocatio",
+			"primal"
+		]
+	}, {
+		"skill": "Sass",
+		"experience": "1.5",
+		"categories": [
+			"frontend"
+		],
+		"projects": [
+			"spark",
+			"neroli",
+			"platts"
+		]
+	}, {
+		"skill": "Less",
+		"experience": "1",
+		"categories": [
+			"frontend"
+		],
+		"projects": [
+			"btoo"
+		]
+	}, {
+		"skill": "Angular",
+		"experience": "2",
+		"categories": [
+			"frontend",
+			"backend"
+		],
+		"projects": [
+			"btoo",
+			"neroli"
+		]
+	}, {
+		"skill": "Yii",
+		"experience": "2",
+		"categories": [
+			"frontend",
+			"backend",
+			"database"
+		],
+		"projects": [
+			"spark",
+			"neroli"
+		]
+	}, {
+		"skill": "Photoshop",
+		"experience": "3",
+		"categories": [
+			"frontend",
+			"design"
+		],
+		"projects": [
+			"spark",
+			"neroli"
+		]
+	}
+]

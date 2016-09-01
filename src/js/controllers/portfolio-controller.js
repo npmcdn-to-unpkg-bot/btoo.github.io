@@ -5,11 +5,12 @@ portfolio.controller('PortfolioController', [
 	'$timeout',
 	'projectsService',
 	'landingService',
+	'skillzService',
 	'$location',
 	'$anchorScroll',
 	'$document', /*"uiGmapGoogleMapApi", "ColorService", 'ScrollService',*/
 	'$rootScope',
-	function($scope, $http, $window, $timeout, projectsService, landingService, $location, $anchorScroll, $document, $rootScope /*, uiGmapGoogleMapApi, ColorService, ScrollService*/) {
+	function($scope, $http, $window, $timeout, projectsService, landingService, skillzService, $location, $anchorScroll, $document, $rootScope /*, uiGmapGoogleMapApi, ColorService, ScrollService*/) {
 
 
 		$scope.showLandingContent = false;
@@ -34,6 +35,23 @@ portfolio.controller('PortfolioController', [
 		$scope.actionMenuOpened = false;
 		
 
+		// $scope.dummySkillzCategories = skillzService.dummySkillzCategories();
+
+		// initial sorting for skillz
+		$scope.skillzOrderProperty = 'projects.length';
+		$scope.reverse = false;
+
+		$scope.skillzFilterCategories = [];
+		$scope.toggleCategoryFilter = toggledCategory => {
+			// $scope.skillzFilterCategories.indexOf(toggledCategory) > -1 ? 
+			if($scope.skillzFilterCategories.indexOf(toggledCategory) > -1)
+				$scope.skillzFilterCategories.splice($scope.skillzFilterCategories.indexOf(toggledCategory), 1);
+			else
+				$scope.skillzFilterCategories.push(toggledCategory);
+		}
+
+		$scope.skillzFilterExperienceMin = 0;
+		$scope.skillzFilterExperienceMax = 99;
 
 		// $scope.enableCards = 'cardsDisabled';
 		// angular.element($window).bind( //when user reaches bottom of page

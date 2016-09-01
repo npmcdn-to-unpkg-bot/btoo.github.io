@@ -52,9 +52,8 @@ to{opacity:0}
 #animejs-explosion{display:block;width:100vw;height:100vh;cursor:pointer}
 [animejs-explosion]{position:fixed}
 #box-container{position:relative;-webkit-perspective:1000px;perspective:1000px;visibility:hidden}
-#box,#box>figure{position:absolute}
-#box{-webkit-transform-style:preserve-3d;transform-style:preserve-3d;-webkit-transition:-webkit-transform 1s;transition:transform 1s}
-#box>figure{margin:0;display:block;border:2px solid #18212D}
+#box{position:absolute;-webkit-transform-style:preserve-3d;transform-style:preserve-3d;-webkit-transition:-webkit-transform 1s;transition:transform 1s}
+#box>figure{margin:0;display:block;position:absolute;border:2px solid #18212D}
 #box.removeBorders>figure{border-style:none}
 .show-box{visibility:visible!important}
 html{border:2px solid #18212D}
@@ -71,7 +70,6 @@ html{border:2px solid #18212D}
 #action-button-container .menu-open{display:none}
 #action-button-container .hamburger{width:25px;height:3px;background:#3cf0ff;border-radius:8px;display:block;margin:auto;position:absolute;top:0;left:0;bottom:0;right:0;-webkit-transition:-webkit-transform .2s,-webkit-transform .2s;transition:transform .2s,-webkit-transform .2s}
 .header,.second{background:#fff}
-#intro,.circles.h-card{display:none}
 #action-button-container .hamburger-1{-webkit-transform:translate3d(0,-8px,0);transform:translate3d(0,-8px,0)}
 #action-button-container .hamburger-2{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
 #action-button-container .hamburger-3{-webkit-transform:translate3d(0,8px,0);transform:translate3d(0,8px,0)}
@@ -116,6 +114,11 @@ html{border:2px solid #18212D}
 @keyframes pulse{0%{-webkit-transform:scale(1);transform:scale(1);color:#1e78b4;opacity:.42}
 100%{-webkit-transform:scale(2);transform:scale(2);color:#3cf0ff;opacity:1}
 }
+#skillz{max-width:80vw;margin:auto;text-align:center}
+#skillz a{display:block}
+#intro,.circles.h-card{display:none}
+#skillz a.skillz-category-on{font-size:2em}
+#skillz-filter-categories a{text-transform:capitalize}
 body{font-family:Ubuntu;-webkit-font-smoothing:antialiased;-moz-font-smoothing:antialiased;font-smoothing:antialiased;text-rendering:optimizeLegibility;font-smooth:always;overflow-x:hidden;margin:0}
 .row{margin-left:0;margin-right:0}
 .scrollable{overflow:auto!important}
