@@ -31,7 +31,7 @@ to{opacity:0}
 .bg-light{background-color:#f4f4f4}
 [bubble-gradient]{-webkit-transition:1s ease all;transition:1s ease all;z-index:0;position:relative;height:100vh;width:100%}
 [bubble-gradient] canvas{border:3px solid #CCC}
-[landing-content]{font-family:Ubuntu!important;-webkit-transition:all linear 2s;transition:all linear 2s;color:#f4f4f4}
+[landing-content]{font-family:Ubuntu!important;font-weight:700;-webkit-transition:all linear 2s;transition:all linear 2s;color:#f4f4f4}
 [landing-content][ng-hide]{-webkit-animation:1s disappear;animation:1s disappear}
 [landing-content][ng-show]{-webkit-animation:1s appear;animation:1s appear}
 [landing-content] strong{color:#3cf0ff}
@@ -52,8 +52,10 @@ to{opacity:0}
 #animejs-explosion{display:block;width:100vw;height:100vh;cursor:pointer}
 [animejs-explosion]{position:fixed}
 #box-container{position:relative;-webkit-perspective:1000px;perspective:1000px;visibility:hidden}
-#box{position:absolute;-webkit-transform-style:preserve-3d;transform-style:preserve-3d;-webkit-transition:-webkit-transform 1s;transition:transform 1s}
-#box>figure{margin:0;display:block;position:absolute;border:2px solid #18212D}
+#box,#box>figure{position:absolute}
+#box{-webkit-transform-style:preserve-3d;transform-style:preserve-3d;-webkit-transition:-webkit-transform 1s;transition:transform 1s}
+#box>figure{margin:0;display:block;border:2px solid #18212D}
+#box>figure.left,#box>figure.right{overflow:auto}
 #box.removeBorders>figure{border-style:none}
 .show-box{visibility:visible!important}
 html{border:2px solid #18212D}
@@ -69,7 +71,6 @@ html{border:2px solid #18212D}
 #action-button-container .menu-open-button:hover{-webkit-transform:scale(1.2,1.2) translate3d(0,0,0);transform:scale(1.2,1.2) translate3d(0,0,0)}
 #action-button-container .menu-open{display:none}
 #action-button-container .hamburger{width:25px;height:3px;background:#3cf0ff;border-radius:8px;display:block;margin:auto;position:absolute;top:0;left:0;bottom:0;right:0;-webkit-transition:-webkit-transform .2s,-webkit-transform .2s;transition:transform .2s,-webkit-transform .2s}
-.header,.second{background:#fff}
 #action-button-container .hamburger-1{-webkit-transform:translate3d(0,-8px,0);transform:translate3d(0,-8px,0)}
 #action-button-container .hamburger-2{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
 #action-button-container .hamburger-3{-webkit-transform:translate3d(0,8px,0);transform:translate3d(0,8px,0)}
@@ -116,9 +117,16 @@ html{border:2px solid #18212D}
 }
 #skillz{max-width:80vw;margin:auto;text-align:center}
 #skillz a{display:block}
-#intro,.circles.h-card{display:none}
 #skillz a.skillz-category-on{font-size:2em}
+#skillz #skillz-list{padding:0}
+#skillz #skillz-list li{list-style:none;display:inline-block;background:#1e78b4;margin:5px;padding:7.5px 15px;border-radius:17.5px;color:#f4f4f4}
+#intro,.circles.h-card{display:none}
+.header,.second{background:#fff}
 #skillz-filter-categories a{text-transform:capitalize}
+.animate-repeat{list-style:none;box-sizing:border-box}
+.animate-repeat.ng-enter,.animate-repeat.ng-leave,.animate-repeat.ng-move{-webkit-transition:all linear .5s;transition:all linear .5s}
+.animate-repeat.ng-enter,.animate-repeat.ng-leave.ng-leave-active,.animate-repeat.ng-move{opacity:0}
+.animate-repeat.ng-enter.ng-enter-active,.animate-repeat.ng-leave,.animate-repeat.ng-move.ng-move-active{opacity:1}
 body{font-family:Ubuntu;-webkit-font-smoothing:antialiased;-moz-font-smoothing:antialiased;font-smoothing:antialiased;text-rendering:optimizeLegibility;font-smooth:always;overflow-x:hidden;margin:0}
 .row{margin-left:0;margin-right:0}
 .scrollable{overflow:auto!important}

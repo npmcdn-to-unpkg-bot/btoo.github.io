@@ -9,12 +9,14 @@
 	</a>
 
 </div>
+
 <div id="skillz-filter-experience">
 </div>
 
 
 <ul id="skillz-list">
-	<li class="skill" ng-repeat="skill in skillz | orderBy: skillzOrderProperty | byCategories: skillzFilterCategories | byExperience: skillzFilterExperienceMin:skillzFilterExperienceMax">
+	<li skill class="skill animate-repeat" ng-repeat="skill in skillz | orderBy: skillzOrderProperty | byCategories: skillzFilterCategories | byExperience: skillzFilterExperienceMin:skillzFilterExperienceMax as results">
+		<!-- {{results}} -->
 		{{skill.skill}} {{skill.experience}}years {{skill.projects.length}}
 	</li>
 </ul>

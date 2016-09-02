@@ -116,5 +116,45 @@
 			"spark",
 			"neroli"
 		]
+	}, {
+		"skill": "Git",
+		"experience": "2",
+		"categories": [
+			"project management"
+		],
+		"projects": [
+			"spark",
+			"vocatio"
+		]
+	}, {
+		"skill": "JIRA",
+		"experience": "2",
+		"categories": [
+			"project management"
+		],
+		"projects": [
+			"spark",
+			"neroli",
+			"primal",
+			"vocatio"
+		]
+	}, {
+		"skill": "Magento",
+		"experience": "2",
+		"categories": [
+			"backend"
+		],
+		"projects": [
+			"primal"
+		]
+	}, {
+		"skill": "MongoDB",
+		"experience": "1",
+		"categories": [
+			"database"
+		],
+		"projects": [
+			"neroli"
+		]
 	}
 ]
