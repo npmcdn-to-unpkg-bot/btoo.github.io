@@ -1,7 +1,20 @@
 [
 	{
 		"skill": "JavaScript",
+		"experience": "4",
+		"proficiency": "very-strong",
+		"categories": [
+			"frontend",
+			"backend"
+		],
+		"projects": [
+			"spark",
+			"neroli"
+		]
+	}, {
+		"skill": "ECMAScript6",
 		"experience": "3",
+		"proficiency": "medium",
 		"categories": [
 			"frontend",
 			"backend"
@@ -13,6 +26,7 @@
 	}, {
 		"skill": "PHP",
 		"experience": "2",
+		"proficiency": "strong",
 		"categories": [
 			"backend"
 		],
@@ -23,6 +37,7 @@
 	}, {
 		"skill": "MySQL",
 		"experience": "3",
+		"proficiency": "strong",
 		"categories": [
 			"database"
 		],
@@ -33,6 +48,7 @@
 	}, {
 		"skill": "Python",
 		"experience": "1",
+		"proficiency": "medium",
 		"categories": [
 			"backend"
 		],
@@ -43,16 +59,18 @@
 	}, {
 		"skill": "AWS",
 		"experience": "1",
+		"proficiency": "light",
 		"categories": [
-			"cloud administration"
+			"cloud"
 		],
 		"projects": [
 			"spark",
 			"neroli"
 		]
 	}, {
-		"skill": "CSS",
+		"skill": "CSS3",
 		"experience": "3",
+		"proficiency": "very-strong",
 		"categories": [
 			"frontend"
 		],
@@ -65,6 +83,7 @@
 	}, {
 		"skill": "Sass",
 		"experience": "1.5",
+		"proficiency": "strong",
 		"categories": [
 			"frontend"
 		],
@@ -76,6 +95,7 @@
 	}, {
 		"skill": "Less",
 		"experience": "1",
+		"proficiency": "strong",
 		"categories": [
 			"frontend"
 		],
@@ -85,6 +105,7 @@
 	}, {
 		"skill": "Angular",
 		"experience": "2",
+		"proficiency": "strong",
 		"categories": [
 			"frontend",
 			"backend"
@@ -94,7 +115,8 @@
 			"neroli"
 		]
 	}, {
-		"skill": "Yii",
+		"skill": "Yii/Yii2",
+		"proficiency": "strong",
 		"experience": "2",
 		"categories": [
 			"frontend",
@@ -107,6 +129,7 @@
 		]
 	}, {
 		"skill": "Photoshop",
+		"proficiency": "medium",
 		"experience": "3",
 		"categories": [
 			"frontend",
@@ -119,6 +142,7 @@
 	}, {
 		"skill": "Git",
 		"experience": "2",
+		"proficiency": "medium",
 		"categories": [
 			"project management"
 		],
@@ -129,6 +153,7 @@
 	}, {
 		"skill": "JIRA",
 		"experience": "2",
+		"proficiency": "medium",
 		"categories": [
 			"project management"
 		],
@@ -141,6 +166,7 @@
 	}, {
 		"skill": "Magento",
 		"experience": "2",
+		"proficiency": "medium",
 		"categories": [
 			"backend"
 		],
@@ -150,11 +176,255 @@
 	}, {
 		"skill": "MongoDB",
 		"experience": "1",
+		"proficiency": "medium",
 		"categories": [
 			"database"
 		],
 		"projects": [
 			"neroli"
+		]
+	}, {
+		"skill": "Eclipse",
+		"experience": "5",
+		"proficiency": "strong",
+		"categories": [
+			"development"
+		],
+		"projects": [
+			"spark",
+			"neroli",
+			"primal"
+		]
+	}, {
+		"skill": "Sublime Text 2/3",
+		"experience": "5",
+		"proficiency": "very-strong",
+		"categories": [
+			"development"
+		],
+		"projects": [
+			"spark",
+			"neroli",
+			"primal",
+			"lundbeck-otsuka",
+			"vocatio",
+			"platts"
+		]
+	}, {
+		"skill": "Node.js",
+		"experience": "2",
+		"proficiency": "medium",
+		"categories": [
+			"development",
+			"backend"
+		],
+		"projects": [
+			"spark",
+			"neroli",
+			"lundbeck-otsuka",
+			"platts"
+		]
+	}, {
+		"skill": "Gulp",
+		"experience": "1.8",
+		"proficiency": "medium",
+		"categories": [
+			"development"
+		],
+		"projects": [
+			"spark-mobile",
+			"neroli",
+			"lundbeck-otsuka"
+		]
+	}, {
+		"skill": "React",
+		"experience": "0.8",
+		"proficiency": "light",
+		"categories": [
+			"frontend",
+			"backend"
+		],
+		"projects": [
+			"pineapple-online"
+		]
+	}, {
+		"skill": "jQuery",
+		"experience": "3",
+		"proficiency": "very-strong",
+		"categories": [
+			"frontend"
+		],
+		"projects": [
+			"spark",
+			"neroli",
+			"vocatio"
+		]
+	}, {
+		"skill": "Bootstrap",
+		"experience": "3",
+		"proficiency": "very-strong",
+		"categories": [
+			"frontend"
+		],
+		"projects": [
+			"spark",
+			"neroli",
+			"vocatio",
+			"primal"
+		]
+	}, {
+		"skill": "Ionic.js",
+		"experience": "1.5",
+		"proficiency": "medium",
+		"categories": [
+			"frontend"
+		],
+		"projects": [
+			"spark-mobile"
+		]
+	}, {
+		"skill": "D3.js",
+		"experience": "2.2",
+		"proficiency": "medium",
+		"categories": [
+			"frontend"
+		],
+		"projects": [
+			"spark"
+		]
+	}, {
+		"skill": "Ruby on Rails",
+		"experience": "1.2",
+		"proficiency": "light",
+		"categories": [
+			"backend"
+		],
+		"projects": [
+			"vocatio"
+		]
+	}, {
+		"skill": "Email design",
+		"experience": "1.5",
+		"proficiency": "strong",
+		"categories": [
+			"frontend",
+			"design"
+		],
+		"projects": [
+			"spark"
+		]
+	}, {
+		"skill": "Mobile-first",
+		"experience": "1.5",
+		"proficiency": "strong",
+		"categories": [
+			"frontend",
+			"design"
+		],
+		"projects": [
+			"spark",
+			"neroli"
+		]
+	}, {
+		"skill": "Flask",
+		"experience": "1.5",
+		"proficiency": "light",
+		"categories": [
+			"backend"
+		],
+		"projects": [
+			"Fruity"
+		]
+	}, {
+		"skill": "Scrum",
+		"experience": "1.5",
+		"proficiency": "medium",
+		"categories": [
+			"project management"
+		],
+		"projects": [
+			"spark"
+		]
+	}, {
+		"skill": "Agile Development",
+		"experience": "1.5",
+		"proficiency": "strong",
+		"categories": [
+			"project management",
+			"development"
+		],
+		"projects": [
+			"spark"
+		]
+	}, {
+		"skill": "oAuth",
+		"experience": "1.5",
+		"proficiency": "medium",
+		"categories": [
+			"security"
+		],
+		"projects": [
+			"spark-mobile"
+		]
+	}, {
+		"skill": "SSH",
+		"experience": "2.2",
+		"proficiency": "strong",
+		"categories": [
+			"security"
+		],
+		"projects": [
+			"spark",
+			"vocatio"
+		]
+	}, {
+		"skill": "bash",
+		"experience": "2.8",
+		"proficiency": "medium",
+		"categories": [
+			"development"
+		],
+		"projects": [
+			"spark",
+			"vocatio"
+		]
+	}, {
+		"skill": "MVC",
+		"experience": "2.5",
+		"proficiency": "strong",
+		"categories": [
+			"development"
+		],
+		"projects": [
+			"spark",
+			"neroli"
+		]
+	}, {
+		"skill": "Linux",
+		"experience": "2",
+		"proficiency": "medium",
+		"categories": [
+			"development"
+		],
+		"projects": [
+		]
+	}, {
+		"skill": "OSX",
+		"experience": "2",
+		"proficiency": "medium",
+		"categories": [
+			"development"
+		],
+		"projects": [
+		]
+	}, {
+		"skill": "Windows",
+		"experience": "8",
+		"proficiency": "very-strong",
+		"categories": [
+			"development"
+		],
+		"projects": [
 		]
 	}
 ]

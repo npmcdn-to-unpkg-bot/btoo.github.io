@@ -17,11 +17,8 @@ portfolio.factory('skillzService', [
 				for (var i = response.data.length - 1; i >= 0; i--)
 					$rootScope.dummySkillzCategoriesList.push(response.data[i].categories);
 				
-				console.log($rootScope.dummySkillzCategoriesList);
 				// removes duplicates using ES6's spread operator (...) and Set object 
 				$rootScope.dummySkillzCategoriesList = [ ...new Set( [].concat( ...$rootScope.dummySkillzCategoriesList) ) ];
-				console.log($rootScope.dummySkillzCategoriesList);
-
 			});
 			
 

@@ -10,7 +10,11 @@
 		.transition(all .4s);
 		// .transition-duration(.4s);
 		opacity: .42;
-		position: relative;
+		position: fixed;
+		top: 50vh;
+		display: inline-block;
+		vertical-align: middle;
+		max-width: 30px;
 
 		i {
 			font-size: 2em;
@@ -24,10 +28,10 @@
 		}
 
 		&:first-child {
-			float: left;
+			left: 5vw !important;
 		}
 		&:last-child {
-			float: right;
+			right: 5vw !important;
 		}
 	}
 

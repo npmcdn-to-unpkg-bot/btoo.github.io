@@ -38,7 +38,7 @@ portfolio.controller('PortfolioController', [
 		// $scope.dummySkillzCategories = skillzService.dummySkillzCategories();
 
 		// initial sorting for skillz
-		$scope.skillzOrderProperty = 'projects.length';
+		$scope.skillzOrderProperty = 'skill';
 		$scope.reverse = false;
 
 		$scope.skillzFilterCategories = [];
