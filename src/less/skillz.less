@@ -1,5 +1,6 @@
 #skillz {
-	max-width: 80vw;
+	max-width: 80%;
+	// max-width: 40vw;
 	margin: auto;
 	text-align: center;
 
@@ -7,7 +8,7 @@
 	#skillz-filter-categories {
 		a {
 			text-transform: capitalize;
-			width: calc(50% - 10px);
+			width: ~"calc(50% - 10px)";
 			display: inline-block;
 			margin: 5px;
 			padding: 5px;
@@ -18,6 +19,97 @@
 			border-radius: 4px;
 			color: @dark-blue;
 		}
+		
+		& > div {
+
+			text-transform: capitalize;
+			width: ~"calc(50% - 10px)";
+			display: inline-block;
+			height: auto;
+			margin: 5px;
+			padding: 5px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			text-align: center;
+			border-radius: 4px;
+			color: @dark-blue;
+
+			h4 {
+				vertical-align: top;
+				line-height: 30px;
+				margin: 0;
+				width: ~"calc(100% - 64px)";
+				position: relative;
+				label {
+					&:before {
+						cursor: pointer;
+						height: 5px;
+						// width: 50%;
+						width: 0%;
+						background: @bg-light;
+						display: inline-block;
+						content: " ";
+						position: absolute;
+						top: 15px;
+						transition: all .8s;
+					}
+					span {
+						background: white;
+						position: relative;
+						cursor: pointer;
+					}
+
+				}
+			}
+
+			&:nth-of-type(odd){
+				& > :first-child {
+					float: left;
+				}
+				& > :last-child {
+					float: right;
+				}
+				& h4 label {
+					span {padding-right: 5px;}
+					&:before {
+						right: 0;
+					}
+				}
+			}
+			&:nth-of-type(even){
+				& > :first-child {
+					float: right;
+				}
+				& > :last-child {
+					float: left;
+				}
+				& h4 label {
+					span {padding-left: 5px;}
+					&:before {
+						left: 0;
+					}
+				}
+			}
+		}
+
+		@categories: development, security, ~"project.management", backend, frontend, design, database, cloud;
+		.for(@categories); .-each(@category) {
+			.@{category} {
+				> *:not(input) {
+					display: inline-block;
+				}
+			}
+		}
+
+		.skillz-category-on {
+			h4 {
+				label:before {
+					width: 50%;
+					background: @green;
+				}
+			}
+		}
+
 	}
 
 
@@ -78,3 +170,81 @@
 	opacity: 1;
 	// max-height: 20px;
 }
+
+
+.tgl {
+	display: none;
+	// add default box-sizing for this scope
+	&,
+	&:after,
+	&:before,
+	& *,
+	& *:after,
+	& *:before,
+	& + .tgl-btn {
+		box-sizing: border-box;
+		&::selection {
+			background: none;
+		}
+	}
+	+ .tgl-btn {
+		outline: 0;
+		display: block;
+		width: 4em;
+		height: 2em;
+		position: relative;
+		cursor: pointer;
+		user-select: none;
+		&:after,
+		&:before {
+			position: relative;
+			display: block;
+			content: "";
+			width: 50%;
+			height: 100%;
+		}
+		&:after {
+			left: 0;
+		}
+		&:before {
+			display: none;
+		}
+	}
+	&:checked + .tgl-btn:after {
+		left: 50%;
+	}
+}
+
+.tgl-flat {
+	+ .tgl-btn {
+		padding: 2px;
+		transition: all .5s;
+		background: transparent;
+		border: 4px solid @bg-light;
+		border-radius: 2em;
+		&:after {
+			transition: all .2s ease;
+			background: @bg-light;
+			content: "";
+			border-radius: 1em;
+		}
+	}
+	&:checked + .tgl-btn {
+		border: 4px solid @green;
+		&:after {
+			left: 50%;
+			background: @green;
+		}
+	}
+}
+
+// @media (max-width: 425px) {
+// 	#skillz {
+// 		max-width: 	80%;
+// 	}
+// }
+// @media (max-width: 425px) {
+// 	#skillz {
+// 		max-width: 	80%;
+// 	}
+// }

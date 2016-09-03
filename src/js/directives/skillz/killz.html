@@ -9,9 +9,29 @@
 	</select>
 </div>
 <div id="skillz-filter-categories">
+	<!-- 
 	<a ng-repeat="dummySkillzCategory in dummySkillzCategoriesList" ng-click="toggleCategoryFilter(dummySkillzCategoriesList[$index])" ng-class="{'skillz-category-on':skillzFilterCategories.indexOf(dummySkillzCategoriesList[$index]) > -1}" href="#">
 		{{dummySkillzCategory}}
+		<h4>Flat</h4>
+		<input id="cb4" type="checkbox" class="tgl tgl-flat" />
+		<label for="cb4" class="tgl-btn"></label>
 	</a>
+	 -->
+	<div ng-repeat="dummySkillzCategory in dummySkillzCategoriesList" ng-class="{'{{dummySkillzCategory}}':true, 'skillz-category-on':skillzFilterCategories.indexOf(dummySkillzCategoriesList[$index]) > -1}">
+		<!-- <h4>{{dummySkillzCategory | lowerCaseAndReplaceSpaces}}</h4> -->
+		<h4>
+			<label ng-click="toggleCategoryFilter(dummySkillzCategoriesList[$index])" for="{{dummySkillzCategory}}">
+				<span>
+					{{dummySkillzCategory | lowerCaseAndReplaceSpaces}}
+				</span>
+			</label>
+		</h4>
+		<input id="{{dummySkillzCategory}}" type="checkbox" class="tgl tgl-flat"/>
+		<label ng-click="toggleCategoryFilter(dummySkillzCategoriesList[$index])" for="{{dummySkillzCategory}}" class="tgl-btn">
+			<!-- {{dummySkillzCategory | lowerCaseAndReplaceSpaces}} -->
+		</label>
+	</div>
+	
 </div>
 
 <div id="skillz-filter-experience">

@@ -32,6 +32,11 @@ var portfolio = angular.module('portfolio', [
 			});
 		}
 	})
+	.filter('lowerCaseAndReplaceSpaces', () => {
+		return (dummySkillzCategory) => {
+			return dummySkillzCategory.replace(/\s+/g, '-').toLowerCase();
+		}
+	})
 
 	// these values are configuration settings for angular-scroll
 	// .value('duScrollEasing', x => {
