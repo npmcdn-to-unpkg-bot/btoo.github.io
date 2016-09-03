@@ -12,24 +12,27 @@
 			display: inline-block;
 			height: auto;
 			// margin: 5px;
-			padding: 5px;
-			overflow: hidden;
+			padding: 0px 5px;
 			text-overflow: ellipsis;
+			white-space: nowrap;
+			// overflow: hidden;
 			text-align: center;
 			border-radius: 4px;
 			color: @dark-blue;
 
 			h4 {
 				vertical-align: top;
-				line-height: 30px;
+				line-height: 28px;
 				margin: 0;
-				width: ~"calc(100% - 64px)";
+				width: ~"calc(100% - 56px)";
 				position: relative;
+
 				label {
+					font-weight: normal;
+					font-size: 14px;
 					&:before {
 						cursor: pointer;
 						height: 5px;
-						// width: 50%;
 						width: 0%;
 						background: @bg-light;
 						display: inline-block;
@@ -42,6 +45,10 @@
 						background: white;
 						position: relative;
 						cursor: pointer;
+						border: 4px solid @bg-light;
+						border-radius: 1em;
+						padding: 2px 5px;
+						color: darken(@bg-light, 22%);
 					}
 
 				}
@@ -87,10 +94,19 @@
 		}
 
 		.skillz-category-on {
+			* {
+				color: @bg-light;
+				border-color: @green;
+			}
 			h4 {
-				label:before {
-					width: 50%;
-					background: @green;
+				label {
+					span {
+						background: @green !important;
+					}
+					&:before {
+						width: 50%;
+						background: @green;
+					}
 				}
 			}
 		}
@@ -152,6 +168,7 @@
 
 .tgl {
 	display: none;
+	margin: 0;
 	// add default box-sizing for this scope
 	&,
 	&:after,
@@ -226,10 +243,14 @@
 	width: 30%;
 }
 #skillz-order {
-	width: 15%;
+	width: 20%;
+	margin-right: auto;
 	.orderer {
+		margin: 40px 0;
 		h4 {
 			margin: 9px 15px;
+			font-weight: bold;
+			color: @bg-dark;
 		}
 		> * {
 			display: inline-block;
@@ -237,25 +258,89 @@
 			&.orderer-carets {
 				label {
 					display: block;
+					margin: 0;
+				}
+				input {
+					display: none;
+					+ i {
+						&.ordered {
+							transform: scale(2);
+						}
+					}
 				}
 			}
 		}
 	}
 }
 #skillz-filter-categories {
-	width: 55%;
+	width: 80%;
+	margin-left: auto;
+	margin-top: 20px;
+	max-width: 888px;
 }
 
 
 
+@media (max-width: 768px) {
+	#skillz > * {
+		display: block;
+		width: 100%
+	}
+	#skillz-filter-categories {
+		margin-top: 0;
+	}
+	#skillz-order {
+		> .orderer {
+			width: ~"calc(50% - 30px)";
+			margin: 0;
+			display: inline-block;
+			&:last-child {
+				margin-left: 30px;
+				> .orderer-carets {
+					float: left;
+				}
+			}
+			&:first-child {
+				margin-right: 30px;
+				> :last-child {
+					float: right;
+				}
+			}
+		}
+	}
+}
 
-// @media (max-width: 425px) {
-// 	#skillz {
-// 		max-width: 	80%;
-// 	}
-// }
-// @media (max-width: 425px) {
-// 	#skillz {
-// 		max-width: 	80%;
-// 	}
-// }
+@media (max-width: 425px) {
+	#skillz-filter-categories {
+		> div {
+			text-align: center;
+			white-space: normal !important;
+			> *:not(input) {
+				display: block !important;
+				float: none !important;
+			}
+			h4 {
+				width: 100% !important;
+				label {
+					width: 100%;
+					span {
+						display: block;
+						line-height: 18px;
+					    white-space: nowrap;
+					    text-overflow: ellipsis;
+					    overflow: hidden;
+					}
+					&:before {
+						display: none !important;
+					}
+				}
+			}
+			label {
+				margin: auto;
+			}
+			.tgl-btn {
+				display: none !important;
+			}
+		}
+	}
+}

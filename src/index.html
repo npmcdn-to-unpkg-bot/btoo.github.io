@@ -46,7 +46,7 @@
 <body ng-class="scrollable" ng-controller="BoxController as box">
 
 	<section id="box-container" ng-class="{'open-menu-blur':actionMenuOpened, 'show-box':showBox}" ng-click="portfolio.closeActionMenu()">
-		<!-- <div id="box" class="{{box.side}}" ng-class="{removeBorders:showLandingContent}"> -->
+		<!-- <div class="box-face-fade"></div> -->
 		<div id="box" class="{{box.side}}">
 			<figure class="front" ng-class="{'shown':shown==='front'}">
 				<ng-include	src="'views/about.html'"></ng-include>
@@ -54,6 +54,7 @@
 			<figure class="right" ng-class="{'shown':shown==='right'}">
 				<ng-include	src="'views/profile.html'"></ng-include>
 			</figure>
+			
 			<figure class="back" ng-class="{'shown':shown==='back'}">
 				<ng-include	src="'views/projects.html'"></ng-include>
 			</figure>
@@ -62,6 +63,9 @@
 			</figure>
 			<!-- <figure class="top">5</figure> -->
 			<!-- <figure class="bottom">6</figure> -->
+		</div>
+		<div id="box-face-scroll-fade" ng-class="{'box-face-fade':shown==='right'}">
+		
 		</div>
 	</section>
 

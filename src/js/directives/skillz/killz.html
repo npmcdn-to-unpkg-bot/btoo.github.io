@@ -1,17 +1,19 @@
-<div id="skillz-intro">
+<!-- <div id="skillz-intro">
 	intro paragraph
-</div>
+</div> -->
 <div id="skillz-order">
 	<div class="orderer">
 		<h4>
 			Skill
 		</h4>
 		<div class="orderer-carets">
-			<label>
-				<i class="fa fa-caret-up"></i>
+			<label for="skill-asc" ng-click="skillzOrderReverse=false">
+				<input id="skill-asc" type="radio" ng-model="skillzOrderProperty" value="skill">
+				<i class="fa fa-caret-up" ng-class="{'ordered':skillzOrderProperty=='skill' && skillzOrderReverse==false}"></i>
 			</label>
-			<label>
-				<i class="fa fa-caret-down"></i>
+			<label for="skill-desc" ng-click="skillzOrderReverse=true">
+				<input id="skill-desc" type="radio" ng-model="skillzOrderProperty" value="skill">
+				<i class="fa fa-caret-down" ng-class="{'ordered':skillzOrderProperty=='skill' && skillzOrderReverse==true}"></i>
 			</label>
 		</div>
 	</div>
@@ -20,11 +22,13 @@
 			Proficiency
 		</h4>
 		<div class="orderer-carets">
-			<label>
-				<i class="fa fa-caret-up"></i>
+			<label for="exp-asc" ng-click="skillzOrderReverse=false">
+				<input id="exp-asc" type="radio" ng-model="skillzOrderProperty" value="experience">
+				<i class="fa fa-caret-up" ng-class="{'ordered':skillzOrderProperty=='experience' && skillzOrderReverse==false}"></i>
 			</label>
-			<label>
-				<i class="fa fa-caret-down"></i>
+			<label id="exp-desc" ng-click="skillzOrderReverse=true">
+				<input id="exp-desc" type="radio" ng-model="skillzOrderProperty" value="experience">
+				<i class="fa fa-caret-down" ng-class="{'ordered':skillzOrderProperty=='experience' && skillzOrderReverse==true}"></i>
 			</label>
 		</div>
 	</div>
@@ -40,7 +44,7 @@
 		<h4>
 			<label ng-click="toggleCategoryFilter(dummySkillzCategoriesList[$index])" for="{{dummySkillzCategory}}">
 				<span>
-					{{dummySkillzCategory | lowerCaseAndReplaceSpaces}}
+					{{dummySkillzCategory}}
 				</span>
 			</label>
 		</h4>
@@ -57,7 +61,7 @@
 
 
 <ul id="skillz-list">
-	<li skill class="skill animate-repeat" ng-repeat="skill in skillz | orderBy: skillzOrderProperty:(skillzOrderProperty!='skill') | byCategories: skillzFilterCategories | byExperience: skillzFilterExperienceMin:skillzFilterExperienceMax as results" ng-class="{'very-strong':'very-strong','strong':'strong','medium':'medium','light':'light'}[skill.proficiency]">
+	<li skill class="skill animate-repeat" ng-repeat="skill in skillz | orderBy: skillzOrderProperty:skillzOrderReverse | byCategories: skillzFilterCategories | byExperience: skillzFilterExperienceMin:skillzFilterExperienceMax as results" ng-class="{'very-strong':'very-strong','strong':'strong','medium':'medium','light':'light'}[skill.proficiency]">
 		<!-- {{results}} -->
 		<!-- {{skillzOrderProperty!='experience'}} -->
 		<!-- {{skillz[$index].experience}} -->

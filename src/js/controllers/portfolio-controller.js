@@ -39,7 +39,7 @@ portfolio.controller('PortfolioController', [
 
 		// initial sorting for skillz
 		$scope.skillzOrderProperty = 'skill';
-		$scope.reverse = false;
+		$scope.skillzOrderReverse = false;
 
 		$scope.skillzFilterCategories = [];
 		$scope.toggleCategoryFilter = toggledCategory => {

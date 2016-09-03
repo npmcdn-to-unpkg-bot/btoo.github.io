@@ -1,159 +1,91 @@
-// JSHint stuffs:
-/* global __dirname: false, require: false, JSON: false, process: false */
+let config = require('./config');
+let gulp = require('gulp');
+let temp = require('temp');
 
-/*========================================
+/* ========================================
 =            Requiring stuffs            =
 ========================================*/
 
-var gulp              = require('gulp'),
-    concat            = require('gulp-concat'),
-    connect           = require('gulp-connect'),
-    csso              = require('gulp-csso'),
-    del               = require('del'),
-    jshint            = require('gulp-jshint'),
-    less              = require('gulp-less'),
-    mobilizer         = require('gulp-mobilizer'),
-    path              = require('path'),
-    protractor        = require('gulp-protractor').protractor,
-    releaseTasks      = require('gulp-release-tasks'),
-    rename            = require('gulp-rename'),
-    os                = require('os'),
-    fs                = require('fs'),
-    seq               = require('run-sequence'),
-    sourcemaps        = require('gulp-sourcemaps'),
-    uglify            = require('gulp-uglify'),
-    ngrok             = require('ngrok');
+let concat = require('gulp-concat');
+let csso = require('gulp-csso');
+let del = require('del');
+let less = require('gulp-less');
+let mobilizer = require('gulp-mobilizer');
+let path = require('path');
+let rename = require('gulp-rename');
+let seq = require('gulp-sequence');
+let sourcemaps = require('gulp-sourcemaps');
+let uglify = require('gulp-uglify');
+let connect = require('gulp-connect');
+let waitOn = require('wait-on');
 
-/*=============================
-=            Globs            =
-=============================*/
-
-var GLOBS = {};
-GLOBS.core                  = ['bower_components/fastclick/lib/fastclick.js', 'src/js/core/**/*.js', 'src/js/mobile-angular-ui.core.js'];
-GLOBS.components            = ['bower_components/overthrow/src/overthrow-detect.js', 'bower_components/overthrow/src/overthrow-init.js', 'bower_components/overthrow/src/overthrow-polyfill.js', 'src/js/components/**/*.js', 'src/js/mobile-angular-ui.components.js'];
-GLOBS.gestures              = ['src/js/gestures/**/*.js', 'src/js/mobile-angular-ui.gestures.js'];
-GLOBS.migrate               = ['src/js/migrate/**/*.js', 'src/js/mobile-angular-ui.migrate.js'];
-GLOBS.main                  = GLOBS.core.concat(GLOBS.components).concat('src/js/mobile-angular-ui.js');
-GLOBS.fonts                 = 'bower_components/font-awesome/fonts/fontawesome-webfont.*';
-GLOBS.vendorLess            = [ path.resolve(__dirname, 'src/less'), path.resolve(__dirname, 'bower_components') ];
-GLOBS.livereloadDemo        = [ path.join('demo', '*.html') ];
-GLOBS.livereloadTest        = [ path.join('test', '**', '*.html') ];
-GLOBS.livereloadTestManual  = [ path.join('test', 'manual', '*.html') ];
-GLOBS.livereloadTestMigrate = [ path.join('test', 'migrate', '*.html') ];
-
-/*================================================
+/* ================================================
 =            Report Errors to Console            =
 ================================================*/
 
 gulp.on('error', function(e) {
-  throw(e);
+  throw (e);
 });
 
-
-/*=========================================
+/* =========================================
 =            Clean dest folder            =
 =========================================*/
 
-gulp.task('clean', function (cb) {
-  del(['dist/**'], cb);
+gulp.task('clean', function() {
+  return del(['dist/**']);
 });
 
-/*==========================================
-=            Web servers                   =
-==========================================*/
-
-gulp.task('connect', function() {
-  connect.server({
-    host: '0.0.0.0',
-    port: 3000,
-    livereload: true
-  });
-});
-
-gulp.task('connect:test', function() {
-  var server       = require('./test/server');
-  var serveFavicon = require('serve-favicon');
-  var favicon      = serveFavicon(__dirname + '/test/favicon.ico');
-
-  connect.server({
-    host: '0.0.0.0',
-    port: 3001,
-    middleware: function() {
-      return [server, favicon];
-    }
-  });
-});
-
-/*==============================================================
-=            Setup live reloading on source changes            =
-==============================================================*/
-
-gulp.task('livereload:demo', function () {
-  return gulp.src(GLOBS.livereloadDemo)
-    .pipe(connect.reload());
-});
-
-gulp.task('livereload:test', function () {
-  return gulp.src(GLOBS.livereloadTest)
-    .pipe(connect.reload());
-});
-
-gulp.task('livereload:test:manual', function () {
-  return gulp.src(GLOBS.livereloadTestManual)
-    .pipe(connect.reload());
-});
-
-gulp.task('livereload:test:migrate', function () {
-  return gulp.src(GLOBS.livereloadTestMigrate)
-    .pipe(connect.reload());
-});
-
-/*==================================
+/* ==================================
 =            Copy fonts            =
 ==================================*/
 
 gulp.task('fonts', function() {
-  return gulp.src(GLOBS.fonts)
-  .pipe(gulp.dest(path.join('dist', 'fonts')));
+  return gulp.src(config.globs.fonts)
+    .pipe(gulp.dest(path.join('dist', 'fonts')));
 });
 
-/*======================================================================
+/* ======================================================================
 =            Compile, minify, mobilize less                            =
 ======================================================================*/
 
-var CSS_TEMP_DIR = path.join(os.tmpdir(), 'mobile-angular-ui', 'css');
+let CSS_TEMP_DIR = temp.path({prefix: 'maui-css'});
 
-gulp.task('css:less', function () {
-    gulp.src([
-      'src/less/mobile-angular-ui-base.less',
-      'src/less/mobile-angular-ui-desktop.less',
-      'src/less/mobile-angular-ui-migrate.less',
-      'src/less/sm-grid.less'
-    ])
-    .pipe(less({paths: GLOBS.vendorLess}))
+gulp.task('css:less', function() {
+  gulp.src([
+    'src/less/mobile-angular-ui-base.less',
+    'src/less/mobile-angular-ui-desktop.less',
+    'src/less/sm-grid.less'
+  ])
+    .pipe(less({paths: config.globs.vendorLess}))
     .pipe(mobilizer('mobile-angular-ui-base.css', {
-      'mobile-angular-ui-base.css': { hover: 'exclude', screens: ['0px'] },
-      'mobile-angular-ui-hover.css': { hover: 'only', screens: ['0px'] }
+      'mobile-angular-ui-base.css': {hover: 'exclude', screens: ['0px']},
+      'mobile-angular-ui-hover.css': {hover: 'only', screens: ['0px']}
     }))
     .pipe(gulp.dest(CSS_TEMP_DIR));
 });
+
+gulp.task('css:less:wait', waitFor([
+  path.join(CSS_TEMP_DIR, 'sm-grid.css'),
+  path.join(CSS_TEMP_DIR, 'mobile-angular-ui-base.css'),
+  path.join(CSS_TEMP_DIR, 'mobile-angular-ui-hover.css'),
+  path.join(CSS_TEMP_DIR, 'mobile-angular-ui-desktop.css')
+]));
 
 gulp.task('css:concat', function() {
   return gulp.src([
     path.join(CSS_TEMP_DIR, 'sm-grid.css'),
     path.join(CSS_TEMP_DIR, 'mobile-angular-ui-base.css')
   ])
-  .pipe(concat('mobile-angular-ui-base.css'))
-  .pipe(gulp.dest(path.join('dist', 'css')));
+    .pipe(concat('mobile-angular-ui-base.css'))
+    .pipe(gulp.dest(path.join('dist', 'css')));
 });
 
 gulp.task('css:copy', function() {
   return gulp.src([
     path.join(CSS_TEMP_DIR, 'mobile-angular-ui-hover.css'),
-    path.join(CSS_TEMP_DIR, 'mobile-angular-ui-migrate.css'),
     path.join(CSS_TEMP_DIR, 'mobile-angular-ui-desktop.css')
   ])
-  .pipe(gulp.dest(path.join('dist', 'css')));
+    .pipe(gulp.dest(path.join('dist', 'css')));
 });
 
 gulp.task('css:minify', function() {
@@ -163,15 +95,28 @@ gulp.task('css:minify', function() {
     .pipe(gulp.dest(path.join('dist', 'css')));
 });
 
-gulp.task('css', function(done) {
-  seq('css:less', 'css:concat', 'css:copy', 'css:minify', done);
+gulp.task('css:rmtemp', function() {
+  return del([CSS_TEMP_DIR], {force: true});
 });
 
-/*====================================================================
+gulp.task('css', function(done) {
+  seq(
+    'css:rmtemp',
+    'css:less',
+    'css:less:wait',
+    'css:concat',
+    'css:copy',
+    'css:minify',
+    'css:rmtemp',
+    done
+  );
+});
+
+/* ====================================================================
 =            Compile and minify js generating source maps            =
 ====================================================================*/
 
-var compileJs = function(dest, src) {
+let compileJs = function(dest, src) {
   return gulp.src(src)
     .pipe(sourcemaps.init())
     .pipe(concat(dest))
@@ -182,57 +127,57 @@ var compileJs = function(dest, src) {
     .pipe(gulp.dest(path.join('dist', 'js')));
 };
 
-gulp.task('js:core',  function() {
-  return compileJs('mobile-angular-ui.core.js', GLOBS.core);
+gulp.task('js:core', function() {
+  return compileJs('mobile-angular-ui.core.js', config.globs.core);
 });
 
-gulp.task('js:migrate',  function() {
-  return compileJs('mobile-angular-ui.migrate.js', GLOBS.migrate);
+gulp.task('js:gestures', function() {
+  return compileJs('mobile-angular-ui.gestures.js', config.globs.gestures);
 });
 
-gulp.task('js:gestures',  function() {
-  return compileJs('mobile-angular-ui.gestures.js', GLOBS.gestures);
+gulp.task('js:main', function() {
+  return compileJs('mobile-angular-ui.js', config.globs.main);
 });
 
-gulp.task('js:main',  function() {
-  return compileJs('mobile-angular-ui.js', GLOBS.main);
-});
+gulp.task('js', ['js:main', 'js:gestures', 'js:core']);
 
-gulp.task('js', ['js:main', 'js:gestures', 'js:migrate', 'js:core']);
-
-/*===================================================================
-=            Watch for source changes and rebuild/reload            =
-===================================================================*/
-
-gulp.task('watch', function () {
-  gulp.watch(GLOBS.livereloadDemo.concat('dist/**/*'), ['livereload:demo']);
-  gulp.watch(GLOBS.livereloadTest.concat('dist/**/*'), ['livereload:test']);
-  gulp.watch(GLOBS.livereloadTestManual.concat('dist/**/*'), ['livereload:test:manual']);
-  gulp.watch(GLOBS.livereloadTestMigrate.concat('dist/**/*'), ['livereload:test:migrate']);
-
-  gulp.watch(['./src/less/**/*'], ['css']);
-
-  ['core', 'gestures', 'migrate', 'main'].forEach(function(target) {
-    gulp.watch(GLOBS[target], ['js:' + target]);
-  });
-
-  gulp.watch(GLOBS.fonts, ['fonts']);
-});
-
-/*======================================
+/* ======================================
 =            Build Sequence            =
 ======================================*/
 
+gulp.task('build:wait', waitFor([
+  'dist/css/mobile-angular-ui-base.css',
+  'dist/css/mobile-angular-ui-base.min.css',
+  'dist/css/mobile-angular-ui-desktop.css',
+  'dist/css/mobile-angular-ui-desktop.min.css',
+  'dist/css/mobile-angular-ui-hover.css',
+  'dist/css/mobile-angular-ui-hover.min.css',
+  'dist/fonts/fontawesome-webfont.eot',
+  'dist/fonts/fontawesome-webfont.svg',
+  'dist/fonts/fontawesome-webfont.ttf',
+  'dist/fonts/fontawesome-webfont.woff',
+  'dist/fonts/fontawesome-webfont.woff2',
+  'dist/js/mobile-angular-ui.core.js',
+  'dist/js/mobile-angular-ui.core.min.js',
+  'dist/js/mobile-angular-ui.core.min.js.map',
+  'dist/js/mobile-angular-ui.gestures.js',
+  'dist/js/mobile-angular-ui.gestures.min.js',
+  'dist/js/mobile-angular-ui.gestures.min.js.map',
+  'dist/js/mobile-angular-ui.js',
+  'dist/js/mobile-angular-ui.min.js',
+  'dist/js/mobile-angular-ui.min.js.map'
+]));
+
 gulp.task('build', function(done) {
-  seq('clean', ['fonts', 'css',  'js'], done);
+  seq('clean', ['fonts', 'css', 'js'], 'build:wait', done);
 });
 
-/*====================================
-=            Default Task            =
-====================================*/
+/* ==========================================
+=            Dev watch and connect          =
+==========================================*/
 
-gulp.task('default', function(done){
-  var tasks = [];
+gulp.task('dev', function(done) {
+  let tasks = [];
 
   tasks.push('connect');
   tasks.push('watch');
@@ -240,83 +185,57 @@ gulp.task('default', function(done){
   seq('build', tasks, done);
 });
 
-/*==============================
-=            JSHint            =
-==============================*/
+/* ==========================================
+=            Web servers                   =
+==========================================*/
 
-gulp.task('jshint', function() {
-  var jshintrc = JSON.parse(fs.readFileSync('.jshintrc').toString());
-  jshintrc.lookup = false;
-  jshintrc.nocomma = false;
-  return gulp.src(['src/js/*.js', 'src/js/core/*.js','src/js/gestures/*.js','src/js/components/*.js'])
-  .pipe(jshint(jshintrc))
-  .pipe(jshint.reporter('default'))
-  .on('error', function(e) { throw e; });
+gulp.task('connect', function() {
+  connect.server({
+    root: process.cwd(),
+    host: '0.0.0.0',
+    port: 3000,
+    livereload: true
+  });
 });
 
-/*=============================
-=            Tests            =
-=============================*/
+/* ==============================================================
+=            Setup live reloading on source changes            =
+==============================================================*/
 
-var nullTunnel = function(cb){
-  cb(null, 'http://localhost:3001');
-};
+gulp.task('livereload:demo', function() {
+  return gulp.src(config.globs.livereloadDemo)
+    .pipe(connect.reload());
+});
 
-var ngRockTunnel = function(cb){
-  ngrok.connect({ port: 3001 }, cb);
-};
+/* ===================================================================
+=            Watch for source changes and rebuild/reload            =
+===================================================================*/
 
-function makeTestTask(name, conf, args, tunnel) {
-  var tunnelWrapper = tunnel ? ngRockTunnel : nullTunnel;
+gulp.task('watch', function() {
+  gulp.watch(config.globs.livereloadDemo.concat('dist/**/*'), ['livereload:demo']);
+  gulp.watch(['./src/less/**/*'], ['css']);
 
-  var protractorArgs = args || []
-    .concat(process.argv.length > 2 ? process.argv.slice(3, process.argv.length) : []);
-
-  gulp.task(name, ['jshint', 'connect:test'], function(done){
-
-    var finalize = function(){
-      try {
-        connect.serverClose();
-        if (tunnel) {
-          ngrok.disconnect();
-        }
-      } catch (e) {
-        console.error('Errors occurred while shutting down test runtime.', e);
-      }
-    };
-
-    var testDone = function(){
-      finalize();
-      done();
-    };
-
-    var testErr = function(){
-      process.exit(1);
-    };
-
-    tunnelWrapper(function(err, url){
-      gulp.src('use_config_specs')
-          .pipe(protractor({
-              configFile: conf,
-              args: ['--baseUrl', url].concat(protractorArgs)
-          }))
-          .on('end', testDone)
-          .on('error', testErr);
-    });
-
+  ['core', 'gestures', 'main'].forEach(function(target) {
+    gulp.watch(config.globs[target], ['js:' + target]);
   });
 
+  gulp.watch(config.globs.fonts, ['fonts']);
+});
+
+function waitFor(resources) {
+  return function() {
+    return new Promise(function(resolve, reject) {
+      waitOn({
+        resources: resources,
+        timeout: 30000
+      }, function(err) {
+        if (err) {
+          process.exit(2);
+          return reject(err);
+        }
+
+        resolve();
+      });
+    });
+  };
 }
-
-makeTestTask('test', 'test/phantomjs.conf.js');
-makeTestTask('test:ci', 'test/ci.conf.js', [], true);
-makeTestTask('test:chrome', 'test/chrome.conf.js');
-makeTestTask('test:firefox', 'test/firefox.conf.js');
-makeTestTask('test:iphone', 'test/iphone5.conf.js');
-
-
-/*===============================
-=            Release            =
-===============================*/
-
-releaseTasks(gulp);
