@@ -437,5 +437,14 @@
 		],
 		"projects": [
 		]
+	}, {
+		"skill": "HTML5",
+		"experience": "4",
+		"proficiency": "very strong",
+		"categories": [
+			"frontend"
+		],
+		"projects": [
+		]
 	}
 ]

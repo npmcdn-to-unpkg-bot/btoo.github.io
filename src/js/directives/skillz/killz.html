@@ -1,22 +1,40 @@
+<div id="skillz-intro">
+	intro paragraph
+</div>
 <div id="skillz-order">
-	<!-- <a ng-click="skillzOrderProperty='skill'" href="#">order by skill name</a> -->
-	<!-- <a ng-click="skillzOrderProperty='experience'" href="#">order by experience</a> -->
-	<!-- <a ng-click="skillzOrderProperty='skill'" href="#">order by project count</a> -->
-	<select ng-model="skillzOrderProperty">
+	<div class="orderer">
+		<h4>
+			Skill
+		</h4>
+		<div class="orderer-carets">
+			<label>
+				<i class="fa fa-caret-up"></i>
+			</label>
+			<label>
+				<i class="fa fa-caret-down"></i>
+			</label>
+		</div>
+	</div>
+	<div class="orderer">
+		<h4>
+			Proficiency
+		</h4>
+		<div class="orderer-carets">
+			<label>
+				<i class="fa fa-caret-up"></i>
+			</label>
+			<label>
+				<i class="fa fa-caret-down"></i>
+			</label>
+		</div>
+	</div>
+	<!-- <select ng-model="skillzOrderProperty">
 		<option value="skill">Skill</option>
 		<option value="experience">Experience Level</option>
 		<option value="projects.length"># of Projects</option>
-	</select>
+	</select> -->
 </div>
 <div id="skillz-filter-categories">
-	<!-- 
-	<a ng-repeat="dummySkillzCategory in dummySkillzCategoriesList" ng-click="toggleCategoryFilter(dummySkillzCategoriesList[$index])" ng-class="{'skillz-category-on':skillzFilterCategories.indexOf(dummySkillzCategoriesList[$index]) > -1}" href="#">
-		{{dummySkillzCategory}}
-		<h4>Flat</h4>
-		<input id="cb4" type="checkbox" class="tgl tgl-flat" />
-		<label for="cb4" class="tgl-btn"></label>
-	</a>
-	 -->
 	<div ng-repeat="dummySkillzCategory in dummySkillzCategoriesList" ng-class="{'{{dummySkillzCategory}}':true, 'skillz-category-on':skillzFilterCategories.indexOf(dummySkillzCategoriesList[$index]) > -1}">
 		<!-- <h4>{{dummySkillzCategory | lowerCaseAndReplaceSpaces}}</h4> -->
 		<h4>

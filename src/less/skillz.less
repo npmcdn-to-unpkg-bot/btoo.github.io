@@ -4,29 +4,14 @@
 	margin: auto;
 	text-align: center;
 
-
 	#skillz-filter-categories {
-		a {
-			text-transform: capitalize;
-			width: ~"calc(50% - 10px)";
-			display: inline-block;
-			margin: 5px;
-			padding: 5px;
-			overflow: hidden;
-			text-overflow: ellipsis;
-			height: 30px;
-			text-align: center;
-			border-radius: 4px;
-			color: @dark-blue;
-		}
-		
 		& > div {
 
 			text-transform: capitalize;
 			width: ~"calc(50% - 10px)";
 			display: inline-block;
 			height: auto;
-			margin: 5px;
+			// margin: 5px;
 			padding: 5px;
 			overflow: hidden;
 			text-overflow: ellipsis;
@@ -112,13 +97,6 @@
 
 	}
 
-
-	a {
-		display: block;
-		&.skillz-category-on {
-			font-size: 2em;
-		}
-	}
 
 	#skillz-list {
 		padding: 0px;
@@ -237,6 +215,39 @@
 		}
 	}
 }
+
+#skillz-intro,
+#skillz-order,
+#skillz-filter-categories {
+	display: inline-block;
+	vertical-align: top;
+}
+#skillz-intro {
+	width: 30%;
+}
+#skillz-order {
+	width: 15%;
+	.orderer {
+		h4 {
+			margin: 9px 15px;
+		}
+		> * {
+			display: inline-block;
+			vertical-align: top;
+			&.orderer-carets {
+				label {
+					display: block;
+				}
+			}
+		}
+	}
+}
+#skillz-filter-categories {
+	width: 55%;
+}
+
+
+
 
 // @media (max-width: 425px) {
 // 	#skillz {

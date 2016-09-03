@@ -120,9 +120,7 @@ html{border:2px solid #18212D}
 100%{-webkit-transform:scale(2);transform:scale(2);color:#3cf0ff;opacity:1}
 }
 #skillz{max-width:80%;margin:auto;text-align:center}
-#skillz #skillz-filter-categories a,#skillz #skillz-filter-categories>div{text-transform:capitalize;width:calc(50% - 10px);margin:5px;padding:5px;overflow:hidden;text-overflow:ellipsis;border-radius:4px;color:#0c3048;display:inline-block;text-align:center}
-#skillz #skillz-filter-categories a{height:30px}
-#skillz #skillz-filter-categories>div{height:auto}
+#skillz #skillz-filter-categories>div{text-transform:capitalize;width:calc(50% - 10px);display:inline-block;height:auto;padding:5px;overflow:hidden;text-overflow:ellipsis;text-align:center;border-radius:4px;color:#0c3048}
 #skillz #skillz-filter-categories>div h4{vertical-align:top;line-height:30px;margin:0;width:calc(100% - 64px);position:relative}
 #skillz #skillz-filter-categories>div h4 label:before{cursor:pointer;height:5px;width:0;background:#f4f4f4;display:inline-block;content:" ";position:absolute;top:15px;-webkit-transition:all .8s;transition:all .8s}
 #skillz #skillz-filter-categories>div h4 label span{background:#fff;position:relative;cursor:pointer}
@@ -133,8 +131,6 @@ html{border:2px solid #18212D}
 #skillz #skillz-filter-categories>div:nth-of-type(even) h4 label span{padding-left:5px}
 #skillz #skillz-filter-categories .backend>:not(input),#skillz #skillz-filter-categories .cloud>:not(input),#skillz #skillz-filter-categories .database>:not(input),#skillz #skillz-filter-categories .design>:not(input),#skillz #skillz-filter-categories .development>:not(input),#skillz #skillz-filter-categories .frontend>:not(input),#skillz #skillz-filter-categories .project.management>:not(input),#skillz #skillz-filter-categories .security>:not(input){display:inline-block}
 #skillz #skillz-filter-categories .skillz-category-on h4 label:before{width:50%;background:#7FC6A6}
-#skillz a{display:block}
-#skillz a.skillz-category-on{font-size:2em}
 #skillz #skillz-list{padding:0}
 #skillz #skillz-list li{list-style:none;display:inline-block;background:#1e78b4;margin:2.5px;padding:5px 15px;border-radius:17.5px;color:#f4f4f4;box-shadow:0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23)}
 #skillz #skillz-list .very-strong{background:#0c3048}
@@ -150,13 +146,20 @@ html{border:2px solid #18212D}
 .tgl ::selection,.tgl :after::selection,.tgl :before::selection,.tgl+.tgl-btn::selection,.tgl::selection,.tgl:after::selection,.tgl:before::selection{background:0 0}
 .tgl+.tgl-btn{outline:0;display:block;width:4em;height:2em;position:relative;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
 .tgl+.tgl-btn:after,.tgl+.tgl-btn:before{position:relative;display:block;content:"";width:50%;height:100%}
-#intro,.circles.h-card,.tgl+.tgl-btn:before{display:none}
+.tgl+.tgl-btn:before{display:none}
+#skillz-filter-categories,#skillz-intro,#skillz-order,#skillz-order .orderer>*{display:inline-block;vertical-align:top}
 .tgl:checked+.tgl-btn:after{left:50%}
 .tgl-flat+.tgl-btn{padding:2px;-webkit-transition:all .5s;transition:all .5s;background:0 0;border:4px solid #f4f4f4;border-radius:2em}
 .tgl-flat+.tgl-btn:after{-webkit-transition:all .2s ease;transition:all .2s ease;background:#f4f4f4;content:"";border-radius:1em}
 .tgl-flat:checked+.tgl-btn{border:4px solid #7FC6A6}
 .tgl-flat:checked+.tgl-btn:after{left:50%;background:#7FC6A6}
 .header,.second{background:#fff}
+#skillz-intro{width:30%}
+#skillz-order{width:15%}
+#skillz-order .orderer h4{margin:9px 15px}
+#skillz-order .orderer>.orderer-carets label{display:block}
+#intro,.circles.h-card{display:none}
+#skillz-filter-categories{width:55%}
 body{font-family:Ubuntu;font-style:16px;-webkit-font-smoothing:antialiased;-moz-font-smoothing:antialiased;font-smoothing:antialiased;text-rendering:optimizeLegibility;font-smooth:always;overflow-x:hidden;margin:0}
 .row{margin-left:0;margin-right:0}
 .scrollable{overflow:auto!important}
