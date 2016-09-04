@@ -1,4 +1,12 @@
 <div class="cards">
+
+	<div id="card-back-buttons">
+		im gonna put the buttons in here
+		<button ng-click="showNetworkMap=true" onclick="document.getElementById('networkmap-modal').classList.toggle('modal-shown')">
+			view demo {{showNetworkMap}}
+		</button>
+	</div>
+
 	<div class="cards-inner flip">
 
 		<div ng-repeat="project in projects" class="card" id="{{project.id}}">

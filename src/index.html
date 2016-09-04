@@ -78,7 +78,23 @@
 		<ng-include	src="'views/actions.html'"></ng-include>
 	</section>
 
+	<!-- <section id="networkmap-modal" ng-class="{'modal-shown':showNetworkMap}"> -->
+	<section id="networkmap-modal">
+		<div network-map>
+			<div id="networkmap">
+				<div id="networkmap-close" onclick="document.getElementById('networkmap-modal').classList.toggle('modal-shown')">
+					<i class="fa fa-times-circle" aria-hidden="true"></i>
+				</div>
 
+				<!-- network map goes here -->
+
+			</div>
+		</div>
+	</section>
+
+	<!-- jQuery and D3 for spark network map -->
+	<script src="lib/jquery/dist/jquery.min.js"></script>
+	<script src="lib/d3/d3.min.js"></script>
 
 	<!-- Angular for frontend modularity -->
 	<script src="lib/angular/angular.min.js"></script>

@@ -4,8 +4,9 @@ var portfolio = angular.module('portfolio', [
 	'mobile-angular-ui',
 	'mobile-angular-ui.gestures.drag',
 	'mobile-angular-ui.gestures.touch',
-	'ngAnimate',
 	// 'duScroll',
+	// 'd3',
+	'ngAnimate',
 	'ngSanitize'
 ])
 	.filter('byCategories', () => {

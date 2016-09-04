@@ -70,6 +70,10 @@ portfolio.controller('PortfolioController', [
 		// 	}
 		// );
 
+		// $scope.showNetworkMap = false;
+		// $scope.$watch('showNetworkMap', () => {
+		// 	console.log('changed');
+		// });
 
 	}
 ]);

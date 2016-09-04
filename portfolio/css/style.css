@@ -1,4 +1,4 @@
-#landing-card,#landing-card p,#projects-intro figure.card-back{text-align:center}
+#card-back-buttons,#landing-card,#landing-card p,#projects-intro figure.card-back{text-align:center}
 .animate-repeat,.cards,.tgl,.tgl *,.tgl :after,.tgl :before,.tgl+.tgl-btn,.tgl:after,.tgl:before{box-sizing:border-box}
 @font-face{font-family:Ubuntu;src:url(../font/ubuntu/Ubuntu-R.ttf)}
 @font-face{font-family:Ubuntu;src:url(../font/ubuntu/Ubuntu-B.ttf);font-weight:700}
@@ -7,6 +7,7 @@
 #projects-intro h2,#projects-intro p{font-family:Ubuntu;width:50%;line-height:1.8}
 #projects-intro figure{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}
 #projects-intro figure.card-back h2{font-family:ChopinScript!important;font-size:5em}
+#card-back-buttons{position:absolute;width:calc(100% - 40px);z-index:3000}
 .cards{height:calc(100vh - 8px);width:100%;max-width:800px;max-height:800px;position:absolute;margin:auto;top:0;left:0;right:0;bottom:0;padding:20px}
 .cards .cards-inner{height:100%;overflow:visible;position:relative}
 .cards .card,.cards .card .card-inner{margin:auto;position:absolute;left:0;right:0;display:block}
@@ -181,7 +182,6 @@ html{border:2px solid #18212D}
 .tgl-flat+.tgl-btn:after{-webkit-transition:all .2s ease;transition:all .2s ease;background:#f4f4f4;content:"";border-radius:1em}
 .tgl-flat:checked+.tgl-btn{border:4px solid #7FC6A6}
 .tgl-flat:checked+.tgl-btn:after{left:50%;background:#7FC6A6}
-.header,.second{background:#fff}
 #skillz-filter-categories,#skillz-intro,#skillz-order{display:inline-block;vertical-align:top}
 #skillz-intro{width:30%}
 #skillz-order{width:20%;margin-right:auto}
@@ -214,7 +214,17 @@ html{border:2px solid #18212D}
 #skillz-filter-categories>div .tgl-btn,#skillz-filter-categories>div h4 label:before{display:none!important}
 #skillz-filter-categories>div label{margin:auto}
 }
+#networkmap-modal{display:none;position:fixed;top:50%;width:calc(100% - 4px);height:0;opacity:0;-webkit-transition:all .8s;transition:all .8s}
+#networkmap-modal.modal-shown{opacity:1;height:calc(100vh - 4px);top:0}
+#networkmap-modal.modal-rendered{display:block}
+[network-map]{background:rgba(0,0,0,.5)}
+.header,.second{background:#fff}
+#networkmapsvg,[network-map]{width:100%;height:100%}
+#networkmap,#networkmapsvg{max-width:800px;max-height:800px}
+#networkmap{background-color:#fff;border:1px solid #e7e7e7;width:calc(100% - 42px);height:calc(100% - 42px);position:absolute;top:0;left:0;right:0;bottom:0;margin:auto}
+#networkmap-close{display:inline-block;position:absolute;right:-15px;top:-15px;cursor:pointer}
 #intro,.circles.h-card{display:none}
+#networkmap-close i{font-size:2.5em;color:#18212D}
 body{font-family:Ubuntu;font-style:16px;-webkit-font-smoothing:antialiased;-moz-font-smoothing:antialiased;font-smoothing:antialiased;text-rendering:optimizeLegibility;font-smooth:always;overflow-x:hidden;margin:0}
 .row{margin-left:0;margin-right:0}
 .scrollable{overflow:auto!important}
