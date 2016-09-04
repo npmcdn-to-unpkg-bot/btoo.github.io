@@ -2,7 +2,9 @@ portfolio.directive('card', [
 	'$drag',
 	'$touch',
 	'projectsService',
-	($drag, $touch, projectsService) => {
+	'landingService',
+	'$timeout',
+	($drag, $touch, projectsService, landingService, $timeout) => {
 		return {
 			restrict: 'C',
 			transclude: true,
@@ -36,54 +38,101 @@ portfolio.directive('card', [
 					elem[0].style.top = (projectsService.cardSpreadInterval() * (index+1)) + 'px';
 				});
 
-				$drag.bind(elem, {
-					transform: (element, transform, touch) => {
-						var t = $drag.TRANSLATE_BOTH(element, transform, touch),
-							Dx = touch.distanceX,
-							t0 = touch.startTransform,
-							sign = Dx < 0 ? -1 : 1,
-							angle = sign * Math.min((Math.abs(Dx) / 700) * 30, 30);
+				function isFlipped(){
+					if(elem[0].querySelector('.flip-card').classList.contains('flipped'))
+						return true;
+					else
+						return false;
+				}
 
-						t.rotateZ = angle + (Math.round(t0.rotateZ));
-						return t;
-					},
-					start: (drag, event) => {
-						event.stopPropagation();
-						PortfolioController.scrollableToggle(false);
-					},
-					move: (drag, event) => {
-						event.stopPropagation();
-						elem[0].style.opacity = 1 - (Math.abs(drag.distanceX) / drag.rect.width);
-						if (Math.abs(drag.distanceX) >= drag.rect.width / 4) {
-							elem.addClass('dismiss');
-						} else {
+				landingService.canBindProjectsCardsTransform().then(() => {
+					$drag.bind(elem, {
+						// transform: allowTransform(),
+						transform: (element, transform, touch) => {
+							if(isFlipped()){
+								// // just scroll the content
+								var cardBackContent = element[0].querySelector('.card-back > ng-include');
+								cardBackContent.scrollTop = -touch.distanceY;
+								
+								return $drag.NULL_TRANSFORM(element, transform, touch);
+
+							} else {
+								var t = $drag.TRANSLATE_BOTH(element, transform, touch),
+									Dx = touch.distanceX,
+									t0 = touch.startTransform,
+									sign = Dx < 0 ? -1 : 1,
+									angle = sign * Math.min((Math.abs(Dx) / 700) * 30, 30);
+
+								t.rotateZ = angle + (Math.round(t0.rotateZ));
+								return t;
+							}
+						},
+						start: (drag, event) => {
+							event.stopPropagation();
+							PortfolioController.scrollableToggle(false);
+						},
+						move: (drag, event) => {
+							if(!isFlipped()){
+								event.stopPropagation();
+								elem[0].style.opacity = 1 - (Math.abs(drag.distanceX) / drag.rect.width);
+								if (Math.abs(drag.distanceX) >= drag.rect.width / 4) {
+									elem.addClass('dismiss');
+								} else {
+									elem.removeClass('dismiss');
+								}
+							}
+						},
+						cancel: () => {
 							elem.removeClass('dismiss');
+						},
+						end: drag => {
+							if(!isFlipped()){
+								elem[0].style.opacity = 1;
+								PortfolioController.scrollableToggle(true);
+								elem.removeClass('dismiss');
+								if (Math.abs(drag.distanceX) >= drag.rect.width/4) {
+									scope.$apply(() => {
+										projectsService.next();
+									});
+								}
+								drag.reset();
+							}
 						}
-					},
-					cancel: () => {
-						elem.removeClass('dismiss');
-					},
-					end: drag => {
-						elem[0].style.opacity = 1;
-						PortfolioController.scrollableToggle(true);
-						elem.removeClass('dismiss');
-						if (Math.abs(drag.distanceX) >= drag.rect.width/4) {
-							scope.$apply(function() {
-								projectsService.next();
-							});
+					});
+
+					$touch.bind(elem, {
+						end: (touchInfo, event) => {
+							
+
+							if(!isFlipped()){
+								if (Math.abs(touchInfo.total) < elem[0].clientWidth/8) {
+									var flipCard = elem[0].querySelector('.flip-card');
+									flipCard.classList.toggle('flipped');
+									if(flipCard.classList.contains('flipped-complete')){
+										flipCard.classList.toggle('flipped-complete');
+									} else {
+										$timeout(() => {
+											flipCard.classList.toggle('flipped-complete');
+										},1000);	
+									}
+									
+								}
+							} else {
+								// console.log(touchInfo);
+								// first wait to see if a drag even was initiated
+							}
+
+
 						}
-						drag.reset();
-					}
+					});
+
+
+
+
+
 				});
 
-				$touch.bind(elem, {
-					end: (touchInfo, event) => {
-						if (Math.abs(touchInfo.total) < elem[0].clientWidth/8) {
-							var flipCard = elem[0].querySelector('.flip-card');
-							flipCard.classList.toggle('flipped');
-						}
-					}
-				});
+				
 
 
 			}

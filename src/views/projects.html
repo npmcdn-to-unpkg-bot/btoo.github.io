@@ -1,6 +1,6 @@
 <div class="cards">
 	<div class="cards-inner flip">
-		<div ng-repeat="project in projects" class="card" id="{{project.id}}">
+		<div ng-repeat="project in projects" class="card" id="{{project.id}}" ng-click="console.log('clicked')">
 			<div class="card-inner">
 
 				<article ng-if="$index===0" id="projects-intro">
@@ -28,14 +28,18 @@
 						<figure class="card-front">
 							<img src="{{project.image}}">
 						</figure>
-						<figure class="card-back">
+						<figure class="card-back" ng-if="!project.hasOwnProperty('customtemplate')">
 							<p>
 								<strong>
 									{{project.shortdescription}}
 								</strong>
 							</p>
 						</figure>
-					</div>	
+						<figure class="card-back" ng-if="project.hasOwnProperty('customtemplate')">
+							<ng-include src="project.customtemplate">
+							</ng-include>
+						</figure>
+					</div>
 				</article>
 
 			</div>

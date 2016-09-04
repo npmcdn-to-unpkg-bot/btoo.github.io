@@ -13,6 +13,7 @@ portfolio.factory('projectsService', [
 				$http.get('resources/json/projects.json')
 					.then(response => {
 						$rootScope.projects = response.data;
+						landingService.loadedProjects();
 					});
 			}, 888);
 			

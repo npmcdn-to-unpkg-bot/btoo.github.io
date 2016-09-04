@@ -25,6 +25,9 @@ portfolio.factory('landingService', ['$q', function($q){
 	// animated landing card
 	var animatedCard = $q.defer();
 
+	// loaded projects from $http
+	var loadedProjects = $q.defer();
+
 	return {
 		'renderedBox': () => {
 			return renderedBox.resolve();
@@ -59,6 +62,12 @@ portfolio.factory('landingService', ['$q', function($q){
 		},
 		'canAnimateControls': () => {
 			return animatedCard.promise;
+		},
+		'loadedProjects': () => {
+			return loadedProjects.resolve();
+		},
+		'canBindProjectsCardsTransform': () => {
+			return loadedProjects.promise;
 		}
 	};
 

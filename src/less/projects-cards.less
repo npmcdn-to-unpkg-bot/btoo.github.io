@@ -1,10 +1,8 @@
 #projects-intro {
-	h2 {
+	h2, p {
 		font-family: Ubuntu;
 		width: 50%;
-	}
-	p {
-		width: 50%;
+		line-height: 1.8
 	}
 	figure {
 		display: flex;
@@ -15,7 +13,7 @@
 			text-align: center;
 			h2 {
 				font-family: ChopinScript !important;
-				font-size: 3em;
+				font-size: 5em;
 			}
 		}
 	}
@@ -52,7 +50,7 @@
 		left: 0; right: 0;
 		background-size: cover;
 		background: transparent;
-		color: #444444;
+		color: @bg-dark;
 		display: block;
 		opacity: 1;
 		-khtml-user-select: none;
@@ -98,8 +96,9 @@
 					// box-shadow: 0px 0px 3px rgba(0,0,0,0.5);
 					box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
 					// box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-					background: #f4f4f4;
-					figure {
+					background: darken(@bg-light, 5%);
+					> figure {
+						padding: 60px;
 						margin: 0;
 						display: block;
 						position: absolute;
@@ -114,11 +113,23 @@
 						flex-direction: column;
 					}
 					.card-back {
-						background: #f4f4f4;
+						background: darken(@bg-light, 5%);
 						transform: rotateY( 180deg);
+						ng-include {
+							overflow: hidden;
+							max-height: 100%;
+						}
 					}
 					&.flipped {
 						transform: rotateY( 180deg );
+						&.flipped-complete .card-back {
+							overflow: auto;
+							max-height: 100%;
+							ng-include {
+								overflow: auto;
+								max-height: 100%;
+							}
+						}
 					}
 				}
 				img {
@@ -149,3 +160,29 @@
 	z-index: -1;
 }
 
+#spark {
+	iframe {
+		margin: 30px auto;
+		max-width: 100%;
+		display: block;
+	}
+}
+
+@media (max-width: 425px) {
+	#projects-intro {
+		h2, p {
+			width: 80%;
+		}
+		p {
+			font-size: 1.4em;
+		}
+	}
+	.flip-card {
+		> figure {
+			padding: 30px !important;
+		}
+	}
+	#spark iframe {
+		margin-top: 0;
+	}
+}

@@ -1,6 +1,6 @@
 [
 	{
-		"thisisa": "dummyproject"
+		"id": "dummyproject"
 	}, {
 		"id": "spark",
 		"name": "Spark Collaboration",
@@ -26,7 +26,8 @@
 			"title": "Source",
 			"url": "http://www.sparkcollaboration.com/"
 		},
-		"color": "rgb(65, 170, 92)"
+		"color": "rgb(65, 170, 92)",
+		"customtemplate": "views/projects-cards-custom-templates/spark.html"
 	}, {
 		"id": "primal",
 		"name": "Primal Blueprint",
