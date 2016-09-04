@@ -3,7 +3,26 @@
 		<div ng-repeat="project in projects" class="card" id="{{project.id}}">
 			<div class="card-inner">
 
-				<article>
+				<article ng-if="$index===0" id="projects-intro">
+					<div class="flip-card">
+						<figure class="card-front">
+							<h2>
+								Projects
+								<br>
+								&amp; Experience
+							</h2>
+						</figure>
+						<figure class="card-back">
+							<p>
+								<strong>
+									gratz
+								</strong>
+							</p>
+						</figure>
+					</div>	
+				</article>
+
+				<article ng-if="$index!==0">
 					<div class="flip-card">
 						<figure class="card-front">
 							<img src="{{project.image}}">

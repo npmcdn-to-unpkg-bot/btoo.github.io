@@ -1,10 +1,7 @@
-<!-- <div id="skillz-intro">
-	intro paragraph
-</div> -->
 <div id="skillz-order">
 	<div class="orderer">
 		<h4>
-			Skill
+			{{(skillzOrderProperty=='skill' && skillzOrderReverse==true) ? 'Z - A' : 'A - Z'}}
 		</h4>
 		<div class="orderer-carets">
 			<label for="skill-asc" ng-click="skillzOrderReverse=false">
@@ -38,9 +35,9 @@
 		<option value="projects.length"># of Projects</option>
 	</select> -->
 </div>
+<hr>
 <div id="skillz-filter-categories">
 	<div ng-repeat="dummySkillzCategory in dummySkillzCategoriesList" ng-class="{'{{dummySkillzCategory}}':true, 'skillz-category-on':skillzFilterCategories.indexOf(dummySkillzCategoriesList[$index]) > -1}">
-		<!-- <h4>{{dummySkillzCategory | lowerCaseAndReplaceSpaces}}</h4> -->
 		<h4>
 			<label ng-click="toggleCategoryFilter(dummySkillzCategoriesList[$index])" for="{{dummySkillzCategory}}">
 				<span>
@@ -50,24 +47,13 @@
 		</h4>
 		<input id="{{dummySkillzCategory}}" type="checkbox" class="tgl tgl-flat"/>
 		<label ng-click="toggleCategoryFilter(dummySkillzCategoriesList[$index])" for="{{dummySkillzCategory}}" class="tgl-btn">
-			<!-- {{dummySkillzCategory | lowerCaseAndReplaceSpaces}} -->
 		</label>
 	</div>
 	
 </div>
-
-<div id="skillz-filter-experience">
-</div>
-
-
+<hr id="hr-before-skillz">
 <ul id="skillz-list">
 	<li skill class="skill animate-repeat" ng-repeat="skill in skillz | orderBy: skillzOrderProperty:skillzOrderReverse | byCategories: skillzFilterCategories | byExperience: skillzFilterExperienceMin:skillzFilterExperienceMax as results" ng-class="{'very-strong':'very-strong','strong':'strong','medium':'medium','light':'light'}[skill.proficiency]">
-		<!-- {{results}} -->
-		<!-- {{skillzOrderProperty!='experience'}} -->
-		<!-- {{skillz[$index].experience}} -->
-		<!-- {{skill.proficiency}} -->
 		{{skill.skill}}
-		<!-- {{skill.experience}}years -->
-		<!-- {{skill.projects.length}} -->
 	</li>
 </ul>

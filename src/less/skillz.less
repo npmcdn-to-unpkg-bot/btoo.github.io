@@ -1,3 +1,23 @@
+.right > * {
+	max-width: 800px;
+	margin: auto; 
+}
+
+#profile-desc {
+	h2 {
+		font-family: Ubuntu;
+		text-align: left;
+	}
+	padding-top: 20vh;
+	// padding-top: 30px;
+	max-width: 80%;
+	margin: auto;
+	line-height: 1.8;
+	~ hr {
+		width: 80%;
+	}
+}
+
 #skillz {
 	max-width: 80%;
 	// max-width: 40vw;
@@ -5,6 +25,9 @@
 	text-align: center;
 
 	#skillz-filter-categories {
+		+ hr {
+			display: none;
+		}
 		& > div {
 
 			text-transform: capitalize;
@@ -32,13 +55,13 @@
 					font-size: 14px;
 					&:before {
 						cursor: pointer;
-						height: 5px;
+						top: 12px;
+						height: 4px;
 						width: 0%;
 						background: @bg-light;
 						display: inline-block;
 						content: " ";
 						position: absolute;
-						top: 15px;
 						transition: all .8s;
 					}
 					span {
@@ -116,6 +139,7 @@
 
 	#skillz-list {
 		padding: 0px;
+		margin-bottom: 20vh;
 		li {
 			list-style: none;
 			display: inline-block;
@@ -243,13 +267,17 @@
 	width: 30%;
 }
 #skillz-order {
+	+ hr {
+		display: none;
+	}
 	width: 20%;
 	margin-right: auto;
 	.orderer {
 		margin: 40px 0;
 		h4 {
 			margin: 9px 15px;
-			font-weight: bold;
+			font-weight: normal;
+			font-size: 16px;
 			color: @bg-dark;
 		}
 		> * {
@@ -263,8 +291,10 @@
 				input {
 					display: none;
 					+ i {
+						color: darken(@bg-light, 22%);
 						&.ordered {
 							transform: scale(2);
+							color: @green;
 						}
 					}
 				}
@@ -278,13 +308,20 @@
 	margin-top: 20px;
 	max-width: 888px;
 }
-
+#hr-before-skillz {
+	display: block !important;
+}
 
 
 @media (max-width: 768px) {
-	#skillz > * {
-		display: block;
-		width: 100%
+	#skillz {
+		hr {
+			display: block !important;
+		}
+		> * {
+			display: block;
+			width: 100%
+		}
 	}
 	#skillz-filter-categories {
 		margin-top: 0;
@@ -294,6 +331,9 @@
 			width: ~"calc(50% - 30px)";
 			margin: 0;
 			display: inline-block;
+			h4 {
+				margin: 9px 0;
+			}
 			&:last-child {
 				margin-left: 30px;
 				> .orderer-carets {
@@ -311,6 +351,9 @@
 }
 
 @media (max-width: 425px) {
+	#profile-desc {
+		font-size: 1.4em;
+	}
 	#skillz-filter-categories {
 		> div {
 			text-align: center;

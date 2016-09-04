@@ -1,9 +1,23 @@
+#projects-intro {
+	h2 {
+		font-family: Ubuntu;
+	}
+}
+
 .cards {
 	// height: calc(~"100vh - 40px");
 	// width: calc(~"100% - 40px");
 	height: calc(~"100vh - 8px");
 	width: 100%;
-	overflow: hidden;
+	max-width: 800px;
+	max-height: 800px;
+	position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+	// overflow: hidden;
 	padding: 20px;
 	box-sizing: border-box;
 	
@@ -77,6 +91,10 @@
 						backface-visibility: hidden;
 					}
 					.card-front {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						flex-direction: column;
 					}
 					.card-back {
 						background: #f4f4f4;

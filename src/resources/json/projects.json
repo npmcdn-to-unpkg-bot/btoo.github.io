@@ -1,5 +1,7 @@
 [
 	{
+		"thisisa": "dummyproject"
+	}, {
 		"id": "spark",
 		"name": "Spark Collaboration",
 		"image": "resources/img/spark-logo.png",

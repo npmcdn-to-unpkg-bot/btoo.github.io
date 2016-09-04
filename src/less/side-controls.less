@@ -9,7 +9,7 @@
 	a {
 		.transition(all .4s);
 		// .transition-duration(.4s);
-		opacity: .42;
+		opacity: .22;
 		position: fixed;
 		top: 50vh;
 		display: inline-block;
@@ -20,11 +20,16 @@
 			font-size: 2em;
 			color: @mid-blue;
 			cursor: pointer;
+			opacity: .22;
+			.transition(all .4s);
 		}
 		
 		&:hover {
 			.transform(~"scale(1.2,1.2) translate3d(0,0,0)");
 			opacity: 1; //use mobile angular ui touch event instead
+			i {
+				opacity: 1;
+			}
 		}
 
 		&:first-child {
