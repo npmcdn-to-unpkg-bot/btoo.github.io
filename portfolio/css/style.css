@@ -1,8 +1,13 @@
+#landing-card,#landing-card p,#projects-intro figure.card-back{text-align:center}
 .animate-repeat,.cards,.tgl,.tgl *,.tgl :after,.tgl :before,.tgl+.tgl-btn,.tgl:after,.tgl:before{box-sizing:border-box}
 @font-face{font-family:Ubuntu;src:url(../font/ubuntu/Ubuntu-R.ttf)}
 @font-face{font-family:Ubuntu;src:url(../font/ubuntu/Ubuntu-B.ttf);font-weight:700}
 @font-face{font-family:Ubuntu;src:url(../font/ubuntu/Ubuntu-C.ttf);font-stretch:condensed}
-#projects-intro h2{font-family:Ubuntu}
+@font-face{font-family:ChopinScript;src:url(../font/chopinscript/ChopinScript.eot?) format("eot"),url(../font/chopinscript/ChopinScript.woff) format("woff"),url(../font/chopinscript/ChopinScript.ttf) format("truetype"),url(../font/chopinscript/ChopinScript.svg#ChopinScript) format("svg");font-weight:400;font-style:normal}
+#projects-intro h2{font-family:Ubuntu;width:50%}
+#projects-intro p{width:50%}
+#projects-intro figure{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}
+#projects-intro figure.card-back h2{font-family:ChopinScript!important;font-size:3em}
 .cards{height:calc(100vh - 8px);width:100%;max-width:800px;max-height:800px;position:absolute;margin:auto;top:0;left:0;right:0;bottom:0;padding:20px}
 .cards .cards-inner{height:100%;overflow:visible;position:relative}
 .cards .card,.cards .card .card-inner{margin:auto;position:absolute;left:0;right:0;display:block}
@@ -38,9 +43,9 @@ to{opacity:0}
 [landing-content][ng-hide]{-webkit-animation:1s disappear;animation:1s disappear}
 [landing-content][ng-show]{-webkit-animation:1s appear;animation:1s appear}
 [landing-content] strong{color:#3cf0ff}
-#landing-card{z-index:1;display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;background-color:transparent;height:28em;max-height:90vh;max-width:90vw;width:42em;text-align:center}
+#landing-card{z-index:1;display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;background-color:transparent;height:28em;max-height:90vh;max-width:90vw;width:42em}
 #landing-card h1{color:#f4f4f4;font-weight:700}
-#landing-card p{text-align:center;padding:0 10vw;display:none;line-height:1.8}
+#landing-card p{padding:0 10vw;display:none;line-height:1.8}
 @media (max-width:375px){#landing-card p{line-height:1.2}
 }
 .initialScrollBtn{position:fixed;color:#fff;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);bottom:20px}
@@ -179,7 +184,7 @@ html{border:2px solid #18212D}
 #skillz-order .orderer>*{display:inline-block;vertical-align:top}
 #skillz-order .orderer>.orderer-carets label{display:block;margin:0}
 #skillz-order .orderer>.orderer-carets input{display:none}
-#skillz-order .orderer>.orderer-carets input+i{color:#bcbcbc}
+#skillz-order .orderer>.orderer-carets input+i{cursor:pointer;color:#bcbcbc}
 #skillz-order .orderer>.orderer-carets input+i.ordered{-webkit-transform:scale(2);transform:scale(2);color:#7FC6A6}
 #skillz-filter-categories{width:80%;margin-left:auto;margin-top:20px;max-width:888px}
 #hr-before-skillz{display:block!important}

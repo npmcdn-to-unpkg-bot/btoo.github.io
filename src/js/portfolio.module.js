@@ -5,8 +5,8 @@ var portfolio = angular.module('portfolio', [
 	'mobile-angular-ui.gestures.drag',
 	'mobile-angular-ui.gestures.touch',
 	'ngAnimate',
-	'ngSanitize',
-	'duScroll'
+	// 'duScroll',
+	'ngSanitize'
 ])
 	.filter('byCategories', () => {
 		return (skillz, filterByCategories) => {
@@ -42,4 +42,4 @@ var portfolio = angular.module('portfolio', [
 	// .value('duScrollEasing', x => {
 	// 	return 1-x;
 	// })
-	.value('duScrollOffset', 88);
+	// .value('duScrollOffset', 88);
