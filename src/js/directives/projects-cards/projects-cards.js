@@ -52,8 +52,7 @@ portfolio.directive('card', [
 							if(isFlipped()){
 								// // just scroll the content
 								var cardBackContent = element[0].querySelector('.card-back > ng-include');
-								cardBackContent.scrollTop = -touch.distanceY;
-								
+								cardBackContent.scrollTop += -touch.stepY;
 								return $drag.NULL_TRANSFORM(element, transform, touch);
 
 							} else {

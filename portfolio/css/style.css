@@ -24,7 +24,7 @@
 .cards .card .card-inner article .flip-card.flipped.flipped-complete .card-back,.cards .card .card-inner article .flip-card.flipped.flipped-complete .card-back ng-include{overflow:auto;max-height:100%}
 .cards .card .card-inner article img{max-width:90%;display:block}
 .decoy.cardsEnabled{z-index:-1}
-#spark iframe{margin:30px auto;max-width:100%;display:block}
+#spark iframe{margin:30px auto;width:100%;display:block;height:100%}
 @media (max-width:425px){#projects-intro h2,#projects-intro p{width:80%}
 #projects-intro p{font-size:1.4em}
 .flip-card>figure{padding:30px!important}
