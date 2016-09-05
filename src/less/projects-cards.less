@@ -1,7 +1,8 @@
 #projects-intro {
 	h2, p {
 		font-family: Ubuntu;
-		width: 50%;
+		width: 80%;
+		max-width: 500px;
 		line-height: 1.8
 	}
 	figure {
@@ -23,7 +24,7 @@
 	position: absolute;
 	width: ~"calc(100% - 40px)";
 	text-align: center;
-	z-index: 3000;
+	z-index: 100000;
 }
 
 .cards {
@@ -100,7 +101,6 @@
 					position: absolute;
 					transform-style: preserve-3d;
 					transition: transform 1s;
-					// box-shadow: 0px 0px 3px rgba(0,0,0,0.5);
 					box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
 					// box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 					background: darken(@bg-light, 5%);
@@ -169,10 +169,70 @@
 
 #spark {
 	iframe {
+		max-height: 50vh;
 		margin: 30px auto;
 		width: 100%;
 		display: block;
-		height: 100%;
+		height: 382px;
+	}
+}
+
+#card-back-buttons {
+	display: none;
+	opacity: 0;
+	// display: flex;
+	justify-content: space-between;
+	width: ~"calc(100% + 60px - 40px)";
+	transform: translate(-30px, -30px);
+	.card-back-button {
+		cursor: pointer;
+		border-radius: 50%;
+		display: inline-block;
+		position: relative;
+		height: 60px;
+		width: 60px;
+		padding: 5px;
+		background: @mid-blue;
+		box-shadow: 0 5px 10px rgba(0,0,0,0.19), 0 3px 3px rgba(0,0,0,0.23);
+		.vertical-center();
+		&:first-child {
+			// float: left;
+			// align-self: flex-start;
+		}
+		&:last-child {
+			// float: right;
+			// align-self: flex-end;
+		}
+		i {
+			font-size: 2em;
+			color: @bg-light;
+			display: inline-block;
+		}
+	}
+}
+
+#dummyproject {
+
+}
+
+@media (max-width: 768px), (max-height: 768px) {
+	#card-back-buttons {
+		width: ~"calc(100% - 20px)";
+		.transform(translate(-10px, -10px));
+	}
+	#spark {
+		iframe {
+			margin-top: 0;
+		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+	.cards {
+		padding: 40px;
+	}
+	#card-back-buttons {
+		width: ~"calc(100% - 20px)";
 	}
 }
 
@@ -192,5 +252,14 @@
 	}
 	#spark iframe {
 		margin-top: 0;
+	}
+	#dummyproject {
+		.card-front {
+			padding: 15px 0px !important;
+			.vertical-center();
+			h2 {
+				line-height: 1.2;
+			}
+		}
 	}
 }

@@ -1,10 +1,31 @@
 <div class="cards">
 
 	<div id="card-back-buttons">
-		im gonna put the buttons in here
-		<button ng-click="showNetworkMap=true" onclick="document.getElementById('networkmap-modal').classList.toggle('modal-shown')">
-			view demo {{showNetworkMap}}
+		<!-- <button class="ripple-cont">
+			<div class="ripple-content">
+				Button
+			</div>
+			<div class="ink-content"></div>
 		</button>
+
+		<div>
+			<button class="r-raised ripple-cont" r-color="#F44336" r-opacity=".6">
+				<div class="ripple-content">
+					Custom
+				</div>
+				<div class="ink-content"></div>
+			</button>
+		</div> -->
+		<a class="card-back-button" ng-click="flipToFront()">
+			<i class="fa fa-undo" aria-hidden="true"></i>
+		</a>
+		<a onclick="document.getElementById('networkmap-modal').classList.toggle('modal-shown')" class="card-back-button">
+			<i class="fa fa-search-plus" aria-hidden="true"></i>
+		</a>
+		<a class="card-back-button" id="visit-project-site" target="_blank">
+			<i class="fa fa-share" aria-hidden="true"></i>
+		</a>
+
 	</div>
 
 	<div class="cards-inner flip">
@@ -33,7 +54,7 @@
 				</article>
 
 				<article ng-if="$index!==0">
-					<div class="flip-card">
+					<div class="flip-card" data-website-url="{{project.link.url}}">
 						<figure class="card-front">
 							<img src="{{project.image}}">
 						</figure>

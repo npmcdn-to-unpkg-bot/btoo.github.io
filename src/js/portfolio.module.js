@@ -4,6 +4,7 @@ var portfolio = angular.module('portfolio', [
 	'mobile-angular-ui',
 	'mobile-angular-ui.gestures.drag',
 	'mobile-angular-ui.gestures.touch',
+	'ng-ripple',
 	// 'duScroll',
 	// 'd3',
 	'ngAnimate',
@@ -44,3 +45,8 @@ var portfolio = angular.module('portfolio', [
 	// 	return 1-x;
 	// })
 	// .value('duScrollOffset', 88);
+
+	// .run(['rippleConfig', function(rippleConfig) {
+	// 	rippleConfig.rippleOpacity = .2;
+	// 	rippleConfig.rippleDelay = 100;
+	// }]);

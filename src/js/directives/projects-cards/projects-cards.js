@@ -4,7 +4,8 @@ portfolio.directive('card', [
 	'projectsService',
 	'landingService',
 	'$timeout',
-	($drag, $touch, projectsService, landingService, $timeout) => {
+	'$rootScope',
+	($drag, $touch, projectsService, landingService, $timeout, $rootScope) => {
 		return {
 			restrict: 'C',
 			transclude: true,
@@ -55,7 +56,7 @@ portfolio.directive('card', [
 								cardBackContent.scrollTop += -touch.stepY;
 								return $drag.NULL_TRANSFORM(element, transform, touch);
 
-							} else {
+							} else if (id == projectsService.activeCard()) {
 								var t = $drag.TRANSLATE_BOTH(element, transform, touch),
 									Dx = touch.distanceX,
 									t0 = touch.startTransform,
@@ -71,7 +72,7 @@ portfolio.directive('card', [
 							PortfolioController.scrollableToggle(false);
 						},
 						move: (drag, event) => {
-							if(!isFlipped()){
+							if(!isFlipped() && id == projectsService.activeCard() ){
 								event.stopPropagation();
 								elem[0].style.opacity = 1 - (Math.abs(drag.distanceX) / drag.rect.width);
 								if (Math.abs(drag.distanceX) >= drag.rect.width / 4) {
@@ -85,7 +86,9 @@ portfolio.directive('card', [
 							elem.removeClass('dismiss');
 						},
 						end: drag => {
-							if(!isFlipped()){
+							if(!isFlipped() && id == projectsService.activeCard()){
+								// document.getElementById('visit-project-site').setAttribute('href', $rootScope.projects)
+								// console.log($rootScope.projects);
 								elem[0].style.opacity = 1;
 								PortfolioController.scrollableToggle(true);
 								elem.removeClass('dismiss');
@@ -102,9 +105,11 @@ portfolio.directive('card', [
 					$touch.bind(elem, {
 						end: (touchInfo, event) => {
 							
-
-							if(!isFlipped()){
+							if(!isFlipped() && id==projectsService.activeCard()){
 								if (Math.abs(touchInfo.total) < elem[0].clientWidth/8) {
+									
+									projectsService.showCardBackButtons();
+
 									var flipCard = elem[0].querySelector('.flip-card');
 									flipCard.classList.toggle('flipped');
 									if(flipCard.classList.contains('flipped-complete')){
@@ -119,6 +124,7 @@ portfolio.directive('card', [
 							} else {
 								// console.log(touchInfo);
 								// first wait to see if a drag even was initiated
+								// projectsService.showCardBackButtons();
 							}
 
 

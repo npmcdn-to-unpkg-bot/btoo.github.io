@@ -1,0 +1,31 @@
+{
+  "name": "ng-ripple",
+  "description": "Ripple effects for angular",
+  "main": "index.js",
+  "authors": [
+    "Antonio Dal Sie"
+  ],
+  "license": "ISC",
+  "homepage": "https://ng-ripple.antoniodalsie.com/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.4.7"
+  },
+  "version": "0.9.6",
+  "_release": "0.9.6",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.9.6",
+    "commit": "ded1c8dfc138e9234de7e1096c7a5ed4572b8bf9"
+  },
+  "_source": "https://github.com/exodusanto/ng-ripple.git",
+  "_target": "^0.9.6",
+  "_originalSource": "ngRipple",
+  "_direct": true
+}

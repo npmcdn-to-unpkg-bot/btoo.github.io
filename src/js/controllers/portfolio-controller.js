@@ -75,5 +75,16 @@ portfolio.controller('PortfolioController', [
 		// 	console.log('changed');
 		// });
 
+		$scope.flipToFront = () => {
+			projectsService.hideCardBackButtons();
+
+			var cards = document.querySelectorAll('.cards-inner > .card');
+			var activeCard = cards[projectsService.activeCard()];
+			activeCard.querySelector('.flip-card').classList.remove('flipped');
+			$timeout(() => {
+				activeCard.querySelector('.flip-card').classList.remove('flipped-complete');
+			}, 1000);
+		}
+
 	}
 ]);

@@ -103,7 +103,7 @@
 			"btoo"
 		]
 	}, {
-		"skill": "Angular",
+		"skill": "Angular 1",
 		"experience": "2",
 		"proficiency": "strong",
 		"categories": [
@@ -443,6 +443,34 @@
 		"proficiency": "very strong",
 		"categories": [
 			"frontend"
+		],
+		"projects": [
+		]
+	}, {
+		"skill": "GIMP",
+		"experience": "2",
+		"proficiency": "strong",
+		"categories": [
+			"design"
+		],
+		"projects": [
+		]
+	}, {
+		"skill": "Material Design",
+		"experience": "2",
+		"proficiency": "strong",
+		"categories": [
+			"design",
+			"frontend"
+		],
+		"projects": [
+		]
+	}, {
+		"skill": "Google Analytics",
+		"experience": "1",
+		"proficiency": "medium",
+		"categories": [
+			"project management"
 		],
 		"projects": [
 		]
