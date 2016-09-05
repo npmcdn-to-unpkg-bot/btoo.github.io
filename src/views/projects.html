@@ -19,7 +19,7 @@
 		<a class="card-back-button" ng-click="flipToFront()">
 			<i class="fa fa-undo" aria-hidden="true"></i>
 		</a>
-		<a onclick="document.getElementById('networkmap-modal').classList.toggle('modal-shown')" class="card-back-button">
+		<a ng-click="showProjectModal()" class="card-back-button">
 			<i class="fa fa-search-plus" aria-hidden="true"></i>
 		</a>
 		<a class="card-back-button" id="visit-project-site" target="_blank">
@@ -41,11 +41,11 @@
 								<br>
 								&amp; Experience
 							</h2>
+						</figure>
+						<figure class="card-back">
 							<p>
 								Take a peek into the motley of endeavors I've engaged in throughout my professional career, academia, and my own personal time. Tap on a card to view each project in more detail, and swipe it away to view the next one.
 							</p>
-						</figure>
-						<figure class="card-back">
 							<h2>
 								Happy Swiping
 							</h2>
@@ -56,18 +56,22 @@
 				<article ng-if="$index!==0">
 					<div class="flip-card" data-website-url="{{project.link.url}}">
 						<figure class="card-front">
-							<img src="{{project.image}}">
+							<img src="{{project.images.logo}}">
 						</figure>
 						<figure class="card-back" ng-if="!project.hasOwnProperty('customtemplate')">
-							<p>
-								<strong>
-									{{project.shortdescription}}
-								</strong>
-							</p>
+							<div>
+								<img class="project-featured-img" src="{{project.images.featured}}">
+								<!-- <p ng-repeat="paragraph in project.description">
+									{{paragraph}}
+								</p> -->
+								<p ng-repeat="paragraph in project.description" ng-bind-html="paragraph">
+									<!-- {{paragraph}} -->
+								</p>
+							</div>
 						</figure>
 						<figure class="card-back" ng-if="project.hasOwnProperty('customtemplate')">
-							<ng-include src="project.customtemplate">
-							</ng-include>
+							<div ng-include src="project.customtemplate">
+							</div>
 						</figure>
 					</div>
 				</article>

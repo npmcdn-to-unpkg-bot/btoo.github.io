@@ -4,8 +4,17 @@
 	Spark Collaboration is a social networking platform that aims to create connections in a group of people where they normally wouldn't exist. You can good bye to silos in the workplace as you expand beyong the confines of your normal social interactions. Spark works by connecting a given community of people randomly on a fixed interval of time. Spark Collaboration starts with group organizers who, after registering, can configure Spark Communities with settings such as the time interval between matches or  group segments (Accounting, IT, etc.).
 </p>
 <p>
-	But perhaps the most exciting of features, and I encourage you to contact the users of the platform, is the network map, which visualizes the growth of a Communit throughout time in a fun, intuitive, and interactive way.
+	But perhaps the most exciting of features, and I encourage you to contact the users of the platform, is the network map, which visualizes the growth of a Communit throughout time in a fun, intuitive, and interactive way. Whereas a typical community can consist of about 30 people, the network map will garner more than 500 links. I was the architect and lead developer of the network map, but I also built a majority of the platform, from community creation to email design and a user feedback system. 
 </p>
+<div class="other-imgs">
+	<!--
+	<div ng-repeat="image in project.otherimgs" style="background-image: url({{image}})">
+		<img src="{{image}}">
+	</div>
+	-->
+	<img ng-repeat="image in project.images.other" src="{{image}}">
+</div>
+
 <!-- <div network-map>
 	<div id="networkmap">
 		

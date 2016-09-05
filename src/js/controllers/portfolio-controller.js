@@ -86,5 +86,9 @@ portfolio.controller('PortfolioController', [
 			}, 1000);
 		}
 
+		$scope.showProjectModal = () => {
+			document.getElementById('networkmap-modal').classList.toggle('modal-shown');
+		}
+
 	}
 ]);

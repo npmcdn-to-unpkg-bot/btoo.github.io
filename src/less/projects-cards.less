@@ -122,9 +122,14 @@
 					.card-back {
 						background: darken(@bg-light, 5%);
 						transform: rotateY( 180deg);
-						ng-include {
+						> div {
 							overflow: hidden;
 							max-height: 100%;
+						}
+						.project-featured-img {
+							width: 100%;
+							margin: 30px 0;
+							max-width: none !important;
 						}
 					}
 					&.flipped {
@@ -132,7 +137,7 @@
 						&.flipped-complete .card-back {
 							overflow: auto;
 							max-height: 100%;
-							ng-include {
+							> div {
 								overflow: auto;
 								max-height: 100%;
 							}
@@ -211,8 +216,49 @@
 	}
 }
 
-#dummyproject {
+.card-back {
+	img {
+		position: relative !important;
+	}
+	.other-imgs {
+		> div {
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-attachment: fixed;
+		}
+		img {
+			width: 100%;
+			max-width: none !important;
+			margin: 15px 0 !important;
+			// visibility: hidden;
+			&:nth-of-type(odd){
+				float: left;
+			}
+			&:nth-of-type(even){
+				float: right;
+			}
+		}
+	}
+}
 
+@media (max-width: 768px) {
+	.other-imgs {
+		img {
+			// width: ~"calc(50% - 15px)";
+		}
+		> div {
+			height: 50vh;
+			// padding: 50vh;
+			width: 100%;
+		}
+	}
+	.card-back {
+		p {
+			font-size: 1.4em;
+			line-height: 1.8;
+		}
+	}
 }
 
 @media (max-width: 768px), (max-height: 768px) {

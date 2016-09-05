@@ -4,9 +4,16 @@
 	}, {
 		"id": "spark",
 		"name": "Spark Collaboration",
-		"image": "resources/img/spark-logo.png",
+		"images": {
+			"logo": "resources/img/spark-logo.png",
+			"featured": "",
+			"other": [
+				"resources/img/spark-network-map.png",
+				"resources/img/spark-participants-view.png"
+			]
+		},
 		"shortdescription": "Spark Collaboration is a social networking platform that seeks to create connections where they normally wouldn't occur.",
-		"description": "My portfolio website is designed to highlight important information so potential employers can have a quick glance before reading further. It features a dynamic color palette and some small features like this portfolio.",
+		"description": "",
 		"features": [
 			"Dynamic Color Palette",
 			"Small design features"
@@ -31,9 +38,19 @@
 	}, {
 		"id": "primal",
 		"name": "Primal Blueprint",
-		"image": "resources/img/PrimalBlueprint_Logo_250px_wide_1_1.png",
-		"shortdescription": "My portfolio website, you're browsing it now!",
-		"description": "..and my personal favorite, avacado mayonnaise: BUY SOME NOW",
+		"images": {
+			"logo": "resources/img/PrimalBlueprint_Logo_250px_wide_1_1.png",
+			"featured": "resources/img/primal-landing.png",
+			"other": [
+				
+			]
+		},
+		"shortdescription": "",
+		"description": [
+			"Arguably <i>the<\/i> largest e-commerce/online-community for the revolutionary primal lifestyle is The Primal Blueprint. Join fitness guru Mark Sisson and our friendly ancestor, Grok, as they help you discover how amazingly simple and fun lifelong wellness can be by providing a complete diet, exercise and lifestyle philosophy, along with various products, services and community support, to help you enjoy effortless weight loss, vibrant health and boundless energy. The Primal Blueprint is based on lifestyle principles that have governed human health, evolution and peak performance for over two million years, and is supported by respected research in the fields of epigenetics and evolutionary biology. The Primal Blueprint principles challenge many elements of conventional wisdom that, while well intentioned, are deeply flawed and are making people fat, sick and burnt out.",
+			"My role in developing Primal Blueprint included both frontend and backend development using Magento to handle both the customer and admin interfaces. Additionally, I managed some of the core functionality of the coaching center, such as user registration and blogging.",
+			"And before you check out this site, you should know that their <a target=\"_blank\" href=\"https://www.primalblueprint.com/primal-kitchen/mayo-12-oz/\">Avocado Oil Mayo<\/a> will make you question why anyone would ever use its normal counterpart anymore."
+		],
 		"features": [
 			"Dynamic Color Palette",
 			"Small design features"
@@ -54,9 +71,17 @@
 	}, {
 		"id": "neroli",
 		"name": "Neroli",
-		"image": "resources/img/Neroli_BottomLogo.png",
+		"images": {
+			"logo": "resources/img/Neroli_BottomLogo.png",
+			"featured": "resources/img/primal-landing.png",
+			"other": [
+				
+			]
+		},
 		"shortdescription": "My portfolio website, you're browsing it now!",
-		"description": "My portfolio website is designed to highlight important information so potential employers can have a quick glance before reading further. It features a dynamic color palette and some small features like this portfolio.",
+		"description": [
+			"My portfolio website is designed to highlight important information so potential employers can have a quick glance before reading further. It features a dynamic color palette and some small features like this portfolio."
+		],
 		"features": [
 			"Dynamic Color Palette",
 			"Small design features"
@@ -78,7 +103,9 @@
 		"name": "Vocatio",
 		"image": "resources/img/VocatioLogoDarkLowRes.png",
 		"shortdescription": "My portfolio website, you're browsing it now!",
-		"description": "My portfolio website is designed to highlight important information so potential employers can have a quick glance before reading further. It features a dynamic color palette and some small features like this portfolio.",
+		"description": [
+			"My portfolio website is designed to highlight important information so potential employers can have a quick glance before reading further. It features a dynamic color palette and some small features like this portfolio."
+		],
 		"features": [
 			"Dynamic Color Palette",
 			"Small design features"

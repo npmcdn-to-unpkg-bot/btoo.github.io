@@ -1,3 +1,4 @@
+#skillz #skillz-filter-categories>div:nth-of-type(even)>:last-child,#skillz #skillz-filter-categories>div:nth-of-type(odd)>:first-child,.card-back .other-imgs img:nth-of-type(odd){float:left}
 #card-back-buttons,#landing-card,#landing-card p,#projects-intro figure.card-back{text-align:center}
 .animate-repeat,.cards,.tgl,.tgl *,.tgl :after,.tgl :before,.tgl+.tgl-btn,.tgl:after,.tgl:before{box-sizing:border-box}
 @font-face{font-family:Ubuntu;src:url(../font/ubuntu/Ubuntu-R.ttf)}
@@ -19,16 +20,24 @@
 .cards .card .card-inner article .flip-card>figure{padding:60px;margin:0;display:block;position:absolute;width:100%;height:100%;-webkit-backface-visibility:hidden;backface-visibility:hidden}
 .cards .card .card-inner article .flip-card .card-front{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}
 .cards .card .card-inner article .flip-card .card-back{background:#e7e7e7;-webkit-transform:rotateY(180deg);transform:rotateY(180deg)}
-.cards .card .card-inner article .flip-card .card-back ng-include{overflow:hidden;max-height:100%}
+.cards .card .card-inner article .flip-card .card-back>div{overflow:hidden;max-height:100%}
+.cards .card .card-inner article .flip-card .card-back .project-featured-img{width:100%;margin:30px 0;max-width:none!important}
 .cards .card .card-inner article .flip-card.flipped{-webkit-transform:rotateY(180deg);transform:rotateY(180deg)}
-.cards .card .card-inner article .flip-card.flipped.flipped-complete .card-back,.cards .card .card-inner article .flip-card.flipped.flipped-complete .card-back ng-include{overflow:auto;max-height:100%}
+.cards .card .card-inner article .flip-card.flipped.flipped-complete .card-back,.cards .card .card-inner article .flip-card.flipped.flipped-complete .card-back>div{overflow:auto;max-height:100%}
 .cards .card .card-inner article img{max-width:90%;margin:auto;display:block;position:absolute;bottom:0;top:0;left:0;right:0}
 .decoy.cardsEnabled{z-index:-1}
 #spark iframe{max-height:50vh;margin:30px auto;width:100%;display:block;height:382px}
 #card-back-buttons{display:none;opacity:0;-webkit-box-pack:justify;justify-content:space-between;width:calc(100% + 60px - 40px);-webkit-transform:translate(-30px,-30px);transform:translate(-30px,-30px)}
 #card-back-buttons .card-back-button{cursor:pointer;border-radius:50%;position:relative;height:60px;width:60px;padding:5px;background:#1e78b4;box-shadow:0 5px 10px rgba(0,0,0,.19),0 3px 3px rgba(0,0,0,.23);display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}
-#landing-card,.center{margin:auto;position:absolute;top:0;left:0;bottom:0;right:0}
 #card-back-buttons .card-back-button i{font-size:2em;color:#f4f4f4;display:inline-block}
+.card-back img{position:relative!important}
+.card-back .other-imgs>div{background-size:contain;background-repeat:no-repeat;background-position:center;background-attachment:fixed}
+.card-back .other-imgs img{width:100%;max-width:none!important;margin:15px 0!important}
+#landing-card,.center{margin:auto;position:absolute;top:0;left:0;bottom:0;right:0}
+.card-back .other-imgs img:nth-of-type(even){float:right}
+@media (max-width:768px){.other-imgs>div{height:50vh;width:100%}
+.card-back p{font-size:1.4em;line-height:1.8}
+}
 @media (max-width:768px),(max-height:768px){#card-back-buttons{width:calc(100% - 20px);-webkit-transform:translate(-10px,-10px);transform:translate(-10px,-10px)}
 #spark iframe{margin-top:0}
 }
@@ -164,7 +173,6 @@ html{border:2px solid #18212D}
 #skillz #skillz-filter-categories>div h4 label{font-weight:400;font-size:14px}
 #skillz #skillz-filter-categories>div h4 label:before{cursor:pointer;top:12px;height:4px;width:0;background:#f4f4f4;display:inline-block;content:" ";position:absolute;-webkit-transition:all .8s;transition:all .8s}
 #skillz #skillz-filter-categories>div h4 label span{background:#fff;position:relative;cursor:pointer;border:4px solid #f4f4f4;border-radius:1em;padding:2px 5px;color:#bcbcbc}
-#skillz #skillz-filter-categories>div:nth-of-type(even)>:last-child,#skillz #skillz-filter-categories>div:nth-of-type(odd)>:first-child{float:left}
 #skillz #skillz-filter-categories>div:nth-of-type(even)>:first-child,#skillz #skillz-filter-categories>div:nth-of-type(odd)>:last-child{float:right}
 #skillz #skillz-filter-categories>div:nth-of-type(odd) h4 label span{padding-right:5px}
 #skillz #skillz-filter-categories>div:nth-of-type(odd) h4 label:before{right:0}
