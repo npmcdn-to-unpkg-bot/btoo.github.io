@@ -357,7 +357,7 @@
 			"spark"
 		]
 	}, {
-		"skill": "oAuth",
+		"skill": "OAuth",
 		"experience": "1.5",
 		"proficiency": "medium",
 		"categories": [

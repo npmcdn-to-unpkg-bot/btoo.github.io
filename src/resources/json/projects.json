@@ -13,7 +13,9 @@
 			]
 		},
 		"shortdescription": "Spark Collaboration is a social networking platform that seeks to create connections where they normally wouldn't occur.",
-		"description": "",
+		"description": [
+			""
+		],
 		"features": [
 			"Dynamic Color Palette",
 			"Small design features"
@@ -26,14 +28,10 @@
 			"Javascript",
 			"MySQL"
 		],
-		"progress": "Almost finished",
-		"calendar": "April 2015",
-		"tasks": "Frontend",
 		"link": {
 			"title": "Source",
 			"url": "http://www.sparkcollaboration.com/"
 		},
-		"color": "rgb(65, 170, 92)",
 		"customtemplate": "views/projects-cards-custom-templates/spark.html"
 	}, {
 		"id": "primal",
@@ -51,6 +49,7 @@
 			"My role in developing Primal Blueprint included both frontend and backend development using Magento to handle both the customer and admin interfaces. Additionally, I managed some of the core functionality of the coaching center, such as user registration and blogging.",
 			"And before you check out this site, you should know that their <a target=\"_blank\" href=\"https://www.primalblueprint.com/primal-kitchen/mayo-12-oz/\">Avocado Oil Mayo<\/a> will make you question why anyone would ever use its normal counterpart anymore."
 		],
+		"preview": "views/projects-cards-custom-templates/previews/primal.html",
 		"features": [
 			"Dynamic Color Palette",
 			"Small design features"
@@ -60,12 +59,42 @@
 			"PHP",
 			"MySQL"
 		],
+		"link": {
+			"title": "Source",
+			"url": "https://www.primalblueprint.com/"
+		}
+	}, {
+		"id": "vocatio",
+		"name": "Vocatio",
+		"images": {
+			"logo": "resources/img/VocatioLogoDarkLowRes.png",
+			"featured": "resources/img/vocatio-student-home.png",
+			"other": [
+				"resources/img/VocatioLogoDarkLowRes.png"
+			]
+		},
+		"shortdescription": "Discover the path to your dream job",
+		"description": [
+			"The magic of Vocatio is twofold:<br><ol><li>It helps those who are undecided on what career paths to take discover which ones are suitable for them and<\/li><li>It acts as a liason between employers and potential employees by facilitating the recruitment process<\/li>",
+			"Upon registering, users may take a custom Job Fit Assessment, a thorough examination into one's personality and compatibility with various careers. No answer is wrong as there are multiple career choices for every type of personality. The results of this assessment, along with other information such as past experience or project files, can be made available to employers if their requests to view them are accepted",
+			"Companies and recruiters, who enjoy their own version of Vocatio, are able to immediately engage with potential employees by posting jobs,  messaging job seekers, and joining or posting content in \"career groups,\" separate subcommunities dedicated to the discussion of their respective careers."
+		],
+		"preview": "views/projects-cards-custom-templates/previews/vocatio.html",
+		"features": [
+			"Dynamic Color Palette",
+			"Small design features"
+		],
+		"tools": [
+			"BuddyPress",
+			"Javascript",
+			"MySQL"
+		],
 		"progress": "Almost finished",
 		"calendar": "April 2015",
 		"tasks": "Frontend",
 		"link": {
 			"title": "Source",
-			"url": "https://www.primalblueprint.com/"
+			"url": "http://betavocatio.staging.wpengine.com/"
 		},
 		"color": "rgb(65, 170, 92)"
 	}, {
@@ -90,38 +119,9 @@
 			"MEAN-Stack",
 			"Sass"
 		],
-		"progress": "Almost finished",
-		"calendar": "April 2015",
-		"tasks": "Frontend",
 		"link": {
 			"title": "Source",
 			"url": "http://www.neroliapp.com/"
-		},
-		"color": "rgb(65, 170, 92)"
-	}, {
-		"id": "vocatio",
-		"name": "Vocatio",
-		"image": "resources/img/VocatioLogoDarkLowRes.png",
-		"shortdescription": "My portfolio website, you're browsing it now!",
-		"description": [
-			"My portfolio website is designed to highlight important information so potential employers can have a quick glance before reading further. It features a dynamic color palette and some small features like this portfolio."
-		],
-		"features": [
-			"Dynamic Color Palette",
-			"Small design features"
-		],
-		"tools": [
-			"BuddyPress",
-			"Javascript",
-			"MySQL"
-		],
-		"progress": "Almost finished",
-		"calendar": "April 2015",
-		"tasks": "Frontend",
-		"link": {
-			"title": "Source",
-			"url": "http://betavocatio.staging.wpengine.com/"
-		},
-		"color": "rgb(65, 170, 92)"
+		}
 	}
 ]

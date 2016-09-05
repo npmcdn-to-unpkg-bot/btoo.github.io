@@ -8,9 +8,10 @@ portfolio.controller('PortfolioController', [
 	'skillzService',
 	'$location',
 	'$anchorScroll',
-	'$document', /*"uiGmapGoogleMapApi", "ColorService", 'ScrollService',*/
+	'$document',
 	'$rootScope',
-	function($scope, $http, $window, $timeout, projectsService, landingService, skillzService, $location, $anchorScroll, $document, $rootScope /*, uiGmapGoogleMapApi, ColorService, ScrollService*/) {
+	'$compile',
+	function($scope, $http, $window, $timeout, projectsService, landingService, skillzService, $location, $anchorScroll, $document, $rootScope, $compile) {
 
 
 		$scope.showLandingContent = false;
@@ -87,8 +88,28 @@ portfolio.controller('PortfolioController', [
 		}
 
 		$scope.showProjectModal = () => {
-			document.getElementById('networkmap-modal').classList.toggle('modal-shown');
+			document.getElementById('project-modal-bg').classList.toggle('modal-shown');
+
+			var modalContent = projectsService.renderProjectModal();
+			if(modalContent){
+				modalContent.then(template => {
+					var projectModal = angular.element(document.getElementById('project-modal'));
+					$compile(projectModal.html(template).contents())($scope);
+				}, () => {
+					console.log('an error occured');
+				});
+			}
+			
 		}
+
+		$scope.closeProjectModal = () => {
+			document.getElementById('project-modal-bg').classList.remove('modal-shown');
+			$timeout(() => {
+				projectsService.emptyProjectModal();
+			}, 888);
+		}
+
+		$scope.projectPreview = '';
 
 	}
 ]);

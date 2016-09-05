@@ -4,7 +4,7 @@ var portfolio = angular.module('portfolio', [
 	'mobile-angular-ui',
 	'mobile-angular-ui.gestures.drag',
 	'mobile-angular-ui.gestures.touch',
-	'ng-ripple',
+	// 'ng-ripple',
 	// 'duScroll',
 	// 'd3',
 	'ngAnimate',

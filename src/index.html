@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="lib/mobile-angular-ui/dist/css/mobile-angular-ui-hover.min.css" />
 	<link rel="stylesheet" href="lib/mobile-angular-ui/dist/css/mobile-angular-ui-base.min.css" />
 	<link rel="stylesheet" href="lib/mobile-angular-ui/dist/css/mobile-angular-ui-desktop.min.css" />
-	<link rel="stylesheet" type="text/css" href="lib/ng-ripple/dist/css/ng-ripple.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="lib/ng-ripple/dist/css/ng-ripple.min.css"> -->
 	<link href='css/style.css' rel="stylesheet"></link>
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -82,19 +82,23 @@
 		<ng-include	src="'views/actions.html'"></ng-include>
 	</section>
 
-	<!-- <section id="networkmap-modal" ng-class="{'modal-shown':showNetworkMap}"> -->
-	<section id="networkmap-modal">
-		<div network-map>
-			<div id="networkmap">
-				<div id="networkmap-close" onclick="document.getElementById('networkmap-modal').classList.remove('modal-shown')">
+	<section id="project-modal-bg">
+		<div id="project-modal-container" ng-click="closeProjectModal()">
+			<div id="project-modal" ng-click="$event.stopPropagation()">
+				<!-- <div id="project-modal-close">
 					<i class="fa fa-times-circle" aria-hidden="true"></i>
-				</div>
+				</div> -->
 
-				<!-- network map goes here -->
+				<!-- modal content goes here -->
+				<!-- <img src="resources/img/vocatio-dossier.jpg"> -->
+				<!-- <img ng-src="resources/img/vocatio-dossier.jpg"> -->
+				<ng-bind-html ng-bind-html="projectPreview">
+				</ng-bind-html>
 
 			</div>
 		</div>
 	</section>
+
 
 	<!-- jQuery and D3 for spark network map -->
 	<script src="lib/jquery/dist/jquery.min.js"></script>
@@ -115,7 +119,7 @@
 	<script src="lib/mobile-angular-ui/dist/js/mobile-angular-ui.gestures.js"></script>
 	<!-- Angular Ripple for buttons with Material ripple effect -->
 	<!-- <script src="lib/ng-ripple/dist/js/ng-ripple.min.js"></script> -->
-	<script src="lib/ng-ripple/dist/js/ng-ripple.js"></script>
+	<!-- <script src="lib/ng-ripple/dist/js/ng-ripple.js"></script> -->
 	<!-- Sanitizer -->
 	<script src="lib/angular-sanitize/angular-sanitize.min.js"></script>
 	<!-- Own scripts -->

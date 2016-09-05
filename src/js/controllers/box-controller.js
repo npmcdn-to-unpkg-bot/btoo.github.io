@@ -50,7 +50,7 @@ portfolio.controller('BoxController', [
 		
 		vm.showSide = side => {
 			document.querySelector('#side-controls a:last-child').style.animationName = 'none';
-			document.getElementById('networkmap-modal').classList.remove('modal-rendered');
+			document.getElementById('project-modal-bg').classList.remove('modal-rendered');
 
 			var leftControl = document.querySelector('#side-controls a:first-child');
 			var rightControl = document.querySelector('#side-controls a:last-child');
@@ -69,7 +69,7 @@ portfolio.controller('BoxController', [
 					break;
 				case 'back':
 					rotateY = '-180deg'
-					document.getElementById('networkmap-modal').classList.add('modal-rendered');
+					document.getElementById('project-modal-bg').classList.add('modal-rendered');
 					break;
 				case 'left':
 					rightControl.style.opacity = 0;

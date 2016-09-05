@@ -4,7 +4,11 @@ portfolio.factory('projectsService', [
 	'$rootScope',
 	'landingService',
 	'$timeout',
-	function($q, $http, $rootScope, landingService, $timeout){
+	'networkMapService',
+	'$templateCache',
+	'$sce',
+	'$templateRequest',
+	function($q, $http, $rootScope, landingService, $timeout, networkMapService, $templateCache, $sce, $templateRequest){
 
 		// using rootScope and doing $http over here because doesnt work in controller
 		landingService.canAnimateCard().then(() => {
@@ -50,8 +54,10 @@ portfolio.factory('projectsService', [
 					if(cardBackButtons != 'flex'){ //not already shown for whatever reason
 					cardBackButtons.style.display = 'flex';
 				
+					var activeCardData = $rootScope.projects[activeCard];
+
 					if(activeCard != 0)
-						cardBackButtons.querySelector('#visit-project-site').setAttribute('href', $rootScope.projects[activeCard].link.url);
+						cardBackButtons.querySelector('#visit-project-site').setAttribute('href', activeCardData.link.url);
 
 					var showButtonsContainer = anime({
 						targets: cardBackButtons,
@@ -115,6 +121,22 @@ portfolio.factory('projectsService', [
 						});
 					}
 				});
+			},
+			emptyProjectModal: () => { //empty everytime modal is closed
+				var projectModalContent = angular.element(document.querySelectorAll('#project-modal > *:not(#project-modal-close)'));
+				projectModalContent.remove();
+			},
+			renderProjectModal: () => {
+				var activeCardData = $rootScope.projects[activeCard];
+				if(activeCardData.id === 'spark')
+					networkMapService.renderSparkNetworkMap();
+				else if (activeCardData.preview) {
+					var templateUrl = $sce.getTrustedResourceUrl(activeCardData.preview);
+					var templateRequest = $templateRequest(templateUrl);
+					return templateRequest;
+					
+				}
+
 			}
 			
 		};
