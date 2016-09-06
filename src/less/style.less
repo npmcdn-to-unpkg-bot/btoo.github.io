@@ -7,11 +7,11 @@
 	src: url(../font/ubuntu/Ubuntu-B.ttf);
 	font-weight: bold;
 }
-@font-face {
-	font-family: Ubuntu;
-	src: url(../font/ubuntu/Ubuntu-C.ttf);
-	font-stretch: condensed;
-}
+// @font-face {
+// 	font-family: Ubuntu;
+// 	src: url(../font/ubuntu/Ubuntu-C.ttf);
+// 	font-stretch: condensed;
+// }
 @font-face {
 	font-family: "ChopinScript";
 	src: url("../font/chopinscript/ChopinScript.eot?") format("eot"), url("../font/chopinscript/ChopinScript.woff") format("woff"), url("../font/chopinscript/ChopinScript.ttf") format("truetype"), url("../font/chopinscript/ChopinScript.svg#ChopinScript") format("svg");
@@ -149,13 +149,14 @@ landing-content {
 }
 
 
-
-/* to hide all scrollbars */
-html {
-    overflow: scroll;
-    overflow-x: hidden;
-}
-::-webkit-scrollbar {
-    width: 0px;  /* remove scrollbar space */
-    background: transparent;  /* optional: just make scrollbar invisible */
+@media (min-width: 769px){
+	/* to hide all scrollbars */
+	html {
+	    overflow: scroll;
+	    overflow-x: hidden;
+	}
+	::-webkit-scrollbar {
+	    width: 0px;  /* remove scrollbar space */
+	    background: transparent;  /* optional: just make scrollbar invisible */
+	}
 }

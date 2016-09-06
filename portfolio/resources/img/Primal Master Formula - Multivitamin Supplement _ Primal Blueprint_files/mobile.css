@@ -1,0 +1,227 @@
+/*===============
+
+	Responsive Styles -cb
+
+=================*/
+
+
+@media only screen and (max-width: 978px){
+	
+		.feature .featurette-heading, 
+		.secondary, 
+		.teaser, 
+		.newsletter1 h1, 
+		.newsletter1 h4,
+		.optimize-health h2, 
+		.lose-weight h2, 
+		.immunity h2,
+		input,
+		.secondary-text,
+		.category-header{
+			font-size: 1em;
+		}
+		.newsletter-input{
+			width: 70%;
+		}
+		.product-info .heading{
+			font-size: 1.5em;
+		}
+		
+		.title{
+			font-size: 1em !important;
+		}
+		
+		
+		header#header .quick-access {
+			padding: 0px;
+			position: relative;
+			top: 0px;
+		}
+
+		.iosSlider .slider .item .text1, .iosSlider .slider .item .text2, .iosSlider .slider .item .text3{
+			top: 20%;
+		}
+}
+@media only screen and (max-width: 766px) {
+	header#header .quick-access {
+		padding: 0px;
+		position: static;
+	}
+	
+	.input-group .button{
+		margin: 0 auto;
+		display: block;
+		padding: 5px 0px;
+	}
+	.newsletter-input{
+		width: 100%;
+	}
+	
+	.feature .featurette-heading{
+		font-size: 1em;
+	}
+	.secondary{
+		font-size: 1em;
+	}
+	.teaser{
+		font-size: 1em;
+	}
+	img{
+		width: 100%;
+	}
+	.logo img {
+		width: auto;
+	}
+	header#header .menu-button span{
+		text-transform: capitalize;
+		font-family: 'Montserrat', sans-serif;
+	}
+	header#header.main-header .logo{
+		padding-bottom: 2em;
+	}
+	.feature img{
+		width: 15%;
+	}
+	
+	.item-img{
+		display: none;
+	}
+	.menu-product{
+		background-color: #ffffff;
+		color: #000000;
+	}
+	.product-link:hover, 
+	.item-img:hover, 
+	.menu-item:hover .menu-product, 
+	.menu-product:hover{
+		background-color: #ffffff;
+		color: #000000;
+	}
+	
+	header#header .nav-container > ul li a{
+		padding: 0px;
+	}
+	
+	.grok-fact img {
+		width: auto;
+		margin: 0 auto;
+		display: block;
+	}
+	
+	.grok-fact .alpha{
+		border: none;
+	}
+	#add-to-cart-button{
+		float: none;
+		margin: 15px auto;
+	}
+	
+	.testslider .heading{
+		font-size: 1em;
+	}
+	
+	.testslider, #olark_chat, .phone-number{
+		display: none !important;
+	}
+	.registered-users{
+		margin-top: 15px;
+	}
+	.title{
+		display: block !important;
+		position: initial !important;
+		margin: 0px !important;
+	}
+	.banner-text .btn-cart {
+		margin-top: 10px !important;
+		font-size: 1em;
+	}
+	#olark_chat{
+		display: none;
+	}
+	.iosSlider .slider .item .fa-play-circle, 
+	.iosSlider .slider .item .fa-play-circle-o{
+		font-size: 40px;
+	}
+	.btn-cart{
+		font-size: 11px;
+	}
+	.iosSlider .slider .item #watch_video3{
+		left: 0%; /*was 50% */
+	}
+	.iosSlider .slider .item button{
+		bottom: 10%;
+	}
+	.iosSlider .slider .item .text0 ,
+	.iosSlider .slider .item .text1 , 
+	.iosSlider .slider .item .text2 , 
+	.iosSlider .slider .item .text3 {
+		top: 0%;
+		font-size: 1.5em;
+	}
+	.iosSlider .slider .item .text0 span,
+	.iosSlider .slider .item .text1 span, 
+	.iosSlider .slider .item .text2 span, 
+	.iosSlider .slider .item .text3 span, 
+	.iosSlider .slider .item .sub span{
+		font-size: 1em;
+	}
+}
+
+@media only screen and (max-width: 968px){
+	#olark_chat{
+		display: none;
+	}
+	
+	.phone-number{
+		position: static;
+	}
+}
+
+.video-container {
+	position:relative;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+
+@media only screen and (max-width: 767px) {
+	header#header.floating .grid_12 .small_logo {
+		float: right;
+		margin-top: 22px;
+		margin-left: 0;
+		margin-right: 10px;
+		width: 20px !important;
+	}
+	header#header.floating .small_logo img{width: 100%;}
+	header#header.floating .top-cart .block-content {
+		right: -12px;
+		top: 40px;
+	}
+	
+	
+	.top-products-container .product.left, .top-products-container .product.right {
+width:100%;
+margin-left:auto;
+margin-right:auto;
+position:relative;
+display:inline-block;
+float:none;
+	}
+	
+	.top-products-container .product.middle {
+	width:100%;
+	}
+	
+	.top-products-container .grid_2 {
+	height:0px !important;}
+	
+}

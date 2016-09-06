@@ -66,8 +66,8 @@ portfolio.directive('animejsBanner', [ '$q', 'landingService',
 					});
 				});
 
-				// remove this - only for dev
-				landingService.animatedB();
+				// remove this bc it's only only for dev
+				// landingService.animatedB();
 
 				// // create the elements for the squares
 				// var squares = element[0].querySelector('#squares');

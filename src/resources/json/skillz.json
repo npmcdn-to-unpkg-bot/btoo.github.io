@@ -474,5 +474,24 @@
 		],
 		"projects": [
 		]
+	}, {
+		"skill": "HTTP",
+		"experience": "2",
+		"proficiency": "medium",
+		"categories": [
+			"backend",
+			"security"
+		],
+		"projects": [
+		]
+	}, {
+		"skill": "Apache",
+		"experience": "2",
+		"proficiency": "medium",
+		"categories": [
+			"backend"
+		],
+		"projects": [
+		]
 	}
 ]

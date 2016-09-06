@@ -53,14 +53,21 @@
 
 #project-modal-close {
 	display: inline-block;
-	position: absolute;
-	// right: -15px;
-	// top: -15px;
-	right: 5px;
-	top: 5px;
-	cursor: pointer;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+    padding: 0px 2.5px;
+    background: white;
+    border-radius: 50%;
 	i {
 		font-size: 2.5em;
-		color: @bg-dark;
+		color: @mid-blue;
+	}
+}
+
+@media (min-width: 769px) {
+	#project-modal-close {
+		display: none;
 	}
 }

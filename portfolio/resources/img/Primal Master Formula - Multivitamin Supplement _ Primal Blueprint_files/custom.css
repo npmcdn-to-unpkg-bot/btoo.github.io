@@ -1,0 +1,2014 @@
+/*
+*    PROXIMA NOVA IMPORTS
+*/
+/**
+ * @license
+ * MyFonts Webfont Build ID 3040282, 2015-06-10T18:06:39-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs 
+below.
+ * 
+ * Webfont: ProximaNovaA-Bold by Mark Simonson
+ * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/a-bold/
+ * 
+ * Webfont: ProximaNovaS-Bold by Mark Simonson
+ * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/s-bold/
+ * 
+ * Webfont: ProximaNova-Bold by Mark Simonson
+ * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/bold/
+ * 
+ * Webfont: ProximaNovaA-Regular by Mark Simonson
+ * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/a-regular/
+ * 
+ * Webfont: ProximaNovaA-Light by Mark Simonson
+ * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/a-light/
+ * 
+ * Webfont: ProximaNovaA-Thin by Mark Simonson
+ * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/a-thin/
+ * 
+ * Webfont: ProximaNovaA-Semibold by Mark Simonson
+ * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/a-semibold/
+ * 
+ * Webfont: ProximaNovaS-Light by Mark Simonson
+ * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/s-light/
+ * 
+ * Webfont: ProximaNovaS-Regular by Mark Simonson
+ * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/s-regular/
+ * 
+ * Webfont: ProximaNovaS-Thin by Mark Simonson
+ * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/s-thin/
+ * 
+ * Webfont: ProximaNovaS-Semibold by Mark Simonson
+ * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/s-semibold/
+ * 
+ * Webfont: ProximaNova-Light by Mark Simonson
+ * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/light/
+ * 
+ * Webfont: ProximaNova-Semibold by Mark Simonson
+ * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/semibold/
+ * 
+ * Webfont: ProximaNova-Regular by Mark Simonson
+ * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/regular/
+ * 
+ * Webfont: ProximaNovaT-Thin by Mark Simonson
+ * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/thin/
+ * 
+ * Webfont: ProximaNovaA-LightIt by Mark Simonson
+ * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/a-light-it/
+ * 
+ * Webfont: ProximaNovaA-Medium by Mark Simonson
+ * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/a-medium/
+ * 
+ * Webfont: ProximaNovaA-RegularIt by Mark Simonson
+ * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/a-regular-it/
+ * 
+ * Webfont: ProximaNovaS-LightIt by Mark Simonson
+ * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/s-light-it/
+ * 
+ * Webfont: ProximaNovaS-Medium by Mark Simonson
+ * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/s-medium/
+ * 
+ * Webfont: ProximaNovaS-RegularIt by Mark Simonson
+ * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/s-regular-it/
+ * 
+ * Webfont: ProximaNova-LightIt by Mark Simonson
+ * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/light-it/
+ * 
+ * Webfont: ProximaNova-Medium by Mark Simonson
+ * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/medium/
+ * 
+ * Webfont: ProximaNova-RegularIt by Mark Simonson
+ * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/regular-it/
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3040282
+ * Licensed pageviews: 1,000,000
+ * Webfonts copyright: Copyright (c) Mark Simonson, 2005. All rights reserved.
+ * 
+ * © 2015 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/2e641a");
+
+  
+@font-face {font-family: 'ProximaNovaA-Bold';src: url('webfonts/2E641A_0_0.eot');src: url('webfonts/2E641A_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2E641A_0_0.woff2') format('woff2'),url('webfonts/2E641A_0_0.woff') format('woff'),url('webfonts/2E641A_0_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'ProximaNovaS-Bold';src: url('webfonts/2E641A_1_0.eot');src: url('webfonts/2E641A_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2E641A_1_0.woff2') format('woff2'),url('webfonts/2E641A_1_0.woff') format('woff'),url('webfonts/2E641A_1_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'ProximaNova-Bold';src: url('webfonts/2E641A_2_0.eot');src: url('webfonts/2E641A_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2E641A_2_0.woff2') format('woff2'),url('webfonts/2E641A_2_0.woff') format('woff'),url('webfonts/2E641A_2_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'ProximaNovaA-Regular';src: url('webfonts/2E641A_3_0.eot');src: url('webfonts/2E641A_3_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2E641A_3_0.woff2') format('woff2'),url('webfonts/2E641A_3_0.woff') format('woff'),url('webfonts/2E641A_3_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'ProximaNovaA-Light';src: url('webfonts/2E641A_4_0.eot');src: url('webfonts/2E641A_4_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2E641A_4_0.woff2') format('woff2'),url('webfonts/2E641A_4_0.woff') format('woff'),url('webfonts/2E641A_4_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'ProximaNovaA-Thin';src: url('webfonts/2E641A_5_0.eot');src: url('webfonts/2E641A_5_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2E641A_5_0.woff2') format('woff2'),url('webfonts/2E641A_5_0.woff') format('woff'),url('webfonts/2E641A_5_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'ProximaNovaA-Semibold';src: url('webfonts/2E641A_6_0.eot');src: url('webfonts/2E641A_6_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2E641A_6_0.woff2') format('woff2'),url('webfonts/2E641A_6_0.woff') format('woff'),url('webfonts/2E641A_6_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'ProximaNovaS-Light';src: url('webfonts/2E641A_7_0.eot');src: url('webfonts/2E641A_7_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2E641A_7_0.woff2') format('woff2'),url('webfonts/2E641A_7_0.woff') format('woff'),url('webfonts/2E641A_7_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'ProximaNovaS-Regular';src: url('webfonts/2E641A_8_0.eot');src: url('webfonts/2E641A_8_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2E641A_8_0.woff2') format('woff2'),url('webfonts/2E641A_8_0.woff') format('woff'),url('webfonts/2E641A_8_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'ProximaNovaS-Thin';src: url('webfonts/2E641A_9_0.eot');src: url('webfonts/2E641A_9_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2E641A_9_0.woff2') format('woff2'),url('webfonts/2E641A_9_0.woff') format('woff'),url('webfonts/2E641A_9_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'ProximaNovaS-Semibold';src: url('webfonts/2E641A_A_0.eot');src: url('webfonts/2E641A_A_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2E641A_A_0.woff2') format('woff2'),url('webfonts/2E641A_A_0.woff') format('woff'),url('webfonts/2E641A_A_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'ProximaNova-Light';src: url('webfonts/2E641A_B_0.eot');src: url('webfonts/2E641A_B_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2E641A_B_0.woff2') format('woff2'),url('webfonts/2E641A_B_0.woff') format('woff'),url('webfonts/2E641A_B_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'ProximaNova-Semibold';src: url('webfonts/2E641A_C_0.eot');src: url('webfonts/2E641A_C_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2E641A_C_0.woff2') format('woff2'),url('webfonts/2E641A_C_0.woff') format('woff'),url('webfonts/2E641A_C_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'ProximaNova-Regular';src: url('webfonts/2E641A_D_0.eot');src: url('webfonts/2E641A_D_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2E641A_D_0.woff2') format('woff2'),url('webfonts/2E641A_D_0.woff') format('woff'),url('webfonts/2E641A_D_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'ProximaNovaT-Thin';src: url('webfonts/2E641A_E_0.eot');src: url('webfonts/2E641A_E_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2E641A_E_0.woff2') format('woff2'),url('webfonts/2E641A_E_0.woff') format('woff'),url('webfonts/2E641A_E_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'ProximaNovaA-LightIt';src: url('webfonts/2E641A_F_0.eot');src: url('webfonts/2E641A_F_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2E641A_F_0.woff2') format('woff2'),url('webfonts/2E641A_F_0.woff') format('woff'),url('webfonts/2E641A_F_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'ProximaNovaA-Medium';src: url('webfonts/2E641A_10_0.eot');src: url('webfonts/2E641A_10_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2E641A_10_0.woff2') format('woff2'),url('webfonts/2E641A_10_0.woff') format('woff'),url('webfonts/2E641A_10_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'ProximaNovaA-RegularIt';src: url('webfonts/2E641A_11_0.eot');src: url('webfonts/2E641A_11_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2E641A_11_0.woff2') format('woff2'),url('webfonts/2E641A_11_0.woff') format('woff'),url('webfonts/2E641A_11_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'ProximaNovaS-LightIt';src: url('webfonts/2E641A_12_0.eot');src: url('webfonts/2E641A_12_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2E641A_12_0.woff2') format('woff2'),url('webfonts/2E641A_12_0.woff') format('woff'),url('webfonts/2E641A_12_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'ProximaNovaS-Medium';src: url('webfonts/2E641A_13_0.eot');src: url('webfonts/2E641A_13_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2E641A_13_0.woff2') format('woff2'),url('webfonts/2E641A_13_0.woff') format('woff'),url('webfonts/2E641A_13_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'ProximaNovaS-RegularIt';src: url('webfonts/2E641A_14_0.eot');src: url('webfonts/2E641A_14_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2E641A_14_0.woff2') format('woff2'),url('webfonts/2E641A_14_0.woff') format('woff'),url('webfonts/2E641A_14_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'ProximaNova-LightIt';src: url('webfonts/2E641A_15_0.eot');src: url('webfonts/2E641A_15_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2E641A_15_0.woff2') format('woff2'),url('webfonts/2E641A_15_0.woff') format('woff'),url('webfonts/2E641A_15_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'ProximaNova-Medium';src: url('webfonts/2E641A_16_0.eot');src: url('webfonts/2E641A_16_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2E641A_16_0.woff2') format('woff2'),url('webfonts/2E641A_16_0.woff') format('woff'),url('webfonts/2E641A_16_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'ProximaNova-RegularIt';src: url('webfonts/2E641A_17_0.eot');src: url('webfonts/2E641A_17_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2E641A_17_0.woff2') format('woff2'),url('webfonts/2E641A_17_0.woff') format('woff'),url('webfonts/2E641A_17_0.ttf') format('truetype');}
+
+/*
+* END PROXIMA NOVA IMPORTS
+*/
+/*this needs to be ONLY on home screen and when the screen is big enough to support full width*/
+@media only screen and (min-width: 1076px) {
+.cms-home .content-wrapper .container_12 {
+	margin-left:0;
+	margin-right:0;
+	width:100%;
+}
+
+.cms-home .main-container.col1-layout, .cms-home .grid_12.col-main {
+	width:100%;
+}
+
+
+.cms-home .grid_12.col-main {
+	margin-left:0;
+}
+
+}
+/*end full width layout conditions*/
+
+
+/**
+*
+* Feel free to add your own css rules here.
+*
+*/
+@import url(https://fonts.googleapis.com/css?family=Lora:400,400italic);
+
+p {
+	font-size: 16px;
+	font-family:'ProximaNova-Regular','Open Sans', sans-serif; /*dan added this*/
+	color: #444444
+}
+
+.form-search {
+	display: none;
+}
+
+input.input-text, select {
+	height: 25px;
+}
+
+input {
+	font-size: 14px;
+}
+
+.main-container {
+	padding-bottom: 20px;
+}
+
+
+#footer_bottom address { /*dan added this block */
+	color:#fff;
+}
+
+footer ul.social-links li a i { /*dan added this block */
+	color:#fff;
+}
+
+#footer h3 { /*dan added this block */
+	font-family:'ProximaNova-Medium',sans-serif !important;
+}
+
+#footer_stuff { 
+	color:#fff;
+}
+
+.logo img {
+	/*height:56px !important; /*dan added this */
+	/*width:200px !important; /*dan added this */
+	float: left;
+}
+
+.btn-remove {
+	overflow:visible; /*dan added this, remove button in cart popup was being cut off */
+	
+}
+
+.nav-wide#nav-wide li.level-top > a > span {
+	font-family:'ProximaNova-Medium',sans-serif; /* dan added this to change menu fonts in nav header */
+}
+
+h1.title {
+	color:  color: #666666;; /*new sea blue */
+	font-family:'ProximaNova-Medium',sans-serif; /* dan added this  whole block*/
+	font-size:22px
+}
+
+.testimonial-page-source {
+	font-family:'ProximaNova-Regular', sans-serif; /*dan added this block, reference testimonial source in testimonial cms page*/
+}
+
+#affiliate-header {
+	color:#14b3ef; /*new sea blue */
+	font-family:'ProximaNova-Medium',sans-serif; /*dan added this whole block - applies to header on affiliate sales page*/
+}
+
+.workout-info-span {
+
+	font-family:'ProximaNova-Medium',sans-serif; /*dan added this block; corresponds to spans on fitness page that explain how to do each exercise */
+	color:#14b3ef;
+}
+
+header#header .links {
+	position: relative;
+	top: 0px;
+	float: right;
+}
+
+/*dan adding this to change the my account dashboard*/
+.dashboard .page-title h1, .dashboard .box-head h2 {
+	font-family:'ProximaNova-Medium',sans-serif !important;
+}
+
+header#header .top-cart {
+	/* top: -2px; */ /*this was top -2px*/
+	top:-2px; /* dan added this to -8px */
+	padding-right: 5px;
+}
+
+header#header .links li a:hover {
+	background-color: #ffffff;
+	color: #000;
+}
+
+header#header .links li a {
+	font-size: 12px;
+	/* font-family: 'Montserrat', sans-serif; */
+	font-family:'ProximaNova-Medium',sans-serif; /* dan added this */
+	padding: 3px 3px;
+/* 	color: #60A5CD; */
+	color: #1963c6; /* new sea blue */
+}
+
+header#header .links>li>a::after {
+	top: 0px;
+	font-size: 1em;
+	content: "";
+}
+/*dan changed this june 2015, to try to make it inline with the live chat button*/
+
+
+
+header#header .quick-access {
+	padding: 0px;
+	position: relative;
+	 top: 30px; 
+	
+	/* top:32px; */ /* dan added this*/
+	/* padding-right:240px; */ /* dan added this */
+	color:#000000; /* dan added this */
+}
+
+.featurette .omega {
+	float: right;
+}
+
+header#header h2.logo, header#header h2.small_logo {
+	margin: 10px 0px 0px 0px;
+}
+
+.phone-number {
+	float: right;
+	 position: relative; 
+	/* position:absolute;  *//* dan added this */
+	 padding-top:15px;   /* dan added this */
+	 padding-right:3px;
+	/* top: 33px;
+	 right: -75px; *//*was -78*/
+	font-family:'ProximaNova-Medium',sans-serif; /* dan added this */
+	/* padding-right:90px; */ /* dan added this */
+	color: #000000; /* dan added this */
+}
+
+.nav-wide#nav-wide li.level-top>a {
+	padding: 8px;
+}
+
+
+.main-container {
+	padding-top: 10px !important;
+}
+/*
+.tools-content h2 {
+	font-family: 'ProximaNova-Regular', sans-serif !important;
+}
+*/
+
+.content-banner.featurette{
+	margin-top: 1px;
+}
+
+.featurette {
+	padding: 0px;
+    background-color: #f0f0f0; 
+	margin-top: 15px;
+	font-size: 36px;
+	text-align: center;
+}
+
+.featurette-image {
+	float: left;
+}
+
+.feature img {
+	display: block;
+	margin: auto;
+	width: 10%;
+	margin-top: 15px;
+}
+
+.feature .featurette-heading {
+	/* color: #0173bc; */
+	color: #1963c6; /* new primal blue */
+	letter-spacing: 3px;
+	padding: 10px 10px 0px 10px;
+	font-size: 1.75em;
+	/* font-family: 'Montserrat'; */
+	font-family:'ProximaNova-Medium',sans-serif; /* dan added this */
+	margin-bottom: 0px;
+}
+
+.teaser {
+	font-family: 'Lora', serif;
+	color: #8a8a8a;
+	font-size: 44px;
+	font-style: italic;
+	font-weight: 400;
+	margin-bottom: 15px;
+	padding: 0px 10px;	
+}
+
+.feature button {
+	background-color: #0173bc;
+/* 	border: solid 1px #ffffff;
+	outline: solid 4px #0173bc; */
+	border-radius:3px;
+	color: #ffffff;
+	/* font-family: 'Montserrat', sans serif !important; */
+	font-family: 'ProximaNova-Bold',sans-serif !important; /*dan added this */
+	/* border-radius: 2px; */
+	font-size: 20px;
+	padding: 15px 15px;
+	margin: 20px 0px;
+	text-transform: uppercase;
+	-webkit-transition: background-color 400ms ease;
+	-moz-transition: background-color 400ms ease;
+	-o-transition: background-color 400ms ease;
+	transition: background-color 400ms ease;
+}
+
+.feature a {
+	color: #FFFFFF;
+}
+
+.feature a:hover {
+	color: #FFFFFF;
+}
+
+.feature button:hover {
+	color: #ffffff;
+	background-color: #1A81C3;
+/* 	border: solid 1px #ffffff;
+	outline: solid 4px #1A81C3; */
+	border-radius:3px;
+	
+}
+
+.secondary {
+	/* color: #0698d2; */
+	color: #14b3ef; /*new sea blue */
+	/* font-family: 'Montserrat'; */
+	font-family:'ProximaNova-Medium', sans-serif;
+	margin-bottom: 15px;
+}
+
+.red h1 {
+	/* color: #dc291e !important; */
+	color: #e44c41 !important; /*new orange*/
+}
+
+.red button {
+/* 	background-color: #dc291e;
+	outline: solid 4px #dc291e;
+	margin: 20px 0px; */
+	background-color: #e44c41;
+	margin:20px 0px;
+	border-radius:3px;
+}
+
+.red button:hover {
+	color: #ffffff;
+	background-color: #e44c41;
+	border-radius:3px;
+/* 	border: solid 1px #ffffff;
+	outline: solid 4px #E03E34; */
+}
+
+.red .secondary {
+	color: #dc291e;
+}
+
+.darkblue h1 {
+	color: #2f64b0 !important;
+}
+
+.darkblue button {
+	background-color: #2f64b0;
+	/* outline: solid 4px #2f64b0; */
+	border-radius:3px;
+	border-color:transparent;
+}
+
+.darkblue button:hover {
+	cursor: pointer;
+	color: #ffffff;
+	background-color: #4474B8;
+	/* border: solid 1px #ffffff;
+	outline: solid 4px #4474B8; */
+	border-radius:3px;
+}
+
+.green h1 {
+	/* color: #749e2e !important; */
+	color: #93ba2b !important; /* new leaf green */
+}
+
+.green button {
+/* 	background-color: #749e2e; */
+	background-color: #93ba2b; /* new leaf green */
+	/* outline: solid 4px #749e2e; */
+	border-radius:3px;
+}
+
+.green button:hover {
+	color: #ffffff;
+	background-color: #82A843;
+/* 	border: solid 1px #ffffff;
+	outline: solid 4px #82A843; */
+	border-radius:3px;
+}
+
+.green .secondary {
+	color: #8a8a8a;
+}
+
+.blog img {
+	width: 5%;
+	margin-bottom: 30px;
+}
+
+.blog .teaser {
+	margin-bottom: 150px;
+}
+
+.blog a {
+	color: #8a8a8a;
+}
+
+.blog a:hover {
+	color: #787878;
+}
+
+.lose-weight, .immunity, .optimize-health {
+	text-align: center;
+	color: #8a8a8a;
+}
+
+.optimize-health h2, .lose-weight h2, .immunity h2 {
+	/* font-family: 'Montserrat', sans-serif; */
+	font-family: 'ProximaNova-Medium',sans-serif; /*dan added this */
+	font-size: 24px;
+}
+
+.learn-more {
+	color: #0698D2;
+	cursor: pointer;
+	font-size: 14px;
+	padding: 10px;
+}
+
+.testslider .omega {
+	float: left;
+}
+
+.learn-more:hover {
+	color: #0698D2;
+	cursor: pointer;
+}
+
+.secondary-text {
+	/* font-family: 'Montserrat', sans-serif; */
+	font-family:'ProximaNova-Medium',sans-serif;
+	font-size: 14px;
+}
+
+.optimize-lose-weight img {
+	width: 86px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.newsletter1 {
+	background-color: #0986BB;
+	padding: 20px;
+	margin-bottom: 10px;
+	color: #FFFFFF;
+}
+
+.newsletter1 h1, .newsletter1 h2 {
+/* 	font-family: 'Montserrat'; */
+font-family:'ProximaNova-Medium',sans-serif; /*dan added this*/
+}
+
+.newsletter1 .alpha {
+	text-align: center;
+}
+
+.newsletter1 .input-group {
+	padding-top: 5px;
+}
+
+.newsletter1 h1 {
+	font-size: 28px;
+}
+
+.newsletter1 h4 {
+	font-size: 14px;
+	margin-bottom: 0px;
+}
+
+.newsletter-input {
+	width: 80%;
+	height: 24px !important;
+}
+
+.newsletter1 button.button:hover>span {
+	background-color: #C7C7C7;
+	color: #FFFFFF;
+}
+
+.newsletter1 button.button>span {
+	background-color: #DDDDDD;
+	color: #000000;
+}
+
+.fa-caret-right {
+	margin-top: 5px;
+	margin-left: 5px;
+}
+
+.item {
+	
+}
+
+.menu-item {
+	text-align: center;
+	background-color: #EAEAEA;
+	width: 188px !important;
+	padding: 0px !important;
+	margin: 0px -4px !important;
+	display: inline-block;
+}
+
+.menu-wrapper {
+	background-color: transparent !important;
+	border: none !important;
+	padding: 0px !important;
+	font-size: 0;
+}
+
+.item-img {
+	padding: 0px;
+	background-color: #E4E4E4;
+	height: 188px;
+	width: 188px;
+}
+
+.product-link {
+	color: #949494;
+}
+
+.product-link:hover, .item-img:hover, .menu-item:hover .menu-product,
+	.menu-product:hover {
+	background-color: #ECECEC;
+	color: #ffffff;
+	text-transform: uppercase;
+	-webkit-transition: 300ms ease;
+	-moz-transition: 300ms ease;
+	-o-transition: 300ms ease;
+	transition: 300ms easse;
+	z-index: 10;
+}
+
+.menu-product {
+	padding: 10px;
+	/* font-family: 'Montserrat'; */
+	font-family:'ProximaNova-Medium',sans-serif; /* dan added this */
+	margin: 0px;
+	background-color: #DBDBDB;
+	color: #444;
+	border-top: 1px solid #FFFFFF;
+	font-size: 12px;
+	font-weight: 1.5em;
+	text-transform: uppercase;
+	height: 40px;
+}
+
+.product-link:hover .product span {
+	color: #ffffff !important;
+	border-bottom: 2px solid #ffffff;
+}
+
+/*style override*/
+.nav-wide#nav-wide li.level-top:hover {
+	background-color: #E4E4E4;
+}
+
+.header-slider-holder {
+	padding-top: 1px;
+}
+/* ==========================================================================
+   Testimonial Slider
+   ========================================================================== */
+.testslider {
+	text-align: left;
+	padding-top: 15px;
+}
+
+.testslider h4, .testslider h5 {
+	font-weight: normal;
+}
+
+.testslider img {
+	margin: auto;
+}
+
+.testslider .heading {
+	color: #a8a8a8;
+	letter-spacing: 3px;
+	padding: 10px 10px 0px 0px;
+	font-size: 1.75em;
+	/* font-family: 'Montserrat'; */
+	font-family: 'ProximaNova-Light', sans-serif; /*dan added this*/
+	margin-bottom: 0px;
+	text-align: left;
+}
+
+.testslider .people-say {
+	/* color: #0698d2; */
+	color:#14b3ef; /* sea blue */
+	font-family: 'Lora';
+	text-align: left;
+	font-size: 22px;
+}
+
+.opinion {
+	color: #8a8a8a;
+	font-family: 'Lora';
+	font-size: 20px;
+	line-height: normal;
+}
+
+.testslider .name {
+/* 	color: #33abdb; */
+	color: #14b3ef; /* new sea blue */
+	/* font-family: 'Montserrat'; */
+	font-family: 'ProximaNova-Regular',sans-serif;
+	font-size: 24px;
+	margin-bottom: 0px;
+	text-transform: uppercase;
+}
+
+.testslider .location {
+	color: #8a8a8a;
+	font-family: 'Lora';
+	margin-bottom: 0px;
+	font-size: 20px;
+}
+
+/* ==========================================================================
+   Recurring profiles
+   ========================================================================== */
+.order-info {
+	padding-bottom: 10px;
+	border-bottom: 1px solid #ededed;
+	width: 100%;
+	margin-bottom: 30px;
+}
+
+.order-info dt, .order-info dd, .order-info ul, .order-info li {
+	display: inline;
+}
+
+.order-info dt {
+	margin-right: 20px;
+}
+
+.order-info li {
+	margin: 0 0 0 20px;
+}
+
+.order-info li.current {
+	font-weight: 600;
+}
+
+.order-info li:first-child {
+	margin-left: 0;
+}
+
+.order-date {
+	font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
+	text-transform: uppercase;
+}
+
+.order-info-box {
+	margin-bottom: 40px;
+	margin-top: 20px;
+}
+
+.order-info-box+.order-info-box {
+	padding-bottom: 40px;
+	border-bottom: 1px solid #ededed;
+}
+
+.order-info-box .col-1 {
+	padding-right: 0;
+	width: 48%;
+}
+
+.order-info-box .col-2 {
+	width: 52%;
+}
+
+.order-info-box .col-1, .order-info-box .col-2 {
+	overflow: hidden;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.order-info-box .box-title {
+	width: 150px;
+	padding-right: 10px;
+	float: left;
+}
+
+.order-info-box .box-title h2 {
+	font-size: 14px;
+	font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
+	font-weight: bold;
+	line-height: 1.5;
+}
+
+.order-info-box .box-title h2:after {
+	content: ':';
+}
+
+.order-info-box .box-content {
+	float: left;
+	font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+.order-info-box .box-content td, .order-info-box .box-content th {
+	font-family: Georgia, Times, "Times New Roman", serif;
+	line-height: 1.3;
+}
+
+.order-info-box .box-content th {
+	padding-top: 10px;
+}
+
+.order-info-box .box-content td {
+	padding-left: 15px;
+}
+
+.order-info-box .box-content strong {
+	font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+#my-orders-table .option-label {
+	margin-left: 10px;
+	font-weight: 600;
+	font-style: italic;
+}
+
+#my-orders-table .option-value {
+	margin-left: 20px;
+}
+
+#my-orders-table tr.bundle:not (:last-child ) td {
+	border-bottom: none;
+	border-top: none;
+}
+
+ol#cart-sidebar-reorder li {
+	margin-top: 10px;
+	margin-bottom: 0;
+}
+
+ol#cart-sidebar-reorder li input {
+	margin-right: 10px;
+}
+
+ol#cart-sidebar-reorder p.product-name {
+	display: inline;
+}
+
+@media only screen and (max-width: 599px) {
+	#my-orders-table .option-label {
+		margin-left: 20px;
+	}
+	#my-orders-table .option-value {
+		margin-left: 35px;
+	}
+	#my-orders-table td[data-rwd-label=Qty] .nobr br {
+		display: none;
+	}
+	#my-orders-table td[data-rwd-label=Qty] .nobr strong {
+		margin-right: 10px;
+	}
+	#my-orders-table tr.bundle {
+		border-color: #ededed;
+	}
+	#my-orders-table tr.bundle.child td[data-rwd-label] {
+		padding-left: 60px;
+	}
+	#my-orders-table tbody:last-child tr:last-child td {
+		padding-bottom: 10px;
+		border-bottom: 0;
+	}
+	#my-orders-table tbody:last-child tr:last-child td:last-child {
+		padding-bottom: 15px;
+	}
+	#my-orders-table tfoot tr.shipping {
+		margin-top: 0;
+	}
+}
+
+.order-additional {
+	margin: 40px 0;
+}
+
+.order-gift-message dd {
+	margin-top: 10px;
+}
+
+@media only screen and (max-width: 1199px) {
+	.dashboard .col2-set .col-1, .dashboard .col2-set .col-2 {
+		padding-right: 30px;
+		padding-bottom: 0;
+	}
+}
+
+@media only screen and (max-width: 979px) {
+	body.customer-account .my-account .title-buttons {
+		text-align: left;
+	}
+	body.customer-account .my-account .title-buttons span.separator, body.customer-account .my-account .title-buttons a
+		{
+		top: -12px;
+	}
+	.data-table span.nobr {
+		white-space: normal;
+	}
+	.data-table span.nobr a {
+		white-space: nowrap;
+	}
+	.data-table .separator {
+		display: none;
+	}
+	.dashboard .col2-set .col-1 .box-title a, .dashboard .col2-set .col-2 .box-title a
+		{
+		position: static;
+		padding: 0;
+	}
+}
+
+@media only screen and (max-width: 770px) {
+	body.customer-account .data-table.orders th.ship, body.customer-account .data-table.orders td.ship
+		{
+		display: none;
+	}
+	.order-info-box .box-content {
+		clear: left;
+	}
+	.addresses-list .item {
+		float: left;
+		width: 50%;
+		padding-right: 30px;
+	}
+	.order-info dt {
+		display: none;
+	}
+	.dashboard .page-title {
+		margin-top: 20px;
+	}
+	.dashboard .page-title h1 {
+		margin-top: 0;
+	}
+	.dashboard .welcome-msg {
+		font-family: Georgia, Times, "Times New Roman", serif;
+	}
+	.dashboard .welcome-msg .hello {
+		font-style: italic;
+	}
+	.dashboard .box-account {
+		padding-bottom: 15px;
+		margin-bottom: 30px;
+	}
+	.dashboard .col2-set .col-1, .dashboard .col2-set .col-2 {
+		width: 48%;
+		padding-right: 0;
+		padding-left: 0;
+	}
+	.dashboard .col2-set .col-1 {
+		float: left;
+		margin-right: 4%;
+	}
+	.dashboard .col2-set .col-2 {
+		float: right;
+	}
+}
+
+@media only screen and (max-width: 599px) {
+	body.customer-account .my-account .form-list .control {
+		padding-left: 0;
+	}
+}
+
+@media only screen and (max-width: 530px) {
+	.data-table.orders td.status, .data-table.orders th.status {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 479px) {
+	body.customer-account .my-account .page-title h1 {
+		text-align: center;
+	}
+	body.customer-account .my-account .title-buttons {
+		text-align: center;
+	}
+	body.customer-account .my-account .title-buttons .button {
+		width: 100%;
+		position: static;
+		margin-bottom: 15px;
+	}
+	body.customer-account .my-account .fieldset h2 {
+		margin-bottom: 15px;
+	}
+	body.customer-account .my-account .order-details h2 {
+		margin-bottom: 15px;
+	}
+	body.customer-account .my-account .buttons-set {
+		border-top: 0;
+	}
+	body.customer-account .my-account .addresses-list .item {
+		margin-bottom: 15px;
+		padding-right: 0;
+		float: none;
+		width: auto;
+	}
+	body.customer-account .my-account .addresses-list h2 {
+		margin-bottom: 15px;
+	}
+	.order-info {
+		margin-top: 15px;
+	}
+	.data-table.orders .link-reorder, .data-table.orders .date {
+		display: none;
+	}
+	.data-table.orders td.view {
+		text-align: right;
+	}
+	.dashboard .col2-set .col-1, .dashboard .col2-set .col-2 {
+		width: 100%;
+		margin-top: 15px;
+	}
+	.dashboard .col2-set .col-1 .box-title a, .dashboard .col2-set .col-2 .box-title a
+		{
+		position: absolute;
+		padding: 10px;
+	}
+	.order-info-box {
+		margin: 0;
+	}
+	.order-info-box .col-1, .order-info-box .col-2 {
+		width: 100%;
+		border-bottom: 1px solid #ededed;
+		padding: 15px 0;
+	}
+	.order-info-box+.order-info-box {
+		padding-bottom: 0;
+		border-bottom: 0;
+		margin-bottom: 30px;
+	}
+	#my-reviews-table .nobr {
+		white-space: normal;
+	}
+}
+
+/* ==============================
+	Cart 
+============================= */
+.cart .heading {
+	text-align: center;
+	text-transform: upppercase;
+	color: #60A5CD;
+	/* font-family: 'Montserrat', sans serif !important; */
+	font-family: 'ProximaNova-Medium', sans-serif !important; /* dan added this */
+	font-size: 24px;
+	padding: 15px 0px;
+	margin-bottom: 15px;
+	border-bottom: 1px solid #F3F3F3;
+}
+
+.cart .grid_12 {
+	background: none repeat scroll 0% 0% #FFF;
+}
+
+/* .title-buttons{
+	border: 1px solid  #1A81C3;
+} */
+.title-buttons h2 {
+	text-align: center;
+}
+
+.data-table th {
+	border: none;
+	text-align: left;
+	padding: 18px;
+	font-family:'ProximaNova-Medium',sans-serif; /*dan added this*/
+	font-size:1em; /*added this, was previously .91em by default*/
+}
+
+.cart-table thead tr {
+/* 	font-family: 'Montserrat', sans serif !important; */
+font-family: 'ProximaNova-Medium', sans-serif !important; 
+	font-size: 18px;
+	text-transform: uppercase;
+	backgorund-color: #ECECEC;
+}
+
+.cart-table .header {
+	background-color: #ddd;
+	border-top: 1px solid #C7C7C7;
+	border-bottom: 1px solid #C7C7C7;
+}
+
+.cart-table .product-row {
+	/* font-family: 'Montserrat', sans serif !important; */
+	font-family: 'ProximaNova-Regular',sans-serif !important; /*dan added this */
+	font-size: 12px;
+}
+
+.data-table a.product-image {
+	margin-right: 15px;
+}
+
+.data-table td {
+	border: none;
+	font-family:'ProximaNova-Regular',sans-serif; /*dan added this - changes table fonts on my account page*/
+}
+
+/*adding this to correctly identify product names in the table*/
+.data-table td h3 {
+	font-weight:normal;
+	font-family:'ProximaNova-SemiBold',sans-serif; /*dan added this block*/
+}
+
+
+.data-table tr {
+	border-bottom: 2px solid #ddd;
+}
+
+.cart-edit:hover {
+	color: #DDD;
+}
+
+.btn-remove2 {
+	display: inline-block;
+}
+
+.btn-remove2:hover {
+	color: #EF3D2E;
+}
+
+.checkout-button {
+	background-color: #0173bc !important;
+	/* border: solid 1px #ffffff !important;
+	outline: solid 3px #0173bc; */
+	color: #ffffff;
+/* 	font-family: 'Montserrat', sans serif !important; */
+    font-family:'ProximaNova-Bold',sans-serif !important; /*dan added this */
+	border-radius: 3px;
+	width: 160px !important;
+	height: 35px;
+	font-size: 16px;
+	padding: 10px 0px;
+	margin: 20px 0px;
+	text-transform: uppercase;
+}
+
+.cart .title-buttons .checkout-types li {
+	margin-top: 10px
+}
+
+.checkout-button:hover {
+	background-color: #348FC9 !important;
+	/*outline: solid 3px #348FC9;*/
+	-webkit-transition: 300ms ease;
+	-moz-transition: 300ms ease;
+	-o-transition: 300ms ease;
+	transition: 300ms easse;
+}
+
+/*============
+Category page
+=================*/
+.category-header {
+	/* color: #60A5CD !important; */
+	color:#1963c6; /*primal blue */
+	text-transform: uppercase;
+	/* font-family: 'Montserrat', sans-serif; */
+	font-family:'ProximaNova-Medium',sans-serif; /* dan added this */
+	font-size: 36px;
+	padding: 0px;
+	margin: 10px 0px 20px 0px;
+}
+
+.toolbar .pager {
+	top: 30px !important;
+	position: relative !important;
+}
+
+header .category-image {
+	width: 5%;
+	float: right;
+	margin: 0px;
+}
+.products-grid .product-name a {
+  font-family: 'ProximaNova-Regular',sans-serif;
+  font-size: 16px;
+  color: #1963c6;
+}
+
+.price-box .price {
+  color: #e44c41;
+  font-size: 14px !important;
+  font-family: 'ProximaNova-Medium';
+   
+}
+
+
+.price-box .regular-price .price  {
+  color: #666666;
+  font-size: 14px ;
+  font-family: 'ProximaNova-Medium';
+   
+}
+
+
+dev.trackmind.com/
+/* Remove sorting toolbar */
+.toolbar {
+	display: none;
+}
+
+/*============
+Learning Center page
+=================*/
+.banner {
+	padding: 15px 0px 0px 0px;
+}
+
+.banner-text{
+	text-align: center;
+	padding: 15px;
+/* 	background-color: #0986bb; */
+	background-color:#1963c6; /*new primal blue */
+	color: #ffffff;
+	margin-bottom: 15px;
+	
+}
+
+.banner-text .btn-cart{
+	margin: 0px 10px !important;
+}
+
+.banner-text .title{
+	text-transform: uppercase;
+	/* font-family: 'Montserrat', sans-serif !important; */
+	font-family:'ProximaNova-Medium',sans-serif !important; /*dan added this */
+	font-size: 34px;
+	padding: 10px 10px;
+	display: inline;
+	margin-top: 10px;
+	position: relative;
+	top: 14px;
+}
+.categories {
+	
+}
+
+.categories .grid_4 img {
+	margin: auto;
+	display: block;
+}
+
+.categories .title-text h2 {
+	text-align: center;
+	text-transform: uppercase;
+	/* font-family: 'Montserrat', sans-serif !important; */
+	font-family:'ProximaNova-SemiBold',sans-serif !important; /*dan added this*/
+	font-size: 24px;
+}
+
+.categories .row {
+	padding-top: 10px;
+}
+
+.categories h2 {
+	color: #ffffff;
+	padding: 10px 0px;
+}
+
+.categories .pyramid h2 {
+	background-color: #0698d2;
+}
+
+.categories .weight-loss h2 {
+	background-color: #dc291e;
+}
+
+.categories .immunity h2 {
+	background-color: #039ba5;
+}
+
+.categories .recipes h2 {
+	/* background-color: #749e2e;  old green color*/
+	background-color: #93ba2b;
+}
+
+.categories .exercise h2 {
+	 background-color: #2f64b0; 
+	
+}
+
+.categories .free-content h2 {
+	/* background-color: #4cc7f3; */
+	background-color: #14b3ef; /*new sea blue */
+}
+
+.categories .free-content h2:hover {
+	background-color:#14b3ef; /* dan added this - hover styling was not set here*/
+}
+
+.categories .grid_4:hover h2 {
+	-webkit-transition: background-color 400ms ease;
+	-moz-transition: background-color 400ms ease;
+	-o-transition: background-color 400ms ease;
+	transition: background-color 400ms ease;
+}
+
+.categories .pyramid:hover h2 {
+	background-color: #38ADDB;
+}
+
+.categories .weight-loss:hover h2 {
+	background-color: #E3544B;
+}
+
+.categories .immunity:hover h2 {
+	background-color: #35AFB7;
+}
+
+.categories .recipes:hover h2 {
+	background-color: #90B158;
+}
+
+.categories .exercise:hover h2 {
+	background-color: #5983C0;
+}
+
+.categories .free-content:hover h2 {
+	background-color: #80B7D7;
+}
+
+.categories .free-content:hover h2 {
+/* 	background-color: #70D2F5; */ /*dan commented this out */
+background-color:#14b3ef; /*dan added this */
+}
+
+/*=============
+* checkout
+*/ /*live chat button is here */
+.red>span {
+	/* background-color: #DC291E !important; */
+	background-color: #e44c41 !important; /*new orange*/
+	border-radius:3px; /* added this */
+}
+
+.red:hover>span {
+	background-color: #DDD !important;
+	color: #888;
+}
+
+.continue>span {
+/* 	background-color: #60A5CD !important; */
+background-color:#14b3ef !important; /*new sea blue for continue in modal */
+border-radius:3px; /*added this */
+}
+
+.continue:hover>span {
+	background-color: #DDD !important;
+	color: #888;
+}
+
+.checkbox {
+	position: relative;
+}
+
+.checkbox label {
+	cursor: pointer;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: 0;
+	left: 0;
+	background: #eee;
+	border: 1px solid #ddd;
+	padding-bottom: 0px;
+}
+
+.checkbox label:after {
+	opacity: 0.2;
+	content: '';
+	position: absolute;
+	width: 9px;
+	height: 4px;
+	background: transparent;
+	top: 5px;
+	left: 5px;
+	border: 3px solid #333;
+	border-top: none;
+	border-right: none;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.checkbox label:hover::after {
+	opacity: 0.5;
+}
+
+.checkbox span {
+	margin-left: 10px;
+}
+
+.agree{
+	width: 100%;
+	padding: 5px;
+}
+
+.order-review .data-table th {
+	padding: .6em 1.5em;
+}
+
+.order-review thead tr+th {
+	padding-left: 0px;
+}
+
+#checkout-step-login h3 {
+	text-align: center;
+	color: #1963c6;
+}
+
+#checkout-step-login .alpha {
+	text-align: center;
+}
+
+#checkout-step-login .grid_4, #checkout-step-login .grid_5 {
+	border: 1px solid #EFEFEF;
+	padding: 5px;
+}
+
+.opc .grid_4 a {
+	color: #60A5CD;
+}
+
+#checkout-step-login h4 {
+	margin: 77px 0px;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	/* font-family: 'Montserrat', sans-serif; */
+	font-family:'ProximaNova-Medium', sans-serif; /*dan added this */
+}
+
+#checkout-step-login h3 {
+	text-transform: uppercase;
+	font-size: 1em;
+	border-bottom: 1px solid #EFEFEF;
+	padding-bottom: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+#checkout-step-login .grid_4:hover, #checkout-step-login .grid_5:hover {
+	border: 1px solid #60A5CD;
+}
+
+.form-list label.required {
+	font-weight: bold;
+}
+/**
+ * Create the checkbox state for the tick
+ */
+.checkbox input[type=checkbox]:checked+label:after {
+	opacity: 1;
+}
+
+.opc .active .step-title h2 {
+	
+}
+
+.opc .grid_4 a {
+	width: 100%;
+}
+
+.opc h3 {
+	padding-top: 10px;
+}
+
+#checkout-step-login .buttons-set .button:hover span {
+	background-color: #80B7D7;
+	color: #ffffff;
+}
+
+#checkout-step-login .buttons-set .button span {
+/* 	background-color: #60A5CD; */
+background-color:#e44c41;  
+	color: #ffffff;
+	border-radius:3px; /* added this */
+}
+
+#opc-review .btn-checkout span {
+/* 	background-color: #EF3D2E; */
+background-color:#e44c41; /* new orange */
+border-radius:3px; /*added this*/
+}
+
+#opc-review .btn-checkout:hover span {
+	background-color: #DDD;
+	color: #888;
+}
+
+}
+#opc-billing .continue, #opc-shipping_method .continue, #opc-shipping .continue,
+	#opc-payment .continue {
+	float: right;
+}
+
+.buttons-set button.button {
+	color: #60A5CD;
+	float: left;
+}
+
+.review-img {
+	width: 50%;
+}
+
+#checkout-review-table-wrapper tbody td .product-name {
+	text-align: left;
+}
+
+#checkout-step-login .omega .buttons-set {
+	padding-top: 10px;
+	text-align: center;
+}
+
+#checkout-step-login .forgot {
+	padding: 0px 10px;
+}
+
+.form-list .input-box {
+	width: 100%;
+}
+
+#checkout-step-login .buttons-set {
+	border: none;
+	padding: 15px 15px;
+	margin: 0 auto;
+}
+
+.opc #login-form .form-list {
+	margin: 0px;
+}
+
+/*dan added this to change fonts for login-form */
+#login-form p {
+	font-family:'ProximaNova-Medium',sans-serif !important; /* dan added this */
+	
+}
+
+#login-holder .page-title h1 {
+	font-family:'ProximaNova-SemiBold',sans-serif !important; /* dan added this */
+	
+}
+
+header.rating-title h2:after, .widget .widget-title h1:after, .widget .widget-title h2:after,
+	.page-title h1:after, .page-title h2:after, .page-title h3:after,
+	.page-title h4:after, .page-title h5:after, .page-title h6:after,
+	#footer h3:after, aside.sidebar section header h2:after, .block-related h2:after,
+	.product-name h1:after, #onepagecheckout_forgotbox .page-title span:after,
+	#onepagecheckout_loginbox .page-title span:after, .op_block_title:after,
+	.dashboard .box-head h2:after {
+	border: none;
+}
+
+/*dan changes*/
+.page-title h1, .page-title h2, .page-title h3 {
+	font-family:'ProximaNova-SemiBold',sans-serif !important; /*dan added this */
+}
+
+/*all of these are defined in skin.css and this was the pale light blue color, #60A5CD so it is being overwritten*/
+header#header .top-cart .block-title i, .price, a, 
+.catalog-product-view .box-reviews ul li small span, 
+.onepagecheckout-index-index a, 
+.onepagecheckout-index-index #onepagecheckout_forgotbox.op_login_area #forgot-password-form .onepagecheckout_loginlink, 
+.onepagecheckout-index-index #onepagecheckout_loginbox.op_login_area #login-form .onepagecheckout_forgotlink, 
+.nav-wide#nav-wide ul li a:hover span, .nav-wide#nav-wide ul li.level1 a:hover span.subtitle {
+	color:#1963c6; /* sea blue */
+	
+}
+
+/*design for new social links in footer*/
+.social-links {
+	margin-right:0px !important;
+	float:right;
+	width:630px !important;
+/* 	margin-left:0px !important; */
+}
+
+.social-links li.liveawesome {
+	font-family:'ProximaNova-Bold',sans-serif; /*dan added this */
+	height:40px;
+	vertical-align:middle;
+}
+.social-links li.liveawesome span {
+	    display:inline-block;
+		margin-top:9px;
+}
+
+/*view cart button in cart dropdown in header */
+header#header .top-cart .block-content .actions a {
+	border-radius:3px;'
+}
+
+
+/*the highlight color for active nav items. this is defined in skin.css in default theme css */
+.nav-wide#nav-wide li.level-top.active {
+	background-color:#666666 !important;
+}
+
+button.button > span {
+	border-radius: 3px; /*added this, the style is defined in skin.css */
+}
+#footer_bottom .container_12 { padding-top:0.75em; padding-bottom: 0.75em; background-color:#1963c6;}
+#footer_bottom {position:relative; border-top:solid 1px #eee;background-color:#1963c6;}
+#footer  {
+	border-top: solid 1px #eee;
+}
+/*media="all"
+.nav-wide#nav-wide li.level-top:hover > a > span, .nav-wide#nav-wide li.level-top.active > a > span 
+{
+  color: #666666;
+  border-bottom: solid 2px #666666;
+  padding-bottom: 0;
+}*  On hover text turn Dark Grey/
+
+
+footer, footer .container_12 .grid_12 {
+	background-color:1963c6;
+	color:#444444;
+}
+
+#footer ul li a {
+	color:#444444;
+}
+
+
+
+#footer > .container_12 {
+	background-color:white;/*It should be white not #1963c6****************/
+}
+
+.custom-footer-content ul li a {
+    color: #888;
+}
+
+#footer_bottom .container_12 {
+	background-color:#1963c6;
+}
+
+/*these were grid_4's but I changed the minimmalism_footer static block on the backend to make room as per the new design*/
+.footer-columns-block .grid_3.alpha h3, .footer-columns-block .grid_3 h3, .footer-columns-block .grid_3.omega h3 {
+	color:#1963c6 !important;/*It was white before this*************/
+}
+/* dan new additions/changes. Others are changed on specific classes that already exist*/
+.product-options-bottom {
+	padding: 0px;
+	border: none;
+}
+
+.cart .discount label {
+	margin: 0px;
+}
+
+.cart .discount .input-box input {
+	width: 90%;
+	font-size: 1em;
+	height: 18px;
+}
+
+#nav-wide.nav-wide {
+	text-align: left;
+}
+
+.checkout-types {
+	width: 100%;
+}
+
+.cart .title-buttons .checkout-types li, .cart .btn-proceed-checkout {
+	float: right;
+}
+
+.cart .discount .discount-form {
+	
+}
+
+#review-buttons-container .btn-checkout {
+	float: right;
+}
+
+/*=====================
+	My autoshipments
+=========================*/
+#rp-edit-form .buttons-set strong {
+	font-weight: bold;
+}
+
+#rp-edit-form .buttons-set .save-changes {
+	float: right;
+}
+
+.save-changes>span {
+	background-color: #dc291e !important;
+}
+
+.save-changes:hover>span {
+	background-color: #ddd !important;
+}
+
+/*====================
+
+	order confirmation
+=================*/
+#my-orders-table-final img {
+	float: left;
+}
+
+#my-orders-table-final .price {
+	float: right;
+}
+
+.dashboard .welcome-msg .hello::before, .dashboard .box-title h3::before,
+	.dashboard .welcome-msg .hello::before {
+	border: none;
+	margin-right: 0px;
+}
+
+.a {
+	/* color: #54C9F3; this is old light blue color */
+	color: #444444;; /* new sea blue */
+	font-size: 16px;
+}
+
+/*=======
+ Slider
+==============*/
+/*added this to get rid of homepage slider*/
+.iosSlider .slider {
+	display:none;
+}
+
+.iosSlider .slider .item .text1, .iosSlider .slider .item .text2,
+	.iosSlider .slider .item .text3 {
+	position: absolute;
+	opacity: 0;
+	z-index: 8;
+	top: 43%;
+}
+
+.iosSlider .slider .item .text0 {
+	bottom: 170px;
+	position: absolute;
+	opacity: 0;
+	z-index: 8;
+	bottom: 50%;
+}
+
+.iosSlider .slider .item .text1, .iosSlider .slider .item .text2 {
+	left: 0px;
+}
+
+.iosSlider .slider .item .text3 {
+	right: 0px;
+}
+
+.iosSlider .slider .item button {
+	position: absolute;
+	bottom: 15%;
+	left: 0px;
+	opacity: 0;
+	z-index: 8;
+	border: 1px solid #fff;
+	z-index: 8;
+}
+
+.iosSlider .slider .item .fa-play-circle, .iosSlider .slider .item .fa-play-circle-o
+	{
+	position: absolute;
+	bottom: 39%;
+	right: 18%;
+	opacity: 1;
+	font-size: 80px !important;
+	z-index: 8;
+	color: #ffffff;
+}
+
+.iosSlider .slider .item .fa-play-circle-o:hover {
+	opacity: .8;
+}
+
+.iosSlider .slider .item #watch_video3 {
+	left: 0%; /*was 65% */
+}
+
+.iosSlider .slider .item .text0 span {
+/* 	font: 30px "Montserrat", sans-serif; */
+font:30px 'ProximaNova-Bold', sans-serif; /* dan added this */
+	color: #ffffff;
+}
+
+.iosSlider .slider .item .text1 span, .iosSlider .slider .item .text2 span,
+	.iosSlider .slider .item .text3 span, .iosSlider .slider .item .text0 span
+	{
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	/* font: 50px/60px "Montserrat", sans-serif; */
+	font: 50px/60px 'ProximaNova-Bold',sans-serif; /* dan added this */
+	padding: 0 8px;
+}
+
+.iosSlider .slider .item .text1 span, .iosSlider .slider .item .text0 span,
+	.iosSlider .slider .item .sub span {
+	color: #ffffff;
+}
+
+.iosSlider .slider .item .text2 span {
+	color: #a8a8a8;
+}
+
+.iosSlider .slider .item .text3 span {
+	color: #a8a8a8;
+}
+
+.slider1 {
+	float: left !important;
+}
+
+#olark_chat {
+	float: right;
+	
+	
+	/* padding-right:150px; */ /*dan added this*/
+}
+
+/*=================
+	My Payment accordion
+	
+==================*/
+.accordion {
+	margin: 10px 0px;
+}
+
+.accordion>dt {
+	border-bottom: 2px solid #DDD;
+	padding: 10px 0px;
+	font-size: 16px;
+/* 	font-family: 'Montserrat', sans-serif; */
+    font-family: 'ProximaNova-SemiBold', sans-serif; /* dan added this -applies to payment data tab in profile */
+}
+
+.accordion address {
+	padding: 5px 0px;
+	font-size: 14px;
+
+}
+
+address {
+    font-family:'ProximaNova-Regular',sans-serif; /*dan added this*/
+}
+
+.edit-button {
+	float: right;
+}
+
+.agree input:hover, .agree label:hover {
+	cursor: pointer;
+}
+
+
+/*==========================
+What is the primal blueprint
+=============================*/
+.meigee-tabs{
+	padding: 1.5em 0px !important;
+	border-bottom: 2px solid #DDD;
+}
+
+.what-is p{
+	
+}
+.what-is h1{
+	padding: 10px 0px;
+}
+
+.what-is img{
+	padding: 10px 0px;
+}
+
+.short-description .std{
+	font-size: 14px;
+}
+.out-of-stock{
+	color: #0986BB;
+	/* font: 30px "Montserrat",sans-serif; */
+	font:30px 'ProximaNova-Medium',sans-serif; /*dan added this */
+}
+
+#testimonials_contents h3{
+	font-size: 18px;
+}
+
+#contactForm .form-list{
+	list-style-type: none;
+}
+
+#login-holder form .input-box input{
+	font-size: 1em;
+}
+
+.minimal-price-link {
+  color: #666666;
+}
+
+
+
+@media only screen and (max-width: 880px) and (min-width: 692px) {
+	
+	.toggle-btn-grp.cssonly .autoship-options input {
+		height: 70px !important;
+	}
+	
+	.toggle-btn-grp.cssonly .half input {
+		height: 60px !important;
+	}
+	
+}
+
+.ratings .rating-links p{
+     font-size: 14px;
+}
+ 
+p.rating-links{
+	 font-size: 14px;
+}
+
+.catalog-product-view .box-reviews ul li small {
+     
+   font-family: 'ProximaNova-Regular','Open Sans', sans-serif;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #444444;
+} 
+
+.catalog-product-view .box-reviews .review-txt {
+	  
+   font-family: 'ProximaNova-Regular','Open Sans', sans-serif;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #444444;
+}
+.ratings-table th {
+    font-size: 14px;
+    color: #444444;
+}
+
+.ratings-table {
+    margin:  0 1.5em 1.5em 0;
+}
+
+.catalog-product-view .box-reviews .form-add h3 {
+      
+   font-family: 'ProximaNova-Regular','Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.catalog-product-view .box-reviews .form-add h4 {
+	font-family: 'ProximaNova-Regular','Open Sans', sans-serif;
+    color: #444444;
+    font-size: 14px;
+    font-weight: normal;
+}
+.catalog-product-view .box-reviews .data-table tbody th {
+	font-family: 'ProximaNova-Regular','Open Sans', sans-serif;
+    padding: 1.16em 1.16em 1.16em 2em;
+    font-size: 14px;
+}
+.ampromo_items_form h4 a {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.2em;
+    font-size: 18px;
+}

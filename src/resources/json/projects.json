@@ -1,6 +1,7 @@
 [
 	{
-		"id": "dummyproject"
+		"id": "dummyproject",
+		"preview": "views/projects-cards-custom-templates/previews/dummyproject.html"
 	}, {
 		"id": "spark",
 		"name": "Spark Collaboration",
@@ -45,9 +46,9 @@
 		},
 		"shortdescription": "",
 		"description": [
-			"Arguably <i>the<\/i> largest e-commerce/online-community for the revolutionary primal lifestyle is The Primal Blueprint. Join fitness guru Mark Sisson and our friendly ancestor, Grok, as they help you discover how amazingly simple and fun lifelong wellness can be by providing a complete diet, exercise and lifestyle philosophy, along with various products, services and community support, to help you enjoy effortless weight loss, vibrant health and boundless energy. The Primal Blueprint is based on lifestyle principles that have governed human health, evolution and peak performance for over two million years, and is supported by respected research in the fields of epigenetics and evolutionary biology. The Primal Blueprint principles challenge many elements of conventional wisdom that, while well intentioned, are deeply flawed and are making people fat, sick and burnt out.",
+			"Arguably <i>the<\/i> largest e-commerce/online-community for the revolutionary primal lifestyle is The Primal Blueprint. Join fitness guru Mark Sisson and our friendly ancestor Grok as they help you discover how amazingly simple and fun lifelong wellness can be by providing a complete diet, exercise and lifestyle philosophy, along with various products, services and community support, to help you enjoy effortless weight loss, vibrant health and boundless energy. The Primal Blueprint is based on lifestyle principles that have governed human health, evolution and peak performance for over two million years, and is supported by respected research in the fields of epigenetics and evolutionary biology. The Primal Blueprint principles challenge many elements of conventional wisdom that, while well intentioned, are deeply flawed and are making people fat, sick and burnt out.",
 			"My role in developing Primal Blueprint included both frontend and backend development using Magento to handle both the customer and admin interfaces. Additionally, I managed some of the core functionality of the coaching center, such as user registration and blogging.",
-			"And before you check out this site, you should know that their <a target=\"_blank\" href=\"https://www.primalblueprint.com/primal-kitchen/mayo-12-oz/\">Avocado Oil Mayo<\/a> will make you question why anyone would ever use its normal counterpart anymore."
+			"And before you check out this site, you should know that their <a target=\"_blank\" href=\"https://www.primalblueprint.com/primal-kitchen/mayo-single-jar-106/\">Avocado Oil Mayo<\/a> will make you question why anyone would ever use its normal counterpart anymore."
 		],
 		"preview": "views/projects-cards-custom-templates/previews/primal.html",
 		"features": [

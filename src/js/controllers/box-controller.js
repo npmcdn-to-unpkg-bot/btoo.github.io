@@ -1,7 +1,9 @@
 portfolio.controller('BoxController', [
 	'$scope',
 	'landingService',
-	function($scope, landingService) {
+	'$http',
+	'$rootScope',
+	function($scope, landingService, $http, $rootScope) {
 		var vm = this;
 		$scope.shown = 'front';
 
@@ -57,6 +59,7 @@ portfolio.controller('BoxController', [
 
 			leftControl.style.opacity = '1';
 			rightControl.style.opacity = '1';
+			document.getElementById('side-controls').style.opacity = .42;
 
 			var rotateY;
 			switch(side){
@@ -69,6 +72,14 @@ portfolio.controller('BoxController', [
 					break;
 				case 'back':
 					rotateY = '-180deg'
+					
+					if(!$rootScope.projects){
+						$http.get('resources/json/projects.json') //for performance optimization, don't execute projects cards code until they view the back face
+							.then(response => {
+								$rootScope.projects = response.data; // using rootScope and doing $http over here because doesnt work in controller
+								landingService.loadedProjects();
+							});
+					}
 					document.getElementById('project-modal-bg').classList.add('modal-rendered');
 					break;
 				case 'left':

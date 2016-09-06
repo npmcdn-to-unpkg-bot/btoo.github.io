@@ -1,0 +1,631 @@
+/*====================
+Product Page
+======================*/
+.product-view .product-shop .product-name {
+	padding-bottom: 0em !important;
+}
+
+.breadcrumbs .fa-caret-right, .omega .fa-caret-right {
+	margin-top: 0px;
+	margin-left: 0px;
+}
+
+#add-to-cart-button {
+	float: right;
+}
+
+.btn-cart {
+/*background-color: #dc291e !important; */	
+background-color: #e44c41 !important;
+	/* border: solid 1px #ffffff !important;
+	outline: solid 3px #dc291e !important; */
+	border-radius:3px; /* added this */
+	color: #ffffff;
+	width: 12em;
+	height: 3em;
+	padding: 10px !important;
+	text-transform: uppercase;
+	/* font: 16px 'Montserrat', sans-serif; */
+	font: 16px 'ProximaNova-Medium',sans-serif; /* dan added this */
+	margin-top: 25px !important;
+	-webkit-transition: background-color 500ms ease;
+	-moz-transition: background-color 500ms ease;
+	-o-transition: background-color 500ms ease;
+	transition: background-color 500ms ease;
+}
+
+#product-addtocart-button {
+	margin: 15px auto 0px auto !important;
+	display: block !important;
+	width: 92.575%;
+}
+
+.btn-cart:hover {
+	/* background-color: #E6655D !important; */
+	background-color: #dc291e !important;
+	/* border: solid 1px #ffffff !important;
+	outline: solid 3px #E6655D !important; */
+	cursor: pointer;
+}
+
+.product-info {
+	font: 'Montserrat', sans-serif;
+}
+
+.product-info .fa-caret-right {
+	/* color: #dc291e; */
+	color:#e44c41; /*new orange */
+}
+
+.product-info .heading {
+	/* font: 35px 'Montserrat', sans-serif; */
+	font: 30px 'ProximaNova-Regular', sans-serif; /*dan added this*/
+/* 	color: #0986bb; */
+	color: #1963c6; /* main blue */
+	text-transform: initial;
+
+}
+
+.shortDesc {
+	color: #444444;
+	/* font: 18px 'Montserrat', sans-serif; */
+	font: 14px 'ProximaNova-Regular', sans-serif;
+	padding-bottom: 5px;
+}
+
+.price-block .price {
+	/* color: #54c9f3; */
+	color: #666666; /*NEW  blue */
+	font-size: 26px !important;
+}
+
+.short-description ul {
+	padding: 0;
+	margin: 0;
+	font: 14px 'Lato', sans-serif;
+}
+
+.add-to-cart .fa-shopping-cart {
+	color: #ffffff;
+}
+
+.short-description li {
+	color: #444444;
+	font-size: 14px;
+	font-family:'ProximaNova-Regular',sans-serif;
+	text-indent: -.7em;
+	padding: 3px 0px;
+}
+
+.short-description li:before {
+	padding: 10px;
+}
+
+.choose-plan {
+	color: #54c9f3;
+	text-transform: uppercase;
+	padding: 0px;
+	font-size: 18px;
+	/* font-family: 'Montserrat', sans-serif; */
+	font-family:'ProximaNova-Medium', sans-serif; /*dan added this for choose-plan */
+	margin-bottom: 0px;
+	margin-left: 5px;
+	display: inline-block;
+}
+
+.frequency {
+	text-align: center;
+	text-transform: uppercase;
+	padding-bottom: 15px;
+}
+
+.frequency:hover, .frequency label:hover {
+	cursor: pointer;
+}
+
+.frequency h3, .frequency {
+	margin: 0px;
+/* 	font-family: 'Montserrat', sans-serif; */
+font-family:'ProximaNova-Medium',sans-serif; /*dan added this*/
+}
+
+.frequency-plan {
+	color: #ffffff;
+	background-color: #dc291e;
+	border: none;
+}
+
+.just-once {
+	padding: 10px 0px;
+}
+
+.quantity .alpha {
+	color: #54c9f3;
+/* 	font-family: 'Montserrat' sans-serif; */
+font-family:'ProximaNova-Regular',sans-serif; /*dan added this*/
+	text-transform: uppercase;
+	vertical-align: middle;
+	padding: 4% 0;
+}
+
+.quantity {
+	padding: 10px 0px 20px 0px;
+}
+
+.add-to-box {
+	float: right !important;
+}
+
+.config-title em {
+	color: #e71861;
+}
+/*================
+Monthly Free Shipping
+=====================*/
+.promo-free-shipping {
+	text-transform: uppercase;
+	margin: 0px 0px;
+}
+
+.promo-free-shipping .red {
+	/* color: #de1919; */
+	color:#1963c6; /* new orange */
+/* 	font: 26px 'Montserrat', sans-serif; */ 
+font: 26px 'ProximaNova-Medium',sans-serif; /*dan added this*/
+}
+
+.promo-free-shipping .blue {
+	/* color: #0698d2; */
+	color:#14b3ef; /* new sea blue*/
+	/* font: 18px 'Montserrat', sans-serif; */
+	font: 18px 'ProximaNova-Medium',sans-serif; /*dan added this */
+}
+
+.promo-free-shipping .monthly {
+	color: #0986bb;
+	font: 30px 'Trajan';
+}
+
+/*===============
+Grok Fact
+=================*/
+.grok-fact {
+	 border: 2px solid #DDD; 
+	 padding: 5px 0px; 
+	 margin: 15px 0px 0px 0px;
+	
+}
+
+.product-collateral {
+	padding: .5em 0px;
+}
+
+.grok-fact h1 {
+	padding-top: 5px;
+	color: #949494;
+	font-size: 14px;
+}
+
+.grok-fact .alpha {
+	border-right: 2px solid #dddddd;
+	margin-right: 0px;
+}
+
+/*======================
+	add to cart modal
+============================*/
+#confirm-modal {
+	padding: 25px;
+	text-align: center;
+}
+
+#confirm-modal .title{
+	/* font: 20px "Montserrat",sans-serif; */
+	font:20px 'ProximaNova-Medium',sans-serif; /*dan added this */
+	margin: 10px 0px;
+}
+
+#confirm-modal strong {
+	color: #0698d2;
+}
+
+#confirm-modal img{
+	margin: 10px auto;
+	display: block;
+	width: 50%;
+}
+#confirm-modal .total{
+	/* font: 18px 'Montserrat', sans-serif; */
+	font:18px 'ProximaNova-Medium',sans-serif; /* dan added this */
+	margin: 10px 0px;
+}
+
+#confirm-modal .cart-quantity{
+/* 	font: 16px 'Montserrat', sans-serif; */
+font: 16px 'ProximaNova-Medium',sans-serif; /* dan added this */
+	margin: 10px 0px;
+}
+
+#confirm-modal .cart-quantity strong{
+	font-weight: bold;
+	color: #0698d2;
+	
+}
+#confirm-modal .grid_12 .button{
+	margin: 0px 10px;
+}
+#confirm-modal .grid_12 .checkout > span{
+/* 	background-color: #DC291E; */
+background-color:#e44c41;
+border-radius:3px; /* added this */
+}
+#confirm-modal .grid_12 .checkout:hover > span{
+	background-color: #dddddd;
+	color: #888;
+}
+#confirm-modal .grid_12{
+	width: 100%;
+	margin: 10px
+}
+.add-to-cart-success a {
+	color: #000000;
+}
+
+.add-to-cart-success a:hover {
+	color: #dddddd;
+	text-decoration: none;
+}
+/*=================
+Tabs override
+===================*/
+.meigee-tabs a {
+	font-family:'ProximaNova-Medium',sans-serif !important; /*dan added this block*/
+	color: #444444;
+}
+
+.miege-tabs a:hover {
+	color: #888888 !important;
+}
+
+.meigee-tabs li.active a {
+	/* color: #38ADDB !important; */
+	color: #1963c6; /*new sea blue */
+}
+
+.meigee-tabs li.active a:hover {
+/* 	color: #54c9f3 !important; set the active tab hover color to the old blue, less bright*/
+color: #1963c6 !important; 
+}
+
+.meigee-tabs-content h1 {
+	/* 	color: #54c9f3; */
+	color: #1963c6; /*new sea blue */
+	/* font-family: 'Montserrat' sans-serif; */
+	font-family: 'ProximaNova-Regular', sans-serif; /* dan added this */
+	font-size: 36px;
+	text-transform: initial;
+}
+
+.meigee-tabs-content h3 {
+/* 	color: #54c9f3; */
+	color: #444444; /*new sea blue */
+	/* font-family: 'Montserrat' sans-serif; */
+	font-family: 'ProximaNova-Medium',sans-serif; /* dan added this */
+	font-size: 20px;
+	font-weight: normal;
+}
+
+.meigee-tabs-content h2 {
+	font-family:'ProximaNova-Medium',sans-serif; /*dan added these two lines*/
+	font-size:18px;
+}
+/*================
+Product Tabs 
+===================*/
+.header .sub-heading {
+	font-family:'ProximaNova-Regular', sans-serif; /*dan added this*/
+	display: block !important;
+	font-size: 14px;
+	text-transform: capitalize;
+
+}
+
+.header .title {
+	font-family: 'ProximaNova-Medium',sans-serif; /* dan added this*/
+	font-size: 24px;
+	color: #14b3ef;
+	text-transform: uppercase;
+
+}
+
+.header .grid_5 {
+	
+}
+media="all"
+.header .sub-heading, .header .title {
+	text-transform: initial;
+	color: #14b3ef;
+}
+/*main header gradient style. one color*/
+.gradient {
+	/* background: -webkit-linear-gradient(top, #0986bb, #0986bb);
+	background: linear-gradient(top, #0986bb, #0986bb); */
+	background: -webkit-linear-gradient(top, #1963c6, #1963c6);
+	background: linear-gradient(top, #1963c6, #1963c6);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 48px;
+	text-transform: uppercase;
+	letter-spacing: -2px;
+}
+
+.header img {
+	width: 100px;
+}
+
+.sub-title {
+/* 	color: #54c9f3; */ /*dan commented this out*/
+    color:#14b3ef; /*dan added this */
+    font-family:'ProximaNova-Medium',sans-serif; /* dan added this */
+	font-size: 20px;
+	margin: 15px 0px;
+	 
+}
+
+.header {
+	padding: 10px 0px;
+	margin: 10px 0px;
+}
+
+#product_tabs_description_contents .feature button {
+	float: right;
+	/* outline: solid 3px #0173bc; */
+	border-radius:3px;
+	background-color: #0173bc;
+}
+
+/*===========================
+Product Facts
+=================================*/
+.facts li:before { /* for lists, this is the square bullet point */
+	content: '\25A0';
+/* 	color: #54c9f3; */
+	color: #444444; /*new sea blue */
+	padding: 4px;
+	
+}
+
+.facts ul {
+	margin-bottom: 15px;
+}
+
+.facts img {
+	margin: 10px 0px;
+	cursor:zoom-in;
+}
+
+.facts li {
+	padding-left: 1em;
+	text-indent: -.7em;
+	font-size: 16px;
+	color: #444444;
+}
+
+/*==================
+Benefits
+======================*/
+
+/*==========================
+FAQS
+==========================*/
+#product_tabs_product_faqs_contents .a {
+	color: #54c9f3;
+	text-transform: uppercase;
+	/* font-family: 'Montserrat' sans-serif; */
+	font-family: 'ProximaNova-Medium',sans-serif;
+	font-size: 20px;
+}
+/*-------------------------------------------------------------------------------------------------------------*/
+.answer {
+	font-family:'ProximaNova-Regular','Open Sans', sans-serif; /*dan added this*/
+	margin-bottom: 10px;
+	font-size: 16px;
+	color: #444444;
+	
+}
+
+#product_tabs_product_faqs_contents .sub-title {
+	margin-top: 25px;
+}
+
+/*========================
+Css only toggle button
+===========================*/
+input[type="radio"] {
+	margin: 0px !important;
+}
+
+.toggle-btn-grp.cssonly {
+	padding: 5px;
+	width: 100%;
+}
+
+.toggle-btn-grp.cssonly .autoship-options input, .toggle-btn-grp.cssonly .autoship-options label,
+	.toggle-btn-grp.cssonly .autoship-options {
+	height: 70px !important;
+}
+
+.toggle-btn-grp.cssonly input, .toggle-btn-grp.cssonly label {
+	height: 25px;
+	width: 47%;
+	text-transform: capitalize;
+	border: solid 1px #aaa;
+	border-radius:3px; /* added this */
+}
+
+.toggle-btn-grp.cssonly .half, .toggle-btn-grp.cssonly .half input,
+	.toggle-btn-grp.cssonly .half label {
+	height: 55px !important;
+}
+
+.toggle-btn-grp.cssonly .grid_2, .toggle-btn-grp.cssonly .grid_1 {
+	display: inline-block;
+	position: relative;
+	margin: 4px;
+	height: 25px;
+	width: 46%;
+}
+
+.toggle-btn-grp.cssonly div label {
+	width: 100%;
+	position: absolute;
+	z-index: 0;
+	padding: 0;
+	text-align: center;
+	 
+	/* height: auto; */
+	height:33px;
+}
+
+.toggle-btn-grp.cssonly div input {
+	width: 100%;
+	position: absolute;
+	z-index: 1;
+	cursor: pointer;
+	opacity: 0;
+
+}
+/*this controls product page button options which are actually radio buttons*/
+.toggle-btn-grp.cssonly div:hover label, .toggle-btn-grp.cssonly div:hover input,
+	div:hover label .label-radio-configurable .label-value {
+	/* color: #dc291e !important; */
+	 color:#e44c41 !important;
+	border: 1px solid #e44c41;
+	border-radius:3px; /* added this */
+/* 	height:30px; */
+}
+
+.toggle-btn-grp.cssonly div:hover label .price {
+	/* color: #dc291e !important; */
+	color:#e44c41;
+}
+
+.toggle-btn-grp.cssonly div input:checked+label  {
+	/* background: #dc291e; */
+	background:#e44c41;
+	border: solid 1px #e44c41 !important;
+	color: #ffffff !important;
+	width: 100%;
+	border-radius:3px; /* added this */
+	line-height: 15px;
+	font-family: 'ProximaNova-Regular',sans-serif !important; /* dan added this */
+}
+
+.toggle-btn-grp.cssonly div input:checked+label .label-value{
+	 color: #ffffff !important;
+	 
+}
+
+.toggle-btn-grp.cssonly div input:checked+label .price {
+	color: #ffffff !important;
+}
+
+.toggle-btn-grp h3 {
+	/* color: #0698D2; */
+	/*color:#1963c6; 	new main blue */
+	/* font: 20px "Montserrat", sans-serif; */
+	color: #444444;
+	font:20px "ProximaNova-Regular", sans-serif; /* dan added this */
+	font-weight: normal;
+	border: none !important;
+	margin: 0px 5px 5px 5px;
+}
+
+.toggle-btn-grp .config-subtitle {
+	/* font: 14px "Montserrat", sans-serif; */
+	font:12px 'ProximaNova-Medium',sans-serif; /* dan added this */
+	color: #e44c41;
+}
+
+.label-radio-configurable {
+	/* font: 16px 'Montserrat' sans-serif !important; */
+	font: 16px 'ProximaNova-Regular',sans-serif !important; /* dan added this */
+}
+
+.label-value {
+	padding-top: 7px;
+	/* font: 12px "Montserrat", sans-serif; */
+	font: 14px 'ProximaNova-Medium', sans-serif; /* dan added this */
+	font-weight: normal;
+	margin-bottom: 0px;
+	color: #666666;
+	 
+}
+
+.label-value .price {
+	/* font: 12px "Montserrat", sans-serif; */
+	font: 12px 'ProximaNova-SemiBold', sans-serif; /* dan added this */
+}
+
+.autoship-options .price, .half .price {
+	color: #666666;
+}
+
+.product-options {
+	background-color: #ffffff;
+	border: none !important;
+	padding: 5px;
+}
+
+.product-custom {
+	padding: 0px;
+}
+
+.product-type-block {
+	margin: 0px;
+}
+
+.add-to-box {
+	width: 100%;
+}
+
+.product-container {
+	margin-top: 10px;
+}
+
+.half {
+	width: 30% !important;
+}
+.tier-pricing .config-subtitle{
+	/* font: 16px "Montserrat",sans-serif; */
+	font: 16px 'ProximaNova-Medium', sans-serif; /* dan added this */
+	/* color: #DC291E; */
+	color:#e44c41;
+	margin-bottom: 0.4em;
+	text-transform: uppercase;
+}
+
+.tier-pricing .as-low-as{
+	/* font: 16px "Montserrat",sans-serif; */
+	color: #e44c41;
+	font: 14px 'ProximaNova-Medium', sans-serif; /* dan added this */
+	margin-bottom: 0.4em !important;
+}
+
+.tier-pricing .price{
+/* 	color: #54C9F3; */
+	color: #e44c41; /* NEW BLUE color */
+    font: 14px 'ProximaNova-Bold', sans-serif;
+    font-size: 1em;
+    line-height: 1.2em;
+}
+
+.product-view .product-shop .price-box{
+	margin: 0px;
+	text-align: left;
+}
+
+.special-price .price {
+    line-height: 1.89em;
+    
+}

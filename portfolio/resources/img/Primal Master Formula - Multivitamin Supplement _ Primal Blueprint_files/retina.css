@@ -1,0 +1,45 @@
+/**
+ * Magento
+ *
+ * @category    design
+ * @package     meigeetheme_default
+ * @copyright   Copyright (c) 2012 MeigeeTeam. (http://www.meigeeteam.com)
+ */
+ 
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+   only screen and (min-resolution: 144dpi) {
+	
+	header#header h2.logo img{
+		position: absolute;
+		opacity: 0;
+		width: auto;
+		max-width: none;
+	}
+	header#header h2.small_logo img {position: absolute;}
+	
+	.rating-box,
+	.rating-box .rating{background-size:17px 107px!important;}
+	.rating-box {background:url(../images/@x2/bkg_rating@x2.gif) 0 0 repeat-x; width:85px;}
+	.rating-box .rating{background:url(../images/@x2/bkg_rating@x2.gif) 0 100% repeat-x;}
+	
+	.ratings-table .rating-box,
+	.ratings-table .rating-box .rating{background-size:9px 107px!important;}
+	.ratings-table .rating-box { width:43px; background:url(../images/@x2/bkg_rating_2@x2.gif) 0 0 repeat-x; }
+	.ratings-table .rating-box .rating{ background:url(../images/@x2/bkg_rating_2@x2.gif) 0 100% repeat-x;}
+	
+	.catalog-product-view .box-reviews .data-table thead th span{background-image:url(../images/@x2/review_stars@x2.png); background-size:36px 78px!important;}
+	.catalog-product-view .box-reviews .data-table thead th span.one-star{background-position:center 4px;}
+	.catalog-product-view .box-reviews .data-table thead th span.two-stars{background-position:center -11px;}
+	.catalog-product-view .box-reviews .data-table thead th span.three-stars{background-position:center -27px;}
+	.catalog-product-view .box-reviews .data-table thead th span.four-stars{background-position:center -43px;}
+	.catalog-product-view .box-reviews .data-table thead th span.five-stars{background-position:center -58px;}
+	
+	#login-holder form .input-box input#email,
+	#login-holder form .input-box input#pass,
+	#login-holder form .input-box input#firstname,
+	#login-holder form .input-box input#lastname,
+	#login-holder form .input-box input#password,
+	#login-holder form .input-box input#confirmation,
+	.opc #login-form input {background:url(../images/@x2/inp_bg@x2.png) right center; background-size:19px 10px!important; background-repeat:no-repeat;}
+
+}

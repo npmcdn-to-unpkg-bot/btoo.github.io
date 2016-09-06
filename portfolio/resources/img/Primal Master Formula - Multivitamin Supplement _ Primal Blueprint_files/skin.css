@@ -1,0 +1,276 @@
+/**
+*
+* This file is generated automaticaly. Please do no edit it directly cause all changes will be lost.
+*
+*/
+/*====== Font Replacement =======*/ 
+.product-name .sku,
+a.aw-blog-read-more,
+.crosssell h2,
+header.rating-title h2,
+.widget .widget-title h1,
+.widget .widget-title h2,
+.page-title h1,
+.page-title h2,
+.page-title h3,
+.page-title h4,
+.page-title h5,
+.page-title h6,
+header#header .top-cart .cart-empty,
+.product-collateral h2,
+.content_bottom section h3,
+.product-view .product-shop .price-box .price-label,
+#footer h3,
+header#header .top-cart .block-title a span,
+header#header .top-cart .block-content .mini-products-list .product-details .price,
+header#header .top-cart .block-content .subtotal .label,
+.price,
+#topCartContent button,
+#topCartContent .actions a,
+#topCartContent button span,
+#nav li a span,
+.content_bottom button.button span,
+.products-grid .btn-quick-view span span,
+.products-list .btn-quick-view span span,
+aside.sidebar section header h2,
+button.button span,
+aside.sidebar section .block-content .actions a,
+.sorter label,
+.pages li a.previous,
+.pages li a.next,
+.products-list .product-name a,
+.block-wishlist .link-cart,
+.product-name h1,
+.block-related h2,
+#product-options-wrapper dt label,
+.meigee-tabs li a,
+.product-collateral#collateral-accordion h2,
+.catalog-product-view .box-reviews h2,
+.catalog-product-view .box-reviews ul li h6 a,
+#login-holder .page-title h1,
+#login-holder form > p,
+#login-holder .link-box a,
+#login-holder form .fieldset .legend,
+#login-form h2,
+#cart-accordion h3.accordion-title,
+.data-table .product-name a,
+#onepagecheckout_forgotbox .page-title span,
+#onepagecheckout_loginbox .page-title span,
+#onepagecheckout_forgotbox button.button span span,
+#onepagecheckout_loginbox button.button span span,
+.op_block_title,
+#onepagecheckout_orderform  #checkout-review-submit button,
+.opc .step-title, 
+.opc .step-title h2, 
+.opc h3,
+aside.sidebar section.block-progress dt,
+.dashboard .welcome-msg .hello,
+.dashboard .box-title h2,
+.dashboard .box-title h3,
+.dashboard .box-head h2,
+.dashboard .box-head h3,
+.header-slider-container .iosSlider .slider .item p,
+.header-slider-container .iosSlider .slider .item h2,
+.header-slider-container .iosSlider .slider .item h3 {font-family: 'ProximaNovaA', sans-serif;}
+
+/*====== Site Bg =======*/
+body,
+body.boxed-layout {background-color:#FFFFFF;}
+
+/*====== Skin Color #1 =======*/
+.widget-latest li a:hover,
+.block-blog li a:hover,
+.menu-tags h5,
+.menu-categories h5,
+.menu-recent h5,
+.crosssell h2,
+.product-collateral h2,
+.page-title h1,
+.content_bottom section h3,
+#footer h3,
+header#header .top-cart .block-content .subtotal .label,
+header#header .top-cart .product-name a,
+#nav li a span,
+.nav-wide#nav-wide li a span,
+aside.sidebar section.block-layered-nav dl dd a:hover,
+.weee,
+.product-name a,
+#footer ul li a:hover,
+aside.sidebar section header h2,
+aside.sidebar section dl dt,
+.block-layered-nav,
+.block-layered-nav a,
+aside.sidebar .product-name a,
+aside.sidebar .block-subtitle,
+aside.sidebar label,
+aside.sidebar section.block-wishlist li.item .product-details .product-name a,
+#poll-answers,
+.sorter label,
+.pages li a.previous,
+.pages li a.next,
+.minimal-price-link .label,
+.products-list .add-to-links i:hover,
+a:hover,
+#categories-accordion li.level-top a.level-top,
+#categories-accordion li.level-top.parent ul.level0 li a:hover,
+.block-wishlist .link-cart,
+.block-wishlist .prev i:hover,
+.block-wishlist .next i:hover,
+.product-name h1,
+.block-related h2,
+.my-wishlist div.quantity-decrease i:hover,
+.my-wishlist div.quantity-increase i:hover,
+.add-to-cart div.quantity-decrease i:hover,
+.add-to-cart div.quantity-increase i:hover,
+.cart-table div.quantity-decrease i:hover,
+.cart-table div.quantity-increase i:hover,
+.product-view .product-shop .add-to-links-box i:hover,
+#product-options-wrapper dt label,
+.product-options .options-list li:hover,
+.product-options .options-list li:hover .price,
+.meigee-tabs li.active a, .meigee-tabs li a:hover,
+.product-collateral#collateral-accordion h2.active,
+.catalog-product-view .box-reviews .form-add h3 span,
+.catalog-product-view .box-reviews ul li h6 a,
+#login-holder form > p,
+#login-holder form .fieldset .legend,
+#login-form h2,
+.cart .totals .checkout-types li a:hover,
+#cart-accordion h3.accordion-title:hover,
+#cart-accordion h3.accordion-title.active,
+.data-table .product-name a,
+#onepagecheckout_forgotbox .page-title span,
+#onepagecheckout_loginbox .page-title span, 
+.onepagecheckout-index-index a:hover,
+.onepagecheckout-index-index #onepagecheckout_forgotbox.op_login_area #forgot-password-form .onepagecheckout_loginlink:hover,
+.onepagecheckout-index-index #onepagecheckout_loginbox.op_login_area #login-form .onepagecheckout_forgotlink:hover,
+#login-holder form .actions .f-right:hover,
+#onepagecheckout_orderform .col3-set.onepagecheckout_datafields .op_block_title,
+#checkout-review-table-wrapper tbody td .product-name,
+#checkout-review-table-wrapper .order-products-table tfoot tr.last td,
+.opc .active .step-title,
+.opc h3,
+aside.sidebar section.block-progress dt a,
+.dashboard .welcome-msg .hello,
+.dashboard .box-title h2,
+.dashboard .box-title h3,
+.dashboard .box-head h2,
+.dashboard .box-head h3,
+.data-table .c_actions a i:hover,
+.block-account a,
+.my-wishlist .data-table .table-buttons a:hover,
+header#header .menu-button,
+.product-view .product-prev:hover,
+.product-view .product-next:hover,
+header#header .top-cart .block-title a span,
+header.rating-title h2,
+aside.sidebar section.block-layered-nav #amount, 
+aside.sidebar section.block-layered-nav #amount-2{color:#444444;}
+
+aside.sidebar section.block-layered-nav .ui-slider .ui-slider-handle{border-top-color:#444444;}
+
+.slider-container .prev i,
+.more-views .prev i,
+.block-related .prev i {border-right-color:#444444;}
+
+.slider-container .next i,
+.more-views .next i,
+.block-related .next i {border-left-color:#444444;}
+
+a.aw-blog-read-more,
+aside.sidebar .block-tags .actions a,
+ul.social-links li a:hover,
+header#header .top-cart .cart-price-qt,
+header#header .form-search.active button,
+header#header.header-2 .form-search button:hover,
+header#header.header-3 .form-search button:hover,
+#topCartContent button > span,
+#topCartContent .actions a:hover,
+#footer .sbSelector:hover,
+.add-to-cart-success,
+.content_bottom button.button > span,
+.products-grid .btn-quick-view > span,
+.products-list .btn-quick-view > span,
+#slider-range.ui-slider .ui-slider-range.ui-widget-header,
+button.button > span,
+aside.sidebar .actions a:hover,
+.toolbar .view-mode a:hover,
+.toolbar .view-mode strong,
+.content_bottom .grid_12 > button:hover > span,
+.pages li.current,
+.pages li a:hover,
+.pages li a.previous:hover,
+.pages li a.next:hover,
+.sorter a.desc:hover,
+.label-new,
+.catalog-product-view .box-reviews .data-table thead,
+.cart .totals header,
+#footer .sbHolder .sbToggleOpen + .sbSelector,
+.cart-table .buttons-row .buttons .btn-clear:hover > span, 
+.cart-table .buttons-row .buttons .btn-update:hover > span,
+.my-wishlist .buttons-set .btn-share:hover > span, 
+.my-wishlist .buttons-set .btn-add:hover > span,
+#login-holder .link-box:hover,
+#onepagecheckout_forgotbox button.button > span,
+#onepagecheckout_loginbox button.button > span,
+header#header dl.company-links dt a:hover,
+header#header dl.company-links dt a.active,
+header#header .links li a:hover {background-color:#444444;}
+
+header#header.header-2 .form-search button:hover,
+header#header.header-3 .form-search button:hover,
+header#header .form-search.active button,
+#footer .sbSelector:hover,
+.content_bottom button.button > span,
+.pages li a:hover {border-color:#444444;}
+
+
+/*====== Skin Color #2 =======*/
+header#header .top-cart .block-title i,
+.price, a,
+.catalog-product-view .box-reviews ul li small span,
+.onepagecheckout-index-index a,
+.onepagecheckout-index-index #onepagecheckout_forgotbox.op_login_area #forgot-password-form .onepagecheckout_loginlink,
+.onepagecheckout-index-index #onepagecheckout_loginbox.op_login_area #login-form .onepagecheckout_forgotlink, .nav-wide#nav-wide ul li a:hover span, .nav-wide#nav-wide ul li.level1 a:hover span.subtitle {color:#60A5CD;}
+
+.nav-wide#nav-wide li.level-top:hover,
+.nav-wide#nav-wide li.level-top.active,
+#nav li.level-top:hover,
+#nav li.level-top.active,
+.products-list .btn-quick-view > span:hover,
+.products-grid .btn-quick-view > span:hover,
+.catalog-product-view .box-reviews .full-review,
+#login-holder .link-box {background-color:#60A5CD}
+
+/*====== Category Labels =======*/
+.nav-wide#nav-wide li.level-top .category-label.label_one { 
+    background-color: #EB4C4C;
+    border-color: #EB4C4C;
+    color: #FFFFFF;
+}
+.nav-wide#nav-wide li.level-top.over .category-label.label_one { 
+    background-color: #9EDE42;
+    border-color: #9EDE42;
+    color: #FFFFFF;
+}
+.nav-wide#nav-wide li.level-top .category-label.label_two { 
+    background-color: #4D8AB0;
+    border-color: #4D8AB0;
+    color: #FFFFFF;
+}
+.nav-wide#nav-wide li.level-top.over .category-label.label_two { 
+    background-color: #4FA9E1;
+    border-color: #4FA9E1;
+    color: #FFFFFF;
+}
+.nav-wide#nav-wide li.level-top .category-label.label_three { 
+    background-color: #FF712F;
+    border-color: #FF712F;
+    color: #FFFFFF;
+}
+.nav-wide#nav-wide li.level-top.over .category-label.label_three { 
+    background-color: #FF712F;
+    border-color: #FF712F;
+    color: #FFFFFF;
+}
+

@@ -65,6 +65,7 @@
 						transition: all .8s;
 					}
 					span {
+						.transition(all .5s);
 						background: white;
 						position: relative;
 						cursor: pointer;
@@ -147,7 +148,7 @@
 			margin: 2.5px;
 			padding: 5px 15px;
 			border-radius: 17.5px;
-			color: #f4f4f4;
+			color: @bg-light;
 			box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 		}
 		// .very-strong { background: #BA68C8; }
@@ -293,6 +294,7 @@
 					+ i {
 						cursor: pointer;
 						color: darken(@bg-light, 22%);
+						.transition( all .5s);
 						&.ordered {
 							transform: scale(2);
 							color: @green;
