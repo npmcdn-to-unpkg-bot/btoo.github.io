@@ -1,5 +1,8 @@
-portfolio.directive('animejsBanner', [ '$q', 'landingService',
-	function( $q, landingService ) {
+portfolio.directive('animejsBanner', [
+	'$q',
+	'landingService',
+	'$timeout',
+	function( $q, landingService, $timeout ) {
 		return {
 			restrict: 'AE',
 			templateUrl: 'js/directives/animejs-banner/animejs-banner.html',
@@ -10,60 +13,63 @@ portfolio.directive('animejsBanner', [ '$q', 'landingService',
 				// animate the B
 				var loadingSquares = element[0].querySelector('#loading-squares');
 				landingService.canShowBox().then(() => {
-					document.getElementById('box-container').className += 'show-box';
-					anime({
-						targets: '#Bsvg path',
-						strokeDashoffset: {
-							easing: 'easeInExpo',
-							duration: 500,
-							// duration: (el, i) => {
-							// 	return 88 + (i * 22);
-							// },
-							value: (el) => {
-								var pathLength = el.getTotalLength();
-								el.setAttribute('stroke-dasharray', pathLength);
-								return [-pathLength, 0];
-							}
-						},
-						stroke: {
-							value: function(el, i) {
-								return 'rgb('+(i*2)+','+(i*8)+','+(i*12)+')';
+					$timeout(() => {
+						document.getElementById('box-container').className += 'show-box';
+						anime({
+							targets: '#Bsvg path',
+							strokeDashoffset: {
+								easing: 'easeInExpo',
+								duration: 500,
+								// duration: (el, i) => {
+								// 	return 88 + (i * 22);
+								// },
+								value: (el) => {
+									var pathLength = el.getTotalLength();
+									el.setAttribute('stroke-dasharray', pathLength);
+									return [-pathLength, 0];
+								}
 							},
-							easing: 'linear',
-							duration: 222,
-						},
-						strokeWidth: {
-							value: 8,
-							easing: 'linear',
+							stroke: {
+								value: function(el, i) {
+									return 'rgb('+(i*2)+','+(i*8)+','+(i*12)+')';
+								},
+								easing: 'linear',
+								duration: 222,
+							},
+							strokeWidth: {
+								value: 8,
+								easing: 'linear',
+								delay: (el, i) => {
+									return 222 + (i * 22);
+								},
+								duration: 222,
+							},
+							opacity: {
+								value: [0,1],
+								duration: 250,
+								delay: 250,
+								easing: 'linear'
+							},
 							delay: (el, i) => {
-								return 222 + (i * 22);
+								return i * 30;
 							},
-							duration: 222,
-						},
-						opacity: {
-							value: [0,1],
-							duration: 250,
-							delay: 250,
-							easing: 'linear'
-						},
-						delay: (el, i) => {
-							return i * 30;
-						},
-						duration: 1200,
-						easing: 'easeOutExpo',
-						loop: false,
-						direction: 'alternate',
-						update: (animation) => {
-							// // start animating squares once B is loaded
-							// if(animation.reversed==true)
-							// 	landingService.animatedB();
-							// landingService.animatedB();
-						},
-						complete: () => {
-							// console.log('finished loadingscreen');
-							landingService.animatedB();
-						}
-					});
+							duration: 1200,
+							easing: 'easeOutExpo',
+							loop: false,
+							direction: 'alternate',
+							update: (animation) => {
+								// // start animating squares once B is loaded
+								// if(animation.reversed==true)
+								// 	landingService.animatedB();
+								// landingService.animatedB();
+							},
+							complete: () => {
+								// console.log('finished loadingscreen');
+								landingService.animatedB();
+							}
+						});
+					}, 888);
+					
 				});
 
 				// remove this bc it's only only for dev
