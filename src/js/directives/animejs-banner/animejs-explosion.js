@@ -10,7 +10,7 @@ portfolio.directive('animejsExplosion', [
 			link: function(scope, element, attr, ctrl) {
 
 				landingService.canAnimateExplosion().then(() => {
-
+					
 					$timeout(() => {
 						var c = document.getElementById("animejs-explosion");
 						var ctx = c.getContext("2d");

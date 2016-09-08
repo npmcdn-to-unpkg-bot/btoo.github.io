@@ -102,9 +102,14 @@ portfolio.factory('projectsService', [
 					},
 					complete: (animation) => {
 						cardBackButtons.style.display = 'none';
-						cardBackButtons.querySelectorAll('.card-back-button').forEach(button => {
-							button.style.opacity = 1;
-						});
+						// cardBackButtons.querySelectorAll('.card-back-button').forEach(button => {
+						// 	button.style.opacity = 1;
+						// });
+						// forEach on nodelist not compatible with safari
+						var buttons = cardBackButtons.querySelectorAll('.card-back-button');
+						for (var i = buttons.length - 1; i >= 0; i--) {
+							buttons[i].style.opacity = 1;
+						}
 					}
 				});
 			},
